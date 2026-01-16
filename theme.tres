@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://4vrmlk1raavy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvktn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1x85"]
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxFlat_wvktn")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_e1x85")
