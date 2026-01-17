@@ -1,9 +1,10 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://4vrmlk1raavy"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvktn"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1x85"]
+[gd_resource type="Theme" format=3 uid="uid://4vrmlk1raavy"]
 
 [resource]
-Panel/styles/panel = SubResource("StyleBoxFlat_wvktn")
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_e1x85")
+Button/colors/font_hover_color = Color(0.8754563, 0.8754566, 0.87545687, 1)
+Button/colors/font_pressed_color = Color(0.4448433, 0.44484326, 0.4448435, 1)
+Button/colors/icon_pressed_color = Color(0.21050721, 0.21050721, 0.21050721, 1)
+Button/font_sizes/font_size = 22
+GridContainer/constants/h_separation = 30
+GridContainer/constants/v_separation = 20
+TabContainer/font_sizes/font_size = 30

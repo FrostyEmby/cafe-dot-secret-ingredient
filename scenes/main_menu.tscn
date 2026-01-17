@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhs6v4k8dmjo4"]
+
+[ext_resource type="Script" uid="uid://dvdg3gi0uee1j" path="res://main_menu.gd" id="1_wu84c"]
+[ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://theme.tres" id="2_8ln24"]
+[ext_resource type="Texture2D" uid="uid://b24uftqnjnnwv" path="res://art/icons/Play.png" id="3_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://cgn6g6ykgffnx" path="res://art/icons/gear.png" id="4_oa1go"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fu7sn"]
+font_size = 80
+
+[sub_resource type="LabelSettings" id="LabelSettings_jix8l"]
+font_size = 30
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wu84c")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 648.0
+theme = ExtResource("2_8ln24")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Working Title"
+label_settings = SubResource("LabelSettings_fu7sn")
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "By Ripesto, Nyx, FrostyEmby, Madpole"
+label_settings = SubResource("LabelSettings_jix8l")
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_8ln24")
+theme_override_constants/margin_top = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Play" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_8ln24")
+text = "Play"
+icon = ExtResource("3_rtw2f")
+alignment = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_8ln24")
+theme_override_constants/margin_right = 3
+
+[node name="Settings" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_8ln24")
+text = "Settings"
+icon = ExtResource("4_oa1go")
+alignment = 0
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Settings" to="." method="_on_settings_pressed"]
