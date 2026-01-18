@@ -1,7 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://puey23wcodsh"]
+[gd_scene load_steps=20 format=3 uid="uid://puey23wcodsh"]
 
 [ext_resource type="Script" uid="uid://dbtlv6p44ft57" path="res://scripts/bestiary.gd" id="1_lqwxb"]
-[ext_resource type="Texture2D" uid="uid://bwsf1rkahhv6a" path="res://art/icons/Exit.png" id="2_8u4y0"]
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/creature-stats.gd" id="2_j3mqr"]
 [ext_resource type="Texture2D" uid="uid://c5son408o0nng" path="res://art/icons/back-small.png" id="2_lqwxb"]
 [ext_resource type="Resource" uid="uid://dosts8w07go7f" path="res://resources/fire-moth.tres" id="3_2cel7"]
@@ -10,6 +9,9 @@
 [ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/bird-one.tres" id="5_n57n3"]
 [ext_resource type="Resource" uid="uid://dxqtqoy48cpre" path="res://resources/nest-parasite.tres" id="6_oyl77"]
 [ext_resource type="Resource" uid="uid://ddvixqmre33gs" path="res://resources/plant-tortoise.tres" id="7_oyl77"]
+[ext_resource type="Texture2D" uid="uid://cmjnxjp0dfr3a" path="res://art/icons/back-small-hover.png" id="9_eapyg"]
+[ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="11_aig2i"]
+[ext_resource type="Texture2D" uid="uid://jsqxydg5pski" path="res://art/icons/forward-smal-hover.png" id="11_bfiq4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eq67u"]
 font_size = 30
@@ -58,16 +60,16 @@ offset_bottom = 651.0
 [node name="Left Page" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 41.0
-offset_top = 22.0
+offset_top = 85.0
 offset_right = 564.0
-offset_bottom = 623.0
+offset_bottom = 648.0
 
 [node name="Creature Name" type="Label" parent="Left Page"]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 9.0
+offset_top = 22.0
 offset_right = 518.0
-offset_bottom = 51.0
+offset_bottom = 64.0
 text = "Warm Bat"
 label_settings = SubResource("LabelSettings_eq67u")
 horizontal_alignment = 1
@@ -201,48 +203,43 @@ text = "Confused with cool bat, distinguished by it's claws and eating habits"
 label_settings = SubResource("LabelSettings_mq4o6")
 autowrap_mode = 3
 
-[node name="Prev Page" type="Button" parent="Left Page"]
+[node name="Prev Page" type="TextureButton" parent="Left Page"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 559.0
-offset_right = 41.0
-offset_bottom = 599.0
-icon = ExtResource("2_lqwxb")
-
-[node name="Exit" type="Button" parent="Left Page"]
-layout_mode = 0
-offset_right = 40.0
+offset_left = 3.0
+offset_right = 43.0
 offset_bottom = 40.0
-icon = ExtResource("2_8u4y0")
+texture_normal = ExtResource("2_lqwxb")
+texture_hover = ExtResource("9_eapyg")
 
 [node name="Binding" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 565.0
-offset_top = 24.0
+offset_left = 564.0
+offset_top = 86.0
 offset_right = 590.0
-offset_bottom = 624.0
+offset_bottom = 649.0
 color = Color(0.88629234, 0.85544294, 0.86880356, 1)
 
 [node name="Right Blank Page" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 588.0
-offset_top = 22.0
+offset_top = 58.0
 offset_right = 1111.0
-offset_bottom = 624.0
+offset_bottom = 649.0
 
 [node name="Right Page" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 588.0
-offset_top = 22.0
+offset_top = 86.0
 offset_right = 1111.0
-offset_bottom = 624.0
+offset_bottom = 649.0
 
 [node name="Creature Name" type="Label" parent="Right Page"]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 10.0
+offset_top = 22.0
 offset_right = 517.0
-offset_bottom = 52.0
+offset_bottom = 64.0
 text = "Cool Bat"
 label_settings = SubResource("LabelSettings_eq67u")
 horizontal_alignment = 1
@@ -376,14 +373,18 @@ text = "Confused with warm bat"
 label_settings = SubResource("LabelSettings_mq4o6")
 autowrap_mode = 3
 
-[node name="Next Page" type="Button" parent="Right Page"]
+[node name="Next Page" type="TextureButton" parent="Right Page"]
 layout_mode = 0
-offset_left = 481.0
-offset_top = 559.0
-offset_right = 521.0
-offset_bottom = 599.0
-icon = ExtResource("4_j3mqr")
+offset_left = 484.0
+offset_right = 524.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_j3mqr")
+texture_hover = ExtResource("11_bfiq4")
+
+[node name="Mini Menu" parent="." instance=ExtResource("11_aig2i")]
+layout_mode = 0
+offset_left = 802.0
+offset_right = 1152.0
 
 [connection signal="pressed" from="Left Page/Prev Page" to="." method="_on_prev_page_pressed"]
-[connection signal="pressed" from="Left Page/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Right Page/Next Page" to="." method="_on_next_page_pressed"]

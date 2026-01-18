@@ -1,0 +1,80 @@
+[gd_scene load_steps=13 format=3 uid="uid://b085dkuk7uq8r"]
+
+[ext_resource type="Script" uid="uid://fuwn4s1jhksn" path="res://scenes/mini_menu.gd" id="1_g1iql"]
+[ext_resource type="Texture2D" uid="uid://dhv7ticowig" path="res://art/icons/home.png" id="1_n2rt3"]
+[ext_resource type="Texture2D" uid="uid://c5dtqxisv1of5" path="res://art/icons/home_hover.png" id="2_g1iql"]
+[ext_resource type="Texture2D" uid="uid://bt11rdadjevpq" path="res://art/icons/incubator.png" id="3_q7i8x"]
+[ext_resource type="Texture2D" uid="uid://dvf5vhulucklh" path="res://art/icons/incubator_hover.png" id="4_32nmq"]
+[ext_resource type="Texture2D" uid="uid://c8l1b328e07o3" path="res://art/icons/terrarium.png" id="5_y6o3p"]
+[ext_resource type="Texture2D" uid="uid://6v2am15t0fgw" path="res://art/icons/terrarium_hover.png" id="6_b2k16"]
+[ext_resource type="Texture2D" uid="uid://v10nhsvrlxpn" path="res://art/icons/bestiary.png" id="7_kd23u"]
+[ext_resource type="Texture2D" uid="uid://dqr2h3xlcovdu" path="res://art/icons/bestiary_hover.png" id="8_gp66p"]
+[ext_resource type="Texture2D" uid="uid://dvejl3bs6w23" path="res://art/icons/gear-big.png" id="9_r40w5"]
+[ext_resource type="Texture2D" uid="uid://dbydrte2rg8sm" path="res://art/icons/gear-big-hover.png" id="11_q7i8x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qigmh"]
+bg_color = Color(0.7271216, 0.61423296, 0.29493418, 1)
+corner_radius_bottom_left = 20
+
+[node name="Mini Menu" type="Panel"]
+custom_minimum_size = Vector2(350, 80)
+offset_right = 350.0
+offset_bottom = 80.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qigmh")
+script = ExtResource("1_g1iql")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Home" type="TextureButton" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_n2rt3")
+texture_hover = ExtResource("2_g1iql")
+texture_focused = ExtResource("2_g1iql")
+
+[node name="Incubator" type="TextureButton" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_q7i8x")
+texture_hover = ExtResource("4_32nmq")
+texture_focused = ExtResource("4_32nmq")
+
+[node name="Terrarium" type="TextureButton" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("5_y6o3p")
+texture_hover = ExtResource("6_b2k16")
+texture_focused = ExtResource("6_b2k16")
+
+[node name="Bestiary" type="TextureButton" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("7_kd23u")
+texture_hover = ExtResource("8_gp66p")
+texture_focused = ExtResource("8_gp66p")
+
+[node name="Settings" type="TextureButton" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("9_r40w5")
+texture_hover = ExtResource("11_q7i8x")
+
+[connection signal="pressed" from="HBoxContainer/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="HBoxContainer/Incubator" to="." method="_on_incubator_pressed"]
+[connection signal="pressed" from="HBoxContainer/Terrarium" to="." method="_on_terrarium_pressed"]
+[connection signal="pressed" from="HBoxContainer/Bestiary" to="." method="_on_bestiary_pressed"]
+[connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]

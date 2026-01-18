@@ -1,26 +1,15 @@
-[gd_scene load_steps=21 format=3 uid="uid://csy6oy6sctiow"]
+[gd_scene load_steps=13 format=3 uid="uid://csy6oy6sctiow"]
 
 [ext_resource type="Texture2D" uid="uid://bunldmv1vprgp" path="res://art/icons/shelf_dragger.png" id="1_7tas0"]
-[ext_resource type="Texture2D" uid="uid://dhv7ticowig" path="res://art/icons/home.png" id="1_evyon"]
+[ext_resource type="Script" uid="uid://dh73ql5mfjxqs" path="res://scripts/incubator.gd" id="1_ic351"]
 [ext_resource type="Texture2D" uid="uid://dh0uy78hioto3" path="res://art/props/shelf.png" id="1_qigmh"]
 [ext_resource type="Texture2D" uid="uid://yph5r4u8xt3w" path="res://art/icons/egg1.png" id="2_0l4kl"]
-[ext_resource type="Texture2D" uid="uid://bt11rdadjevpq" path="res://art/icons/incubator.png" id="2_3t0ey"]
-[ext_resource type="Texture2D" uid="uid://c8l1b328e07o3" path="res://art/icons/terrarium.png" id="3_7e0uq"]
-[ext_resource type="Texture2D" uid="uid://c5dtqxisv1of5" path="res://art/icons/home_hover.png" id="4_268c8"]
-[ext_resource type="Texture2D" uid="uid://v10nhsvrlxpn" path="res://art/icons/bestiary.png" id="4_jthp8"]
-[ext_resource type="Texture2D" uid="uid://dvf5vhulucklh" path="res://art/icons/incubator_hover.png" id="6_7tas0"]
+[ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="5_jthp8"]
 [ext_resource type="Texture2D" uid="uid://cju3g4q1ifvup" path="res://art/props/incubator-cold.png" id="7_qigmh"]
 [ext_resource type="Texture2D" uid="uid://d2nso4xrnpncn" path="res://art/props/incubator-mid.png" id="8_0l4kl"]
-[ext_resource type="Texture2D" uid="uid://6v2am15t0fgw" path="res://art/icons/terrarium_hover.png" id="8_ic351"]
 [ext_resource type="Texture2D" uid="uid://bp6cqy3js0d2j" path="res://art/props/incubator-hot.png" id="9_tvefn"]
-[ext_resource type="Texture2D" uid="uid://dqr2h3xlcovdu" path="res://art/icons/bestiary_hover.png" id="10_yturw"]
-[ext_resource type="Texture2D" uid="uid://dvejl3bs6w23" path="res://art/icons/gear-big.png" id="12_7tas0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ic351"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qigmh"]
-bg_color = Color(0.7271216, 0.61423296, 0.29493418, 1)
-corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oh3qu"]
 
@@ -31,6 +20,7 @@ corner_radius_bottom_left = 20
 [node name="Incubator" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_ic351")
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 layout_mode = 1
@@ -185,60 +175,6 @@ custom_minimum_size = Vector2(952, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Panel" type="Panel" parent="BoxContainer/HSplitContainer/MarginContainer2"]
-custom_minimum_size = Vector2(350, 80)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_qigmh")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/HSplitContainer/MarginContainer2/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 8
-
-[node name="Home" type="TextureButton" parent="BoxContainer/HSplitContainer/MarginContainer2/Panel/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 4
-texture_normal = ExtResource("1_evyon")
-texture_hover = ExtResource("4_268c8")
-texture_focused = ExtResource("4_268c8")
-
-[node name="Incubator" type="TextureButton" parent="BoxContainer/HSplitContainer/MarginContainer2/Panel/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 4
-texture_normal = ExtResource("2_3t0ey")
-texture_hover = ExtResource("6_7tas0")
-texture_focused = ExtResource("6_7tas0")
-
-[node name="Terrarium" type="TextureButton" parent="BoxContainer/HSplitContainer/MarginContainer2/Panel/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 4
-texture_normal = ExtResource("3_7e0uq")
-texture_hover = ExtResource("8_ic351")
-texture_focused = ExtResource("8_ic351")
-
-[node name="Bestiary" type="TextureButton" parent="BoxContainer/HSplitContainer/MarginContainer2/Panel/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 4
-texture_normal = ExtResource("4_jthp8")
-texture_hover = ExtResource("10_yturw")
-texture_focused = ExtResource("10_yturw")
-
-[node name="Settings" type="TextureButton" parent="BoxContainer/HSplitContainer/MarginContainer2/Panel/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 4
-texture_normal = ExtResource("12_7tas0")
-
 [node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HSplitContainer/MarginContainer2"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -301,3 +237,8 @@ texture = ExtResource("8_0l4kl")
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("9_tvefn")
+
+[node name="Mini Menu" parent="." instance=ExtResource("5_jthp8")]
+layout_mode = 0
+offset_left = 802.0
+offset_right = 1152.0

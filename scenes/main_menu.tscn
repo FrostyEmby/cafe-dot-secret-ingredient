@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhs6v4k8dmjo4"]
+[gd_scene load_steps=8 format=3 uid="uid://dhs6v4k8dmjo4"]
 
 [ext_resource type="Script" uid="uid://dvdg3gi0uee1j" path="res://scripts/main_menu.gd" id="1_wu84c"]
 [ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://resources/theme.tres" id="2_8ln24"]
 [ext_resource type="Texture2D" uid="uid://b24uftqnjnnwv" path="res://art/icons/Play.png" id="3_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://cgn6g6ykgffnx" path="res://art/icons/gear.png" id="4_oa1go"]
+[ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="5_8ln24"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fu7sn"]
 font_size = 80
@@ -66,6 +67,11 @@ theme = ExtResource("2_8ln24")
 text = "Settings"
 icon = ExtResource("4_oa1go")
 alignment = 0
+
+[node name="Mini Menu" parent="." instance=ExtResource("5_8ln24")]
+layout_mode = 0
+offset_left = 802.0
+offset_right = 1152.0
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Settings" to="." method="_on_settings_pressed"]

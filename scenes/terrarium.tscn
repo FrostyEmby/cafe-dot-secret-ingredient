@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://77pmhayrj8nl"]
+[gd_scene load_steps=2 format=3 uid="uid://77pmhayrj8nl"]
+
+[ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="1_jka3f"]
 
 [node name="Terrarium" type="Control"]
 layout_mode = 3
@@ -7,3 +9,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Mini Menu" parent="." instance=ExtResource("1_jka3f")]
+layout_mode = 0
+offset_left = 802.0
+offset_right = 1152.0
