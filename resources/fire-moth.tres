@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Stats" load_steps=2 format=3 uid="uid://dosts8w07go7f"]
+
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/creature-stats.gd" id="1_lo3cw"]
+
+[resource]
+script = ExtResource("1_lo3cw")
+name = "Fire Moth"
+diet = "Insects, small animals"
+hint = "Red hair, glows"
+confused_with = "Electric dragonfly"
+description = "Attracted to dark areas"
+incubator = 2
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

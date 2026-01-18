@@ -1,0 +1,18 @@
+extends Resource
+class_name Stats
+
+@export var name : String
+@export var diet : String
+@export var hint : String
+@export var confused_with : String
+@export var description : String
+
+enum hatchery {COLD_DRY, COLD_WET, TEMPERATE_DRY, TEMPERATE_WET, HOT_DRY, HOT_WET}
+enum habitat {VOLCANO, AQUATIC, DESERT, JUNGLE, SNOW, GRASSLAND}
+
+@export var incubator : hatchery
+@export var terrarium : habitat
+
+@export var egg : Image
+@export var baby_detailed : Image
+@export var adult_detailed : Image

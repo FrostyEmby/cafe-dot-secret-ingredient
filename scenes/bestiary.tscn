@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://puey23wcodsh"]
+[gd_scene load_steps=13 format=3 uid="uid://puey23wcodsh"]
 
-[ext_resource type="Texture2D" uid="uid://bbemsiywr7gre" path="res://art/icons/Forward.png" id="1_smylb"]
-[ext_resource type="Texture2D" uid="uid://dubt5x0ntj1od" path="res://art/icons/back.png" id="2_36r6s"]
+[ext_resource type="Script" uid="uid://dbtlv6p44ft57" path="res://scripts/bestiary.gd" id="1_lqwxb"]
+[ext_resource type="Texture2D" uid="uid://bwsf1rkahhv6a" path="res://art/icons/Exit.png" id="2_8u4y0"]
+[ext_resource type="Texture2D" uid="uid://c5son408o0nng" path="res://art/icons/back-small.png" id="2_lqwxb"]
+[ext_resource type="Texture2D" uid="uid://chvqbwaulnv8y" path="res://art/icons/forward-small.png" id="4_j3mqr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eq67u"]
 font_size = 30
@@ -29,6 +31,9 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_lqwxb"]
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_mq4o6"]
+font_color = Color(0, 0, 0, 1)
+
 [node name="Bestiary" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -38,6 +43,7 @@ offset_right = -1152.0
 offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lqwxb")
 
 [node name="Background" type="Panel" parent="."]
 layout_mode = 1
@@ -137,9 +143,9 @@ vertical_alignment = 1
 [node name="Baby Creature Picture Area3" type="ColorRect" parent="Left Page"]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 339.0
+offset_top = 312.0
 offset_right = 221.0
-offset_bottom = 480.0
+offset_bottom = 453.0
 color = Color(0.83033526, 0.83033514, 0.83033514, 1)
 
 [node name="Label" type="Label" parent="Left Page/Baby Creature Picture Area3"]
@@ -181,13 +187,29 @@ text = "It gained its name due to living in a icy environment and staying warm d
 label_settings = SubResource("LabelSettings_lqwxb")
 autowrap_mode = 3
 
+[node name="Confusion" type="Label" parent="Left Page"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 462.0
+offset_right = 219.0
+offset_bottom = 560.0
+text = "Confused with cool bat, distinguished by it's claws and eating habits"
+label_settings = SubResource("LabelSettings_mq4o6")
+autowrap_mode = 3
+
 [node name="Prev Page" type="Button" parent="Left Page"]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 527.0
-offset_right = 73.0
+offset_top = 559.0
+offset_right = 41.0
 offset_bottom = 599.0
-icon = ExtResource("2_36r6s")
+icon = ExtResource("2_lqwxb")
+
+[node name="Exit" type="Button" parent="Left Page"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+icon = ExtResource("2_8u4y0")
 
 [node name="Binding" type="ColorRect" parent="."]
 layout_mode = 0
@@ -288,9 +310,9 @@ vertical_alignment = 1
 [node name="Baby Creature Picture Area2" type="ColorRect" parent="Right Page"]
 layout_mode = 0
 offset_left = 298.0
-offset_top = 339.0
+offset_top = 312.0
 offset_right = 499.0
-offset_bottom = 480.0
+offset_bottom = 453.0
 color = Color(0.83033526, 0.83033514, 0.83033514, 1)
 
 [node name="Label" type="Label" parent="Right Page/Baby Creature Picture Area2"]
@@ -332,10 +354,24 @@ text = "It gained its name due to living in a volcanic environment and staying c
 label_settings = SubResource("LabelSettings_lqwxb")
 autowrap_mode = 3
 
+[node name="Confusion" type="Label" parent="Right Page"]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 462.0
+offset_right = 497.0
+offset_bottom = 560.0
+text = "Confused with warm bat"
+label_settings = SubResource("LabelSettings_mq4o6")
+autowrap_mode = 3
+
 [node name="Next Page" type="Button" parent="Right Page"]
 layout_mode = 0
-offset_left = 449.0
-offset_top = 527.0
+offset_left = 481.0
+offset_top = 559.0
 offset_right = 521.0
 offset_bottom = 599.0
-icon = ExtResource("1_smylb")
+icon = ExtResource("4_j3mqr")
+
+[connection signal="pressed" from="Left Page/Prev Page" to="." method="_on_prev_page_pressed"]
+[connection signal="pressed" from="Left Page/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Right Page/Next Page" to="." method="_on_next_page_pressed"]
