@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://puey23wcodsh"]
+[gd_scene load_steps=18 format=3 uid="uid://puey23wcodsh"]
 
 [ext_resource type="Script" uid="uid://dbtlv6p44ft57" path="res://scripts/bestiary.gd" id="1_lqwxb"]
 [ext_resource type="Texture2D" uid="uid://bwsf1rkahhv6a" path="res://art/icons/Exit.png" id="2_8u4y0"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://bgpacae1weki4" path="res://resources/electric-dragonfly.tres" id="4_mq4o6"]
 [ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/bird-one.tres" id="5_n57n3"]
 [ext_resource type="Resource" uid="uid://dxqtqoy48cpre" path="res://resources/nest-parasite.tres" id="6_oyl77"]
+[ext_resource type="Resource" uid="uid://ddvixqmre33gs" path="res://resources/plant-tortoise.tres" id="7_oyl77"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eq67u"]
 font_size = 30
@@ -45,7 +46,7 @@ offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lqwxb")
-creatures = Array[ExtResource("2_j3mqr")]([ExtResource("3_2cel7"), ExtResource("4_mq4o6"), ExtResource("5_n57n3"), ExtResource("6_oyl77")])
+creatures = Array[ExtResource("2_j3mqr")]([ExtResource("3_2cel7"), ExtResource("4_mq4o6"), ExtResource("5_n57n3"), ExtResource("6_oyl77"), ExtResource("7_oyl77")])
 
 [node name="Background" type="Panel" parent="."]
 layout_mode = 1
@@ -221,6 +222,13 @@ offset_top = 24.0
 offset_right = 590.0
 offset_bottom = 624.0
 color = Color(0.88629234, 0.85544294, 0.86880356, 1)
+
+[node name="Right Blank Page" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 588.0
+offset_top = 22.0
+offset_right = 1111.0
+offset_bottom = 624.0
 
 [node name="Right Page" type="ColorRect" parent="."]
 layout_mode = 0

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Creature" load_steps=2 format=3 uid="uid://ddvixqmre33gs"]
+
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/creature-stats.gd" id="1_qpy2d"]
+
+[resource]
+script = ExtResource("1_qpy2d")
+name = "Vitaruga"
+diet = "herbivorous"
+hint = "Egg is cool to the touch"
+confused_with = "lava creatures"
+description = "Tortoise made out of tree with leaves and solid amber."
+incubator = 3
+terrarium = 3
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"
