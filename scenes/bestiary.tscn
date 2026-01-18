@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://puey23wcodsh"]
+[gd_scene load_steps=12 format=3 uid="uid://puey23wcodsh"]
 
 [ext_resource type="Script" uid="uid://dbtlv6p44ft57" path="res://scripts/bestiary.gd" id="1_lqwxb"]
 [ext_resource type="Texture2D" uid="uid://bwsf1rkahhv6a" path="res://art/icons/Exit.png" id="2_8u4y0"]
@@ -14,12 +14,8 @@ outline_color = Color(0, 0, 0, 1)
 font_size = 22
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_smylb"]
-font_size = 22
-font_color = Color(0, 0, 0, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_36r6s"]
-font_size = 22
+font_size = 14
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_2cel7"]
@@ -86,59 +82,60 @@ label_settings = SubResource("LabelSettings_8u4y0")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Baby Egg" type="ColorRect" parent="Left Page"]
+[node name="Egg" type="ColorRect" parent="Left Page"]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 107.0
-offset_right = 104.0
-offset_bottom = 173.0
+offset_left = 39.0
+offset_top = 71.0
+offset_right = 109.0
+offset_bottom = 141.0
 color = Color(0.83137256, 0.83137256, 0.83137256, 1)
 
-[node name="Title" type="Label" parent="Left Page/Baby Egg"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = -36.0
-offset_right = 85.0
-offset_bottom = -5.0
-text = "Baby Egg"
-label_settings = SubResource("LabelSettings_smylb")
-horizontal_alignment = 1
-
-[node name="Label" type="Label" parent="Left Page/Baby Egg"]
-layout_mode = 0
+[node name="Label" type="Label" parent="Left Page/Egg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.1
 offset_right = 70.0
-offset_bottom = 62.0
-text = "?"
+offset_bottom = 63.0
+text = "Egg"
 label_settings = SubResource("LabelSettings_36r6s")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Environment Icon" type="ColorRect" parent="Left Page"]
+[node name="Incubator" type="ColorRect" parent="Left Page"]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 212.0
-offset_right = 104.0
-offset_bottom = 278.0
+offset_left = 39.0
+offset_top = 146.0
+offset_right = 109.0
+offset_bottom = 216.0
 color = Color(0.83137256, 0.83137256, 0.83137256, 1)
 
-[node name="Title" type="Label" parent="Left Page/Environment Icon"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = -36.0
-offset_right = 85.0
-offset_bottom = -5.0
-text = "Area"
-label_settings = SubResource("LabelSettings_smylb")
-horizontal_alignment = 1
-
-[node name="Label" type="Label" parent="Left Page/Environment Icon"]
+[node name="Label" type="Label" parent="Left Page/Incubator"]
 layout_mode = 0
 offset_right = 70.0
-offset_bottom = 62.0
-text = "?"
+offset_bottom = 70.0
+text = "Incubator"
 label_settings = SubResource("LabelSettings_36r6s")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Terrarium" type="ColorRect" parent="Left Page"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 221.0
+offset_right = 109.0
+offset_bottom = 291.0
+color = Color(0.83137256, 0.83137256, 0.83137256, 1)
+
+[node name="Label" type="Label" parent="Left Page/Terrarium"]
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 70.0
+text = "Terrarium"
+label_settings = SubResource("LabelSettings_36r6s")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Baby Creature Picture Area3" type="ColorRect" parent="Left Page"]
 layout_mode = 0
@@ -253,59 +250,60 @@ label_settings = SubResource("LabelSettings_8u4y0")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Baby Egg" type="ColorRect" parent="Right Page"]
+[node name="Egg" type="ColorRect" parent="Right Page"]
 layout_mode = 0
-offset_left = 417.0
-offset_top = 108.0
-offset_right = 491.0
-offset_bottom = 174.0
+offset_left = 414.0
+offset_top = 71.0
+offset_right = 484.0
+offset_bottom = 141.0
 color = Color(0.83137256, 0.83137256, 0.83137256, 1)
 
-[node name="Title" type="Label" parent="Right Page/Baby Egg"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = -36.0
-offset_right = 85.0
-offset_bottom = -5.0
-text = "Baby Egg"
-label_settings = SubResource("LabelSettings_smylb")
-horizontal_alignment = 1
-
-[node name="Label" type="Label" parent="Right Page/Baby Egg"]
-layout_mode = 0
+[node name="Label" type="Label" parent="Right Page/Egg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.1
 offset_right = 70.0
-offset_bottom = 62.0
-text = "?"
+offset_bottom = 63.0
+text = "Egg"
 label_settings = SubResource("LabelSettings_36r6s")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Environment Icon" type="ColorRect" parent="Right Page"]
+[node name="Incubator" type="ColorRect" parent="Right Page"]
 layout_mode = 0
-offset_left = 417.0
-offset_top = 213.0
-offset_right = 491.0
-offset_bottom = 279.0
+offset_left = 414.0
+offset_top = 146.0
+offset_right = 484.0
+offset_bottom = 216.0
 color = Color(0.83137256, 0.83137256, 0.83137256, 1)
 
-[node name="Title" type="Label" parent="Right Page/Environment Icon"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = -36.0
-offset_right = 85.0
-offset_bottom = -5.0
-text = "Area"
-label_settings = SubResource("LabelSettings_smylb")
-horizontal_alignment = 1
-
-[node name="Label" type="Label" parent="Right Page/Environment Icon"]
+[node name="Label" type="Label" parent="Right Page/Incubator"]
 layout_mode = 0
 offset_right = 70.0
-offset_bottom = 62.0
-text = "?"
+offset_bottom = 70.0
+text = "Incubator"
 label_settings = SubResource("LabelSettings_36r6s")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Terrarium" type="ColorRect" parent="Right Page"]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 221.0
+offset_right = 484.0
+offset_bottom = 291.0
+color = Color(0.83137256, 0.83137256, 0.83137256, 1)
+
+[node name="Label" type="Label" parent="Right Page/Terrarium"]
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 70.0
+text = "Terrarium"
+label_settings = SubResource("LabelSettings_36r6s")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Baby Creature Picture Area2" type="ColorRect" parent="Right Page"]
 layout_mode = 0
