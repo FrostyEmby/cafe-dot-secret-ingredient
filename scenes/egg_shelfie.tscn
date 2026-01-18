@@ -1,0 +1,161 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi7vr8n2y7b5"]
+
+[ext_resource type="Texture2D" uid="uid://dh0uy78hioto3" path="res://art/props/shelf.png" id="1_6gg56"]
+[ext_resource type="Texture2D" uid="uid://yph5r4u8xt3w" path="res://art/icons/egg1.png" id="2_1wort"]
+[ext_resource type="Script" uid="uid://br1lu1lnknnov" path="res://scripts/egg.gd" id="3_1wort"]
+
+[node name="Egg Shelfie" type="MarginContainer"]
+custom_minimum_size = Vector2(200, 0)
+
+[node name="Egg shelf" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 648)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="Egg shelf"]
+texture_filter = 1
+layout_mode = 0
+offset_top = 44.0
+offset_right = 200.0
+offset_bottom = 604.0
+texture = ExtResource("1_6gg56")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Egg shelf"]
+custom_minimum_size = Vector2(0, 540)
+layout_direction = 3
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Egg shelf/ScrollContainer"]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="Egg shelf/ScrollContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 560)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="TextureRect" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect2" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect3" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect4" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect5" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect6" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect7" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect8" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect9" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect10" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect11" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect12" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect13" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect14" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect15" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="TextureRect16" type="TextureButton" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("2_1wort")
+script = ExtResource("3_1wort")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"

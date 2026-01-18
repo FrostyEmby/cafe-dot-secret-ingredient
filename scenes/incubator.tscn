@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://csy6oy6sctiow"]
+[gd_scene load_steps=12 format=3 uid="uid://csy6oy6sctiow"]
 
 [ext_resource type="Texture2D" uid="uid://bunldmv1vprgp" path="res://art/icons/shelf_dragger.png" id="1_7tas0"]
 [ext_resource type="Script" uid="uid://dh73ql5mfjxqs" path="res://scripts/incubator.gd" id="1_ic351"]
-[ext_resource type="Texture2D" uid="uid://dh0uy78hioto3" path="res://art/props/shelf.png" id="1_qigmh"]
-[ext_resource type="Texture2D" uid="uid://yph5r4u8xt3w" path="res://art/icons/egg1.png" id="2_0l4kl"]
+[ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelfie.tscn" id="3_7e0uq"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="5_jthp8"]
 [ext_resource type="Texture2D" uid="uid://cju3g4q1ifvup" path="res://art/props/incubator-cold.png" id="7_qigmh"]
 [ext_resource type="Texture2D" uid="uid://d2nso4xrnpncn" path="res://art/props/incubator-mid.png" id="8_0l4kl"]
@@ -40,149 +39,22 @@ touch_dragger_enabled = true
 drag_area_margin_begin = -80
 drag_area_offset = -18
 
-[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HSplitContainer"]
-custom_minimum_size = Vector2(200, 0)
+[node name="Egg Shelfie" parent="BoxContainer/HSplitContainer" instance=ExtResource("3_7e0uq")]
 layout_mode = 2
 
-[node name="Egg shelf" type="Control" parent="BoxContainer/HSplitContainer/MarginContainer"]
-custom_minimum_size = Vector2(200, 648)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 3
-
-[node name="TextureRect" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf"]
-texture_filter = 1
-layout_mode = 0
-offset_top = 44.0
-offset_right = 200.0
-offset_bottom = 604.0
-texture = ExtResource("1_qigmh")
-
-[node name="ScrollContainer" type="ScrollContainer" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf"]
-custom_minimum_size = Vector2(0, 540)
-layout_direction = 3
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer"]
-layout_direction = 1
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="GridContainer" type="GridContainer" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer"]
-custom_minimum_size = Vector2(0, 560)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-columns = 2
-
-[node name="TextureRect" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect2" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect3" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect4" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect5" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect6" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect7" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect8" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect9" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect10" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect11" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect12" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect13" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect14" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect15" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect16" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="TextureRect17" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer/Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_0l4kl")
-
-[node name="MarginContainer2" type="MarginContainer" parent="BoxContainer/HSplitContainer"]
+[node name="Incubators" type="MarginContainer" parent="BoxContainer/HSplitContainer"]
 custom_minimum_size = Vector2(952, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HSplitContainer/MarginContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HSplitContainer/Incubators"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="GridContainer" type="GridContainer" parent="BoxContainer/HSplitContainer/MarginContainer2/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="BoxContainer/HSplitContainer/Incubators/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -190,53 +62,53 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 5
 
-[node name="panel" type="Panel" parent="BoxContainer/HSplitContainer/MarginContainer2/MarginContainer/GridContainer"]
+[node name="panel" type="Panel" parent="BoxContainer/HSplitContainer/Incubators/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_oh3qu")
 
-[node name="TextureRect" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer2/MarginContainer/GridContainer"]
+[node name="ColdDry" type="TextureButton" parent="BoxContainer/HSplitContainer/Incubators/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("7_qigmh")
+texture_normal = ExtResource("7_qigmh")
 stretch_mode = 3
 
-[node name="TextureRect2" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer2/MarginContainer/GridContainer"]
+[node name="TempDry" type="TextureButton" parent="BoxContainer/HSplitContainer/Incubators/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("8_0l4kl")
+texture_normal = ExtResource("8_0l4kl")
 stretch_mode = 3
 
-[node name="TextureRect3" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer2/MarginContainer/GridContainer"]
+[node name="HotDry" type="TextureButton" parent="BoxContainer/HSplitContainer/Incubators/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("9_tvefn")
+texture_normal = ExtResource("9_tvefn")
 stretch_mode = 3
 
-[node name="Panel" type="Panel" parent="BoxContainer/HSplitContainer/MarginContainer2/MarginContainer/GridContainer"]
+[node name="Panel" type="Panel" parent="BoxContainer/HSplitContainer/Incubators/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_268c8")
 
-[node name="Panel2" type="Panel" parent="BoxContainer/HSplitContainer/MarginContainer2/MarginContainer/GridContainer"]
+[node name="Panel2" type="Panel" parent="BoxContainer/HSplitContainer/Incubators/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_7tas0")
 
-[node name="TextureRect4" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer2/MarginContainer/GridContainer"]
+[node name="ColdWet" type="TextureButton" parent="BoxContainer/HSplitContainer/Incubators/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("7_qigmh")
+texture_normal = ExtResource("7_qigmh")
 
-[node name="TextureRect5" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer2/MarginContainer/GridContainer"]
+[node name="TempWet" type="TextureButton" parent="BoxContainer/HSplitContainer/Incubators/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("8_0l4kl")
+texture_normal = ExtResource("8_0l4kl")
 
-[node name="TextureRect6" type="TextureRect" parent="BoxContainer/HSplitContainer/MarginContainer2/MarginContainer/GridContainer"]
+[node name="HotWet" type="TextureButton" parent="BoxContainer/HSplitContainer/Incubators/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("9_tvefn")
+texture_normal = ExtResource("9_tvefn")
 
 [node name="Mini Menu" parent="." instance=ExtResource("5_jthp8")]
 layout_mode = 0
