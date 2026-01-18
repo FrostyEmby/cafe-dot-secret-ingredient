@@ -1,0 +1,341 @@
+[gd_scene load_steps=10 format=3 uid="uid://puey23wcodsh"]
+
+[ext_resource type="Texture2D" uid="uid://bbemsiywr7gre" path="res://art/icons/Forward.png" id="1_smylb"]
+[ext_resource type="Texture2D" uid="uid://dubt5x0ntj1od" path="res://art/icons/back.png" id="2_36r6s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eq67u"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8u4y0"]
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_smylb"]
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_36r6s"]
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2cel7"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j3mqr"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lqwxb"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="Bestiary" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_right = 1152.0
+offset_bottom = 651.0
+
+[node name="Left Page" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = 555.0
+offset_bottom = 623.0
+
+[node name="Creature Name" type="Label" parent="Left Page"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 9.0
+offset_right = 518.0
+offset_bottom = 51.0
+text = "Warm Bat"
+label_settings = SubResource("LabelSettings_eq67u")
+horizontal_alignment = 1
+
+[node name="Adult Creature Picture" type="ColorRect" parent="Left Page"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 72.0
+offset_right = 507.0
+offset_bottom = 297.0
+color = Color(0.83033526, 0.83033514, 0.83033514, 1)
+
+[node name="Label" type="Label" parent="Left Page/Adult Creature Picture"]
+layout_mode = 0
+offset_right = 363.0
+offset_bottom = 222.0
+text = "(Picture of Adult)"
+label_settings = SubResource("LabelSettings_8u4y0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Baby Egg" type="ColorRect" parent="Left Page"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 107.0
+offset_right = 104.0
+offset_bottom = 173.0
+color = Color(0.83137256, 0.83137256, 0.83137256, 1)
+
+[node name="Title" type="Label" parent="Left Page/Baby Egg"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -36.0
+offset_right = 85.0
+offset_bottom = -5.0
+text = "Baby Egg"
+label_settings = SubResource("LabelSettings_smylb")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Left Page/Baby Egg"]
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 62.0
+text = "?"
+label_settings = SubResource("LabelSettings_36r6s")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Environment Icon" type="ColorRect" parent="Left Page"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 212.0
+offset_right = 104.0
+offset_bottom = 278.0
+color = Color(0.83137256, 0.83137256, 0.83137256, 1)
+
+[node name="Title" type="Label" parent="Left Page/Environment Icon"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -36.0
+offset_right = 85.0
+offset_bottom = -5.0
+text = "Area"
+label_settings = SubResource("LabelSettings_smylb")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Left Page/Environment Icon"]
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 62.0
+text = "?"
+label_settings = SubResource("LabelSettings_36r6s")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Baby Creature Picture Area3" type="ColorRect" parent="Left Page"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 339.0
+offset_right = 221.0
+offset_bottom = 480.0
+color = Color(0.83033526, 0.83033514, 0.83033514, 1)
+
+[node name="Label" type="Label" parent="Left Page/Baby Creature Picture Area3"]
+layout_mode = 0
+offset_right = 201.0
+offset_bottom = 141.0
+text = "(Picture of Baby)"
+label_settings = SubResource("LabelSettings_8u4y0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dynamic Text" type="VBoxContainer" parent="Left Page"]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 308.0
+offset_right = 506.0
+offset_bottom = 590.0
+
+[node name="Diet" type="Label" parent="Left Page/Dynamic Text"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+text = "Diet: Insects"
+label_settings = SubResource("LabelSettings_2cel7")
+autowrap_mode = 3
+
+[node name="Hint" type="Label" parent="Left Page/Dynamic Text"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+text = "Hint: Looks cool, but is warm to the touch"
+label_settings = SubResource("LabelSettings_j3mqr")
+autowrap_mode = 3
+
+[node name="Description" type="Label" parent="Left Page/Dynamic Text"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "It gained its name due to living in a icy environment and staying warm despite that. The eggs are a beautiful blue color"
+label_settings = SubResource("LabelSettings_lqwxb")
+autowrap_mode = 3
+
+[node name="Prev Page" type="Button" parent="Left Page"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 527.0
+offset_right = 73.0
+offset_bottom = 599.0
+icon = ExtResource("2_36r6s")
+
+[node name="Binding" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 13.0
+offset_right = 596.0
+offset_bottom = 632.0
+color = Color(0.46316057, 0.21423924, 0.104590826, 1)
+
+[node name="Right Page" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 597.0
+offset_top = 22.0
+offset_right = 1120.0
+offset_bottom = 624.0
+
+[node name="Creature Name" type="Label" parent="Right Page"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 10.0
+offset_right = 517.0
+offset_bottom = 52.0
+text = "Cool Bat"
+label_settings = SubResource("LabelSettings_eq67u")
+horizontal_alignment = 1
+
+[node name="Adult Creature Picture Area" type="ColorRect" parent="Right Page"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 73.0
+offset_right = 385.0
+offset_bottom = 298.0
+color = Color(0.83033526, 0.83033514, 0.83033514, 1)
+
+[node name="Label" type="Label" parent="Right Page/Adult Creature Picture Area"]
+layout_mode = 0
+offset_right = 363.0
+offset_bottom = 222.0
+text = "(Picture of Adult)"
+label_settings = SubResource("LabelSettings_8u4y0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Baby Egg" type="ColorRect" parent="Right Page"]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 108.0
+offset_right = 491.0
+offset_bottom = 174.0
+color = Color(0.83137256, 0.83137256, 0.83137256, 1)
+
+[node name="Title" type="Label" parent="Right Page/Baby Egg"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -36.0
+offset_right = 85.0
+offset_bottom = -5.0
+text = "Baby Egg"
+label_settings = SubResource("LabelSettings_smylb")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Right Page/Baby Egg"]
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 62.0
+text = "?"
+label_settings = SubResource("LabelSettings_36r6s")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Environment Icon" type="ColorRect" parent="Right Page"]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 213.0
+offset_right = 491.0
+offset_bottom = 279.0
+color = Color(0.83137256, 0.83137256, 0.83137256, 1)
+
+[node name="Title" type="Label" parent="Right Page/Environment Icon"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -36.0
+offset_right = 85.0
+offset_bottom = -5.0
+text = "Area"
+label_settings = SubResource("LabelSettings_smylb")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Right Page/Environment Icon"]
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 62.0
+text = "?"
+label_settings = SubResource("LabelSettings_36r6s")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Baby Creature Picture Area2" type="ColorRect" parent="Right Page"]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 339.0
+offset_right = 499.0
+offset_bottom = 480.0
+color = Color(0.83033526, 0.83033514, 0.83033514, 1)
+
+[node name="Label" type="Label" parent="Right Page/Baby Creature Picture Area2"]
+layout_mode = 0
+offset_right = 201.0
+offset_bottom = 141.0
+text = "(Picture of Baby)"
+label_settings = SubResource("LabelSettings_8u4y0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dynamic Text" type="VBoxContainer" parent="Right Page"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 305.0
+offset_right = 281.0
+offset_bottom = 589.0
+
+[node name="Diet" type="Label" parent="Right Page/Dynamic Text"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+text = "Diet: Insects, small animals, rocks"
+label_settings = SubResource("LabelSettings_2cel7")
+autowrap_mode = 3
+
+[node name="Hint" type="Label" parent="Right Page/Dynamic Text"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+text = "Hint: Looks hot, but cool to the touch"
+label_settings = SubResource("LabelSettings_j3mqr")
+autowrap_mode = 3
+
+[node name="Description" type="Label" parent="Right Page/Dynamic Text"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "It gained its name due to living in a volcanic environment and staying cool despite that. The eggs are a beautiful green color"
+label_settings = SubResource("LabelSettings_lqwxb")
+autowrap_mode = 3
+
+[node name="Next Page" type="Button" parent="Right Page"]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 527.0
+offset_right = 521.0
+offset_bottom = 599.0
+icon = ExtResource("1_smylb")
