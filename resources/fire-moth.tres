@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Stats" load_steps=2 format=3 uid="uid://dosts8w07go7f"]
+[gd_resource type="Resource" script_class="Creature" load_steps=2 format=3 uid="uid://dosts8w07go7f"]
 
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/creature-stats.gd" id="1_lo3cw"]
 
 [resource]
 script = ExtResource("1_lo3cw")
 name = "Fire Moth"
-diet = "Insects, small animals"
+diet = "Insects"
 hint = "Red hair, glows"
-confused_with = "electric dragonfly"
+confused_with = "electrifly"
 description = "Attracted to dark areas. The eggs are in clusters with a dirty yellow"
 incubator = 2
 metadata/_custom_type_script = "uid://cqr8dj8toeqen"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Stats" load_steps=2 format=3 uid="uid://bgpacae1weki4"]
+
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/creature-stats.gd" id="1_0u3nu"]
+
+[resource]
+script = ExtResource("1_0u3nu")
+name = "Electrifly"
+diet = "Insects, small animals"
+hint = "Yellow hair, no glow"
+confused_with = "Fire Moth"
+description = "Seeks dark areas. Eggs are golden yellow"
+incubator = 3
+terrarium = 3
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

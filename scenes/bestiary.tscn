@@ -1,9 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://puey23wcodsh"]
+[gd_scene load_steps=17 format=3 uid="uid://puey23wcodsh"]
 
 [ext_resource type="Script" uid="uid://dbtlv6p44ft57" path="res://scripts/bestiary.gd" id="1_lqwxb"]
 [ext_resource type="Texture2D" uid="uid://bwsf1rkahhv6a" path="res://art/icons/Exit.png" id="2_8u4y0"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/creature-stats.gd" id="2_j3mqr"]
 [ext_resource type="Texture2D" uid="uid://c5son408o0nng" path="res://art/icons/back-small.png" id="2_lqwxb"]
+[ext_resource type="Resource" uid="uid://dosts8w07go7f" path="res://resources/fire-moth.tres" id="3_2cel7"]
 [ext_resource type="Texture2D" uid="uid://chvqbwaulnv8y" path="res://art/icons/forward-small.png" id="4_j3mqr"]
+[ext_resource type="Resource" uid="uid://bgpacae1weki4" path="res://resources/electric-dragonfly.tres" id="4_mq4o6"]
+[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/bird-one.tres" id="5_n57n3"]
+[ext_resource type="Resource" uid="uid://dxqtqoy48cpre" path="res://resources/nest-parasite.tres" id="6_oyl77"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eq67u"]
 font_size = 30
@@ -18,10 +23,10 @@ font_color = Color(0, 0, 0, 1)
 font_size = 14
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_2cel7"]
+[sub_resource type="LabelSettings" id="LabelSettings_j3mqr"]
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_j3mqr"]
+[sub_resource type="LabelSettings" id="LabelSettings_2cel7"]
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_lqwxb"]
@@ -40,6 +45,7 @@ offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lqwxb")
+creatures = Array[ExtResource("2_j3mqr")]([ExtResource("3_2cel7"), ExtResource("4_mq4o6"), ExtResource("5_n57n3"), ExtResource("6_oyl77")])
 
 [node name="Background" type="Panel" parent="."]
 layout_mode = 1
@@ -161,20 +167,20 @@ offset_top = 308.0
 offset_right = 506.0
 offset_bottom = 590.0
 
-[node name="Diet" type="Label" parent="Left Page/Dynamic Text"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
-text = "Diet: Insects"
-label_settings = SubResource("LabelSettings_2cel7")
-autowrap_mode = 3
-
 [node name="Hint" type="Label" parent="Left Page/Dynamic Text"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 text = "Hint: Looks cool, but is warm to the touch"
 label_settings = SubResource("LabelSettings_j3mqr")
+autowrap_mode = 3
+
+[node name="Diet" type="Label" parent="Left Page/Dynamic Text"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+text = "Diet: Insects"
+label_settings = SubResource("LabelSettings_2cel7")
 autowrap_mode = 3
 
 [node name="Description" type="Label" parent="Left Page/Dynamic Text"]
@@ -329,20 +335,20 @@ offset_top = 305.0
 offset_right = 281.0
 offset_bottom = 589.0
 
-[node name="Diet" type="Label" parent="Right Page/Dynamic Text"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
-text = "Diet: Insects, small animals, rocks"
-label_settings = SubResource("LabelSettings_2cel7")
-autowrap_mode = 3
-
 [node name="Hint" type="Label" parent="Right Page/Dynamic Text"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 text = "Hint: Looks hot, but cool to the touch"
 label_settings = SubResource("LabelSettings_j3mqr")
+autowrap_mode = 3
+
+[node name="Diet" type="Label" parent="Right Page/Dynamic Text"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+text = "Diet: Insects, small animals, rocks"
+label_settings = SubResource("LabelSettings_2cel7")
 autowrap_mode = 3
 
 [node name="Description" type="Label" parent="Right Page/Dynamic Text"]
