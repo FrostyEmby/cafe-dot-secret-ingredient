@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Creature" load_steps=2 format=3 uid="uid://bo03k2xsccltr"]
+[gd_resource type="Resource" script_class="Creature" load_steps=3 format=3 uid="uid://bo03k2xsccltr"]
 
+[ext_resource type="Texture2D" uid="uid://yph5r4u8xt3w" path="res://art/icons/egg1.png" id="1_7siy4"]
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/creature-stats.gd" id="1_it8xv"]
 
 [resource]
@@ -9,4 +10,5 @@ diet = "Insects"
 hint = "Claws"
 confused_with = "other ugly bird chicks"
 terrarium = 5
+egg = ExtResource("1_7siy4")
 metadata/_custom_type_script = "uid://cqr8dj8toeqen"

@@ -5,16 +5,15 @@ signal selection(hatchery : Hatchery)
 
 
 func add_egg(egg: Egg):
-	if not $Egg1.visible:
-		$Egg1.icon = egg.icon
-		$Egg1.visible = true
-	elif not $Egg2.visible:
-		$Egg2.icon = egg.icon
-		$Egg2.visible = true
-	elif not $Egg3.visible:
-		$Egg3.icon = egg.icon
-		$Egg3.visible = true
+	for new_egg in find_children("Egg*"):
+		if not new_egg.visible:
+			new_egg.species = egg.species
+			new_egg.setup()
+			new_egg.visible = true
+			break
 
 
 func _pressed() -> void:
-	selection.emit(self)
+	# if at least the last spot is open, then let egg match happen
+	if not $Egg3.visible:
+		selection.emit(self)

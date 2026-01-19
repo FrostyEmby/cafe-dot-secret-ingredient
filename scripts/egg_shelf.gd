@@ -2,6 +2,13 @@ extends MarginContainer
 
 signal selection(egg: Egg)
 
+func add_egg(egg: Egg):
+	for new_egg in find_children("Egg*"):
+		if not new_egg.visible:
+			new_egg.species = egg.species
+			new_egg.setup()
+			new_egg.visible = true
+			break
 
 func _on_egg_1_selection(egg: Egg) -> void:
 	selection.emit(egg)
