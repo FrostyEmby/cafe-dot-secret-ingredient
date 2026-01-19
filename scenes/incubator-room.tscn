@@ -37,7 +37,7 @@ touch_dragger_enabled = true
 drag_area_margin_begin = -80
 drag_area_offset = -18
 
-[node name="Egg Shelfie" parent="BoxContainer/HSplitContainer" instance=ExtResource("3_t4njw")]
+[node name="Egg Shelf" parent="BoxContainer/HSplitContainer" instance=ExtResource("3_t4njw")]
 layout_mode = 2
 
 [node name="Incubators" parent="BoxContainer/HSplitContainer" instance=ExtResource("4_83g0e")]
@@ -47,3 +47,6 @@ layout_mode = 2
 layout_mode = 0
 offset_left = 802.0
 offset_right = 1152.0
+
+[connection signal="selection" from="BoxContainer/HSplitContainer/Egg Shelf" to="." method="_on_egg_selection"]
+[connection signal="selection" from="BoxContainer/HSplitContainer/Incubators" to="." method="_on_incubator_selection"]
