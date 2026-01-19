@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dh73ql5mfjxqs" path="res://scripts/incubator-room.gd" id="1_lerr0"]
 [ext_resource type="Texture2D" uid="uid://bunldmv1vprgp" path="res://art/icons/shelf_dragger.png" id="2_glcki"]
-[ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelfie.tscn" id="3_t4njw"]
+[ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelf.tscn" id="3_t4njw"]
 [ext_resource type="PackedScene" uid="uid://bvmhui71lfmc4" path="res://scenes/incubators.tscn" id="4_83g0e"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="8_ebtcn"]
 

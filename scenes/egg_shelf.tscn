@@ -6,17 +6,17 @@
 [ext_resource type="ButtonGroup" uid="uid://cpegfv37n7gxg" path="res://resources/egg_buttons.tres" id="2_lcyoe"]
 [ext_resource type="Script" uid="uid://br1lu1lnknnov" path="res://scripts/egg.gd" id="3_1wort"]
 
-[node name="Egg Shelfie" type="MarginContainer"]
+[node name="Egg Shelf" type="MarginContainer"]
 custom_minimum_size = Vector2(200, 0)
 script = ExtResource("1_qpkqp")
 
-[node name="Egg shelf" type="Control" parent="."]
+[node name="Organizer" type="Control" parent="."]
 custom_minimum_size = Vector2(200, 648)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="Egg shelf"]
+[node name="TextureRect" type="TextureRect" parent="Organizer"]
 texture_filter = 1
 layout_mode = 0
 offset_top = 44.0
@@ -24,7 +24,7 @@ offset_right = 200.0
 offset_bottom = 604.0
 texture = ExtResource("1_6gg56")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Egg shelf"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Organizer"]
 custom_minimum_size = Vector2(0, 540)
 layout_direction = 3
 layout_mode = 1
@@ -35,7 +35,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Egg shelf/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Organizer/ScrollContainer"]
 layout_direction = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -44,14 +44,14 @@ theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="GridContainer" type="GridContainer" parent="Egg shelf/ScrollContainer/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="Organizer/ScrollContainer/MarginContainer"]
 custom_minimum_size = Vector2(0, 560)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 2
 
-[node name="Egg 1" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 1" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -60,7 +60,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 2" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 2" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -69,7 +69,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 3" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 3" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -78,7 +78,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 4" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 4" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -87,7 +87,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 5" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 5" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -96,7 +96,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 6" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 6" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -105,7 +105,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 7" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 7" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -114,7 +114,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 8" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 8" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -123,7 +123,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 9" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 9" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -132,7 +132,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 10" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 10" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -141,7 +141,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 11" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 11" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -150,7 +150,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 12" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 12" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -159,7 +159,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 13" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 13" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -168,7 +168,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 14" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 14" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -177,7 +177,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 15" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 15" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
@@ -186,7 +186,7 @@ icon = ExtResource("2_1wort")
 script = ExtResource("3_1wort")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg 16" type="Button" parent="Egg shelf/ScrollContainer/MarginContainer/GridContainer"]
+[node name="Egg 16" type="Button" parent="Organizer/ScrollContainer/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 toggle_mode = true
