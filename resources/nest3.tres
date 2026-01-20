@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="NestData" load_steps=10 format=3 uid="uid://darl7ej1xp2dx"]
+
+[ext_resource type="Script" uid="uid://bgw7voc2pvri" path="res://scripts/nest-data.gd" id="1_1na5l"]
+[ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/egg-data.gd" id="1_f8c3s"]
+[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/bird-one.tres" id="2_1i0w2"]
+
+[sub_resource type="Resource" id="Resource_jjte4"]
+script = ExtResource("1_f8c3s")
+visibility = true
+species = ExtResource("2_1i0w2")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_03bfe"]
+script = ExtResource("1_f8c3s")
+species = ExtResource("2_1i0w2")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_ag6rv"]
+script = ExtResource("1_f8c3s")
+species = ExtResource("2_1i0w2")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_sd2px"]
+script = ExtResource("1_f8c3s")
+species = ExtResource("2_1i0w2")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_5fk5q"]
+script = ExtResource("1_f8c3s")
+species = ExtResource("2_1i0w2")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_toy8n"]
+script = ExtResource("1_f8c3s")
+species = ExtResource("2_1i0w2")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[resource]
+script = ExtResource("1_1na5l")
+egg1 = SubResource("Resource_jjte4")
+egg2 = SubResource("Resource_03bfe")
+egg3 = SubResource("Resource_ag6rv")
+egg4 = SubResource("Resource_sd2px")
+egg5 = SubResource("Resource_5fk5q")
+egg6 = SubResource("Resource_toy8n")
+metadata/_custom_type_script = "uid://bgw7voc2pvri"

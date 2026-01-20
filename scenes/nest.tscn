@@ -1,12 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://djtd6vihyb4ph"]
+[gd_scene load_steps=4 format=3 uid="uid://djtd6vihyb4ph"]
 
 [ext_resource type="Texture2D" uid="uid://dvg6h6e05k5fi" path="res://art/icons/nest.png" id="1_0c7o3"]
-[ext_resource type="Texture2D" uid="uid://yph5r4u8xt3w" path="res://art/icons/egg1.png" id="2_61tgp"]
 [ext_resource type="Script" uid="uid://coxr4fw58q14s" path="res://scenes/nest.gd" id="2_a0nmq"]
-[ext_resource type="Script" uid="uid://br1lu1lnknnov" path="res://scripts/egg.gd" id="3_a0nmq"]
-[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/bird-one.tres" id="4_5fcmp"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i1l7w"]
+[ext_resource type="PackedScene" uid="uid://ctuxvuxm5oh0r" path="res://scenes/egg.tscn" id="3_5fcmp"]
 
 [node name="Nest" type="TextureRect"]
 offset_left = 440.0
@@ -17,77 +13,52 @@ texture = ExtResource("1_0c7o3")
 stretch_mode = 2
 script = ExtResource("2_a0nmq")
 
-[node name="Egg1" type="Button" parent="."]
+[node name="Egg1" parent="." instance=ExtResource("3_5fcmp")]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 53.0
-offset_right = 120.0
-offset_bottom = 125.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_i1l7w")
-icon = ExtResource("2_61tgp")
-script = ExtResource("3_a0nmq")
-species = ExtResource("4_5fcmp")
-metadata/_custom_type_script = "uid://br1lu1lnknnov"
+offset_left = 100.0
+offset_top = 41.0
+offset_right = 172.0
+offset_bottom = 113.0
 
-[node name="Egg2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 90.0
-offset_top = 92.0
-offset_right = 162.0
-offset_bottom = 164.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_i1l7w")
-icon = ExtResource("2_61tgp")
-script = ExtResource("3_a0nmq")
-species = ExtResource("4_5fcmp")
-metadata/_custom_type_script = "uid://br1lu1lnknnov"
+[node name="Egg2" parent="." instance=ExtResource("3_5fcmp")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25300002
+anchor_top = 0.20700002
+anchor_right = 0.25300002
+anchor_bottom = 0.20700002
+offset_left = -16.768005
+offset_top = 0.0079956055
+offset_right = 55.231995
+offset_bottom = 72.007996
 
-[node name="Egg3" type="Button" parent="."]
+[node name="Egg3" parent="." instance=ExtResource("3_5fcmp")]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 104.0
-offset_right = 117.0
-offset_bottom = 176.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_i1l7w")
-icon = ExtResource("2_61tgp")
-script = ExtResource("3_a0nmq")
-species = ExtResource("4_5fcmp")
-metadata/_custom_type_script = "uid://br1lu1lnknnov"
+offset_left = 104.0
+offset_top = 108.0
+offset_right = 176.0
+offset_bottom = 180.0
 
-[node name="Egg4" type="Button" parent="."]
+[node name="Egg4" parent="." instance=ExtResource("3_5fcmp")]
 layout_mode = 0
-offset_left = 141.0
-offset_top = 82.0
-offset_right = 213.0
-offset_bottom = 154.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_i1l7w")
-icon = ExtResource("2_61tgp")
-script = ExtResource("3_a0nmq")
-species = ExtResource("4_5fcmp")
-metadata/_custom_type_script = "uid://br1lu1lnknnov"
+offset_left = 143.0
+offset_top = 66.0
+offset_right = 215.0
+offset_bottom = 138.0
 
-[node name="Egg5" type="Button" parent="."]
+[node name="Egg5" parent="." instance=ExtResource("3_5fcmp")]
 layout_mode = 0
-offset_left = 120.0
-offset_top = 127.0
-offset_right = 192.0
-offset_bottom = 199.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_i1l7w")
-icon = ExtResource("2_61tgp")
-script = ExtResource("3_a0nmq")
-species = ExtResource("4_5fcmp")
-metadata/_custom_type_script = "uid://br1lu1lnknnov"
+offset_left = 149.0
+offset_top = 116.0
+offset_right = 221.0
+offset_bottom = 188.0
 
-[node name="Egg6" type="Button" parent="."]
+[node name="Egg6" parent="." instance=ExtResource("3_5fcmp")]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 46.0
-offset_right = 181.0
-offset_bottom = 118.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_i1l7w")
-icon = ExtResource("2_61tgp")
-script = ExtResource("3_a0nmq")
-species = ExtResource("4_5fcmp")
-metadata/_custom_type_script = "uid://br1lu1lnknnov"
+offset_left = 53.0
+offset_top = 108.0
+offset_right = 125.0
+offset_bottom = 180.0
 
 [connection signal="selection" from="Egg1" to="." method="_on_egg_1_selection"]
 [connection signal="selection" from="Egg2" to="." method="_on_egg_2_selection"]

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Save" load_steps=7 format=3 uid="uid://1ll1rg6ogcrc"]
+
+[ext_resource type="Script" uid="uid://dt67tgv2fjsug" path="res://scripts/save.gd" id="1_8knjt"]
+[ext_resource type="Resource" uid="uid://c15yc4b70njfd" path="res://resources/incubator.tres" id="2_d66w8"]
+[ext_resource type="Resource" uid="uid://dhidbksh1hoq2" path="res://resources/nest2.tres" id="3_gnrsa"]
+[ext_resource type="Resource" uid="uid://b6xug7sh5qc1b" path="res://resources/nest1.tres" id="3_w8e4p"]
+[ext_resource type="Resource" uid="uid://darl7ej1xp2dx" path="res://resources/nest3.tres" id="4_d66w8"]
+[ext_resource type="Resource" uid="uid://cmgoopq5yg1vo" path="res://resources/egg-shelf.tres" id="6_w8e4p"]
+
+[resource]
+script = ExtResource("1_8knjt")
+shelf = ExtResource("6_w8e4p")
+incubator = ExtResource("2_d66w8")
+nest1 = ExtResource("3_w8e4p")
+nest2 = ExtResource("3_gnrsa")
+nest3 = ExtResource("4_d66w8")
+metadata/_custom_type_script = "uid://dt67tgv2fjsug"

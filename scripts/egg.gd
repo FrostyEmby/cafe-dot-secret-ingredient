@@ -1,18 +1,33 @@
 extends Button
 class_name Egg
 
-@export var species : Creature = load("res://resources/bird-one.tres")
-@export var shelved = false
+@export var info : EggData = EggData.new()
 
 signal selection(egg : Egg)
 
 
-func setup():
-	icon = species.egg
+func config(visibility : bool, species : Creature):
+	visible = visibility
+	info.visibility = visibility
+	info.species = species
+	icon = info.species.egg
+
+
+func setup(id : EggData):
+	print("starting " + self.name + " setup")
+	
+	visible = id.visibility
+	info.visibility = id.visibility
+	print("visible = ", id.visibility)
+	
+	info.species = id.species
+	icon = info.species.egg
+	
+	print(self.name + " setup complete")
 
 
 func _ready():
-	setup()
+	setup(info)
 
 
 func _pressed() -> void:

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctuxvuxm5oh0r"]
+
+[ext_resource type="Texture2D" uid="uid://yph5r4u8xt3w" path="res://art/icons/egg1.png" id="1_34461"]
+[ext_resource type="Script" uid="uid://br1lu1lnknnov" path="res://scripts/egg.gd" id="2_ifgqj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i1l7w"]
+
+[node name="Egg" type="Button"]
+offset_left = 48.0
+offset_top = 53.0
+offset_right = 120.0
+offset_bottom = 125.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i1l7w")
+icon = ExtResource("1_34461")
+script = ExtResource("2_ifgqj")
+metadata/_custom_type_script = "uid://br1lu1lnknnov"
+
+[node name="Hatch" type="Timer" parent="."]

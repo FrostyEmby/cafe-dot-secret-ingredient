@@ -1,0 +1,110 @@
+[gd_resource type="Resource" script_class="EggShelfData" load_steps=20 format=3 uid="uid://cmgoopq5yg1vo"]
+
+[ext_resource type="Script" uid="uid://qvbb7aomctoi" path="res://scripts/egg-shelf-data.gd" id="1_l4f7o"]
+[ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/egg-data.gd" id="2_gfb1j"]
+[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/bird-one.tres" id="3_mdvro"]
+
+[sub_resource type="Resource" id="Resource_voiek"]
+script = ExtResource("2_gfb1j")
+visibility = true
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_qgiom"]
+script = ExtResource("2_gfb1j")
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_q7cat"]
+script = ExtResource("2_gfb1j")
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_yoy8y"]
+script = ExtResource("2_gfb1j")
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_n0kor"]
+script = ExtResource("2_gfb1j")
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_835x8"]
+script = ExtResource("2_gfb1j")
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_t4qud"]
+script = ExtResource("2_gfb1j")
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_6ebrs"]
+script = ExtResource("2_gfb1j")
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_l4f7o"]
+script = ExtResource("2_gfb1j")
+visibility = true
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_gfb1j"]
+script = ExtResource("2_gfb1j")
+visibility = true
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_mdvro"]
+script = ExtResource("2_gfb1j")
+visibility = true
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_k0v0v"]
+script = ExtResource("2_gfb1j")
+visibility = true
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_yl5p5"]
+script = ExtResource("2_gfb1j")
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_5yjoj"]
+script = ExtResource("2_gfb1j")
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_071dg"]
+script = ExtResource("2_gfb1j")
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_tdeye"]
+script = ExtResource("2_gfb1j")
+species = ExtResource("3_mdvro")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[resource]
+script = ExtResource("1_l4f7o")
+egg1 = SubResource("Resource_voiek")
+egg2 = SubResource("Resource_l4f7o")
+egg3 = SubResource("Resource_gfb1j")
+egg4 = SubResource("Resource_mdvro")
+egg5 = SubResource("Resource_k0v0v")
+egg6 = SubResource("Resource_yl5p5")
+egg7 = SubResource("Resource_5yjoj")
+egg8 = SubResource("Resource_071dg")
+egg9 = SubResource("Resource_tdeye")
+egg10 = SubResource("Resource_qgiom")
+egg11 = SubResource("Resource_q7cat")
+egg12 = SubResource("Resource_yoy8y")
+egg13 = SubResource("Resource_n0kor")
+egg14 = SubResource("Resource_835x8")
+egg15 = SubResource("Resource_t4qud")
+egg16 = SubResource("Resource_6ebrs")
+metadata/_custom_type_script = "uid://qvbb7aomctoi"
