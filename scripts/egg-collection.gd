@@ -1,6 +1,8 @@
 extends Control
 
-func _init() -> void:
+var save : Save = load("res://resources/save.tres")
+
+func _ready() -> void:
 	_load()
 
 
@@ -23,4 +25,6 @@ func _on_nest_3_selection(egg: Egg) -> void:
 
 
 func _load():
-	pass
+	$Nest1.setup(save.nest1)
+	$Nest2.setup(save.nest2)
+	$Nest3.setup(save.nest3)

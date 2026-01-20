@@ -61,3 +61,8 @@ offset_right = 125.0
 offset_bottom = 180.0
 
 [connection signal="selection" from="Egg1" to="." method="_on_egg_1_selection"]
+[connection signal="selection" from="Egg2" to="." method="_on_egg_2_selection"]
+[connection signal="selection" from="Egg3" to="." method="_on_egg_3_selection"]
+[connection signal="selection" from="Egg4" to="." method="_on_egg_4_selection"]
+[connection signal="selection" from="Egg5" to="." method="_on_egg_5_selection"]
+[connection signal="selection" from="Egg6" to="." method="_on_egg_6_selection"]

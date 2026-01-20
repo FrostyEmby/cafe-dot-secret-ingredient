@@ -1,0 +1,133 @@
+[gd_resource type="Resource" script_class="IncubatorData" load_steps=22 format=3 uid="uid://c15yc4b70njfd"]
+
+[ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/egg-data.gd" id="1_hu8gw"]
+[ext_resource type="Script" uid="uid://shyattdlbmgu" path="res://scripts/incubator-data.gd" id="1_vxp6q"]
+[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/bird-one.tres" id="2_s6sun"]
+
+[sub_resource type="Resource" id="Resource_1ydbg"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_d2eh6"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_8lbsj"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_qvlx8"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_vor7i"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_hvc0u"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_upsmy"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_xs6rm"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_x02df"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_vnolt"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_vjab0"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_n73qg"]
+script = ExtResource("1_hu8gw")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_jmrxi"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_nmim1"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_1o141"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_chlcl"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_bbpnm"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_bmhj3"]
+script = ExtResource("1_hu8gw")
+visibility = false
+species = ExtResource("2_s6sun")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[resource]
+script = ExtResource("1_vxp6q")
+cold_dry_egg1 = SubResource("Resource_1ydbg")
+cold_dry_egg2 = SubResource("Resource_d2eh6")
+cold_dry_egg3 = SubResource("Resource_8lbsj")
+cold_wet_egg1 = SubResource("Resource_qvlx8")
+cold_wet_egg2 = SubResource("Resource_vor7i")
+cold_wet_egg3 = SubResource("Resource_hvc0u")
+temp_dry_egg1 = SubResource("Resource_jmrxi")
+temp_dry_egg2 = SubResource("Resource_nmim1")
+temp_dry_egg3 = SubResource("Resource_1o141")
+temp_wet_egg1 = SubResource("Resource_chlcl")
+temp_wet_egg2 = SubResource("Resource_bbpnm")
+temp_wet_egg3 = SubResource("Resource_bmhj3")
+hot_dry_egg1 = SubResource("Resource_upsmy")
+hot_dry_egg2 = SubResource("Resource_xs6rm")
+hot_dry_egg3 = SubResource("Resource_x02df")
+hot_wet_egg1 = SubResource("Resource_vnolt")
+hot_wet_egg2 = SubResource("Resource_vjab0")
+hot_wet_egg3 = SubResource("Resource_n73qg")
+metadata/_custom_type_script = "uid://shyattdlbmgu"

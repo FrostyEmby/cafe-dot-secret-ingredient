@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="HatcheryData" load_steps=7 format=3 uid="uid://bpexrkd1iutvp"]
+
+[ext_resource type="Script" uid="uid://elwxkvw5040k" path="res://scripts/hatchery-data.gd" id="1_qpboi"]
+[ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/egg-data.gd" id="1_sh5nu"]
+[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/bird-one.tres" id="2_dinu0"]
+
+[sub_resource type="Resource" id="Resource_hkcal"]
+script = ExtResource("1_sh5nu")
+visibility = false
+species = ExtResource("2_dinu0")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_pbcgw"]
+script = ExtResource("1_sh5nu")
+visibility = false
+species = ExtResource("2_dinu0")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_vb88o"]
+script = ExtResource("1_sh5nu")
+visibility = false
+species = ExtResource("2_dinu0")
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[resource]
+script = ExtResource("1_qpboi")
+egg1 = SubResource("Resource_hkcal")
+egg2 = SubResource("Resource_pbcgw")
+egg3 = SubResource("Resource_vb88o")
+metadata/_custom_type_script = "uid://elwxkvw5040k"

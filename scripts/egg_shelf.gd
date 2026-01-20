@@ -8,75 +8,93 @@ func _ready() -> void:
 
 
 func add_egg(egg: Egg):
+	print("adding egg to shelf")
 	for new_egg in find_children("Egg*"):
 		if not new_egg.visible:
-			new_egg.species = egg.species
-			new_egg.setup()
-			new_egg.visible = true
+			print("found empty slot")
+			new_egg.config(true, egg.info.species)
+			print("filled empty slot")
 			break
+	print("no valid spot found")
 
 
 func _on_egg_1_selection(egg: Egg) -> void:
+	print("selected egg 1")
 	selection.emit(egg)
 
 
 func _on_egg_2_selection(egg: Egg) -> void:
+	print("selected egg 2")
 	selection.emit(egg)
 
 
 func _on_egg_3_selection(egg: Egg) -> void:
+	print("selected egg 3")
 	selection.emit(egg)
 
 
 func _on_egg_4_selection(egg: Egg) -> void:
+	print("selected egg 4")
 	selection.emit(egg)
 
 
 func _on_egg_5_selection(egg: Egg) -> void:
+	print("selected egg 5")
 	selection.emit(egg)
 
 
 func _on_egg_6_selection(egg: Egg) -> void:
+	print("selected egg 6")
 	selection.emit(egg)
 
 
 func _on_egg_7_selection(egg: Egg) -> void:
+	print("selected egg 7")
 	selection.emit(egg)
 
 
 func _on_egg_8_selection(egg: Egg) -> void:
+	print("selected egg 8")
 	selection.emit(egg)
 
 
 func _on_egg_9_selection(egg: Egg) -> void:
+	print("selected egg 9")
 	selection.emit(egg)
 
 
 func _on_egg_10_selection(egg: Egg) -> void:
+	print("selected egg 10")
 	selection.emit(egg)
 
 
 func _on_egg_11_selection(egg: Egg) -> void:
+	print("selected egg 11")
 	selection.emit(egg)
 
 
 func _on_egg_12_selection(egg: Egg) -> void:
+	print("selected egg 12")
 	selection.emit(egg)
 
 
 func _on_egg_13_selection(egg: Egg) -> void:
+	print("selected egg 13")
 	selection.emit(egg)
 
 
 func _on_egg_14_selection(egg: Egg) -> void:
+	print("selected egg 14")
 	selection.emit(egg)
 
 
 func _on_egg_15_selection(egg: Egg) -> void:
+	print("selected egg 15")
 	selection.emit(egg)
 
 
 func _on_egg_16_selection(egg: Egg) -> void:
+	print("selected egg 16")
 	selection.emit(egg)
 
 func _load():
@@ -97,52 +115,23 @@ func _load():
 	var egg15 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg15"
 	var egg16 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg16"
 	
-	save = load("res://resources/save.tres")
+	print("-----starting shelf setup-----")
 	
-	egg1.visible = save.shelf_egg_1_visible
-	egg1.species = save.shelf_egg_1_species
+	egg1.setup(save.shelf.egg1)
+	egg2.setup(save.shelf.egg2)
+	egg3.setup(save.shelf.egg3)
+	egg4.setup(save.shelf.egg4)
+	egg5.setup(save.shelf.egg1)
+	egg6.setup(save.shelf.egg1)
+	egg7.setup(save.shelf.egg1)
+	egg8.setup(save.shelf.egg1)
+	egg9.setup(save.shelf.egg1)
+	egg10.setup(save.shelf.egg2)
+	egg11.setup(save.shelf.egg3)
+	egg12.setup(save.shelf.egg4)
+	egg13.setup(save.shelf.egg1)
+	egg14.setup(save.shelf.egg1)
+	egg15.setup(save.shelf.egg1)
+	egg16.setup(save.shelf.egg1)
 	
-	egg2.visible = save.shelf_egg_2_visible
-	egg2.species = save.shelf_egg_2_species
-	
-	egg3.visible = save.shelf_egg_3_visible
-	egg3.species = save.shelf_egg_3_species
-	
-	egg4.visible = save.shelf_egg_4_visible
-	egg4.species = save.shelf_egg_4_species
-	
-	egg5.visible = save.shelf_egg_5_visible
-	egg5.species = save.shelf_egg_5_species
-	
-	egg6.visible = save.shelf_egg_6_visible
-	egg6.species = save.shelf_egg_6_species
-	
-	egg7.visible = save.shelf_egg_7_visible
-	egg7.species = save.shelf_egg_7_species
-	
-	egg8.visible = save.shelf_egg_8_visible
-	egg8.species = save.shelf_egg_8_species
-	
-	egg9.visible = save.shelf_egg_9_visible
-	egg9.species = save.shelf_egg_9_species
-	
-	egg10.visible = save.shelf_egg_10_visible
-	egg10.species = save.shelf_egg_10_species
-	
-	egg11.visible = save.shelf_egg_11_visible
-	egg11.species = save.shelf_egg_11_species
-	
-	egg12.visible = save.shelf_egg_12_visible
-	egg12.species = save.shelf_egg_12_species
-	
-	egg13.visible = save.shelf_egg_13_visible
-	egg13.species = save.shelf_egg_13_species
-	
-	egg14.visible = save.shelf_egg_14_visible
-	egg14.species = save.shelf_egg_14_species
-	
-	egg15.visible = save.shelf_egg_15_visible
-	egg15.species = save.shelf_egg_15_species
-	
-	egg16.visible = save.shelf_egg_16_visible
-	egg16.species = save.shelf_egg_16_species
+	print("-----egg shelf setup complete-----")

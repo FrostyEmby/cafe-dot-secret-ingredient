@@ -48,7 +48,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(952, 0)
 layout_mode = 2
 
-[node name="Nest" parent="." instance=ExtResource("3_r7ts3")]
+[node name="Nest1" parent="." instance=ExtResource("3_r7ts3")]
 layout_mode = 0
 offset_left = 270.0
 offset_top = 244.0
@@ -72,6 +72,6 @@ offset_right = 740.0
 offset_bottom = 407.0
 init_eggs = 3
 
-[connection signal="selection" from="Nest" to="." method="_on_nest_selection"]
+[connection signal="selection" from="Nest1" to="." method="_on_nest_selection"]
 [connection signal="selection" from="Nest2" to="." method="_on_nest_2_selection"]
 [connection signal="selection" from="Nest3" to="." method="_on_nest_3_selection"]
