@@ -204,6 +204,7 @@ offset_right = 506.0
 offset_bottom = 590.0
 
 [node name="Hint" type="Label" parent="Left Page/Dynamic Text"]
+custom_minimum_size = Vector2(269, 0)
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
@@ -212,6 +213,7 @@ label_settings = SubResource("LabelSettings_j3mqr")
 autowrap_mode = 3
 
 [node name="Diet" type="Label" parent="Left Page/Dynamic Text"]
+custom_minimum_size = Vector2(269, 0)
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
@@ -220,6 +222,7 @@ label_settings = SubResource("LabelSettings_2cel7")
 autowrap_mode = 3
 
 [node name="Description" type="Label" parent="Left Page/Dynamic Text"]
+custom_minimum_size = Vector2(269, 0)
 layout_mode = 2
 size_flags_vertical = 3
 text = "It gained its name due to living in a icy environment and staying warm despite that. The eggs are a beautiful blue color"
@@ -414,6 +417,7 @@ offset_right = 281.0
 offset_bottom = 589.0
 
 [node name="Hint" type="Label" parent="Right Page/Dynamic Text"]
+custom_minimum_size = Vector2(259, 0)
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
@@ -422,6 +426,7 @@ label_settings = SubResource("LabelSettings_j3mqr")
 autowrap_mode = 3
 
 [node name="Diet" type="Label" parent="Right Page/Dynamic Text"]
+custom_minimum_size = Vector2(259, 0)
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
@@ -430,6 +435,7 @@ label_settings = SubResource("LabelSettings_2cel7")
 autowrap_mode = 3
 
 [node name="Description" type="Label" parent="Right Page/Dynamic Text"]
+custom_minimum_size = Vector2(259, 0)
 layout_mode = 2
 size_flags_vertical = 3
 text = "It gained its name due to living in a volcanic environment and staying cool despite that. The eggs are a beautiful green color"

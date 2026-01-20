@@ -69,6 +69,7 @@ icon = ExtResource("4_oa1go")
 alignment = 0
 
 [node name="Mini Menu" parent="." instance=ExtResource("5_8ln24")]
+visible = false
 layout_mode = 0
 offset_left = 802.0
 offset_right = 1152.0

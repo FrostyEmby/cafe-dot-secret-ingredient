@@ -1,7 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://77pmhayrj8nl"]
+[gd_scene load_steps=17 format=3 uid="uid://77pmhayrj8nl"]
 
 [ext_resource type="Texture2D" uid="uid://dieym8rlk7n24" path="res://art/props/layout test game jam terrarium.png" id="1_xb13y"]
 [ext_resource type="Texture2D" uid="uid://l4k1qkmaaupx" path="res://art/props/layout test game jam terrarium foreground.png" id="2_qlrmg"]
+[ext_resource type="Script" uid="uid://fuwn4s1jhksn" path="res://scripts/mini_menu.gd" id="4_h6qyf"]
+[ext_resource type="Texture2D" uid="uid://dhv7ticowig" path="res://art/icons/home.png" id="4_y2mes"]
+[ext_resource type="Texture2D" uid="uid://c5dtqxisv1of5" path="res://art/icons/home_hover.png" id="5_h6qyf"]
+[ext_resource type="Texture2D" uid="uid://bt11rdadjevpq" path="res://art/icons/incubator.png" id="6_nrwuv"]
+[ext_resource type="Texture2D" uid="uid://dvf5vhulucklh" path="res://art/icons/incubator_hover.png" id="7_1wf2t"]
+[ext_resource type="Texture2D" uid="uid://c8l1b328e07o3" path="res://art/icons/terrarium.png" id="8_a3s61"]
+[ext_resource type="Texture2D" uid="uid://6v2am15t0fgw" path="res://art/icons/terrarium_hover.png" id="9_kstpm"]
+[ext_resource type="Texture2D" uid="uid://v10nhsvrlxpn" path="res://art/icons/bestiary.png" id="10_vusgt"]
+[ext_resource type="Texture2D" uid="uid://dqr2h3xlcovdu" path="res://art/icons/bestiary_hover.png" id="11_pf7wg"]
+[ext_resource type="Texture2D" uid="uid://dvejl3bs6w23" path="res://art/icons/gear-big.png" id="12_mxrpn"]
+[ext_resource type="Texture2D" uid="uid://dbydrte2rg8sm" path="res://art/icons/gear-big-hover.png" id="13_skqsh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xb13y"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_xb13y"]
+color = Color(0.9529412, 0.87058824, 0.49019608, 1)
+grow_begin = -45.0
+grow_end = -45.0
+thickness = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6qyf"]
+bg_color = Color(0.7254902, 0.6156863, 0.29411766, 1)
 
 [node name="Terrarium" type="Control"]
 layout_mode = 3
@@ -39,3 +61,121 @@ layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("2_qlrmg")
+
+[node name="Snow" type="Button" parent="."]
+layout_mode = 0
+offset_left = 95.0
+offset_right = 417.0
+offset_bottom = 323.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
+theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+
+[node name="Grass" type="Button" parent="."]
+layout_mode = 0
+offset_left = 419.0
+offset_right = 735.0
+offset_bottom = 323.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
+theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+
+[node name="Sand" type="Button" parent="."]
+layout_mode = 0
+offset_left = 736.0
+offset_right = 1058.0
+offset_bottom = 323.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
+theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+
+[node name="Aqua" type="Button" parent="."]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 324.0
+offset_right = 417.0
+offset_bottom = 647.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
+theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+
+[node name="Jungle" type="Button" parent="."]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 324.0
+offset_right = 735.0
+offset_bottom = 647.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
+theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+
+[node name="Lava" type="Button" parent="."]
+layout_mode = 0
+offset_left = 738.0
+offset_top = 324.0
+offset_right = 1060.0
+offset_bottom = 647.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
+theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+
+[node name="Vertical Mini Menu" type="Panel" parent="."]
+custom_minimum_size = Vector2(80, 360)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.938
+anchor_top = 0.22200002
+anchor_right = 1.0
+anchor_bottom = 0.77800006
+offset_left = -8.57605
+offset_top = 0.14398193
+offset_bottom = -0.14404297
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h6qyf")
+script = ExtResource("4_h6qyf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Vertical Mini Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Home" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("4_y2mes")
+texture_pressed = ExtResource("5_h6qyf")
+texture_hover = ExtResource("5_h6qyf")
+
+[node name="Incubator" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("6_nrwuv")
+texture_pressed = ExtResource("7_1wf2t")
+texture_hover = ExtResource("7_1wf2t")
+
+[node name="Terrarium" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("8_a3s61")
+texture_pressed = ExtResource("9_kstpm")
+texture_hover = ExtResource("9_kstpm")
+
+[node name="Bestiary" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("10_vusgt")
+texture_pressed = ExtResource("11_pf7wg")
+texture_hover = ExtResource("11_pf7wg")
+
+[node name="Settings" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("12_mxrpn")
+texture_pressed = ExtResource("13_skqsh")
+texture_hover = ExtResource("13_skqsh")
+
+[connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Home" to="Vertical Mini Menu" method="_on_home_pressed"]
+[connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Incubator" to="Vertical Mini Menu" method="_on_incubator_pressed"]
+[connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Terrarium" to="Vertical Mini Menu" method="_on_terrarium_pressed"]
+[connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Bestiary" to="Vertical Mini Menu" method="_on_bestiary_pressed"]
+[connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Settings" to="Vertical Mini Menu" method="_on_settings_pressed"]
