@@ -4,6 +4,7 @@ var egg_selected : bool = false
 var egg_match : Egg
 var hatchery_match : Hatchery
 
+
 # matches egg and hatchery
 func _match():
 	# turn off the button and visibility to make egg disappear
@@ -20,6 +21,7 @@ func _match():
 func _on_egg_selection(egg: Egg) -> void:
 	egg_match = egg
 	egg_selected = true
+
 
 # selection only goes one way, because egg -> hatchery 
 # makes more sense than hatchery -> egg
