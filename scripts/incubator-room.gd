@@ -3,13 +3,15 @@ extends Control
 var egg_selected : bool = false
 var egg_match : Egg
 var hatchery_match : Hatchery
-
+var save : Save = load("res://resources/save.tres")
 
 # matches egg and hatchery
 func _match():
 	# turn off the button and visibility to make egg disappear
 	egg_match.disabled = true
 	egg_match.visible = false
+	save.shelf[egg_match.name.to_lower()].visibility = false
+	save.shelf[egg_match.name.to_lower()].species = egg_match.info.species
 	
 	# use egg button data to add that variety to the hatchery
 	hatchery_match.add_egg(egg_match)

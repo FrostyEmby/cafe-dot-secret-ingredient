@@ -13,10 +13,16 @@ func add_egg(egg: Egg):
 		if not new_egg.visible:
 			print("found empty slot")
 			new_egg.config(true, egg.info.species)
+			save.shelf[new_egg.name.to_lower()].visibility = true
+			save.shelf[new_egg.name.to_lower()].species = egg.info.species
 			print("filled empty slot")
 			break
 	print("no valid spot found")
 
+func remove_egg(egg: Egg):
+	egg.disabled = true
+	egg.config(false, egg.info.species)
+	save.shelf[egg.name.to_lower()].visibility = false
 
 func _on_egg_1_selection(egg: Egg) -> void:
 	print("selected egg 1")
@@ -121,17 +127,17 @@ func _load():
 	egg2.setup(save.shelf.egg2)
 	egg3.setup(save.shelf.egg3)
 	egg4.setup(save.shelf.egg4)
-	egg5.setup(save.shelf.egg1)
-	egg6.setup(save.shelf.egg1)
-	egg7.setup(save.shelf.egg1)
-	egg8.setup(save.shelf.egg1)
-	egg9.setup(save.shelf.egg1)
-	egg10.setup(save.shelf.egg2)
-	egg11.setup(save.shelf.egg3)
-	egg12.setup(save.shelf.egg4)
-	egg13.setup(save.shelf.egg1)
-	egg14.setup(save.shelf.egg1)
-	egg15.setup(save.shelf.egg1)
-	egg16.setup(save.shelf.egg1)
+	egg5.setup(save.shelf.egg5)
+	egg6.setup(save.shelf.egg6)
+	egg7.setup(save.shelf.egg7)
+	egg8.setup(save.shelf.egg8)
+	egg9.setup(save.shelf.egg9)
+	egg10.setup(save.shelf.egg10)
+	egg11.setup(save.shelf.egg11)
+	egg12.setup(save.shelf.egg12)
+	egg13.setup(save.shelf.egg13)
+	egg14.setup(save.shelf.egg14)
+	egg15.setup(save.shelf.egg15)
+	egg16.setup(save.shelf.egg16)
 	
 	print("-----egg shelf setup complete-----")

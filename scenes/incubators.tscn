@@ -45,7 +45,7 @@ custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_oh3qu")
 
-[node name="ColdDry" type="Button" parent="MarginContainer/GridContainer"]
+[node name="Cold_Dry" type="Button" parent="MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_7e0uq")
@@ -53,7 +53,7 @@ icon = ExtResource("1_esafb")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 
-[node name="Egg1" type="Button" parent="MarginContainer/GridContainer/ColdDry"]
+[node name="Egg1" type="Button" parent="MarginContainer/GridContainer/Cold_Dry"]
 visible = false
 layout_mode = 0
 offset_left = 20.0
@@ -66,7 +66,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg2" type="Button" parent="MarginContainer/GridContainer/ColdDry"]
+[node name="Egg2" type="Button" parent="MarginContainer/GridContainer/Cold_Dry"]
 visible = false
 layout_mode = 0
 offset_left = 63.0
@@ -79,7 +79,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg3" type="Button" parent="MarginContainer/GridContainer/ColdDry"]
+[node name="Egg3" type="Button" parent="MarginContainer/GridContainer/Cold_Dry"]
 visible = false
 layout_mode = 0
 offset_left = 108.0
@@ -92,7 +92,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="TempDry" type="Button" parent="MarginContainer/GridContainer"]
+[node name="Temp_Dry" type="Button" parent="MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_7e0uq")
@@ -100,7 +100,7 @@ icon = ExtResource("3_oys6p")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 
-[node name="Egg1" type="Button" parent="MarginContainer/GridContainer/TempDry"]
+[node name="Egg1" type="Button" parent="MarginContainer/GridContainer/Temp_Dry"]
 visible = false
 layout_mode = 0
 offset_left = 20.0
@@ -113,7 +113,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg2" type="Button" parent="MarginContainer/GridContainer/TempDry"]
+[node name="Egg2" type="Button" parent="MarginContainer/GridContainer/Temp_Dry"]
 visible = false
 layout_mode = 0
 offset_left = 63.0
@@ -126,7 +126,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg3" type="Button" parent="MarginContainer/GridContainer/TempDry"]
+[node name="Egg3" type="Button" parent="MarginContainer/GridContainer/Temp_Dry"]
 visible = false
 layout_mode = 0
 offset_left = 108.0
@@ -139,7 +139,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="HotDry" type="Button" parent="MarginContainer/GridContainer"]
+[node name="Hot_Dry" type="Button" parent="MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_7e0uq")
@@ -147,7 +147,7 @@ icon = ExtResource("4_cejr2")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 
-[node name="Egg1" type="Button" parent="MarginContainer/GridContainer/HotDry"]
+[node name="Egg1" type="Button" parent="MarginContainer/GridContainer/Hot_Dry"]
 visible = false
 layout_mode = 0
 offset_left = 20.0
@@ -160,7 +160,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg2" type="Button" parent="MarginContainer/GridContainer/HotDry"]
+[node name="Egg2" type="Button" parent="MarginContainer/GridContainer/Hot_Dry"]
 visible = false
 layout_mode = 0
 offset_left = 63.0
@@ -173,7 +173,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg3" type="Button" parent="MarginContainer/GridContainer/HotDry"]
+[node name="Egg3" type="Button" parent="MarginContainer/GridContainer/Hot_Dry"]
 visible = false
 layout_mode = 0
 offset_left = 108.0
@@ -196,7 +196,7 @@ custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_7tas0")
 
-[node name="ColdWet" type="Button" parent="MarginContainer/GridContainer"]
+[node name="Cold_Wet" type="Button" parent="MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_jthp8")
@@ -204,7 +204,7 @@ icon = ExtResource("1_esafb")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 
-[node name="Egg1" type="Button" parent="MarginContainer/GridContainer/ColdWet"]
+[node name="Egg1" type="Button" parent="MarginContainer/GridContainer/Cold_Wet"]
 visible = false
 layout_mode = 0
 offset_left = 20.0
@@ -217,7 +217,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg2" type="Button" parent="MarginContainer/GridContainer/ColdWet"]
+[node name="Egg2" type="Button" parent="MarginContainer/GridContainer/Cold_Wet"]
 visible = false
 layout_mode = 0
 offset_left = 63.0
@@ -230,7 +230,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg3" type="Button" parent="MarginContainer/GridContainer/ColdWet"]
+[node name="Egg3" type="Button" parent="MarginContainer/GridContainer/Cold_Wet"]
 visible = false
 layout_mode = 0
 offset_left = 108.0
@@ -243,7 +243,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="TempWet" type="Button" parent="MarginContainer/GridContainer"]
+[node name="Temp_Wet" type="Button" parent="MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_jthp8")
@@ -251,7 +251,7 @@ icon = ExtResource("3_oys6p")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 
-[node name="Egg1" type="Button" parent="MarginContainer/GridContainer/TempWet"]
+[node name="Egg1" type="Button" parent="MarginContainer/GridContainer/Temp_Wet"]
 visible = false
 layout_mode = 0
 offset_left = 20.0
@@ -264,7 +264,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg2" type="Button" parent="MarginContainer/GridContainer/TempWet"]
+[node name="Egg2" type="Button" parent="MarginContainer/GridContainer/Temp_Wet"]
 visible = false
 layout_mode = 0
 offset_left = 63.0
@@ -277,7 +277,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg3" type="Button" parent="MarginContainer/GridContainer/TempWet"]
+[node name="Egg3" type="Button" parent="MarginContainer/GridContainer/Temp_Wet"]
 visible = false
 layout_mode = 0
 offset_left = 108.0
@@ -290,7 +290,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="HotWet" type="Button" parent="MarginContainer/GridContainer"]
+[node name="Hot_Wet" type="Button" parent="MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_jthp8")
@@ -298,7 +298,7 @@ icon = ExtResource("4_cejr2")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 
-[node name="Egg1" type="Button" parent="MarginContainer/GridContainer/HotWet"]
+[node name="Egg1" type="Button" parent="MarginContainer/GridContainer/Hot_Wet"]
 visible = false
 layout_mode = 0
 offset_left = 20.0
@@ -311,7 +311,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg2" type="Button" parent="MarginContainer/GridContainer/HotWet"]
+[node name="Egg2" type="Button" parent="MarginContainer/GridContainer/Hot_Wet"]
 visible = false
 layout_mode = 0
 offset_left = 63.0
@@ -324,7 +324,7 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[node name="Egg3" type="Button" parent="MarginContainer/GridContainer/HotWet"]
+[node name="Egg3" type="Button" parent="MarginContainer/GridContainer/Hot_Wet"]
 visible = false
 layout_mode = 0
 offset_left = 108.0
@@ -337,9 +337,9 @@ icon = ExtResource("4_3f4rs")
 script = ExtResource("5_1f0hf")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
-[connection signal="selection" from="MarginContainer/GridContainer/ColdDry" to="." method="_on_cold_dry_selection"]
-[connection signal="selection" from="MarginContainer/GridContainer/TempDry" to="." method="_on_temp_dry_selection"]
-[connection signal="selection" from="MarginContainer/GridContainer/HotDry" to="." method="_on_hot_dry_selection"]
-[connection signal="selection" from="MarginContainer/GridContainer/ColdWet" to="." method="_on_cold_wet_selection"]
-[connection signal="selection" from="MarginContainer/GridContainer/TempWet" to="." method="_on_temp_wet_selection"]
-[connection signal="selection" from="MarginContainer/GridContainer/HotWet" to="." method="_on_hot_wet_selection"]
+[connection signal="selection" from="MarginContainer/GridContainer/Cold_Dry" to="." method="_on_cold_dry_selection"]
+[connection signal="selection" from="MarginContainer/GridContainer/Temp_Dry" to="." method="_on_temp_dry_selection"]
+[connection signal="selection" from="MarginContainer/GridContainer/Hot_Dry" to="." method="_on_hot_dry_selection"]
+[connection signal="selection" from="MarginContainer/GridContainer/Cold_Wet" to="." method="_on_cold_wet_selection"]
+[connection signal="selection" from="MarginContainer/GridContainer/Temp_Wet" to="." method="_on_temp_wet_selection"]
+[connection signal="selection" from="MarginContainer/GridContainer/Hot_Wet" to="." method="_on_hot_wet_selection"]

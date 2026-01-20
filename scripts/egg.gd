@@ -14,7 +14,7 @@ func config(visibility : bool, species : Creature):
 
 
 func setup(id : EggData):
-	print("starting egg setup")
+	print("starting " + self.name + " setup")
 	
 	visible = id.visibility
 	info.visibility = id.visibility
@@ -23,7 +23,7 @@ func setup(id : EggData):
 	info.species = id.species
 	icon = info.species.egg
 	
-	print("egg setup complete")
+	print(self.name + " setup complete")
 
 
 func _ready():

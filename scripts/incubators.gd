@@ -1,6 +1,5 @@
 extends MarginContainer
 
-var save : Save = load("res://resources/save.tres")
 signal selection(hatchery : Hatchery)
 
 func _ready() -> void:
@@ -36,20 +35,20 @@ func _on_hot_wet_selection(hatchery: Hatchery) -> void:
 	selection.emit(hatchery)
 
 func _load():
-	var cold_dry = $MarginContainer/GridContainer/ColdDry
-	var cold_wet = $MarginContainer/GridContainer/ColdWet
-	var temp_dry = $MarginContainer/GridContainer/TempDry
-	var temp_wet = $MarginContainer/GridContainer/TempWet
-	var hot_dry = $MarginContainer/GridContainer/HotDry
-	var hot_wet = $MarginContainer/GridContainer/HotWet
+	var cold_dry = $MarginContainer/GridContainer/Cold_Dry
+	var cold_wet = $MarginContainer/GridContainer/Cold_Wet
+	var temp_dry = $MarginContainer/GridContainer/Temp_Dry
+	var temp_wet = $MarginContainer/GridContainer/Temp_Wet
+	var hot_dry = $MarginContainer/GridContainer/Hot_Dry
+	var hot_wet = $MarginContainer/GridContainer/Hot_Wet
 	
 	print("-----starting incubator room setup-----")
 	
-	cold_dry.setup(save.incubator.cold_dry)
-	cold_wet.setup(save.incubator.cold_wet)
-	temp_dry.setup(save.incubator.temp_dry)
-	temp_wet.setup(save.incubator.temp_wet)
-	hot_dry.setup(save.incubator.hot_dry)
-	hot_wet.setup(save.incubator.hot_wet)
+	cold_dry.setup()
+	cold_wet.setup()
+	temp_dry.setup()
+	temp_wet.setup()
+	hot_dry.setup()
+	hot_wet.setup()
 	
 	print("-----incubator room setup complete-----")

@@ -1,22 +1,12 @@
 extends TextureRect
 
-@export var init_eggs : int = 6
 signal selection(egg: Egg)
 
 
-func _ready() -> void:
-	pass
-	
-	#var enabled_eggs = 0
-	
-	#for egg in find_children("Egg*"):
-	#	if enabled_eggs < init_eggs:
-	#		egg.disabled = false
-	#		egg.visible = true
-	#		enabled_eggs += 1
-	#	else:
-	#		egg.disabled = true
-	#		egg.visible = false
+func remove_egg(nest: NestData, egg: Egg):
+	egg.disabled = true
+	egg.config(false, egg.info.species)
+	nest[egg.name.to_lower()].visibility = false
 
 
 func _on_egg_1_selection(egg: Egg) -> void:
