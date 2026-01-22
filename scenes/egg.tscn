@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctuxvuxm5oh0r"]
+[gd_scene load_steps=5 format=3 uid="uid://ctuxvuxm5oh0r"]
 
 [ext_resource type="Texture2D" uid="uid://yph5r4u8xt3w" path="res://art/icons/egg1.png" id="1_34461"]
 [ext_resource type="Script" uid="uid://br1lu1lnknnov" path="res://scripts/egg.gd" id="2_ifgqj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i1l7w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qlus4"]
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Egg" type="Button"]
 offset_left = 48.0
@@ -20,9 +24,17 @@ wait_time = 15.0
 one_shot = true
 
 [node name="Indicator" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22200002
+anchor_top = 0.83300006
+anchor_right = 0.66700006
+anchor_bottom = 1.153
+offset_left = 0.01599884
+offset_top = 0.023994446
+offset_right = -0.024002075
+offset_bottom = -0.01599884
+label_settings = SubResource("LabelSettings_qlus4")
 
 [connection signal="timeout" from="Hatch" to="." method="_on_hatch_timeout"]
 [connection signal="tree_entered" from="Hatch" to="." method="_on_hatch_tree_entered"]
