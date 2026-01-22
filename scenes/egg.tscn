@@ -16,3 +16,14 @@ script = ExtResource("2_ifgqj")
 metadata/_custom_type_script = "uid://br1lu1lnknnov"
 
 [node name="Hatch" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[node name="Indicator" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="timeout" from="Hatch" to="." method="_on_hatch_timeout"]
+[connection signal="tree_entered" from="Hatch" to="." method="_on_hatch_tree_entered"]
+[connection signal="tree_exiting" from="Hatch" to="." method="_on_hatch_tree_exiting"]

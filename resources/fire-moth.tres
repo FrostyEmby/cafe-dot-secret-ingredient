@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Creature" load_steps=2 format=3 uid="uid://dosts8w07go7f"]
+[gd_resource type="Resource" script_class="Creature" load_steps=3 format=3 uid="uid://dosts8w07go7f"]
 
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/creature-stats.gd" id="1_lo3cw"]
+[ext_resource type="Texture2D" uid="uid://dl0xw3162b2qq" path="res://art/eggs/egglist39.png" id="1_o7fq1"]
 
 [resource]
 script = ExtResource("1_lo3cw")
@@ -10,4 +11,5 @@ hint = "Red hair, glows"
 confused_with = "electrifly"
 description = "Attracted to dark areas. The eggs are in clusters with a dirty yellow"
 incubator = 2
+egg = ExtResource("1_o7fq1")
 metadata/_custom_type_script = "uid://cqr8dj8toeqen"

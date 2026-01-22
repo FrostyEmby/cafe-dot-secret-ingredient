@@ -6,20 +6,20 @@
 
 [sub_resource type="Resource" id="Resource_j3g0g"]
 script = ExtResource("1_j3g0g")
-visibility = false
 species = ExtResource("2_sad4m")
+placement = 6
 metadata/_custom_type_script = "uid://br5o6wci85nr8"
 
 [sub_resource type="Resource" id="Resource_sad4m"]
 script = ExtResource("1_j3g0g")
-visibility = false
 species = ExtResource("2_sad4m")
+placement = 6
 metadata/_custom_type_script = "uid://br5o6wci85nr8"
 
 [sub_resource type="Resource" id="Resource_vvwa0"]
 script = ExtResource("1_j3g0g")
-visibility = false
 species = ExtResource("2_sad4m")
+placement = 6
 metadata/_custom_type_script = "uid://br5o6wci85nr8"
 
 [resource]

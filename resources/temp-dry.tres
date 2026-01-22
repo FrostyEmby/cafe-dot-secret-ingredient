@@ -7,16 +7,19 @@
 [sub_resource type="Resource" id="Resource_qiise"]
 script = ExtResource("1_tq11f")
 species = ExtResource("2_1dpai")
+placement = 4
 metadata/_custom_type_script = "uid://br5o6wci85nr8"
 
 [sub_resource type="Resource" id="Resource_0wr70"]
 script = ExtResource("1_tq11f")
 species = ExtResource("2_1dpai")
+placement = 4
 metadata/_custom_type_script = "uid://br5o6wci85nr8"
 
 [sub_resource type="Resource" id="Resource_4vnh7"]
 script = ExtResource("1_tq11f")
 species = ExtResource("2_1dpai")
+placement = 4
 metadata/_custom_type_script = "uid://br5o6wci85nr8"
 
 [resource]
