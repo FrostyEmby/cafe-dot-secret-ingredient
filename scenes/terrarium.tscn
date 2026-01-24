@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://77pmhayrj8nl"]
 
-[ext_resource type="Script" uid="uid://bbn1jxutftk3u" path="res://scenes/terrarium.gd" id="1_h6qyf"]
+[ext_resource type="Script" uid="uid://bbn1jxutftk3u" path="res://scripts/terrarium.gd" id="1_h6qyf"]
 [ext_resource type="Texture2D" uid="uid://dieym8rlk7n24" path="res://art/props/layout test game jam terrarium.png" id="1_xb13y"]
 [ext_resource type="Texture2D" uid="uid://l4k1qkmaaupx" path="res://art/props/layout test game jam terrarium foreground.png" id="2_qlrmg"]
 [ext_resource type="Texture2D" uid="uid://db1p5mc1oy03c" path="res://art/eggs/birdbaby.png" id="4_1wf2t"]

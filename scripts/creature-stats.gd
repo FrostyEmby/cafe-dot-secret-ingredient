@@ -1,3 +1,4 @@
+# This class is for information to be displayed in the bestiary and to be used as a base for the species
 extends Resource
 class_name CreatureStats
 

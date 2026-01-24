@@ -2,7 +2,7 @@ extends Button
 class_name Egg
 
 signal selection(egg : Egg)
-signal birth(creature : Creature)
+signal birth(creature : CreatureStats)
 
 @export var info : EggData = EggData.new()
 @onready var hatch_timer : Timer = $Hatch
