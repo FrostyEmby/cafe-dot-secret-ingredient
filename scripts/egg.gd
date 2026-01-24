@@ -5,6 +5,8 @@ signal selection(egg : Egg)
 signal birth(creature : Creature)
 
 @export var info : EggData = EggData.new()
+@onready var hatch_timer : Timer = $Hatch
+
 
 func _set_appearance():
 	if info.dead:
@@ -14,38 +16,20 @@ func _set_appearance():
 	else:
 		icon = info.species.egg
 
-func config(visibility : bool, species : Creature, time_hatch : float = 15.0, incubation : bool = false, hatch : bool = false, death : bool = false):
-	print("starting " + self.name + " config")
-	
+
+func change_visibility(visibility : bool):
 	visible = visibility
 	info.visibility = visibility
-	
-	info.species = species
-	
-	info.hatch_time = time_hatch
-	
-	info.incubating = incubation
-	
-	info.hatched = hatch
-	info.dead = death
-	
-	_set_appearance()
-	
-	print(self.name + " config complete")
 
 
 func setup(id : EggData):
 	print("starting " + self.name + " setup")
 	
-	visible = id.visibility
-	info.visibility = id.visibility
+	change_visibility(id.visibility)
 	
 	info.species = id.species
-	
 	info.hatch_time = id.hatch_time
-	
 	info.incubating = id.incubating
-	
 	info.hatched = id.hatched
 	info.dead = id.dead
 	
@@ -59,24 +43,23 @@ func _ready():
 
 
 func _pressed() -> void:
+	print("egg pressed")
 	if info.dead:
 		visible = false
 		info.visibility = false
-		disabled = true
 		print("corpse removed")
 	elif info.hatched:
-		birth.emit(self.info.species)
+		birth.emit(self)
 		visible = false
 		info.visibility = false
-		disabled = true
 		print("baby taken")
 	else:
 		selection.emit(self)
 
 
 func incubate():
-	print("incubation start!")
-	$Hatch.start(info.hatch_time)
+	print("----INCUBATION START!----")
+	hatch_timer.start(info.hatch_time)
 	info.incubating = true
 
 
@@ -91,8 +74,6 @@ func _hatch_or_death():
 func _hatch():
 	print("hatched nice and healthy!")
 	
-	disabled = false
-	
 	info.incubating = false
 	info.hatched = true
 	
@@ -103,8 +84,6 @@ func _hatch():
 func _dead():
 	print("hatched... but unfortunately dead")
 	
-	disabled = false
-	
 	info.incubating = false
 	info.hatched = true
 	info.dead = true
@@ -112,9 +91,16 @@ func _dead():
 
 
 func _process(_delta: float) -> void:
+	if info.incubating and hatch_timer.paused:
+		incubate() 
+	
+	if info.hatch_time <= 0 and not info.hatched:
+		_hatch_or_death()
+	
 	# update indicator timer when incubating
 	if info.incubating:
-		$Indicator.text =  str($Hatch.time_left)
+		$Indicator.text = str(hatch_timer.time_left)
+		info.hatch_time = hatch_timer.time_left
 
 
 func _on_hatch_timeout() -> void:
@@ -127,5 +113,5 @@ func _on_hatch_tree_entered() -> void:
 		incubate()
 
 
-func _on_hatch_tree_exiting() -> void:
-	info.hatch_time = $Hatch.time_left
+#func _on_hatch_tree_exiting() -> void:
+#	info.hatch_time = hatch_timer.time_left

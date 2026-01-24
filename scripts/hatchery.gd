@@ -8,9 +8,9 @@ var save : Save = load("res://resources/save.tres")
 func add_egg(egg: Egg):
 	for new_egg in find_children("Egg*"):
 		if not new_egg.visible:
-			new_egg.config(true, egg.info.species)
-			save.incubator[self.name.to_lower()][new_egg.name.to_lower()].visibility = true
-			save.incubator[self.name.to_lower()][new_egg.name.to_lower()].species = egg.info.species
+			new_egg.setup(egg.info)
+			new_egg.incubate()
+			_save()
 			print(self.name + " " + new_egg.name + " saved!")
 			break
 
@@ -24,7 +24,13 @@ func setup():
 	print("starting hatchery " + self.name + " setup")
 	
 	$Egg1.setup(save.incubator[self.name.to_lower()].egg1)
-	$Egg1.setup(save.incubator[self.name.to_lower()].egg1)
-	$Egg1.setup(save.incubator[self.name.to_lower()].egg1)
+	$Egg2.setup(save.incubator[self.name.to_lower()].egg2)
+	$Egg3.setup(save.incubator[self.name.to_lower()].egg3)
 	
 	print("hatchery " + self.name + " setup complete")
+
+
+func _save():
+	save.incubator[self.name.to_lower()].egg1 = $Egg1.info
+	save.incubator[self.name.to_lower()].egg2 = $Egg2.info
+	save.incubator[self.name.to_lower()].egg3 = $Egg3.info

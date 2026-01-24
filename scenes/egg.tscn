@@ -10,10 +10,8 @@ outline_size = 3
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Egg" type="Button"]
-offset_left = 48.0
-offset_top = 53.0
-offset_right = 120.0
-offset_bottom = 125.0
+offset_right = 72.0
+offset_bottom = 72.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_i1l7w")
 icon = ExtResource("1_34461")
 script = ExtResource("2_ifgqj")
@@ -35,6 +33,9 @@ offset_top = 0.023994446
 offset_right = -0.024002075
 offset_bottom = -0.01599884
 label_settings = SubResource("LabelSettings_qlus4")
+horizontal_alignment = 1
+clip_text = true
+visible_characters = 4
 
 [connection signal="timeout" from="Hatch" to="." method="_on_hatch_timeout"]
 [connection signal="tree_entered" from="Hatch" to="." method="_on_hatch_tree_entered"]

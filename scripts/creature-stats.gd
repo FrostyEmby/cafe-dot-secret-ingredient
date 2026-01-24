@@ -1,5 +1,5 @@
 extends Resource
-class_name Creature
+class_name CreatureStats
 
 @export var name : String
 @export var diet : String

@@ -3,10 +3,11 @@ extends TextureRect
 signal selection(egg: Egg)
 
 
-func remove_egg(nest: NestData, egg: Egg):
+func remove_egg(egg: Egg):
 	egg.disabled = true
-	egg.config(false, egg.info.species)
-	nest[egg.name.to_lower()].visibility = false
+	egg.change_visibility(false)
+	#egg.config(false, egg.info.species)
+	#nest[egg.name.to_lower()].visibility = false
 
 
 func _on_egg_1_selection(egg: Egg) -> void:

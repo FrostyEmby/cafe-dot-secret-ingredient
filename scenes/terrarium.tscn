@@ -1,8 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://77pmhayrj8nl"]
+[gd_scene load_steps=20 format=3 uid="uid://77pmhayrj8nl"]
 
+[ext_resource type="Script" uid="uid://bbn1jxutftk3u" path="res://scenes/terrarium.gd" id="1_h6qyf"]
 [ext_resource type="Texture2D" uid="uid://dieym8rlk7n24" path="res://art/props/layout test game jam terrarium.png" id="1_xb13y"]
 [ext_resource type="Texture2D" uid="uid://l4k1qkmaaupx" path="res://art/props/layout test game jam terrarium foreground.png" id="2_qlrmg"]
+[ext_resource type="Texture2D" uid="uid://db1p5mc1oy03c" path="res://art/eggs/birdbaby.png" id="4_1wf2t"]
 [ext_resource type="Script" uid="uid://fuwn4s1jhksn" path="res://scripts/mini_menu.gd" id="4_h6qyf"]
+[ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="4_nrwuv"]
 [ext_resource type="Texture2D" uid="uid://dhv7ticowig" path="res://art/icons/home.png" id="4_y2mes"]
 [ext_resource type="Texture2D" uid="uid://c5dtqxisv1of5" path="res://art/icons/home_hover.png" id="5_h6qyf"]
 [ext_resource type="Texture2D" uid="uid://bt11rdadjevpq" path="res://art/icons/incubator.png" id="6_nrwuv"]
@@ -32,6 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_h6qyf")
 
 [node name="TextureRect background" type="TextureRect" parent="."]
 layout_mode = 0
@@ -69,6 +73,14 @@ offset_right = 417.0
 offset_bottom = 323.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+
+[node name="Button" type="Button" parent="Snow"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 178.0
+offset_right = 92.0
+offset_bottom = 250.0
+icon = ExtResource("4_1wf2t")
 
 [node name="Grass" type="Button" parent="."]
 layout_mode = 0
@@ -112,6 +124,12 @@ offset_right = 1060.0
 offset_bottom = 647.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+
+[node name="Mini Menu" parent="." instance=ExtResource("4_nrwuv")]
+visible = false
+layout_mode = 0
+offset_left = 802.0
+offset_right = 1152.0
 
 [node name="Vertical Mini Menu" type="Panel" parent="."]
 custom_minimum_size = Vector2(80, 360)
