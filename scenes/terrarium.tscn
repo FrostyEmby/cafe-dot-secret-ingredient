@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://77pmhayrj8nl"]
+[gd_scene load_steps=25 format=3 uid="uid://77pmhayrj8nl"]
 
 [ext_resource type="Script" uid="uid://bbn1jxutftk3u" path="res://scripts/terrarium.gd" id="1_h6qyf"]
+[ext_resource type="Script" uid="uid://b6yspum6krbt7" path="res://scripts/terrarium_room.gd" id="1_vusgt"]
 [ext_resource type="Texture2D" uid="uid://dieym8rlk7n24" path="res://art/props/layout test game jam terrarium.png" id="1_xb13y"]
 [ext_resource type="Texture2D" uid="uid://l4k1qkmaaupx" path="res://art/props/layout test game jam terrarium foreground.png" id="2_qlrmg"]
 [ext_resource type="Texture2D" uid="uid://db1p5mc1oy03c" path="res://art/eggs/birdbaby.png" id="4_1wf2t"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dhv7ticowig" path="res://art/icons/home.png" id="4_y2mes"]
 [ext_resource type="Texture2D" uid="uid://c5dtqxisv1of5" path="res://art/icons/home_hover.png" id="5_h6qyf"]
 [ext_resource type="Texture2D" uid="uid://bt11rdadjevpq" path="res://art/icons/incubator.png" id="6_nrwuv"]
+[ext_resource type="PackedScene" uid="uid://ctuxvuxm5oh0r" path="res://scenes/egg.tscn" id="6_vusgt"]
 [ext_resource type="Texture2D" uid="uid://dvf5vhulucklh" path="res://art/icons/incubator_hover.png" id="7_1wf2t"]
 [ext_resource type="Texture2D" uid="uid://c8l1b328e07o3" path="res://art/icons/terrarium.png" id="8_a3s61"]
 [ext_resource type="Texture2D" uid="uid://6v2am15t0fgw" path="res://art/icons/terrarium_hover.png" id="9_kstpm"]
@@ -16,6 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://dqr2h3xlcovdu" path="res://art/icons/bestiary_hover.png" id="11_pf7wg"]
 [ext_resource type="Texture2D" uid="uid://dvejl3bs6w23" path="res://art/icons/gear-big.png" id="12_mxrpn"]
 [ext_resource type="Texture2D" uid="uid://dbydrte2rg8sm" path="res://art/icons/gear-big-hover.png" id="13_skqsh"]
+[ext_resource type="Texture2D" uid="uid://bunldmv1vprgp" path="res://art/icons/shelf_dragger.png" id="17_kstpm"]
+[ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelf.tscn" id="18_vusgt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pf7wg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xb13y"]
 
@@ -28,14 +34,14 @@ thickness = 3
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6qyf"]
 bg_color = Color(0.7254902, 0.6156863, 0.29411766, 1)
 
-[node name="Terrarium" type="Control"]
+[node name="Terrarium Room" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_h6qyf")
+script = ExtResource("1_vusgt")
 
 [node name="TextureRect background" type="TextureRect" parent="."]
 layout_mode = 0
@@ -44,17 +50,20 @@ offset_bottom = 648.0
 texture = ExtResource("1_xb13y")
 
 [node name="ReferenceRect" type="ReferenceRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 384.0
 offset_bottom = 324.0
 
 [node name="ReferenceRect2" type="ReferenceRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 384.0
 offset_right = 768.0
 offset_bottom = 324.0
 
 [node name="ReferenceRect3" type="ReferenceRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 769.0
 offset_right = 1152.0
@@ -66,6 +75,31 @@ offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("2_qlrmg")
 
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 0
+offset_left = -176.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="BoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_icons/touch_dragger = ExtResource("17_kstpm")
+theme_override_styles/split_bar_background = SubResource("StyleBoxEmpty_pf7wg")
+split_offset = 200
+dragger_visibility = 1
+touch_dragger_enabled = true
+drag_area_margin_begin = -80
+drag_area_offset = -18
+
+[node name="Egg Shelf" parent="BoxContainer/HSplitContainer" instance=ExtResource("18_vusgt")]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HSplitContainer"]
+custom_minimum_size = Vector2(952, 0)
+layout_mode = 2
+
 [node name="Snow" type="Button" parent="."]
 layout_mode = 0
 offset_left = 95.0
@@ -73,13 +107,39 @@ offset_right = 417.0
 offset_bottom = 323.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+script = ExtResource("1_h6qyf")
+metadata/_custom_type_script = "uid://bbn1jxutftk3u"
 
-[node name="Button" type="Button" parent="Snow"]
+[node name="Creature1" parent="Snow" instance=ExtResource("6_vusgt")]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 178.0
-offset_right = 92.0
-offset_bottom = 250.0
+offset_left = 242.0
+offset_top = 181.0
+offset_right = 314.0
+offset_bottom = 253.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature2" parent="Snow" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 165.0
+offset_right = 160.0
+offset_bottom = 237.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature3" parent="Snow" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 173.0
+offset_right = 87.0
+offset_bottom = 245.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature4" parent="Snow" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 164.0
+offset_right = 220.0
+offset_bottom = 236.0
 icon = ExtResource("4_1wf2t")
 
 [node name="Grass" type="Button" parent="."]
@@ -89,6 +149,40 @@ offset_right = 735.0
 offset_bottom = 323.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+script = ExtResource("1_h6qyf")
+metadata/_custom_type_script = "uid://bbn1jxutftk3u"
+
+[node name="Creature1" parent="Grass" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 181.0
+offset_right = 314.0
+offset_bottom = 253.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature2" parent="Grass" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 165.0
+offset_right = 160.0
+offset_bottom = 237.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature3" parent="Grass" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 173.0
+offset_right = 87.0
+offset_bottom = 245.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature4" parent="Grass" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 164.0
+offset_right = 220.0
+offset_bottom = 236.0
+icon = ExtResource("4_1wf2t")
 
 [node name="Sand" type="Button" parent="."]
 layout_mode = 0
@@ -97,6 +191,40 @@ offset_right = 1058.0
 offset_bottom = 323.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+script = ExtResource("1_h6qyf")
+metadata/_custom_type_script = "uid://bbn1jxutftk3u"
+
+[node name="Creature1" parent="Sand" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 246.0
+offset_right = 261.0
+offset_bottom = 318.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature2" parent="Sand" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 195.0
+offset_right = 160.0
+offset_bottom = 267.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature3" parent="Sand" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 173.0
+offset_right = 87.0
+offset_bottom = 245.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature4" parent="Sand" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 176.0
+offset_right = 220.0
+offset_bottom = 248.0
+icon = ExtResource("4_1wf2t")
 
 [node name="Aqua" type="Button" parent="."]
 layout_mode = 0
@@ -106,6 +234,40 @@ offset_right = 417.0
 offset_bottom = 647.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+script = ExtResource("1_h6qyf")
+metadata/_custom_type_script = "uid://bbn1jxutftk3u"
+
+[node name="Creature1" parent="Aqua" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 119.0
+offset_right = 251.0
+offset_bottom = 191.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature2" parent="Aqua" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 119.0
+offset_right = 161.0
+offset_bottom = 191.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature3" parent="Aqua" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 78.0
+offset_right = 88.0
+offset_bottom = 150.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature4" parent="Aqua" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 44.0
+offset_right = 218.0
+offset_bottom = 116.0
+icon = ExtResource("4_1wf2t")
 
 [node name="Jungle" type="Button" parent="."]
 layout_mode = 0
@@ -115,6 +277,40 @@ offset_right = 735.0
 offset_bottom = 647.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+script = ExtResource("1_h6qyf")
+metadata/_custom_type_script = "uid://bbn1jxutftk3u"
+
+[node name="Creature1" parent="Jungle" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 237.0
+offset_right = 316.0
+offset_bottom = 309.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature2" parent="Jungle" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 235.0
+offset_right = 160.0
+offset_bottom = 307.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature3" parent="Jungle" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 145.0
+offset_right = 89.0
+offset_bottom = 217.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature4" parent="Jungle" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 177.0
+offset_right = 245.0
+offset_bottom = 249.0
+icon = ExtResource("4_1wf2t")
 
 [node name="Lava" type="Button" parent="."]
 layout_mode = 0
@@ -124,6 +320,40 @@ offset_right = 1060.0
 offset_bottom = 647.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
+script = ExtResource("1_h6qyf")
+metadata/_custom_type_script = "uid://bbn1jxutftk3u"
+
+[node name="Creature1" parent="Lava" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 181.0
+offset_right = 314.0
+offset_bottom = 253.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature2" parent="Lava" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 127.0
+offset_right = 151.0
+offset_bottom = 199.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature3" parent="Lava" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 173.0
+offset_right = 87.0
+offset_bottom = 245.0
+icon = ExtResource("4_1wf2t")
+
+[node name="Creature4" parent="Lava" instance=ExtResource("6_vusgt")]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 191.0
+offset_right = 220.0
+offset_bottom = 263.0
+icon = ExtResource("4_1wf2t")
 
 [node name="Mini Menu" parent="." instance=ExtResource("4_nrwuv")]
 visible = false
@@ -191,6 +421,14 @@ size_flags_horizontal = 4
 texture_normal = ExtResource("12_mxrpn")
 texture_pressed = ExtResource("13_skqsh")
 texture_hover = ExtResource("13_skqsh")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(952, 0)
+layout_mode = 0
+offset_left = 99.0
+offset_top = 2.0
+offset_right = 1051.0
+offset_bottom = 644.0
 
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Home" to="Vertical Mini Menu" method="_on_home_pressed"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Incubator" to="Vertical Mini Menu" method="_on_incubator_pressed"]
