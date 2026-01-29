@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmgw7poye8jfi"]
+
+[ext_resource type="Texture2D" uid="uid://cju3g4q1ifvup" path="res://art/props/incubator-cold.png" id="1_nqom3"]
+[ext_resource type="Script" uid="uid://twclfrnswwp7" path="res://scripts/hatchery.gd" id="2_koycu"]
+[ext_resource type="PackedScene" uid="uid://ctuxvuxm5oh0r" path="res://scenes/egg.tscn" id="3_i34b7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7e0uq"]
+
+[node name="hatchery" type="Button"]
+texture_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxTexture_7e0uq")
+icon = ExtResource("1_nqom3")
+script = ExtResource("2_koycu")
+metadata/_custom_type_script = "uid://twclfrnswwp7"
+
+[node name="Egg1" parent="." instance=ExtResource("3_i34b7")]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 70.0
+offset_right = 94.0
+offset_bottom = 142.0
+
+[node name="Egg2" parent="." instance=ExtResource("3_i34b7")]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 70.0
+offset_right = 138.0
+offset_bottom = 142.0
+
+[node name="Egg3" parent="." instance=ExtResource("3_i34b7")]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 70.0
+offset_right = 182.0
+offset_bottom = 142.0
+
+[connection signal="selection" from="Egg1" to="." method="_on_egg_1_selection"]
+[connection signal="selection" from="Egg2" to="." method="_on_egg_2_selection"]
+[connection signal="selection" from="Egg3" to="." method="_on_egg_3_selection"]

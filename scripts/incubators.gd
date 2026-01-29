@@ -1,6 +1,7 @@
 extends MarginContainer
 
 signal selection(hatchery : Hatchery)
+signal hatch_select(egg : Egg)
 
 func _ready() -> void:
 	_load()
@@ -52,3 +53,7 @@ func _load():
 	hot_wet.setup()
 	
 	print("-----incubator room setup complete-----")
+
+
+func _on_hatch_select(egg: Egg) -> void:
+	hatch_select.emit(egg)
