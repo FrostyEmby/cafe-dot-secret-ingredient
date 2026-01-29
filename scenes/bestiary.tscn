@@ -116,7 +116,7 @@ expand_mode = 1
 layout_mode = 0
 offset_left = 32.0
 offset_top = 71.0
-offset_right = 96.0
+offset_right = 97.0
 offset_bottom = 135.0
 
 [node name="ColorRect" type="ColorRect" parent="Left Page/Egg"]

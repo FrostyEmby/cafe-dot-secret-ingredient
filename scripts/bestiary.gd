@@ -1,6 +1,6 @@
 extends Control
 
-var creatures : Array[Creature] = [load("res://resources/fire-moth.tres"), load("res://resources/electric-dragonfly.tres"), load("res://resources/bird-one.tres"), load("res://resources/nest-parasite.tres"), load("res://resources/plant-tortoise.tres")]
+var creatures : Array[CreatureStats] = [load("res://resources/fire-moth.tres"), load("res://resources/electric-dragonfly.tres"), load("res://resources/bird-one.tres"), load("res://resources/nest-parasite.tres"), load("res://resources/plant-tortoise.tres")]
 var page : int = 0 # starts at 0 because of arrays
 
 func _ready() -> void:

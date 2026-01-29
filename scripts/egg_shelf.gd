@@ -162,3 +162,7 @@ func _save():
 	save.shelf.egg14 = egg14.info
 	save.shelf.egg15 = egg15.info
 	save.shelf.egg16 = egg16.info
+
+
+func _on_incubators_hatch_select(egg: Egg) -> void:
+	add_egg(egg)

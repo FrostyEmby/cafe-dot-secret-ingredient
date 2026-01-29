@@ -49,4 +49,5 @@ offset_left = 802.0
 offset_right = 1152.0
 
 [connection signal="selection" from="BoxContainer/HSplitContainer/Egg Shelf" to="." method="_on_egg_selection"]
+[connection signal="hatch_select" from="BoxContainer/HSplitContainer/Incubators" to="BoxContainer/HSplitContainer/Egg Shelf" method="_on_incubators_hatch_select"]
 [connection signal="selection" from="BoxContainer/HSplitContainer/Incubators" to="." method="_on_incubator_selection"]

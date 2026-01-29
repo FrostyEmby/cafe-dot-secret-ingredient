@@ -2,7 +2,6 @@ extends Button
 class_name Egg
 
 signal selection(egg : Egg)
-signal birth(creature : CreatureStats)
 
 @export var info : EggData = EggData.new()
 @onready var hatch_timer : Timer = $Hatch
@@ -49,7 +48,7 @@ func _pressed() -> void:
 		info.visibility = false
 		print("corpse removed")
 	elif info.hatched:
-		birth.emit(self)
+		selection.emit(self)
 		visible = false
 		info.visibility = false
 		print("baby taken")
