@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="TerrariumData" load_steps=7 format=3 uid="uid://12gsb43tntc3"]
+
+[ext_resource type="Script" uid="uid://du0bchkwa6mok" path="res://scripts/terrarium-data.gd" id="1_6vbkx"]
+[ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/egg-data.gd" id="1_dad7m"]
+
+[sub_resource type="Resource" id="Resource_xkdvp"]
+script = ExtResource("1_dad7m")
+hatched = true
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_7xt1j"]
+script = ExtResource("1_dad7m")
+hatched = true
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_0ojpw"]
+script = ExtResource("1_dad7m")
+hatched = true
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[sub_resource type="Resource" id="Resource_bj83q"]
+script = ExtResource("1_dad7m")
+hatched = true
+metadata/_custom_type_script = "uid://br5o6wci85nr8"
+
+[resource]
+script = ExtResource("1_6vbkx")
+creature1 = SubResource("Resource_xkdvp")
+creature2 = SubResource("Resource_7xt1j")
+creature3 = SubResource("Resource_0ojpw")
+creature4 = SubResource("Resource_bj83q")
+metadata/_custom_type_script = "uid://du0bchkwa6mok"

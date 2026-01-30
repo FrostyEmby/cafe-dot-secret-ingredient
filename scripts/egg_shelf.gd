@@ -38,7 +38,6 @@ func add_egg(egg: Egg):
 
 
 func remove_egg(egg: Egg):
-	egg.disabled = true
 	egg.change_visibility(false)
 	_save()
 	#save.shelf[egg.name.to_lower()].visibility = false
@@ -166,3 +165,5 @@ func _save():
 
 func _on_incubators_hatch_select(egg: Egg) -> void:
 	add_egg(egg)
+	egg.visible = false
+	egg.info.visibility = false

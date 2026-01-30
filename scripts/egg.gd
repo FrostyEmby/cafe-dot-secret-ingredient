@@ -49,8 +49,8 @@ func _pressed() -> void:
 		print("corpse removed")
 	elif info.hatched:
 		selection.emit(self)
-		visible = false
-		info.visibility = false
+		#visible = false
+		#info.visibility = false
 		print("baby taken")
 	else:
 		selection.emit(self)

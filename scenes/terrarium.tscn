@@ -433,6 +433,13 @@ texture_normal = ExtResource("12_mxrpn")
 texture_pressed = ExtResource("13_skqsh")
 texture_hover = ExtResource("13_skqsh")
 
+[connection signal="selection" from="BoxContainer/HSplitContainer/Egg Shelf" to="." method="_on_egg_shelf_selection"]
+[connection signal="selection" from="Snow" to="." method="_on_snow_selection"]
+[connection signal="selection" from="Grass" to="." method="_on_grass_selection"]
+[connection signal="selection" from="Sand" to="." method="_on_sand_selection"]
+[connection signal="selection" from="Aqua" to="." method="_on_aqua_selection"]
+[connection signal="selection" from="Jungle" to="." method="_on_jungle_selection"]
+[connection signal="selection" from="Lava" to="." method="_on_lava_selection"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Home" to="Vertical Mini Menu" method="_on_home_pressed"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Incubator" to="Vertical Mini Menu" method="_on_incubator_pressed"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Terrarium" to="Vertical Mini Menu" method="_on_terrarium_pressed"]

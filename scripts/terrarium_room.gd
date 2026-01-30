@@ -1,11 +1,43 @@
 extends Control
 
+var creature_selected : bool = false
+var creature_match : Egg
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@onready var shelf = $"BoxContainer/HSplitContainer/Egg Shelf"
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_egg_shelf_selection(creature: Egg) -> void:
+	if creature.info.hatched:
+		creature_selected = true
+		creature_match = creature
+
+
+func _match(terrarium : Terrarium):
+	if creature_selected:
+		terrarium.add(creature_match)
+		shelf.remove_egg(creature_match)
+		
+
+
+func _on_snow_selection(terrarium : Terrarium) -> void:
+	_match(terrarium)
+
+
+func _on_grass_selection(terrarium : Terrarium) -> void:
+	_match(terrarium)
+
+
+func _on_sand_selection(terrarium : Terrarium) -> void:
+	_match(terrarium)
+
+
+func _on_aqua_selection(terrarium : Terrarium) -> void:
+	_match(terrarium)
+
+
+func _on_jungle_selection(terrarium : Terrarium) -> void:
+	_match(terrarium)
+
+
+func _on_lava_selection(terrarium : Terrarium) -> void:
+	_match(terrarium)
