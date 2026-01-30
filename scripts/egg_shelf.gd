@@ -31,6 +31,7 @@ func add_egg(egg: Egg):
 		if not new_egg.visible:
 			print("found empty slot")
 			new_egg.setup(egg.info)
+			new_egg.change_visibility(true)
 			_save()
 			print("filled empty slot")
 			break

@@ -10,6 +10,7 @@ func add_egg(egg: Egg):
 	for new_egg in find_children("Egg*"):
 		if not new_egg.visible:
 			new_egg.setup(egg.info)
+			new_egg.change_visibility(true)
 			new_egg.incubate()
 			_save()
 			print(self.name + " " + new_egg.name + " saved!")

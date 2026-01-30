@@ -59,6 +59,7 @@ func _pressed() -> void:
 func incubate():
 	print("----INCUBATION START!----")
 	hatch_timer.start(info.hatch_time)
+	$Indicator.visible = true
 	info.incubating = true
 
 

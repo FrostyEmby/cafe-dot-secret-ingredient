@@ -20,6 +20,7 @@ func add(creature : Egg):
 		if not new_creature.visible:
 			print("found empty slot")
 			new_creature.setup(creature.info)
+			new_creature.change_visibility(true)
 			_save()
 			print("filled empty slot")
 			break
