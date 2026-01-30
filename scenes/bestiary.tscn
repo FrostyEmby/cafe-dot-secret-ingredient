@@ -1,15 +1,17 @@
-[gd_scene load_steps=16 format=3 uid="uid://puey23wcodsh"]
+[gd_scene load_steps=28 format=3 uid="uid://puey23wcodsh"]
 
 [ext_resource type="Script" uid="uid://dbtlv6p44ft57" path="res://scripts/bestiary.gd" id="1_lqwxb"]
 [ext_resource type="Texture2D" uid="uid://c5son408o0nng" path="res://art/icons/back-small.png" id="2_lqwxb"]
 [ext_resource type="Texture2D" uid="uid://hvokm05hwnwl" path="res://art/adult creatures/obsidian.png" id="2_oyl77"]
 [ext_resource type="Texture2D" uid="uid://clq10s4vdhy0c" path="res://art/adult creatures/page background4.png" id="3_aig2i"]
 [ext_resource type="Texture2D" uid="uid://chvqbwaulnv8y" path="res://art/icons/forward-small.png" id="4_j3mqr"]
+[ext_resource type="Texture2D" uid="uid://bwl5mas3bou8k" path="res://art/final props/FlipLeftspritesheet.png" id="6_aig2i"]
 [ext_resource type="Texture2D" uid="uid://cy87qvc5vucad" path="res://art/adult creatures/cool bat.png" id="6_eapyg"]
 [ext_resource type="Texture2D" uid="uid://bvxd7p23rhjsv" path="res://art/adult creatures/page background2.png" id="7_bfiq4"]
 [ext_resource type="Texture2D" uid="uid://cmjnxjp0dfr3a" path="res://art/icons/back-small-hover.png" id="9_eapyg"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="11_aig2i"]
 [ext_resource type="Texture2D" uid="uid://jsqxydg5pski" path="res://art/icons/forward-smal-hover.png" id="11_bfiq4"]
+[ext_resource type="Texture2D" uid="uid://blyiy4kc543nl" path="res://art/final props/FlipRightspritesheet.png" id="11_eapyg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eq67u"]
 font_size = 30
@@ -29,6 +31,78 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_oyl77"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_eapyg"]
+atlas = ExtResource("6_aig2i")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfiq4"]
+atlas = ExtResource("6_aig2i")
+region = Rect2(1152, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_viudg"]
+atlas = ExtResource("6_aig2i")
+region = Rect2(2304, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0etnm"]
+atlas = ExtResource("6_aig2i")
+region = Rect2(3456, 0, 1152, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u0fk6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eapyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfiq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_viudg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0etnm")
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0fk6"]
+atlas = ExtResource("11_eapyg")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1xbv"]
+atlas = ExtResource("11_eapyg")
+region = Rect2(1152, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tv8b"]
+atlas = ExtResource("11_eapyg")
+region = Rect2(2304, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g005f"]
+atlas = ExtResource("11_eapyg")
+region = Rect2(3456, 0, 1152, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jjo4i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0fk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1xbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tv8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g005f")
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]
+
 [node name="Bestiary" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -46,6 +120,13 @@ anchors_preset = -1
 anchor_right = 1.0
 offset_right = 1152.0
 offset_bottom = 651.0
+
+[node name="Left Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 86.0
+offset_right = 564.0
+offset_bottom = 643.0
 
 [node name="Left Page" type="ColorRect" parent="."]
 layout_mode = 0
@@ -281,8 +362,8 @@ autowrap_mode = 3
 
 [node name="Prev Page" type="TextureButton" parent="Left Page"]
 layout_mode = 0
-offset_left = 3.0
-offset_right = 43.0
+offset_left = 8.0
+offset_right = 48.0
 offset_bottom = 40.0
 texture_normal = ExtResource("2_lqwxb")
 texture_hover = ExtResource("9_eapyg")
@@ -295,13 +376,12 @@ offset_right = 588.0
 offset_bottom = 642.0
 color = Color(0.88629234, 0.85544294, 0.86880356, 1)
 
-[node name="Right Blank Page" type="ColorRect" parent="."]
-visible = false
+[node name="Right Background" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 588.0
-offset_top = 58.0
+offset_top = 86.0
 offset_right = 1111.0
-offset_bottom = 649.0
+offset_bottom = 643.0
 
 [node name="Right Page" type="ColorRect" parent="."]
 layout_mode = 0
@@ -538,33 +618,27 @@ autowrap_mode = 3
 
 [node name="Next Page" type="TextureButton" parent="Right Page"]
 layout_mode = 0
-offset_left = 484.0
-offset_right = 524.0
+offset_left = 479.0
+offset_right = 519.0
 offset_bottom = 40.0
 texture_normal = ExtResource("4_j3mqr")
 texture_hover = ExtResource("11_bfiq4")
+
+[node name="FlipLeft" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(575, 319)
+sprite_frames = SubResource("SpriteFrames_u0fk6")
+
+[node name="FlipRight" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(579, 324)
+sprite_frames = SubResource("SpriteFrames_jjo4i")
+frame_progress = 0.5150689
 
 [node name="Mini Menu" parent="." instance=ExtResource("11_aig2i")]
 layout_mode = 0
 offset_left = 802.0
 offset_right = 1152.0
-
-[node name="ReferenceRect" type="ReferenceRect" parent="."]
-layout_mode = 0
-offset_left = 983.0
-offset_top = 144.0
-offset_right = 997.0
-offset_bottom = 634.0
-border_width = 0.2
-
-[node name="ReferenceRect2" type="ReferenceRect" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 73.0
-offset_top = 303.0
-offset_right = 180.0
-offset_bottom = 426.0
-border_width = 0.2
 
 [node name="Egg-Gen" type="Timer" parent="."]
 wait_time = 10.0
@@ -576,5 +650,9 @@ autoplay = true
 
 [connection signal="pressed" from="Left Page/Prev Page" to="." method="_on_prev_page_pressed"]
 [connection signal="pressed" from="Right Page/Next Page" to="." method="_on_next_page_pressed"]
+[connection signal="animation_finished" from="FlipLeft" to="." method="_on_flip_left_animation_finished"]
+[connection signal="frame_changed" from="FlipLeft" to="." method="_on_flip_left_frame_changed"]
+[connection signal="animation_finished" from="FlipRight" to="." method="_on_flip_right_animation_finished"]
+[connection signal="frame_changed" from="FlipRight" to="." method="_on_flip_right_frame_changed"]
 [connection signal="timeout" from="Egg-Gen" to="." method="_on_egg_gen_timeout"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]

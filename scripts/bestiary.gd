@@ -5,9 +5,19 @@ var bestiary : BestiaryData = load("res://resources/bestiary-data.tres")
 var page : int = 0 # starts at 0 because of arrays
 
 func _ready() -> void:
-	_fill_page()
+	_fill_left()
+	_fill_right()
+	
+# returns whether right page can be displayed
+func _right_fill_ok():
+	if bestiary.creatures.size() % 2 != 0 && page == bestiary.creatures.size() - 1:
+		return false
+	else:
+		return true
 
-func _fill_page():
+func _fill_left():
+	$"Left Page".visible = true
+	
 	# hide arrows at either extreme of the bestiary
 	if page <= 0:
 		$"Left Page/Prev Page".visible = false
@@ -42,50 +52,51 @@ func _fill_page():
 		
 	else:
 		$"Left Page/Terrarium/Label".text = "Terrarium"
-		
-	
-	# if odd amount of creatures and on last page, clear the right page
-	if bestiary.creatures.size() % 2 != 0 && page == bestiary.creatures.size() - 1:
+
+# Fill in right page
+func _fill_right():
+	# exit immediately and turn off display if not able to fill
+	if not _right_fill_ok():
 		$"Right Page".visible = false
+		return
+	
+	$"Right Page".visible = true
+	
+	$"Right Page/Creature Name".text = bestiary.creatures[page+1].name
+	$"Right Page/Dynamic Text/Description".text = bestiary.creatures[page+1].description
+	$"Right Page/Adult Creature Picture Area".texture = bestiary.creatures[page+1].adult_detailed
+	
+	if bestiary.creatures[page+1].previously_hatched:
+		$"Right Page/Incubator/Label".text = bestiary.creatures[page+1].hatchery.keys()[bestiary.creatures[page].incubator].replace("_", " ")
+		$"Right Page/Egg".texture = bestiary.creatures[page+1].egg
+		$"Right Page/Egg/Label".text = ""
+		$"Right Page/Baby Creature Picture Area".texture = bestiary.creatures[page+1].baby_sprite
+		$"Right Page/Baby Creature Picture Area/Label".text = ""
 	else:
-		$"Right Page".visible = true
-		
-		# Fill in right page
-		$"Right Page/Creature Name".text = bestiary.creatures[page+1].name
-		$"Right Page/Dynamic Text/Description".text = bestiary.creatures[page+1].description
-		$"Right Page/Adult Creature Picture Area".texture = bestiary.creatures[page+1].adult_detailed
-		
-		if bestiary.creatures[page+1].previously_hatched:
-			$"Right Page/Incubator/Label".text = bestiary.creatures[page+1].hatchery.keys()[bestiary.creatures[page].incubator].replace("_", " ")
-			$"Right Page/Egg".texture = bestiary.creatures[page+1].egg
-			$"Right Page/Egg/Label".text = ""
-			$"Right Page/Baby Creature Picture Area".texture = bestiary.creatures[page+1].baby_sprite
-			$"Right Page/Baby Creature Picture Area/Label".text = ""
-		else:
-			$"Right Page/Incubator/Label".text = "Incubator"
-			$"Right Page/Egg".texture = Texture2D.new()
-			$"Right Page/Egg/Label".text = "Egg"
-			$"Right Page/Baby Creature Picture Area".texture = Texture2D.new()
-			$"Right Page/Baby Creature Picture Area/Label".text = "Baby"
-		
-		if bestiary.creatures[page+1].previously_grown:
-			$"Right Page/Terrarium/Label".text = bestiary.creatures[page+1].habitat.keys()[bestiary.creatures[page].terrarium]
-		else:
-			$"Right Page/Terrarium/Label".text = "Terrarium"
+		$"Right Page/Incubator/Label".text = "Incubator"
+		$"Right Page/Egg".texture = Texture2D.new()
+		$"Right Page/Egg/Label".text = "Egg"
+		$"Right Page/Baby Creature Picture Area".texture = Texture2D.new()
+		$"Right Page/Baby Creature Picture Area/Label".text = "Baby"
+	
+	if bestiary.creatures[page+1].previously_grown:
+		$"Right Page/Terrarium/Label".text = bestiary.creatures[page+1].habitat.keys()[bestiary.creatures[page].terrarium]
+	else:
+		$"Right Page/Terrarium/Label".text = "Terrarium"
 
 
 func _on_next_page_pressed() -> void:
 	page += 2
-	_fill_page()
+	$"Right Page".visible = false
+	$FlipRight.visible = true
+	$FlipRight.play()
 
 
 func _on_prev_page_pressed() -> void:
 	page -= 2
-	_fill_page()
-
-
-func _on_exit_pressed() -> void:
-	pass # Replace with function body.
+	$"Left Page".visible = false
+	$FlipLeft.visible = true
+	$FlipLeft.play()
 
 
 func _on_egg_gen_timeout() -> void:
@@ -94,3 +105,25 @@ func _on_egg_gen_timeout() -> void:
 
 func _on_music_finished() -> void:
 	$Music.play()
+
+
+func _on_flip_left_animation_finished() -> void:
+	_fill_right()
+	$FlipLeft.visible = false
+
+
+func _on_flip_left_frame_changed() -> void:
+	# so that it appears at page turn
+	if $FlipLeft.frame == 2:
+		_fill_left()
+
+
+func _on_flip_right_animation_finished() -> void:
+	_fill_left()
+	$FlipRight.visible = false
+
+
+func _on_flip_right_frame_changed() -> void:
+	# so that it appears at page turn
+	if $FlipRight.frame == 2:
+		_fill_right()
