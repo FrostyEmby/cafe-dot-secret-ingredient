@@ -1,14 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://puey23wcodsh"]
+[gd_scene load_steps=16 format=3 uid="uid://puey23wcodsh"]
 
 [ext_resource type="Script" uid="uid://dbtlv6p44ft57" path="res://scripts/bestiary.gd" id="1_lqwxb"]
 [ext_resource type="Texture2D" uid="uid://c5son408o0nng" path="res://art/icons/back-small.png" id="2_lqwxb"]
 [ext_resource type="Texture2D" uid="uid://hvokm05hwnwl" path="res://art/adult creatures/obsidian.png" id="2_oyl77"]
 [ext_resource type="Texture2D" uid="uid://clq10s4vdhy0c" path="res://art/adult creatures/page background4.png" id="3_aig2i"]
-[ext_resource type="Texture2D" uid="uid://chum4g82ol76j" path="res://art/eggs/egglist28.png" id="4_eapyg"]
 [ext_resource type="Texture2D" uid="uid://chvqbwaulnv8y" path="res://art/icons/forward-small.png" id="4_j3mqr"]
 [ext_resource type="Texture2D" uid="uid://cy87qvc5vucad" path="res://art/adult creatures/cool bat.png" id="6_eapyg"]
 [ext_resource type="Texture2D" uid="uid://bvxd7p23rhjsv" path="res://art/adult creatures/page background2.png" id="7_bfiq4"]
-[ext_resource type="Texture2D" uid="uid://bi0nnqhdm1nkh" path="res://art/eggs/egglist17.png" id="9_bfiq4"]
 [ext_resource type="Texture2D" uid="uid://cmjnxjp0dfr3a" path="res://art/icons/back-small-hover.png" id="9_eapyg"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="11_aig2i"]
 [ext_resource type="Texture2D" uid="uid://jsqxydg5pski" path="res://art/icons/forward-smal-hover.png" id="11_bfiq4"]
@@ -130,11 +128,10 @@ color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Egg" type="TextureRect" parent="Left Page"]
 layout_mode = 0
-offset_left = 44.0
-offset_top = 71.0
-offset_right = 109.0
-offset_bottom = 135.0
-texture = ExtResource("4_eapyg")
+offset_left = 47.0
+offset_top = 73.0
+offset_right = 111.0
+offset_bottom = 137.0
 
 [node name="ColorRect" type="ColorRect" parent="Left Page/Egg"]
 visible = false
@@ -151,13 +148,14 @@ grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Label" type="Label" parent="Left Page/Egg"]
-visible = false
 layout_mode = 1
-anchors_preset = -1
-anchor_bottom = 0.1
-offset_left = 14.0
-offset_right = 78.0
-offset_bottom = 57.6
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Egg"
 label_settings = SubResource("LabelSettings_36r6s")
 horizontal_alignment = 1
@@ -182,8 +180,8 @@ color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Label" type="Label" parent="Left Page/Incubator"]
 layout_mode = 0
-offset_left = 11.0
-offset_right = 81.0
+offset_left = 12.0
+offset_right = 82.0
 offset_bottom = 64.0
 text = "Incubator"
 label_settings = SubResource("LabelSettings_36r6s")
@@ -258,7 +256,6 @@ grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Label" type="Label" parent="Left Page/Baby Creature Picture"]
-visible = false
 layout_mode = 0
 offset_right = 96.0
 offset_bottom = 96.0
@@ -387,11 +384,10 @@ color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Egg" type="TextureRect" parent="Right Page"]
 layout_mode = 0
-offset_left = 409.0
-offset_top = 71.0
-offset_right = 473.0
-offset_bottom = 135.0
-texture = ExtResource("9_bfiq4")
+offset_left = 411.0
+offset_top = 73.0
+offset_right = 475.0
+offset_bottom = 137.0
 
 [node name="ColorRect" type="ColorRect" parent="Right Page/Egg"]
 visible = false
@@ -406,12 +402,14 @@ grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Label" type="Label" parent="Right Page/Egg"]
-visible = false
 layout_mode = 1
-anchors_preset = -1
-anchor_bottom = 0.1
-offset_right = 64.0
-offset_bottom = 57.6
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Egg"
 label_settings = SubResource("LabelSettings_36r6s")
 horizontal_alignment = 1
@@ -437,8 +435,8 @@ color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Label" type="Label" parent="Right Page/Incubator"]
 layout_mode = 0
-offset_left = -3.0
-offset_right = 67.0
+offset_left = -2.0
+offset_right = 68.0
 offset_bottom = 64.0
 text = "Incubator"
 label_settings = SubResource("LabelSettings_36r6s")
@@ -515,7 +513,6 @@ theme = SubResource("Theme_oyl77")
 color = Color(0.90018153, 0.8804225, 0.8409129, 1)
 
 [node name="Label" type="Label" parent="Right Page/Baby Creature Picture Area"]
-visible = false
 layout_mode = 0
 offset_right = 96.0
 offset_bottom = 96.0

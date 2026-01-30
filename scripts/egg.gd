@@ -112,6 +112,9 @@ func _hatch():
 	
 	$Indicator.visible = false
 	icon = info.species.baby_sprite
+	
+	# this updates the bestiary with new data from the hatch
+	info.species.previously_hatched = true
 
 func _mature():
 	print("grown nice and healthy!")
@@ -121,6 +124,9 @@ func _mature():
 	
 	$Indicator.visible = false
 	icon = info.species.adult_sprite
+	
+	# this updates the bestiary with new data from the growth
+	info.species.previously_grown = true
 
 
 func _dead():
