@@ -17,19 +17,23 @@ func _pressed() -> void:
 # adds it to the space that determines life or death
 func _space():
 	match self.name.to_lower():
-		"all":
-			return CreatureStats.hatchery.ALL
 		"lava":
+			print("ADDED TO VOLCANO")
 			return CreatureStats.habitat.VOLCANO
 		"aquatic":
+			print("ADDED TO AQUATIC")
 			return CreatureStats.habitat.AQUATIC
 		"sand":
+			print("ADDED TO DESERT")
 			return CreatureStats.habitat.DESERT
 		"jungle":
+			print("ADDED TO JUNGLE")
 			return CreatureStats.habitat.JUNGLE
 		"snow":
+			print("ADDED TO SNOW")
 			return CreatureStats.habitat.SNOW
 		"grass":
+			print("ADDED TO GRASSLAND")
 			return CreatureStats.habitat.GRASSLAND
 		_:
 			return CreatureStats.habitat.NONE
@@ -50,7 +54,7 @@ func add(creature : Egg):
 			new_creature.setup(creature.info)
 			new_creature.info.space = _space()
 			new_creature.change_visibility(true)
-			new_creature.mature()
+			new_creature.grow_up()
 			_save()
 			print("filled empty slot")
 			break

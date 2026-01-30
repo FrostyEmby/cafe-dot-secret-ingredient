@@ -21,6 +21,10 @@ metadata/_custom_type_script = "uid://br1lu1lnknnov"
 wait_time = 15.0
 one_shot = true
 
+[node name="Age" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
 [node name="Indicator" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -39,4 +43,5 @@ visible_characters = 4
 
 [connection signal="timeout" from="Hatch" to="." method="_on_hatch_timeout"]
 [connection signal="tree_entered" from="Hatch" to="." method="_on_hatch_tree_entered"]
-[connection signal="tree_exiting" from="Hatch" to="." method="_on_hatch_tree_exiting"]
+[connection signal="timeout" from="Age" to="." method="_on_age_timeout"]
+[connection signal="tree_entered" from="Age" to="." method="_on_age_tree_entered"]

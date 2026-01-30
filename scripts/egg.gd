@@ -5,11 +5,14 @@ signal selection(egg : Egg)
 
 @export var info : EggData = EggData.new()
 @onready var hatch_timer : Timer = $Hatch
+@onready var age_timer : Timer = $Age
 
 
 func _set_appearance():
 	if info.dead:
 		_dead()
+	elif info.adult:
+		_mature()
 	elif info.hatched:
 		_hatch()
 	else:
@@ -26,6 +29,7 @@ func new(creature : CreatureStats):
 	info.hatch_time = creature.hatch_time_secs
 	info.incubating = false
 	info.hatched = false
+	info.aging_time = creature.maturity_time_secs
 	info.maturing = false
 	info.adult = false
 	info.dead = false
@@ -79,7 +83,7 @@ func incubate():
 
 func grow_up():
 	print("----GROWTH START!----")
-	hatch_timer.start(info.species.maturity_time_secs)
+	age_timer.start(info.species.maturity_time_secs)
 	$Indicator.visible = true
 	info.maturing = true
 
@@ -97,7 +101,7 @@ func _survive_or_die():
 		print("TERRARIUM IS ", info.placement, " AND SHOULD BE ", info.species.incubator)
 		_dead()
 	else:
-		mature()
+		_mature()
 
 
 func _hatch():
@@ -109,7 +113,7 @@ func _hatch():
 	$Indicator.visible = false
 	icon = info.species.baby_sprite
 
-func mature():
+func _mature():
 	print("grown nice and healthy!")
 	
 	info.maturing = false
@@ -145,18 +149,24 @@ func _process(_delta: float) -> void:
 	
 	# update indicator timer when aging
 	if info.maturing:
-		$Indicator.text = str(hatch_timer.time_left)
-		info.aging_time = hatch_timer.time_left
+		$Indicator.text = str(age_timer.time_left)
+		info.aging_time = age_timer.time_left
 
 
 func _on_hatch_timeout() -> void:
-	if info.maturing:
-		_survive_or_die()
-	else:
-		_hatch_or_death()
+	_hatch_or_death()
 
 
 func _on_hatch_tree_entered() -> void:
 	# start incubating if placed and not already hatched
 	if not info.hatched and not info.incubating and info.placement != info.species.hatchery.NONE:
 		incubate()
+
+
+func _on_age_timeout() -> void:
+	_survive_or_die()
+
+
+func _on_age_tree_entered() -> void:
+	if info.hatched and not info.maturing and info.space != info.species.habitat.NONE:
+		grow_up()
