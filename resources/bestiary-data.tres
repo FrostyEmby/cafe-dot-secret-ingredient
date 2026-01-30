@@ -10,5 +10,5 @@
 
 [resource]
 script = ExtResource("1_8w2vk")
-creatures = Array[ExtResource("1_1jxg1")]([ExtResource("2_5aybs"), ExtResource("3_wqog4"), ExtResource("4_gkyl6"), ExtResource("5_5fwk7"), ExtResource("6_bmmyl")])
+creatures = Array[ExtResource("1_1jxg1")]([ExtResource("3_wqog4"), ExtResource("2_5aybs"), ExtResource("4_gkyl6"), ExtResource("5_5fwk7"), ExtResource("6_bmmyl")])
 metadata/_custom_type_script = "uid://domapwhce8b8o"

@@ -21,10 +21,12 @@ func _fill_page():
 		
 	# Fill in left page
 	$"Left Page/Creature Name".text = bestiary.creatures[page].name
+	$"Left Page/Incubator/Label".text = bestiary.creatures[page].hatchery.keys()[bestiary.creatures[page].incubator].replace("_", " ")
+	$"Left Page/Terrarium/Label".text = bestiary.creatures[page].habitat.keys()[bestiary.creatures[page].terrarium]
 	$"Left Page/Dynamic Text/Description".text = bestiary.creatures[page].description
-	#$"Left Page/Adult Creature Picture Area".texture = creatures[page].adult_detailed
-	#$"Left Page/Baby Creature Picture Area".texture = creatures[page].baby_detailed
-	#$"Left Page/Egg".texture = creatures[page].egg
+	$"Left Page/Adult Creature Picture".texture = bestiary.creatures[page].adult_detailed
+	$"Left Page/Baby Creature Picture".texture = bestiary.creatures[page].baby_sprite
+	$"Left Page/Egg".texture = bestiary.creatures[page].egg
 	
 	# if odd amount of creatures and on last page, clear the right page
 	if bestiary.creatures.size() % 2 != 0 && page == bestiary.creatures.size() - 1:
@@ -34,10 +36,12 @@ func _fill_page():
 		
 		# Fill in right page
 		$"Right Page/Creature Name".text = bestiary.creatures[page+1].name
+		$"Right Page/Incubator/Label".text = bestiary.creatures[page+1].hatchery.keys()[bestiary.creatures[page].incubator].replace("_", " ")
+		$"Right Page/Terrarium/Label".text = bestiary.creatures[page+1].habitat.keys()[bestiary.creatures[page].terrarium]
 		$"Right Page/Dynamic Text/Description".text = bestiary.creatures[page+1].description
-		#$"Right Page/Adult Creature Picture Area".texture = creatures[page+1].adult_detailed
-		#$"Right Page/Baby Creature Picture Area".texture = creatures[page+1].baby_detailed
-		#$"Right Page/Egg".texture = creatures[page+1].egg
+		$"Right Page/Adult Creature Picture Area".texture = bestiary.creatures[page+1].adult_detailed
+		$"Right Page/Baby Creature Picture Area".texture = bestiary.creatures[page+1].baby_sprite
+		$"Right Page/Egg".texture = bestiary.creatures[page+1].egg
 		
 
 

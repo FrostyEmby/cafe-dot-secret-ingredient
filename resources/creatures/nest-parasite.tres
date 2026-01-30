@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="CreatureStats" load_steps=5 format=3 uid="uid://dxqtqoy48cpre"]
+[gd_resource type="Resource" script_class="CreatureStats" load_steps=6 format=3 uid="uid://dxqtqoy48cpre"]
 
+[ext_resource type="Texture2D" uid="uid://dtefrlqmqoy6m" path="res://art/adult creatures/magma gulper.png" id="1_be46o"]
 [ext_resource type="Texture2D" uid="uid://c10ttlqccra28" path="res://art/eggs/omni.png" id="1_mtm20"]
 [ext_resource type="Texture2D" uid="uid://brb0cqlttxbfl" path="res://art/eggs/candy.png" id="1_v7hs4"]
 [ext_resource type="Texture2D" uid="uid://bi0nnqhdm1nkh" path="res://art/eggs/egglist17.png" id="2_mtm20"]
@@ -16,4 +17,5 @@ terrarium = 5
 egg = ExtResource("2_mtm20")
 baby_sprite = ExtResource("1_v7hs4")
 adult_sprite = ExtResource("1_mtm20")
+adult_detailed = ExtResource("1_be46o")
 metadata/_custom_type_script = "uid://cqr8dj8toeqen"

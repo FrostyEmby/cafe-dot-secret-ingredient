@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CreatureStats" load_steps=5 format=3 uid="uid://bo03k2xsccltr"]
+[gd_resource type="Resource" script_class="CreatureStats" load_steps=6 format=3 uid="uid://bo03k2xsccltr"]
 
 [ext_resource type="Texture2D" uid="uid://cinfspmbwyame" path="res://art/eggs/meat.png" id="1_6j0q7"]
+[ext_resource type="Texture2D" uid="uid://bkw33sdj8q46w" path="res://art/adult creatures/mach bird.png" id="1_lhid5"]
 [ext_resource type="Texture2D" uid="uid://db1p5mc1oy03c" path="res://art/eggs/birdbaby.png" id="2_lhid5"]
 [ext_resource type="Texture2D" uid="uid://yph5r4u8xt3w" path="res://art/icons/egg1.png" id="3_hqlun"]
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="4_rrvt4"]
@@ -16,4 +17,5 @@ terrarium = 5
 egg = ExtResource("3_hqlun")
 baby_sprite = ExtResource("2_lhid5")
 adult_sprite = ExtResource("1_6j0q7")
+adult_detailed = ExtResource("1_lhid5")
 metadata/_custom_type_script = "uid://cqr8dj8toeqen"

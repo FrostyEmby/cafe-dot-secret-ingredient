@@ -1,12 +1,14 @@
-[gd_scene load_steps=16 format=3 uid="uid://puey23wcodsh"]
+[gd_scene load_steps=18 format=3 uid="uid://puey23wcodsh"]
 
 [ext_resource type="Script" uid="uid://dbtlv6p44ft57" path="res://scripts/bestiary.gd" id="1_lqwxb"]
 [ext_resource type="Texture2D" uid="uid://c5son408o0nng" path="res://art/icons/back-small.png" id="2_lqwxb"]
 [ext_resource type="Texture2D" uid="uid://hvokm05hwnwl" path="res://art/adult creatures/obsidian.png" id="2_oyl77"]
 [ext_resource type="Texture2D" uid="uid://clq10s4vdhy0c" path="res://art/adult creatures/page background4.png" id="3_aig2i"]
+[ext_resource type="Texture2D" uid="uid://chum4g82ol76j" path="res://art/eggs/egglist28.png" id="4_eapyg"]
 [ext_resource type="Texture2D" uid="uid://chvqbwaulnv8y" path="res://art/icons/forward-small.png" id="4_j3mqr"]
 [ext_resource type="Texture2D" uid="uid://cy87qvc5vucad" path="res://art/adult creatures/cool bat.png" id="6_eapyg"]
 [ext_resource type="Texture2D" uid="uid://bvxd7p23rhjsv" path="res://art/adult creatures/page background2.png" id="7_bfiq4"]
+[ext_resource type="Texture2D" uid="uid://bi0nnqhdm1nkh" path="res://art/eggs/egglist17.png" id="9_bfiq4"]
 [ext_resource type="Texture2D" uid="uid://cmjnxjp0dfr3a" path="res://art/icons/back-small-hover.png" id="9_eapyg"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="11_aig2i"]
 [ext_resource type="Texture2D" uid="uid://jsqxydg5pski" path="res://art/icons/forward-smal-hover.png" id="11_bfiq4"]
@@ -113,24 +115,43 @@ grow_vertical = 2
 texture = ExtResource("3_aig2i")
 expand_mode = 1
 
-[node name="Egg" type="TextureRect" parent="Left Page"]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 71.0
-offset_right = 97.0
-offset_bottom = 135.0
-
-[node name="ColorRect" type="ColorRect" parent="Left Page/Egg"]
+[node name="Egg Background" type="ColorRect" parent="Left Page"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 32.0
+offset_left = 32.0
+offset_top = 74.0
+offset_right = -394.0
+offset_bottom = -420.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9019608, 0.88235295, 0.8392157, 1)
+
+[node name="Egg" type="TextureRect" parent="Left Page"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 71.0
+offset_right = 109.0
+offset_bottom = 135.0
+texture = ExtResource("4_eapyg")
+
+[node name="ColorRect" type="ColorRect" parent="Left Page/Egg"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = 4.0
+offset_right = 20.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Label" type="Label" parent="Left Page/Egg"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.1
@@ -206,14 +227,28 @@ offset_right = 139.0
 offset_bottom = 414.0
 color = Color(0.42352942, 0.42352942, 0.42352942, 1)
 
-[node name="Baby Creature Picture Area3" type="TextureRect" parent="Left Page"]
+[node name="Baby Background" type="ColorRect" parent="Left Page"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 31.0
+offset_top = 316.5
+offset_right = -395.0
+offset_bottom = -148.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9019608, 0.88235295, 0.8392157, 1)
+
+[node name="Baby Creature Picture" type="TextureRect" parent="Left Page"]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 315.0
-offset_right = 128.0
+offset_right = 129.0
 offset_bottom = 411.0
 
-[node name="ColorRect" type="ColorRect" parent="Left Page/Baby Creature Picture Area3"]
+[node name="ColorRect" type="ColorRect" parent="Left Page/Baby Creature Picture"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -222,7 +257,8 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
-[node name="Label" type="Label" parent="Left Page/Baby Creature Picture Area3"]
+[node name="Label" type="Label" parent="Left Page/Baby Creature Picture"]
+visible = false
 layout_mode = 0
 offset_right = 96.0
 offset_bottom = 96.0
@@ -336,14 +372,29 @@ grow_vertical = 2
 texture = ExtResource("7_bfiq4")
 expand_mode = 1
 
+[node name="Egg Background" type="ColorRect" parent="Right Page"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 395.0
+offset_top = 74.0
+offset_right = -31.0
+offset_bottom = -420.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9019608, 0.88235295, 0.8392157, 1)
+
 [node name="Egg" type="TextureRect" parent="Right Page"]
 layout_mode = 0
 offset_left = 409.0
 offset_top = 71.0
 offset_right = 473.0
 offset_bottom = 135.0
+texture = ExtResource("9_bfiq4")
 
 [node name="ColorRect" type="ColorRect" parent="Right Page/Egg"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -355,6 +406,7 @@ grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Label" type="Label" parent="Right Page/Egg"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.1
@@ -431,14 +483,28 @@ offset_right = 502.0
 offset_bottom = 413.0
 color = Color(0.42352942, 0.42352942, 0.42352942, 1)
 
+[node name="Baby Background" type="ColorRect" parent="Right Page"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 394.0
+offset_top = 315.0
+offset_right = -32.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9019608, 0.88235295, 0.8392157, 1)
+
 [node name="Baby Creature Picture Area" type="TextureRect" parent="Right Page"]
 layout_mode = 0
-offset_left = 395.0
+offset_left = 397.0
 offset_top = 314.0
-offset_right = 491.0
+offset_right = 493.0
 offset_bottom = 410.0
 
 [node name="ColorRect" type="ColorRect" parent="Right Page/Baby Creature Picture Area"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -449,6 +515,7 @@ theme = SubResource("Theme_oyl77")
 color = Color(0.90018153, 0.8804225, 0.8409129, 1)
 
 [node name="Label" type="Label" parent="Right Page/Baby Creature Picture Area"]
+visible = false
 layout_mode = 0
 offset_right = 96.0
 offset_bottom = 96.0

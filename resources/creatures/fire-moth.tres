@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="CreatureStats" load_steps=5 format=3 uid="uid://dosts8w07go7f"]
+[gd_resource type="Resource" script_class="CreatureStats" load_steps=6 format=3 uid="uid://dosts8w07go7f"]
 
 [ext_resource type="Texture2D" uid="uid://bwf62tpmssjd4" path="res://art/eggs/insectbaby.png" id="1_62clb"]
 [ext_resource type="Texture2D" uid="uid://ycp6l1v2kl0h" path="res://art/eggs/plant.png" id="1_s8uu0"]
+[ext_resource type="Texture2D" uid="uid://cw11tb05aybg8" path="res://art/adult creatures/carbunkle.png" id="1_vlywj"]
 [ext_resource type="Texture2D" uid="uid://dl0xw3162b2qq" path="res://art/eggs/egglist39.png" id="2_s8uu0"]
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="3_vlywj"]
 
@@ -16,4 +17,5 @@ incubator = 2
 egg = ExtResource("2_s8uu0")
 baby_sprite = ExtResource("1_62clb")
 adult_sprite = ExtResource("1_s8uu0")
+adult_detailed = ExtResource("1_vlywj")
 metadata/_custom_type_script = "uid://cqr8dj8toeqen"
