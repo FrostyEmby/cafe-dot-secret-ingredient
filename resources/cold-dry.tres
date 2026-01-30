@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="HatcheryData" load_steps=7 format=3 uid="uid://cw61ybkggdoah"]
 
-[ext_resource type="Script" uid="uid://elwxkvw5040k" path="res://scripts/hatchery-data.gd" id="1_qv1gu"]
-[ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/egg-data.gd" id="1_sgd5x"]
-[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/bird-one.tres" id="2_iv6rq"]
+[ext_resource type="Script" uid="uid://elwxkvw5040k" path="res://scripts/templates/hatchery-data.gd" id="1_qv1gu"]
+[ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/templates/egg-data.gd" id="1_sgd5x"]
+[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/creatures/bird-one.tres" id="2_iv6rq"]
 
 [sub_resource type="Resource" id="Resource_sgd5x"]
 script = ExtResource("1_sgd5x")

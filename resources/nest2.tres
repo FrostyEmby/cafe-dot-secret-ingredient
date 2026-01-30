@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="NestData" load_steps=10 format=3 uid="uid://dhidbksh1hoq2"]
 
-[ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/egg-data.gd" id="1_hhdhr"]
-[ext_resource type="Script" uid="uid://bgw7voc2pvri" path="res://scripts/nest-data.gd" id="1_vhjig"]
-[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/bird-one.tres" id="2_67w5p"]
+[ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/templates/egg-data.gd" id="1_hhdhr"]
+[ext_resource type="Script" uid="uid://bgw7voc2pvri" path="res://scripts/templates/nest-data.gd" id="1_vhjig"]
+[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/creatures/bird-one.tres" id="2_67w5p"]
 
 [sub_resource type="Resource" id="Resource_1hp4v"]
 script = ExtResource("1_hhdhr")

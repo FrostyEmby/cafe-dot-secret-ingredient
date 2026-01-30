@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Creature" load_steps=3 format=3 uid="uid://bgpacae1weki4"]
 
-[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/creature-stats.gd" id="1_0u3nu"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_0u3nu"]
 [ext_resource type="Texture2D" uid="uid://dl0xw3162b2qq" path="res://art/eggs/egglist39.png" id="1_hyfpd"]
 
 [resource]

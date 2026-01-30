@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="IncubatorData" load_steps=8 format=3 uid="uid://c15yc4b70njfd"]
 
 [ext_resource type="Resource" uid="uid://cw61ybkggdoah" path="res://resources/cold-dry.tres" id="1_8lbsj"]
-[ext_resource type="Script" uid="uid://shyattdlbmgu" path="res://scripts/incubator-data.gd" id="1_vxp6q"]
+[ext_resource type="Script" uid="uid://shyattdlbmgu" path="res://scripts/templates/incubator-data.gd" id="1_vxp6q"]
 [ext_resource type="Resource" uid="uid://bpexrkd1iutvp" path="res://resources/cold-wet.tres" id="2_qvlx8"]
 [ext_resource type="Resource" uid="uid://bn433xq1f7duy" path="res://resources/hot-dry.tres" id="3_vor7i"]
 [ext_resource type="Resource" uid="uid://cj5ywoxlkgk7b" path="res://resources/hot-wet.tres" id="4_hvc0u"]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="TerrariumData" load_steps=7 format=3 uid="uid://d0ei1ycwf41lq"]
 
-[ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/egg-data.gd" id="1_7k58r"]
-[ext_resource type="Script" uid="uid://du0bchkwa6mok" path="res://scripts/terrarium-data.gd" id="1_qx0xb"]
+[ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/templates/egg-data.gd" id="1_7k58r"]
+[ext_resource type="Script" uid="uid://du0bchkwa6mok" path="res://scripts/templates/terrarium-data.gd" id="1_qx0xb"]
 
 [sub_resource type="Resource" id="Resource_q2wc6"]
 script = ExtResource("1_7k58r")
