@@ -41,3 +41,7 @@ func _on_jungle_selection(terrarium : Terrarium) -> void:
 
 func _on_lava_selection(terrarium : Terrarium) -> void:
 	_match(terrarium)
+
+
+func _on_music_finished() -> void:
+	$Music.play()

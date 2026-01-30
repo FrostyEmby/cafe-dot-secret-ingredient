@@ -18,3 +18,7 @@ func _on_sound_volume_value_changed(value: float) -> void:
 func _on_back_pressed() -> void:
 	# go back to main menu
 	get_tree().change_scene_to_file("uid://dhs6v4k8dmjo4")
+
+
+func _on_music_finished() -> void:
+	$Music.play()

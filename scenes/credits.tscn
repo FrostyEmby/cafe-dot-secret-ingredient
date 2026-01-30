@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2ptf51hotg12"]
+
+[ext_resource type="Script" uid="uid://c00c6ar8636tw" path="res://scenes/credits.gd" id="1_0bpdh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0bpdh"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_yeqti"]
+font_size = 30
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0bpdh")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+label_settings = SubResource("LabelSettings_0bpdh")
+horizontal_alignment = 1
+
+[node name="Spacer" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Credits" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Story: VDubbz, Nyx
+Art: RIPesto, Mint_rps
+Programming: FrostyEmby
+Music: Madpole"
+label_settings = SubResource("LabelSettings_yeqti")
+horizontal_alignment = 1
+
+[node name="Spacer2" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Back Button" type="Button" parent="VBoxContainer/CenterContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/CenterContainer/Back Button" to="." method="_on_back_button_pressed"]

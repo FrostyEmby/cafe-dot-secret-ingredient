@@ -37,3 +37,7 @@ func _on_incubator_selection(hatchery: Hatchery) -> void:
 
 func _on_egg_gen_timeout() -> void:
 	save.egg_fill = true
+
+
+func _on_music_finished() -> void:
+	$Music.play()

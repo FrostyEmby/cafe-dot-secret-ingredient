@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dhs6v4k8dmjo4"]
+[gd_scene load_steps=10 format=3 uid="uid://dhs6v4k8dmjo4"]
 
 [ext_resource type="Script" uid="uid://dvdg3gi0uee1j" path="res://scripts/main_menu.gd" id="1_wu84c"]
 [ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://resources/theme.tres" id="2_8ln24"]
 [ext_resource type="Texture2D" uid="uid://b24uftqnjnnwv" path="res://art/icons/Play.png" id="3_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://cgn6g6ykgffnx" path="res://art/icons/gear.png" id="4_oa1go"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="5_8ln24"]
+[ext_resource type="Texture2D" uid="uid://b6mh3wjq2rely" path="res://art/icons/who.png" id="5_oa1go"]
 [ext_resource type="AudioStream" uid="uid://ct3ff1chu1rmr" path="res://sound/music/Calm entry.wav" id="6_rtw2f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fu7sn"]
@@ -35,6 +36,7 @@ label_settings = SubResource("LabelSettings_fu7sn")
 horizontal_alignment = 1
 
 [node name="Subtitle" type="Label" parent="PanelContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "By Ripesto, Nyx, VDubbz, FrostyEmby, Madpole, Mint_rps"
 label_settings = SubResource("LabelSettings_jix8l")
@@ -57,7 +59,7 @@ text = "Play"
 icon = ExtResource("3_rtw2f")
 alignment = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="Space" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_8ln24")
 theme_override_constants/margin_right = 3
@@ -69,15 +71,30 @@ text = "Settings"
 icon = ExtResource("4_oa1go")
 alignment = 0
 
+[node name="Space2" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_8ln24")
+theme_override_constants/margin_right = 3
+
+[node name="Credits" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_8ln24")
+text = "Credits"
+icon = ExtResource("5_oa1go")
+alignment = 0
+
 [node name="Mini Menu" parent="." instance=ExtResource("5_8ln24")]
 visible = false
 layout_mode = 0
 offset_left = 802.0
 offset_right = 1152.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_rtw2f")
 autoplay = true
+mix_target = 1
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]

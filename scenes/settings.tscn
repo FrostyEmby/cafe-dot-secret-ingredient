@@ -93,10 +93,11 @@ layout_mode = 0
 offset_left = 802.0
 offset_right = 1152.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_gis3k")
 autoplay = true
 
 [connection signal="value_changed" from="PanelContainer/MarginContainer/GridContainer/Music Volume" to="." method="_on_master_volume_value_changed"]
 [connection signal="value_changed" from="PanelContainer/MarginContainer/GridContainer/Sound Volume" to="." method="_on_sound_volume_value_changed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/GridContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]

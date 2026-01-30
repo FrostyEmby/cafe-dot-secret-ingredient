@@ -571,6 +571,10 @@ wait_time = 10.0
 one_shot = true
 autostart = true
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
 [connection signal="pressed" from="Left Page/Prev Page" to="." method="_on_prev_page_pressed"]
 [connection signal="pressed" from="Right Page/Next Page" to="." method="_on_next_page_pressed"]
 [connection signal="timeout" from="Egg-Gen" to="." method="_on_egg_gen_timeout"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]

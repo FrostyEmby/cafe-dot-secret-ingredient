@@ -423,6 +423,9 @@ texture_hover = ExtResource("13_skqsh")
 
 [node name="Egg-Gen" parent="." instance=ExtResource("22_skqsh")]
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
 [connection signal="selection" from="BoxContainer/HSplitContainer/Egg Shelf" to="." method="_on_egg_shelf_selection"]
 [connection signal="selection" from="Snow" to="." method="_on_snow_selection"]
 [connection signal="selection" from="Grass" to="." method="_on_grass_selection"]
@@ -435,3 +438,4 @@ texture_hover = ExtResource("13_skqsh")
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Terrarium" to="Vertical Mini Menu" method="_on_terrarium_pressed"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Bestiary" to="Vertical Mini Menu" method="_on_bestiary_pressed"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Settings" to="Vertical Mini Menu" method="_on_settings_pressed"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]
