@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dubt5x0ntj1od" path="res://art/icons/back.png" id="3_6wm04"]
 [ext_resource type="Texture2D" uid="uid://c5son408o0nng" path="res://art/icons/back-small.png" id="4_es4n0"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="5_gis3k"]
-[ext_resource type="AudioStream" uid="uid://lv5mvil3c4fk" path="res://music/Hang on.mp3" id="6_gis3k"]
+[ext_resource type="AudioStream" uid="uid://cpke8gi8uop4d" path="res://sound/music/Hang on.wav" id="6_gis3k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_36l1p"]
 font_size = 50

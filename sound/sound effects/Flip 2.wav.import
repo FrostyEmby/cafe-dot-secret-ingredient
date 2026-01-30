@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cvdiap1n6su4t"
+path="res://.godot/imported/Flip 2.wav-2e4d984cc5f211fb5d69a82118bac95b.sample"
+
+[deps]
+
+source_file="res://sound/sound effects/Flip 2.wav"
+dest_files=["res://.godot/imported/Flip 2.wav-2e4d984cc5f211fb5d69a82118bac95b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

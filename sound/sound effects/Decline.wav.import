@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d4d53o5fcmoj1"
+path="res://.godot/imported/Decline.wav-0142803aa4b8d65089983bb262af638e.sample"
+
+[deps]
+
+source_file="res://sound/sound effects/Decline.wav"
+dest_files=["res://.godot/imported/Decline.wav-0142803aa4b8d65089983bb262af638e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpke8gi8uop4d"
+path="res://.godot/imported/Hang on.wav-d805370c15c5bb23f89de90bf7373f56.sample"
+
+[deps]
+
+source_file="res://sound/music/Hang on.wav"
+dest_files=["res://.godot/imported/Hang on.wav-d805370c15c5bb23f89de90bf7373f56.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
