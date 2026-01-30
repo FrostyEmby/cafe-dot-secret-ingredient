@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BestiaryData" load_steps=8 format=3 uid="uid://bhhxfwpdi3gfj"]
+
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/creature-stats.gd" id="1_1jxg1"]
+[ext_resource type="Script" uid="uid://domapwhce8b8o" path="res://scripts/bestiary-data.gd" id="1_8w2vk"]
+[ext_resource type="Resource" uid="uid://dosts8w07go7f" path="res://resources/fire-moth.tres" id="2_5aybs"]
+[ext_resource type="Resource" uid="uid://bgpacae1weki4" path="res://resources/electric-dragonfly.tres" id="3_wqog4"]
+[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/bird-one.tres" id="4_gkyl6"]
+[ext_resource type="Resource" uid="uid://dxqtqoy48cpre" path="res://resources/nest-parasite.tres" id="5_5fwk7"]
+[ext_resource type="Resource" uid="uid://ddvixqmre33gs" path="res://resources/plant-tortoise.tres" id="6_bmmyl"]
+
+[resource]
+script = ExtResource("1_8w2vk")
+creatures = Array[ExtResource("1_1jxg1")]([ExtResource("2_5aybs"), ExtResource("3_wqog4"), ExtResource("4_gkyl6"), ExtResource("5_5fwk7"), ExtResource("6_bmmyl")])
+metadata/_custom_type_script = "uid://domapwhce8b8o"

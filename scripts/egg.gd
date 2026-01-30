@@ -65,10 +65,10 @@ func incubate():
 
 # Which will it be? Hope your placement was right!
 func _hatch_or_death():
-	if info.placement != info.species.incubator:
-		_dead()
-	else:
+	if info.placement == info.species.incubator:
 		_hatch()
+	else:
+		_dead()
 
 
 func _hatch():
@@ -111,7 +111,3 @@ func _on_hatch_tree_entered() -> void:
 	# start incubating if placed and not already hatched
 	if not info.hatched and not info.incubating and info.placement != info.species.hatchery.NONE:
 		incubate()
-
-
-#func _on_hatch_tree_exiting() -> void:
-#	info.hatch_time = hatch_timer.time_left

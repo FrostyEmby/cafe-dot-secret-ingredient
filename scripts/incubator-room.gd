@@ -12,7 +12,6 @@ func _match():
 	# if hatchery has space, then proceed with matching
 	if hatchery_match.has_space():
 		# turn off the button and visibility to make egg disappear
-		egg_match.disabled = true
 		egg_match.visible = false
 		save.shelf[egg_match.name.to_lower()].visibility = false
 		save.shelf[egg_match.name.to_lower()].species = egg_match.info.species

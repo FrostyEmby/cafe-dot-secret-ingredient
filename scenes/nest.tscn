@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://djtd6vihyb4ph"]
 
 [ext_resource type="Texture2D" uid="uid://dvg6h6e05k5fi" path="res://art/icons/nest.png" id="1_0c7o3"]
-[ext_resource type="Script" uid="uid://coxr4fw58q14s" path="res://scenes/nest.gd" id="2_a0nmq"]
+[ext_resource type="Script" uid="uid://coxr4fw58q14s" path="res://scripts/nest.gd" id="2_a0nmq"]
 [ext_resource type="PackedScene" uid="uid://ctuxvuxm5oh0r" path="res://scenes/egg.tscn" id="3_5fcmp"]
 
 [node name="Nest" type="TextureRect"]
