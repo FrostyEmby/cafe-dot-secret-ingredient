@@ -9,7 +9,7 @@ class_name CreatureStats
 @export var description : String
 
 enum hatchery {NONE, ALL, COLD_DRY, COLD_WET, TEMPERATE_DRY, TEMPERATE_WET, HOT_DRY, HOT_WET}
-enum habitat {VOLCANO, AQUATIC, DESERT, JUNGLE, SNOW, GRASSLAND}
+enum habitat {NONE, ALL, VOLCANO, AQUATIC, DESERT, JUNGLE, SNOW, GRASSLAND}
 
 @export var incubator : hatchery
 @export var terrarium : habitat

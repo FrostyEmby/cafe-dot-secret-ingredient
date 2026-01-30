@@ -6,6 +6,7 @@ signal hatch_select(egg : Egg)
 var save : Save = load("res://resources/save.tres")
 
 
+# adds the placement which determines life or death
 func _place():
 	match self.name.to_lower():
 		"all":

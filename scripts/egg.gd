@@ -26,6 +26,8 @@ func new(creature : CreatureStats):
 	info.hatch_time = creature.hatch_time_secs
 	info.incubating = false
 	info.hatched = false
+	info.maturing = false
+	info.adult = false
 	info.dead = false
 	_set_appearance()
 	change_visibility(true)
@@ -40,7 +42,11 @@ func setup(id : EggData):
 	info.hatch_time = id.hatch_time
 	info.incubating = id.incubating
 	info.hatched = id.hatched
+	info.maturing = id.maturing
+	info.adult = id.adult
 	info.dead = id.dead
+	info.placement = id.placement
+	info.space = id.space
 	
 	_set_appearance()
 	
@@ -59,8 +65,6 @@ func _pressed() -> void:
 		print("corpse removed")
 	elif info.hatched:
 		selection.emit(self)
-		#visible = false
-		#info.visibility = false
 		print("baby taken")
 	else:
 		selection.emit(self)
@@ -68,18 +72,32 @@ func _pressed() -> void:
 
 func incubate():
 	print("----INCUBATION START!----")
-	hatch_timer.start(info.hatch_time)
+	hatch_timer.start(info.species.hatch_time_secs)
 	$Indicator.visible = true
 	info.incubating = true
 
 
+func grow_up():
+	print("----GROWTH START!----")
+	hatch_timer.start(info.species.maturity_time_secs)
+	$Indicator.visible = true
+	info.maturing = true
+
 # Which will it be? Hope your placement was right!
 func _hatch_or_death():
 	if info.placement != info.species.incubator:
-		print("PLACEMENT IS ", info.placement, " and SHOULD BE ", info.species.incubator)
+		print("PLACEMENT IS ", info.placement, " AND SHOULD BE ", info.species.incubator)
 		_dead()
 	else:
 		_hatch()
+
+
+func _survive_or_die():
+	if info.space != info.species.terrarium:
+		print("TERRARIUM IS ", info.placement, " AND SHOULD BE ", info.species.incubator)
+		_dead()
+	else:
+		mature()
 
 
 func _hatch():
@@ -91,13 +109,25 @@ func _hatch():
 	$Indicator.visible = false
 	icon = info.species.baby_sprite
 
+func mature():
+	print("grown nice and healthy!")
+	
+	info.maturing = false
+	info.adult = true
+	
+	$Indicator.visible = false
+	icon = info.species.adult_sprite
+
 
 func _dead():
 	print("hatched... but unfortunately dead")
 	
 	info.incubating = false
+	info.maturing = false
 	info.hatched = true
 	info.dead = true
+	
+	$Indicator.visible = false
 	icon = load("res://art/eggs/corpse.png")
 
 
@@ -112,10 +142,18 @@ func _process(_delta: float) -> void:
 	if info.incubating:
 		$Indicator.text = str(hatch_timer.time_left)
 		info.hatch_time = hatch_timer.time_left
+	
+	# update indicator timer when aging
+	if info.maturing:
+		$Indicator.text = str(hatch_timer.time_left)
+		info.aging_time = hatch_timer.time_left
 
 
 func _on_hatch_timeout() -> void:
-	_hatch_or_death()
+	if info.maturing:
+		_survive_or_die()
+	else:
+		_hatch_or_death()
 
 
 func _on_hatch_tree_entered() -> void:
