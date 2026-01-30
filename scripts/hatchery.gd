@@ -2,7 +2,7 @@ extends Button
 class_name Hatchery
 
 signal selection(hatchery : Hatchery)
-signal hatch_select(egg : Egg)
+signal hatch_select(egg : Egg, hatchery : Hatchery)
 var save : Save = load("res://resources/save.tres")
 
 
@@ -69,14 +69,14 @@ func _save():
 
 func _on_egg_1_selection(egg: Egg) -> void:
 	if egg.info.hatched:
-		hatch_select.emit(egg)
+		hatch_select.emit(egg, self)
 
 
 func _on_egg_2_selection(egg: Egg) -> void:
 	if egg.info.hatched:
-		hatch_select.emit(egg)
+		hatch_select.emit(egg, self)
 
 
 func _on_egg_3_selection(egg: Egg) -> void:
 	if egg.info.hatched:
-		hatch_select.emit(egg)
+		hatch_select.emit(egg, self)

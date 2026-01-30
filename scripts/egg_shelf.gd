@@ -171,8 +171,7 @@ func _save():
 	save.shelf.egg16 = egg16.info
 
 
-func _on_incubators_hatch_select(egg: Egg) -> void:
+func _on_incubators_hatch_select(egg: Egg, hatchery : Hatchery) -> void:
 	add_egg(egg)
 	egg.change_visibility(false)
-	#egg.visible = false
-	#egg.info.visibility = false
+	save.incubator[hatchery.name.to_lower()][egg.name.to_lower()] = egg.info
