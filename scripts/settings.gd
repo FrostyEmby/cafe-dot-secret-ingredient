@@ -1,23 +1,19 @@
 extends Control
 
-@onready var master_volume : Label = $"PanelContainer/MarginContainer/GridContainer/Master Display"
-@onready var music_volume : Label = $"PanelContainer/MarginContainer/GridContainer/Volume Display"
-@onready var sound_volume : Label = $"PanelContainer/MarginContainer/GridContainer/Sound Display"
+@onready var music = $"PanelContainer/MarginContainer/GridContainer/Music Volume"
+@onready var sound = $"PanelContainer/MarginContainer/GridContainer/Sound Volume"
+
+func _ready() -> void:
+	music.value = AudioServer.get_bus_volume_linear(0)
+	sound.value = AudioServer.get_bus_volume_linear(1)
 
 
 func _on_master_volume_value_changed(value: float) -> void:
-	master_volume.text = str(value) + "%"
 	AudioServer.set_bus_volume_linear(0, value)
 
 
-func _on_music_volume_value_changed(value: float) -> void:
-	music_volume.text = str(value) + "%"
-	AudioServer.set_bus_volume_linear(1, value)
-
-
 func _on_sound_volume_value_changed(value: float) -> void:
-	sound_volume.text = str(value) + "%"
-	AudioServer.set_bus_volume_linear(2, value)
+	AudioServer.set_bus_volume_linear(1, value)
 
 func _on_back_pressed() -> void:
 	# go back to main menu

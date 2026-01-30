@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lv5mvil3c4fk"
+path="res://.godot/imported/Hang on.mp3-cc1fe70207f67f6c06ebd47bb1ba8668.mp3str"
+
+[deps]
+
+source_file="res://music/Hang on.mp3"
+dest_files=["res://.godot/imported/Hang on.mp3-cc1fe70207f67f6c06ebd47bb1ba8668.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

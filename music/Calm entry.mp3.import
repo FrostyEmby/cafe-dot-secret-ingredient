@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dua8lnjhyuby6"
+path="res://.godot/imported/Calm entry.mp3-9713b76a2dfda2807e3f6567d6c9e4d9.mp3str"
+
+[deps]
+
+source_file="res://music/Calm entry.mp3"
+dest_files=["res://.godot/imported/Calm entry.mp3-9713b76a2dfda2807e3f6567d6c9e4d9.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
