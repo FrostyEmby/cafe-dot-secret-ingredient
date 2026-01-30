@@ -6,6 +6,13 @@ signal hatch_select(egg : Egg)
 var save : Save = load("res://resources/save.tres")
 
 
+func has_space():
+	for new_egg in find_children("Egg*"):
+		if not new_egg.visible:
+			return true
+	return false
+
+
 func add_egg(egg: Egg):
 	for new_egg in find_children("Egg*"):
 		if not new_egg.visible:

@@ -14,6 +14,13 @@ func _pressed() -> void:
 	selection.emit(self)
 
 
+func has_space():
+	for new_creature in find_children("Creature*"):
+		if not new_creature.visible:
+			return true
+	return false
+
+
 func add(creature : Egg):
 	print("adding egg to terrarium")
 	for new_creature in find_children("Creature*"):

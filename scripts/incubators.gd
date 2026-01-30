@@ -3,8 +3,10 @@ extends MarginContainer
 signal selection(hatchery : Hatchery)
 signal hatch_select(egg : Egg)
 
+
 func _ready() -> void:
 	_load()
+
 
 func _on_cold_dry_selection(hatchery: Hatchery) -> void:
 	print("selected cold dry hatchery")

@@ -25,6 +25,13 @@ func _ready() -> void:
 	_load()
 
 
+func has_space():
+	for new_egg in find_children("Egg*"):
+		if not new_egg.visible:
+			return true
+	return false
+
+
 func add_egg(egg: Egg):
 	print("adding egg to shelf")
 	for new_egg in find_children("Egg*"):

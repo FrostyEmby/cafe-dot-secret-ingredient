@@ -45,3 +45,11 @@ func setup(nest : NestData):
 	$Egg6.setup(nest.egg6)
 	
 	print("nest loaded!")
+
+func save(nest : NestData):
+	nest.egg1 = $Egg1.info
+	nest.egg2 = $Egg2.info
+	nest.egg3 = $Egg3.info
+	nest.egg4 = $Egg4.info
+	nest.egg5 = $Egg5.info
+	nest.egg6 = $Egg6.info
