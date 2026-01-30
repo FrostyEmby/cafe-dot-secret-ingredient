@@ -6,6 +6,26 @@ signal hatch_select(egg : Egg)
 var save : Save = load("res://resources/save.tres")
 
 
+func _place():
+	match self.name.to_lower():
+		"all":
+			return CreatureStats.hatchery.ALL
+		"cold_dry":
+			return CreatureStats.hatchery.COLD_DRY
+		"cold_wet":
+			return CreatureStats.hatchery.COLD_WET
+		"temp_dry":
+			return CreatureStats.hatchery.TEMPERATE_DRY
+		"temp_wet":
+			return CreatureStats.hatchery.TEMPERATE_WET
+		"hot_dry":
+			return CreatureStats.hatchery.HOT_DRY
+		"hot_wet":
+			return CreatureStats.hatchery.HOT_WET
+		_:
+			return CreatureStats.hatchery.NONE
+
+
 func has_space():
 	for new_egg in find_children("Egg*"):
 		if not new_egg.visible:
@@ -17,6 +37,7 @@ func add_egg(egg: Egg):
 	for new_egg in find_children("Egg*"):
 		if not new_egg.visible:
 			new_egg.setup(egg.info)
+			new_egg.info.placement = _place()
 			new_egg.change_visibility(true)
 			new_egg.incubate()
 			_save()

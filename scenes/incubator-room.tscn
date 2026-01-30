@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://csy6oy6sctiow"]
+[gd_scene load_steps=8 format=3 uid="uid://csy6oy6sctiow"]
 
 [ext_resource type="Script" uid="uid://dh73ql5mfjxqs" path="res://scripts/incubator-room.gd" id="1_lerr0"]
 [ext_resource type="Texture2D" uid="uid://bunldmv1vprgp" path="res://art/icons/shelf_dragger.png" id="2_glcki"]
 [ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelf.tscn" id="3_t4njw"]
 [ext_resource type="PackedScene" uid="uid://bvmhui71lfmc4" path="res://scenes/incubators.tscn" id="4_83g0e"]
+[ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="6_qyx4e"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="8_ebtcn"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ic351"]
@@ -48,12 +49,8 @@ layout_mode = 0
 offset_left = 802.0
 offset_right = 1152.0
 
-[node name="Egg-Gen" type="Timer" parent="."]
-wait_time = 10.0
-one_shot = true
-autostart = true
+[node name="Egg-Gen" parent="." instance=ExtResource("6_qyx4e")]
 
 [connection signal="selection" from="BoxContainer/HSplitContainer/Egg Shelf" to="." method="_on_egg_selection"]
 [connection signal="hatch_select" from="BoxContainer/HSplitContainer/Incubators" to="BoxContainer/HSplitContainer/Egg Shelf" method="_on_incubators_hatch_select"]
 [connection signal="selection" from="BoxContainer/HSplitContainer/Incubators" to="." method="_on_incubator_selection"]
-[connection signal="timeout" from="Egg-Gen" to="." method="_on_egg_gen_timeout"]

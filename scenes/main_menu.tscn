@@ -36,7 +36,7 @@ horizontal_alignment = 1
 
 [node name="Subtitle" type="Label" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
-text = "By Ripesto, Nyx, VDubbz, FrostyEmby, Madpole"
+text = "By Ripesto, Nyx, VDubbz, FrostyEmby, Madpole, Mint_rps"
 label_settings = SubResource("LabelSettings_jix8l")
 horizontal_alignment = 1
 
@@ -78,7 +78,6 @@ offset_right = 1152.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_rtw2f")
 autoplay = true
-bus = &"Music"
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Settings" to="." method="_on_settings_pressed"]

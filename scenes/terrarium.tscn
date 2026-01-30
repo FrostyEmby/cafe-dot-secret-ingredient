@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://77pmhayrj8nl"]
+[gd_scene load_steps=28 format=3 uid="uid://77pmhayrj8nl"]
 
 [ext_resource type="Script" uid="uid://bbn1jxutftk3u" path="res://scripts/terrarium.gd" id="1_h6qyf"]
 [ext_resource type="Script" uid="uid://b6yspum6krbt7" path="res://scripts/terrarium_room.gd" id="1_vusgt"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dbydrte2rg8sm" path="res://art/icons/gear-big-hover.png" id="13_skqsh"]
 [ext_resource type="Texture2D" uid="uid://bunldmv1vprgp" path="res://art/icons/shelf_dragger.png" id="17_kstpm"]
 [ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelf.tscn" id="18_vusgt"]
+[ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="22_skqsh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pf7wg"]
 bg_color = Color(0.09048235, 0.09048236, 0.0904823, 1)
@@ -433,10 +434,7 @@ texture_normal = ExtResource("12_mxrpn")
 texture_pressed = ExtResource("13_skqsh")
 texture_hover = ExtResource("13_skqsh")
 
-[node name="Egg-Gen" type="Timer" parent="."]
-wait_time = 10.0
-one_shot = true
-autostart = true
+[node name="Egg-Gen" parent="." instance=ExtResource("22_skqsh")]
 
 [connection signal="selection" from="BoxContainer/HSplitContainer/Egg Shelf" to="." method="_on_egg_shelf_selection"]
 [connection signal="selection" from="Snow" to="." method="_on_snow_selection"]
@@ -450,4 +448,3 @@ autostart = true
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Terrarium" to="Vertical Mini Menu" method="_on_terrarium_pressed"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Bestiary" to="Vertical Mini Menu" method="_on_bestiary_pressed"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Settings" to="Vertical Mini Menu" method="_on_settings_pressed"]
-[connection signal="timeout" from="Egg-Gen" to="." method="_on_egg_gen_timeout"]

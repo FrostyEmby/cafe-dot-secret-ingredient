@@ -75,10 +75,11 @@ func incubate():
 
 # Which will it be? Hope your placement was right!
 func _hatch_or_death():
-	if info.placement == info.species.incubator:
-		_hatch()
-	else:
+	if info.placement != info.species.incubator:
+		print("PLACEMENT IS ", info.placement, " and SHOULD BE ", info.species.incubator)
 		_dead()
+	else:
+		_hatch()
 
 
 func _hatch():
