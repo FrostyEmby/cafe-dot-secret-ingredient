@@ -173,5 +173,6 @@ func _save():
 
 func _on_incubators_hatch_select(egg: Egg) -> void:
 	add_egg(egg)
-	egg.visible = false
-	egg.info.visibility = false
+	egg.change_visibility(false)
+	#egg.visible = false
+	#egg.info.visibility = false

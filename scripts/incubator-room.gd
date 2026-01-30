@@ -12,8 +12,7 @@ func _match():
 	# if hatchery has space, then proceed with matching
 	if hatchery_match.has_space():
 		# turn off the button and visibility to make egg disappear
-		egg_match.change_visibility(false)
-		#egg_match.info.placement = _place()
+		shelf.remove_egg(egg_match)
 		
 		# use egg button data to add that variety to the hatchery
 		hatchery_match.add_egg(egg_match)
