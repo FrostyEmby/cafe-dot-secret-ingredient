@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dhs6v4k8dmjo4"]
+[gd_scene load_steps=11 format=3 uid="uid://dhs6v4k8dmjo4"]
 
 [ext_resource type="Script" uid="uid://dvdg3gi0uee1j" path="res://scripts/main_menu.gd" id="1_wu84c"]
 [ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://resources/theme.tres" id="2_8ln24"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="5_8ln24"]
 [ext_resource type="Texture2D" uid="uid://b6mh3wjq2rely" path="res://art/icons/who.png" id="5_oa1go"]
 [ext_resource type="AudioStream" uid="uid://ct3ff1chu1rmr" path="res://sound/music/Calm entry.wav" id="6_rtw2f"]
+[ext_resource type="AudioStream" uid="uid://blvokbg44omm3" path="res://sound/sound effects/Accept.wav" id="8_tbmy8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fu7sn"]
 font_size = 80
@@ -93,6 +94,9 @@ offset_right = 1152.0
 stream = ExtResource("6_rtw2f")
 autoplay = true
 mix_target = 1
+
+[node name="Press" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_tbmy8")
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Settings" to="." method="_on_settings_pressed"]

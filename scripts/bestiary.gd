@@ -85,11 +85,26 @@ func _fill_right():
 		$"Right Page/Terrarium/Label".text = "Terrarium"
 
 
+func _flip_sound():
+	match randi_range(1, 5):
+		1:
+			$"Flip 1".play()
+		2:
+			$"Flip 2".play()
+		3:
+			$"Flip 3".play()
+		4:
+			$"Flip 4".play()
+		5:
+			$"Flip 5".play()
+
+
 func _on_next_page_pressed() -> void:
 	page += 2
 	$"Right Page".visible = false
 	$FlipRight.visible = true
 	$FlipRight.play()
+	_flip_sound()
 
 
 func _on_prev_page_pressed() -> void:
@@ -97,6 +112,7 @@ func _on_prev_page_pressed() -> void:
 	$"Left Page".visible = false
 	$FlipLeft.visible = true
 	$FlipLeft.play()
+	_flip_sound()
 
 
 func _on_egg_gen_timeout() -> void:

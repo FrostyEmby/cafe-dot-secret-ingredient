@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://puey23wcodsh"]
+[gd_scene load_steps=33 format=3 uid="uid://puey23wcodsh"]
 
 [ext_resource type="Script" uid="uid://dbtlv6p44ft57" path="res://scripts/bestiary.gd" id="1_lqwxb"]
 [ext_resource type="Texture2D" uid="uid://c5son408o0nng" path="res://art/icons/back-small.png" id="2_lqwxb"]
@@ -12,6 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="11_aig2i"]
 [ext_resource type="Texture2D" uid="uid://jsqxydg5pski" path="res://art/icons/forward-smal-hover.png" id="11_bfiq4"]
 [ext_resource type="Texture2D" uid="uid://blyiy4kc543nl" path="res://art/final props/FlipRightspritesheet.png" id="11_eapyg"]
+[ext_resource type="AudioStream" uid="uid://bsrsk2yub3n28" path="res://sound/sound effects/Flip 1.wav" id="13_bfiq4"]
+[ext_resource type="AudioStream" uid="uid://cvdiap1n6su4t" path="res://sound/sound effects/Flip 2.wav" id="14_viudg"]
+[ext_resource type="AudioStream" uid="uid://dohxroyto5wee" path="res://sound/sound effects/Flip 3.wav" id="15_q1xbv"]
+[ext_resource type="AudioStream" uid="uid://nuv064xgu4fm" path="res://sound/sound effects/Flip 4.wav" id="16_7tv8b"]
+[ext_resource type="AudioStream" uid="uid://cj17fetxh7y5g" path="res://sound/sound effects/Flip 5.wav" id="17_g005f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eq67u"]
 font_size = 30
@@ -647,6 +652,27 @@ autostart = true
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 autoplay = true
+
+[node name="Flip 1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_bfiq4")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="Flip 2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_viudg")
+bus = &"SFX"
+
+[node name="Flip 3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_q1xbv")
+bus = &"SFX"
+
+[node name="Flip 4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_7tv8b")
+bus = &"SFX"
+
+[node name="Flip 5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_g005f")
+bus = &"SFX"
 
 [connection signal="pressed" from="Left Page/Prev Page" to="." method="_on_prev_page_pressed"]
 [connection signal="pressed" from="Right Page/Next Page" to="." method="_on_next_page_pressed"]
