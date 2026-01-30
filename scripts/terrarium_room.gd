@@ -1,5 +1,7 @@
 extends Control
 
+var save = load("res://resources/save.tres")
+
 var creature_selected : bool = false
 var creature_match : Egg
 
@@ -41,3 +43,7 @@ func _on_jungle_selection(terrarium : Terrarium) -> void:
 
 func _on_lava_selection(terrarium : Terrarium) -> void:
 	_match(terrarium)
+
+
+func _on_egg_gen_timeout() -> void:
+	save.egg_fill = true

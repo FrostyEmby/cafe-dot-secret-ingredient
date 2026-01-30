@@ -1,16 +1,19 @@
-[gd_resource type="Resource" script_class="Creature" load_steps=4 format=3 uid="uid://bo03k2xsccltr"]
+[gd_resource type="Resource" script_class="CreatureStats" load_steps=5 format=3 uid="uid://bo03k2xsccltr"]
 
-[ext_resource type="Texture2D" uid="uid://yph5r4u8xt3w" path="res://art/icons/egg1.png" id="1_7siy4"]
-[ext_resource type="Texture2D" uid="uid://db1p5mc1oy03c" path="res://art/eggs/birdbaby.png" id="1_811op"]
-[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_it8xv"]
+[ext_resource type="Texture2D" uid="uid://cinfspmbwyame" path="res://art/eggs/meat.png" id="1_6j0q7"]
+[ext_resource type="Texture2D" uid="uid://db1p5mc1oy03c" path="res://art/eggs/birdbaby.png" id="2_lhid5"]
+[ext_resource type="Texture2D" uid="uid://yph5r4u8xt3w" path="res://art/icons/egg1.png" id="3_hqlun"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="4_rrvt4"]
 
 [resource]
-script = ExtResource("1_it8xv")
+script = ExtResource("4_rrvt4")
 name = "Bird 1"
 diet = "Insects"
 hint = "Claws"
 confused_with = "other ugly bird chicks"
+incubator = 2
 terrarium = 5
-egg = ExtResource("1_7siy4")
-baby_sprite = ExtResource("1_811op")
+egg = ExtResource("3_hqlun")
+baby_sprite = ExtResource("2_lhid5")
+adult_sprite = ExtResource("1_6j0q7")
 metadata/_custom_type_script = "uid://cqr8dj8toeqen"

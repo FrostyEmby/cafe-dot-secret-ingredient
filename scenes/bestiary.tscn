@@ -92,6 +92,7 @@ grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Label" type="Label" parent="Left Page/Adult Creature Picture"]
+visible = false
 layout_mode = 0
 offset_right = 363.0
 offset_bottom = 222.0
@@ -501,5 +502,11 @@ offset_right = 180.0
 offset_bottom = 426.0
 border_width = 0.2
 
+[node name="Egg-Gen" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
 [connection signal="pressed" from="Left Page/Prev Page" to="." method="_on_prev_page_pressed"]
 [connection signal="pressed" from="Right Page/Next Page" to="." method="_on_next_page_pressed"]
+[connection signal="timeout" from="Egg-Gen" to="." method="_on_egg_gen_timeout"]

@@ -1,6 +1,8 @@
 extends Resource
 class_name Save
 
+@export var egg_fill : bool = false # if flipped on, eggs randomly generate in egg collection
+
 # EGG SHELF 
 @export var shelf : EggShelfData = load("res://resources/egg-shelf.tres")
 

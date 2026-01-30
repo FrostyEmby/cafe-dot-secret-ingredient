@@ -6,6 +6,24 @@ var save : Save = load("res://resources/save.tres")
 
 func _ready() -> void:
 	_load()
+	if save.egg_fill:
+		_egg_generation()
+
+
+func _egg_generation():
+	save.egg_fill = false
+	
+	# nest 1
+	for new_eggs in randi_range(0, 3):
+		$Nest1.generate_egg()
+	
+	# nest 2
+	for new_eggs in randi_range(0, 3):
+		$Nest2.generate_egg()
+	
+	# nest 3
+	for new_eggs in randi_range(0, 3):
+		$Nest3.generate_egg()
 
 
 func _move_egg(egg: Egg):

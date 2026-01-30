@@ -35,3 +35,7 @@ func _on_incubator_selection(hatchery: Hatchery) -> void:
 	if egg_selected:
 		hatchery_match = hatchery
 		_match()
+
+
+func _on_egg_gen_timeout() -> void:
+	save.egg_fill = true

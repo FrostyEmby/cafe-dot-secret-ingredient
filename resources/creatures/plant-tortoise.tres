@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="Creature" load_steps=2 format=3 uid="uid://ddvixqmre33gs"]
+[gd_resource type="Resource" script_class="CreatureStats" load_steps=5 format=3 uid="uid://ddvixqmre33gs"]
 
-[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_qpy2d"]
+[ext_resource type="Texture2D" uid="uid://hvokm05hwnwl" path="res://art/adult creatures/obsidian.png" id="1_3kg4p"]
+[ext_resource type="Texture2D" uid="uid://jhbi5h4aejc8" path="res://art/eggs/fishbaby.png" id="2_oyasu"]
+[ext_resource type="Texture2D" uid="uid://cavvvf6mrpjim" path="res://art/eggs/egglist88.png" id="3_v2tow"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="4_hnqiy"]
 
 [resource]
-script = ExtResource("1_qpy2d")
+script = ExtResource("4_hnqiy")
 name = "Vitaruga"
 diet = "herbivorous"
 hint = "Egg is cool to the touch"
@@ -11,4 +14,7 @@ confused_with = "lava creatures"
 description = "Tortoise made out of tree with leaves and solid amber."
 incubator = 3
 terrarium = 3
+egg = ExtResource("3_v2tow")
+baby_sprite = ExtResource("2_oyasu")
+adult_detailed = ExtResource("1_3kg4p")
 metadata/_custom_type_script = "uid://cqr8dj8toeqen"

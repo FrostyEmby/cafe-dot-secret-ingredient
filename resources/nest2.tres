@@ -1,21 +1,24 @@
 [gd_resource type="Resource" script_class="NestData" load_steps=10 format=3 uid="uid://dhidbksh1hoq2"]
 
 [ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/templates/egg-data.gd" id="1_hhdhr"]
-[ext_resource type="Script" uid="uid://bgw7voc2pvri" path="res://scripts/templates/nest-data.gd" id="1_vhjig"]
 [ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/creatures/bird-one.tres" id="2_67w5p"]
+[ext_resource type="Script" uid="uid://bgw7voc2pvri" path="res://scripts/templates/nest-data.gd" id="3_1hp4v"]
 
 [sub_resource type="Resource" id="Resource_1hp4v"]
 script = ExtResource("1_hhdhr")
+visibility = true
 species = ExtResource("2_67w5p")
 metadata/_custom_type_script = "uid://br5o6wci85nr8"
 
 [sub_resource type="Resource" id="Resource_wbu0j"]
 script = ExtResource("1_hhdhr")
+visibility = true
 species = ExtResource("2_67w5p")
 metadata/_custom_type_script = "uid://br5o6wci85nr8"
 
 [sub_resource type="Resource" id="Resource_21bdv"]
 script = ExtResource("1_hhdhr")
+visibility = true
 species = ExtResource("2_67w5p")
 metadata/_custom_type_script = "uid://br5o6wci85nr8"
 
@@ -35,7 +38,7 @@ species = ExtResource("2_67w5p")
 metadata/_custom_type_script = "uid://br5o6wci85nr8"
 
 [resource]
-script = ExtResource("1_vhjig")
+script = ExtResource("3_1hp4v")
 egg1 = SubResource("Resource_1hp4v")
 egg2 = SubResource("Resource_wbu0j")
 egg3 = SubResource("Resource_21bdv")

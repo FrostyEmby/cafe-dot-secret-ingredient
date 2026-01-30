@@ -48,6 +48,12 @@ layout_mode = 0
 offset_left = 802.0
 offset_right = 1152.0
 
+[node name="Egg-Gen" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
 [connection signal="selection" from="BoxContainer/HSplitContainer/Egg Shelf" to="." method="_on_egg_selection"]
 [connection signal="hatch_select" from="BoxContainer/HSplitContainer/Incubators" to="BoxContainer/HSplitContainer/Egg Shelf" method="_on_incubators_hatch_select"]
 [connection signal="selection" from="BoxContainer/HSplitContainer/Incubators" to="." method="_on_incubator_selection"]
+[connection signal="timeout" from="Egg-Gen" to="." method="_on_egg_gen_timeout"]

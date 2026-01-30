@@ -1,5 +1,6 @@
 extends Control
 
+var save = load("res://resources/save.tres")
 var bestiary : BestiaryData = load("res://resources/bestiary-data.tres")
 var page : int = 0 # starts at 0 because of arrays
 
@@ -52,3 +53,7 @@ func _on_prev_page_pressed() -> void:
 
 func _on_exit_pressed() -> void:
 	pass # Replace with function body.
+
+
+func _on_egg_gen_timeout() -> void:
+	save.egg_fill = true

@@ -1,10 +1,18 @@
 extends TextureRect
 
 signal selection(egg: Egg)
-
+var bestiary : BestiaryData = load("res://resources/bestiary-data.tres")
 
 func remove_egg(egg: Egg):
 	egg.change_visibility(false)
+
+
+# finds first invisible egg, selects random species, and sets it to that
+func generate_egg():
+	for egg in find_children("Egg*"):
+		if not egg.visible:
+			egg.new(bestiary.creatures.pick_random()) 
+			break
 
 
 func _on_egg_1_selection(egg: Egg) -> void:

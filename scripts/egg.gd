@@ -21,6 +21,16 @@ func change_visibility(visibility : bool):
 	info.visibility = visibility
 
 
+func new(creature : CreatureStats):
+	info.species = creature
+	info.hatch_time = creature.hatch_time_secs
+	info.incubating = false
+	info.hatched = false
+	info.dead = false
+	_set_appearance()
+	change_visibility(true)
+
+
 func setup(id : EggData):
 	print("starting " + self.name + " setup")
 	
