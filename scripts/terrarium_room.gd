@@ -16,7 +16,7 @@ func _match(terrarium : Terrarium):
 	if creature_selected:
 		terrarium.add(creature_match)
 		shelf.remove_egg(creature_match)
-		
+		creature_selected = false
 
 
 func _on_snow_selection(terrarium : Terrarium) -> void:
