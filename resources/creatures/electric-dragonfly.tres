@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="CreatureStats" load_steps=6 format=3 uid="uid://bgpacae1weki4"]
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://bgpacae1weki4"]
 
-[ext_resource type="Texture2D" uid="uid://dc8bemi4sn4jo" path="res://art/eggs/insect.png" id="1_emsln"]
-[ext_resource type="Texture2D" uid="uid://ddoh7nkny1s53" path="res://art/adult creatures/moose shrew.png" id="1_lm0f6"]
-[ext_resource type="Texture2D" uid="uid://ycp6l1v2kl0h" path="res://art/eggs/plant.png" id="1_nilii"]
+[ext_resource type="Texture2D" uid="uid://bl0kls56cpmwv" path="res://art/adult creatures/06 electric dragonfly.png" id="1_lm0f6"]
+[ext_resource type="Texture2D" uid="uid://q4u4v5q74hkm" path="res://art/adult creatures/50 percent size/06 electric dragonfly.png" id="2_isbut"]
 [ext_resource type="Texture2D" uid="uid://cj6xd5qfa1nfl" path="res://art/eggs/egglist37.png" id="2_nilii"]
+[ext_resource type="Texture2D" uid="uid://dr45haypfn8vd" path="res://art/final babies/06 electric dragonfly baby.png" id="3_ko4pe"]
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="3_lm0f6"]
 
 [resource]
@@ -16,7 +16,7 @@ description = "Seeks dark areas. Eggs are golden yellow"
 incubator = 3
 terrarium = 3
 egg = ExtResource("2_nilii")
-baby_sprite = ExtResource("1_emsln")
-adult_sprite = ExtResource("1_nilii")
+baby_sprite = ExtResource("3_ko4pe")
+adult_sprite = ExtResource("2_isbut")
 adult_detailed = ExtResource("1_lm0f6")
 metadata/_custom_type_script = "uid://cqr8dj8toeqen"

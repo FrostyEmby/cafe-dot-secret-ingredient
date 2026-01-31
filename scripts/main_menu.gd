@@ -1,11 +1,13 @@
 extends Control
 
+var save : Save = load("res://resources/save.tres")
+
 @onready var menu = $"Mini Menu/HBoxContainer"
 
 func _on_play_pressed() -> void:
 	# goes to incubator scene
+	save.main_exit = true
 	$Press.play()
-	menu.visible = false
 	#await $Press.finished
 	get_tree().change_scene_to_file("uid://g28updgkaqym")
 

@@ -1,11 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://bvmhui71lfmc4"]
+[gd_scene format=3 uid="uid://bvmhui71lfmc4"]
 
-[ext_resource type="Texture2D" uid="uid://cju3g4q1ifvup" path="res://art/props/incubator-cold.png" id="1_esafb"]
 [ext_resource type="Script" uid="uid://d2cc114ybxrb1" path="res://scripts/incubators.gd" id="1_h5h8x"]
+[ext_resource type="Texture2D" uid="uid://c6s3pal1uk2xh" path="res://art/final props/incubators/dry cold incubator empty.png" id="2_1f0hf"]
 [ext_resource type="Script" uid="uid://twclfrnswwp7" path="res://scripts/hatchery.gd" id="2_h5h8x"]
-[ext_resource type="Texture2D" uid="uid://d2nso4xrnpncn" path="res://art/props/incubator-mid.png" id="3_oys6p"]
-[ext_resource type="Texture2D" uid="uid://bp6cqy3js0d2j" path="res://art/props/incubator-hot.png" id="4_cejr2"]
+[ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://resources/theme.tres" id="4_4f4c5"]
 [ext_resource type="PackedScene" uid="uid://ctuxvuxm5oh0r" path="res://scenes/egg.tscn" id="4_oys6p"]
+[ext_resource type="Texture2D" uid="uid://b0eucqyuyd6ie" path="res://art/final props/incubators/dry incubator empty.png" id="5_4f4c5"]
+[ext_resource type="Texture2D" uid="uid://dvb27opx468ci" path="res://art/final props/incubators/dry hot incubator empty.png" id="6_jet3j"]
+[ext_resource type="Texture2D" uid="uid://dil2kt4lafc5e" path="res://art/final props/incubators/wet incubator empty.png" id="8_vqtuv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oh3qu"]
 
@@ -19,19 +21,19 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jthp8"]
 
-[node name="Incubators" type="MarginContainer"]
+[node name="Incubators" type="MarginContainer" unique_id=338048730]
 custom_minimum_size = Vector2(952, 0)
 size_flags_horizontal = 3
 script = ExtResource("1_h5h8x")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1188935057]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=1789846315]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -39,196 +41,253 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 5
 
-[node name="panel" type="Panel" parent="MarginContainer/GridContainer"]
+[node name="panel" type="Panel" parent="MarginContainer/GridContainer" unique_id=1506104519]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_oh3qu")
 
-[node name="Cold_Dry" type="Button" parent="MarginContainer/GridContainer"]
+[node name="Cold_Dry" type="Button" parent="MarginContainer/GridContainer" unique_id=69168399]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_7e0uq")
-icon = ExtResource("1_esafb")
+icon = ExtResource("2_1f0hf")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 
-[node name="Egg1" parent="MarginContainer/GridContainer/Cold_Dry" instance=ExtResource("4_oys6p")]
+[node name="Popup" type="ColorRect" parent="MarginContainer/GridContainer/Cold_Dry" unique_id=1687320984]
+visible = false
 layout_mode = 0
 offset_left = 22.0
-offset_top = 70.0
-offset_right = 94.0
-offset_bottom = 142.0
+offset_top = -34.0
+offset_right = 163.0
+offset_bottom = 40.0
+theme = ExtResource("4_4f4c5")
+color = Color(0.15422586, 0.37962234, 0.99992317, 1)
 
-[node name="Egg2" parent="MarginContainer/GridContainer/Cold_Dry" instance=ExtResource("4_oys6p")]
+[node name="Egg1" parent="MarginContainer/GridContainer/Cold_Dry" unique_id=1339001775 instance=ExtResource("4_oys6p")]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 70.0
-offset_right = 138.0
-offset_bottom = 142.0
+offset_left = 17.0
+offset_top = -39.0
+offset_right = 89.0
+offset_bottom = 33.0
 
-[node name="Egg3" parent="MarginContainer/GridContainer/Cold_Dry" instance=ExtResource("4_oys6p")]
+[node name="Egg2" parent="MarginContainer/GridContainer/Cold_Dry" unique_id=1705001407 instance=ExtResource("4_oys6p")]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 70.0
-offset_right = 182.0
-offset_bottom = 142.0
+offset_left = 61.0
+offset_top = -39.0
+offset_right = 133.0
+offset_bottom = 33.0
 
-[node name="Temp_Dry" type="Button" parent="MarginContainer/GridContainer"]
+[node name="Egg3" parent="MarginContainer/GridContainer/Cold_Dry" unique_id=1605758182 instance=ExtResource("4_oys6p")]
+layout_mode = 0
+offset_left = 105.0
+offset_top = -39.0
+offset_right = 177.0
+offset_bottom = 33.0
+
+[node name="Temp_Dry" type="Button" parent="MarginContainer/GridContainer" unique_id=2060499838]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_oys6p")
-icon = ExtResource("3_oys6p")
+icon = ExtResource("5_4f4c5")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 
-[node name="Egg1" parent="MarginContainer/GridContainer/Temp_Dry" instance=ExtResource("4_oys6p")]
+[node name="Popup" type="ColorRect" parent="MarginContainer/GridContainer/Temp_Dry" unique_id=1599002782]
+visible = false
 layout_mode = 0
 offset_left = 22.0
-offset_top = 70.0
-offset_right = 94.0
-offset_bottom = 142.0
+offset_top = -34.0
+offset_right = 163.0
+offset_bottom = 40.0
+color = Color(0.76839674, 0.63514733, 0.10674427, 1)
 
-[node name="Egg2" parent="MarginContainer/GridContainer/Temp_Dry" instance=ExtResource("4_oys6p")]
+[node name="Egg1" parent="MarginContainer/GridContainer/Temp_Dry" unique_id=472311000 instance=ExtResource("4_oys6p")]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 70.0
-offset_right = 138.0
-offset_bottom = 142.0
+offset_left = 17.0
+offset_top = -39.0
+offset_right = 89.0
+offset_bottom = 33.0
 
-[node name="Egg3" parent="MarginContainer/GridContainer/Temp_Dry" instance=ExtResource("4_oys6p")]
+[node name="Egg2" parent="MarginContainer/GridContainer/Temp_Dry" unique_id=2055031015 instance=ExtResource("4_oys6p")]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 70.0
-offset_right = 182.0
-offset_bottom = 142.0
+offset_left = 61.0
+offset_top = -39.0
+offset_right = 133.0
+offset_bottom = 33.0
 
-[node name="Hot_Dry" type="Button" parent="MarginContainer/GridContainer"]
+[node name="Egg3" parent="MarginContainer/GridContainer/Temp_Dry" unique_id=85538024 instance=ExtResource("4_oys6p")]
+layout_mode = 0
+offset_left = 105.0
+offset_top = -39.0
+offset_right = 177.0
+offset_bottom = 33.0
+
+[node name="Hot_Dry" type="Button" parent="MarginContainer/GridContainer" unique_id=690180782]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_oys6p")
-icon = ExtResource("4_cejr2")
+icon = ExtResource("6_jet3j")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 
-[node name="Egg1" parent="MarginContainer/GridContainer/Hot_Dry" instance=ExtResource("4_oys6p")]
+[node name="Popup" type="ColorRect" parent="MarginContainer/GridContainer/Hot_Dry" unique_id=433016864]
+visible = false
 layout_mode = 0
 offset_left = 22.0
-offset_top = 70.0
-offset_right = 94.0
-offset_bottom = 142.0
+offset_top = -34.0
+offset_right = 163.0
+offset_bottom = 40.0
+color = Color(0.78435475, 0.22341403, 0.25451857, 1)
 
-[node name="Egg2" parent="MarginContainer/GridContainer/Hot_Dry" instance=ExtResource("4_oys6p")]
+[node name="Egg1" parent="MarginContainer/GridContainer/Hot_Dry" unique_id=978629486 instance=ExtResource("4_oys6p")]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 70.0
-offset_right = 138.0
-offset_bottom = 142.0
+offset_left = 17.0
+offset_top = -39.0
+offset_right = 89.0
+offset_bottom = 33.0
 
-[node name="Egg3" parent="MarginContainer/GridContainer/Hot_Dry" instance=ExtResource("4_oys6p")]
+[node name="Egg2" parent="MarginContainer/GridContainer/Hot_Dry" unique_id=208599833 instance=ExtResource("4_oys6p")]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 70.0
-offset_right = 182.0
-offset_bottom = 142.0
+offset_left = 61.0
+offset_top = -39.0
+offset_right = 133.0
+offset_bottom = 33.0
 
-[node name="Panel" type="Panel" parent="MarginContainer/GridContainer"]
+[node name="Egg3" parent="MarginContainer/GridContainer/Hot_Dry" unique_id=1650592652 instance=ExtResource("4_oys6p")]
+layout_mode = 0
+offset_left = 105.0
+offset_top = -39.0
+offset_right = 177.0
+offset_bottom = 33.0
+
+[node name="Panel" type="Panel" parent="MarginContainer/GridContainer" unique_id=1633155559]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_268c8")
 
-[node name="Panel2" type="Panel" parent="MarginContainer/GridContainer"]
+[node name="Panel2" type="Panel" parent="MarginContainer/GridContainer" unique_id=948467991]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_7tas0")
 
-[node name="Cold_Wet" type="Button" parent="MarginContainer/GridContainer"]
+[node name="Cold_Wet" type="Button" parent="MarginContainer/GridContainer" unique_id=343860241]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_jthp8")
-icon = ExtResource("1_esafb")
+icon = ExtResource("8_vqtuv")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 
-[node name="Egg1" parent="MarginContainer/GridContainer/Cold_Wet" instance=ExtResource("4_oys6p")]
+[node name="Popup" type="ColorRect" parent="MarginContainer/GridContainer/Cold_Wet" unique_id=1055045951]
+visible = false
 layout_mode = 0
 offset_left = 22.0
-offset_top = 70.0
-offset_right = 94.0
-offset_bottom = 142.0
+offset_top = -34.0
+offset_right = 163.0
+offset_bottom = 40.0
+color = Color(0.15422586, 0.37962234, 0.99992317, 1)
 
-[node name="Egg2" parent="MarginContainer/GridContainer/Cold_Wet" instance=ExtResource("4_oys6p")]
+[node name="Egg1" parent="MarginContainer/GridContainer/Cold_Wet" unique_id=737917479 instance=ExtResource("4_oys6p")]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 70.0
-offset_right = 138.0
-offset_bottom = 142.0
+offset_left = 17.0
+offset_top = -39.0
+offset_right = 89.0
+offset_bottom = 33.0
 
-[node name="Egg3" parent="MarginContainer/GridContainer/Cold_Wet" instance=ExtResource("4_oys6p")]
+[node name="Egg2" parent="MarginContainer/GridContainer/Cold_Wet" unique_id=9006980 instance=ExtResource("4_oys6p")]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 70.0
-offset_right = 182.0
-offset_bottom = 142.0
+offset_left = 61.0
+offset_top = -39.0
+offset_right = 133.0
+offset_bottom = 33.0
 
-[node name="Temp_Wet" type="Button" parent="MarginContainer/GridContainer"]
+[node name="Egg3" parent="MarginContainer/GridContainer/Cold_Wet" unique_id=450817402 instance=ExtResource("4_oys6p")]
+layout_mode = 0
+offset_left = 105.0
+offset_top = -39.0
+offset_right = 177.0
+offset_bottom = 33.0
+
+[node name="Temp_Wet" type="Button" parent="MarginContainer/GridContainer" unique_id=808824964]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_jthp8")
-icon = ExtResource("3_oys6p")
+icon = ExtResource("8_vqtuv")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 
-[node name="Egg1" parent="MarginContainer/GridContainer/Temp_Wet" instance=ExtResource("4_oys6p")]
+[node name="Popup" type="ColorRect" parent="MarginContainer/GridContainer/Temp_Wet" unique_id=1747465754]
+visible = false
 layout_mode = 0
 offset_left = 22.0
-offset_top = 70.0
-offset_right = 94.0
-offset_bottom = 142.0
+offset_top = -34.0
+offset_right = 163.0
+offset_bottom = 40.0
+color = Color(0.76839674, 0.63514733, 0.10674427, 1)
 
-[node name="Egg2" parent="MarginContainer/GridContainer/Temp_Wet" instance=ExtResource("4_oys6p")]
+[node name="Egg1" parent="MarginContainer/GridContainer/Temp_Wet" unique_id=1048132361 instance=ExtResource("4_oys6p")]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 70.0
-offset_right = 138.0
-offset_bottom = 142.0
+offset_left = 17.0
+offset_top = -39.0
+offset_right = 89.0
+offset_bottom = 33.0
 
-[node name="Egg3" parent="MarginContainer/GridContainer/Temp_Wet" instance=ExtResource("4_oys6p")]
+[node name="Egg2" parent="MarginContainer/GridContainer/Temp_Wet" unique_id=2042403439 instance=ExtResource("4_oys6p")]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 70.0
-offset_right = 182.0
-offset_bottom = 142.0
+offset_left = 61.0
+offset_top = -39.0
+offset_right = 133.0
+offset_bottom = 33.0
 
-[node name="Hot_Wet" type="Button" parent="MarginContainer/GridContainer"]
+[node name="Egg3" parent="MarginContainer/GridContainer/Temp_Wet" unique_id=866412567 instance=ExtResource("4_oys6p")]
+layout_mode = 0
+offset_left = 105.0
+offset_top = -39.0
+offset_right = 177.0
+offset_bottom = 33.0
+
+[node name="Hot_Wet" type="Button" parent="MarginContainer/GridContainer" unique_id=1961298312]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_jthp8")
-icon = ExtResource("4_cejr2")
+icon = ExtResource("8_vqtuv")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 
-[node name="Egg1" parent="MarginContainer/GridContainer/Hot_Wet" instance=ExtResource("4_oys6p")]
+[node name="Popup" type="ColorRect" parent="MarginContainer/GridContainer/Hot_Wet" unique_id=1915154241]
+visible = false
 layout_mode = 0
 offset_left = 22.0
-offset_top = 70.0
-offset_right = 94.0
-offset_bottom = 142.0
+offset_top = -34.0
+offset_right = 163.0
+offset_bottom = 40.0
+color = Color(0.78435475, 0.22341403, 0.25451857, 1)
 
-[node name="Egg2" parent="MarginContainer/GridContainer/Hot_Wet" instance=ExtResource("4_oys6p")]
+[node name="Egg1" parent="MarginContainer/GridContainer/Hot_Wet" unique_id=1022162866 instance=ExtResource("4_oys6p")]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 70.0
-offset_right = 138.0
-offset_bottom = 142.0
+offset_left = 17.0
+offset_top = -39.0
+offset_right = 89.0
+offset_bottom = 33.0
 
-[node name="Egg3" parent="MarginContainer/GridContainer/Hot_Wet" instance=ExtResource("4_oys6p")]
+[node name="Egg2" parent="MarginContainer/GridContainer/Hot_Wet" unique_id=695329176 instance=ExtResource("4_oys6p")]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 70.0
-offset_right = 182.0
-offset_bottom = 142.0
+offset_left = 61.0
+offset_top = -39.0
+offset_right = 133.0
+offset_bottom = 33.0
+
+[node name="Egg3" parent="MarginContainer/GridContainer/Hot_Wet" unique_id=2133484077 instance=ExtResource("4_oys6p")]
+layout_mode = 0
+offset_left = 105.0
+offset_top = -39.0
+offset_right = 177.0
+offset_bottom = 33.0
 
 [connection signal="hatch_select" from="MarginContainer/GridContainer/Cold_Dry" to="." method="_on_hatch_select"]
+[connection signal="mouse_entered" from="MarginContainer/GridContainer/Cold_Dry" to="MarginContainer/GridContainer/Cold_Dry" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/GridContainer/Cold_Dry" to="MarginContainer/GridContainer/Cold_Dry" method="_on_mouse_exited"]
 [connection signal="selection" from="MarginContainer/GridContainer/Cold_Dry" to="." method="_on_cold_dry_selection"]
 [connection signal="death" from="MarginContainer/GridContainer/Cold_Dry/Egg1" to="MarginContainer/GridContainer/Cold_Dry" method="_on_egg_1_death"]
 [connection signal="selection" from="MarginContainer/GridContainer/Cold_Dry/Egg1" to="MarginContainer/GridContainer/Cold_Dry" method="_on_egg_1_selection"]
@@ -237,6 +296,8 @@ offset_bottom = 142.0
 [connection signal="death" from="MarginContainer/GridContainer/Cold_Dry/Egg3" to="MarginContainer/GridContainer/Cold_Dry" method="_on_egg_3_death"]
 [connection signal="selection" from="MarginContainer/GridContainer/Cold_Dry/Egg3" to="MarginContainer/GridContainer/Cold_Dry" method="_on_egg_3_selection"]
 [connection signal="hatch_select" from="MarginContainer/GridContainer/Temp_Dry" to="." method="_on_hatch_select"]
+[connection signal="mouse_entered" from="MarginContainer/GridContainer/Temp_Dry" to="MarginContainer/GridContainer/Temp_Dry" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/GridContainer/Temp_Dry" to="MarginContainer/GridContainer/Temp_Dry" method="_on_mouse_exited"]
 [connection signal="selection" from="MarginContainer/GridContainer/Temp_Dry" to="." method="_on_temp_dry_selection"]
 [connection signal="death" from="MarginContainer/GridContainer/Temp_Dry/Egg1" to="MarginContainer/GridContainer/Temp_Dry" method="_on_egg_1_death"]
 [connection signal="selection" from="MarginContainer/GridContainer/Temp_Dry/Egg1" to="MarginContainer/GridContainer/Temp_Dry" method="_on_egg_1_selection"]

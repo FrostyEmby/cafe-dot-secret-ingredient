@@ -95,3 +95,11 @@ func _on_egg_2_death(egg: Egg) -> void:
 func _on_egg_3_death(egg: Egg) -> void:
 	egg.reset()
 	save.incubator[self.name.to_lower()][egg.name.to_lower()] = egg.info
+
+
+func _on_mouse_entered() -> void:
+	$Popup.visible = true
+
+
+func _on_mouse_exited() -> void:
+	$Popup.visible = false

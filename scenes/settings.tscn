@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bgagifdev40yk"]
+[gd_scene format=3 uid="uid://bgagifdev40yk"]
 
 [ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://resources/theme.tres" id="1_5p8wc"]
 [ext_resource type="Script" uid="uid://bval0fmdjaet" path="res://scripts/settings.gd" id="1_r6d6q"]
@@ -17,7 +17,7 @@ font_size = 22
 [sub_resource type="LabelSettings" id="LabelSettings_r6d6q"]
 font_size = 22
 
-[node name="Settings" type="Control"]
+[node name="Settings" type="Control" unique_id=1683627982]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r6d6q")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1831965972]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,59 +34,63 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="PanelContainer"]
+[node name="Title" type="Label" parent="PanelContainer" unique_id=973937065]
 layout_mode = 2
 size_flags_vertical = 0
 text = "Settings"
 label_settings = SubResource("LabelSettings_36l1p")
 horizontal_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=586913275]
 layout_mode = 2
 theme_override_constants/margin_left = 200
 theme_override_constants/margin_top = 200
 theme_override_constants/margin_right = 200
 theme_override_constants/margin_bottom = 100
 
-[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer" unique_id=21319293]
 layout_mode = 2
 theme = ExtResource("1_5p8wc")
 columns = 2
 
-[node name="Music" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="Music" type="Label" parent="PanelContainer/MarginContainer/GridContainer" unique_id=977994120]
 layout_mode = 2
 text = "Music"
 label_settings = SubResource("LabelSettings_5p8wc")
 horizontal_alignment = 1
 
-[node name="Music Volume" type="HScrollBar" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="Music Volume" type="HScrollBar" parent="PanelContainer/MarginContainer/GridContainer" unique_id=837628139]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.5
 max_value = 1.0
 value = 1.0
 
-[node name="Sound Effects" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="Sound Effects" type="Label" parent="PanelContainer/MarginContainer/GridContainer" unique_id=23307940]
 layout_mode = 2
 text = "Sound"
 label_settings = SubResource("LabelSettings_r6d6q")
 horizontal_alignment = 1
 
-[node name="Sound Volume" type="HScrollBar" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="Sound Volume" type="HScrollBar" parent="PanelContainer/MarginContainer/GridContainer" unique_id=1714406624]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.5
 max_value = 1.0
 value = 1.0
 
-[node name="Space1" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="Space1" type="Label" parent="PanelContainer/MarginContainer/GridContainer" unique_id=1357423701]
 layout_mode = 2
 
-[node name="Space2" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="Space2" type="Label" parent="PanelContainer/MarginContainer/GridContainer" unique_id=1382285762]
 layout_mode = 2
 
-[node name="Back" type="TextureButton" parent="PanelContainer/MarginContainer/GridContainer"]
-layout_mode = 2
+[node name="Back" type="TextureButton" parent="." unique_id=51032091]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 572.0
+offset_right = 80.0
+offset_bottom = 636.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_5p8wc")
@@ -94,18 +98,18 @@ action_mode = 0
 texture_normal = ExtResource("3_6wm04")
 texture_pressed = ExtResource("4_es4n0")
 
-[node name="Mini Menu" parent="." instance=ExtResource("5_gis3k")]
+[node name="Mini Menu" parent="." unique_id=692852118 instance=ExtResource("5_gis3k")]
 layout_mode = 0
 offset_left = 802.0
 offset_right = 1152.0
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1825309183]
 stream = ExtResource("6_gis3k")
 autoplay = true
 
-[node name="Egg-Gen" parent="." instance=ExtResource("7_83j8s")]
+[node name="Egg-Gen" parent="." unique_id=565685724 instance=ExtResource("7_83j8s")]
 
 [connection signal="value_changed" from="PanelContainer/MarginContainer/GridContainer/Music Volume" to="." method="_on_master_volume_value_changed"]
 [connection signal="value_changed" from="PanelContainer/MarginContainer/GridContainer/Sound Volume" to="." method="_on_sound_volume_value_changed"]
-[connection signal="pressed" from="PanelContainer/MarginContainer/GridContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]

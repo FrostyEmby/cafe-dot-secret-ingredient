@@ -1,6 +1,7 @@
 extends Resource
 class_name Save
 
+@export var main_exit : bool = false
 @export var egg_fill : bool = false # if flipped on, eggs randomly generate in egg collection
 
 # EGG SHELF 
