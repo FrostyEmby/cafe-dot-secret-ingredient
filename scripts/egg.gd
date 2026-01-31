@@ -169,6 +169,9 @@ func _process(_delta: float) -> void:
 	
 	if info.hatch_time <= 0 and not info.hatched:
 		_hatch_or_death()
+		
+	if info.aging_time <= 0 and not info.adult:
+		_survive_or_die()
 	
 	# update indicator timer when incubating
 	if info.incubating:
