@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://g28updgkaqym"]
+[gd_scene load_steps=10 format=3 uid="uid://g28updgkaqym"]
 
 [ext_resource type="Script" uid="uid://6seakwoxk527" path="res://scripts/egg-collection.gd" id="1_w0elb"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="2_1mlyo"]
 [ext_resource type="Texture2D" uid="uid://b5bkddainp227" path="res://art/props/Nest Background.png" id="2_m11xh"]
 [ext_resource type="PackedScene" uid="uid://djtd6vihyb4ph" path="res://scenes/nest.tscn" id="3_r7ts3"]
-[ext_resource type="Texture2D" uid="uid://dlsooa8vkecjj" path="res://art/props/nest1.png" id="6_1xm0k"]
 [ext_resource type="Texture2D" uid="uid://dskie2krx7h0o" path="res://art/props/nest2.png" id="7_fcwn1"]
 [ext_resource type="Texture2D" uid="uid://bunldmv1vprgp" path="res://art/icons/shelf_dragger.png" id="7_vclnr"]
 [ext_resource type="Texture2D" uid="uid://doyl7ideois6k" path="res://art/props/nestback.png" id="8_6o0hv"]
@@ -54,7 +53,6 @@ offset_left = 235.0
 offset_top = 262.0
 offset_right = 560.0
 offset_bottom = 518.0
-texture = ExtResource("6_1xm0k")
 
 [node name="Nest2" parent="." instance=ExtResource("3_r7ts3")]
 layout_mode = 0

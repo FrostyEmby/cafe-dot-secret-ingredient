@@ -80,3 +80,18 @@ func _on_egg_2_selection(egg: Egg) -> void:
 func _on_egg_3_selection(egg: Egg) -> void:
 	if egg.info.hatched:
 		hatch_select.emit(egg, self)
+
+
+func _on_egg_1_death(egg: Egg) -> void:
+	egg.reset()
+	save.incubator[self.name.to_lower()][egg.name.to_lower()] = egg.info
+
+
+func _on_egg_2_death(egg: Egg) -> void:
+	egg.reset()
+	save.incubator[self.name.to_lower()][egg.name.to_lower()] = egg.info
+
+
+func _on_egg_3_death(egg: Egg) -> void:
+	egg.reset()
+	save.incubator[self.name.to_lower()][egg.name.to_lower()] = egg.info

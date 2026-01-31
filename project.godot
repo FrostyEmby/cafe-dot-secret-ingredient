@@ -13,14 +13,20 @@ config_version=5
 config/name="Secret Ingredient"
 run/main_scene="uid://dhs6v4k8dmjo4"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://dfoebasvbudfx"
 
 [audio]
 
 buses/default_bus_layout="res://resources/default_bus_layout.tres"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0.2453545, 0.5455752, 0.48361987, 1)

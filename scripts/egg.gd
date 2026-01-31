@@ -2,11 +2,11 @@ extends Button
 class_name Egg
 
 signal selection(egg : Egg)
+signal death(egg : Egg)
 
 @export var info : EggData = EggData.new()
 @onready var hatch_timer : Timer = $Hatch
 @onready var age_timer : Timer = $Age
-
 
 func _set_appearance():
 	if info.dead:
@@ -24,7 +24,25 @@ func change_visibility(visibility : bool):
 	info.visibility = visibility
 
 
+func reset():
+	print("back to defaults")
+	
+	info.species = load("res://resources/creatures/bird-one.tres")
+	info.hatch_time = info.species.hatch_time_secs
+	info.incubating = false
+	info.hatched = false
+	info.aging_time = info.species.maturity_time_secs
+	info.maturing = false
+	info.adult = false
+	info.dead = false
+	
+	_set_appearance()
+	change_visibility(false)
+
+
 func new(creature : CreatureStats):
+	print("new egg!")
+	
 	info.species = creature
 	info.hatch_time = creature.hatch_time_secs
 	info.incubating = false
@@ -33,6 +51,7 @@ func new(creature : CreatureStats):
 	info.maturing = false
 	info.adult = false
 	info.dead = false
+	
 	_set_appearance()
 	change_visibility(true)
 
@@ -64,8 +83,9 @@ func _ready():
 func _pressed() -> void:
 	print("egg pressed")
 	if info.dead:
-		visible = false
-		info.visibility = false
+		change_visibility(false)
+		reset()
+		death.emit(self)
 		print("corpse removed")
 	elif info.hatched:
 		selection.emit(self)

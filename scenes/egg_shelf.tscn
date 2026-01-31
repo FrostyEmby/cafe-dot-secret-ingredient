@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bi7vr8n2y7b5"]
 
-[ext_resource type="Texture2D" uid="uid://dh0uy78hioto3" path="res://art/props/shelf.png" id="1_6gg56"]
 [ext_resource type="Script" uid="uid://dcswsevd0ehbf" path="res://scripts/egg_shelf.gd" id="1_qpkqp"]
+[ext_resource type="Texture2D" uid="uid://b212xrydl6hbu" path="res://art/final props/shelffinal.png" id="2_528ig"]
 [ext_resource type="PackedScene" uid="uid://ctuxvuxm5oh0r" path="res://scenes/egg.tscn" id="3_528ig"]
 
 [node name="Egg Shelf" type="MarginContainer"]
@@ -20,7 +20,7 @@ layout_mode = 0
 offset_top = 44.0
 offset_right = 200.0
 offset_bottom = 604.0
-texture = ExtResource("1_6gg56")
+texture = ExtResource("2_528ig")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Organizer"]
 custom_minimum_size = Vector2(0, 540)
