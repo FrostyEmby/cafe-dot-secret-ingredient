@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://77pmhayrj8nl"]
+[gd_scene format=3 uid="uid://77pmhayrj8nl"]
 
 [ext_resource type="Script" uid="uid://bbn1jxutftk3u" path="res://scripts/terrarium.gd" id="1_h6qyf"]
 [ext_resource type="Script" uid="uid://b6yspum6krbt7" path="res://scripts/terrarium_room.gd" id="1_vusgt"]
@@ -39,7 +39,7 @@ thickness = 3
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6qyf"]
 bg_color = Color(0.7254902, 0.6156863, 0.29411766, 1)
 
-[node name="Terrarium Room" type="Control"]
+[node name="Terrarium Room" type="Control" unique_id=1770794639]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -48,38 +48,39 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vusgt")
 
-[node name="Background" type="Panel" parent="."]
+[node name="Background" type="Panel" parent="." unique_id=384773760]
 layout_mode = 0
 offset_right = 1155.0
 offset_bottom = 650.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_pf7wg")
 
-[node name="BoxContainer" type="BoxContainer" parent="."]
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=1610696942]
 layout_mode = 0
 offset_left = -176.0
-offset_right = 1152.0
+offset_right = 195.0
 offset_bottom = 648.0
 
-[node name="HSplitContainer" type="HSplitContainer" parent="BoxContainer"]
+[node name="HSplitContainer" type="HSplitContainer" parent="BoxContainer" unique_id=1199140940]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_icons/touch_dragger = ExtResource("17_kstpm")
 theme_override_styles/split_bar_background = SubResource("StyleBoxEmpty_pf7wg")
-split_offset = 200
+split_offsets = PackedInt32Array(200)
 dragger_visibility = 1
 touch_dragger_enabled = true
 drag_area_margin_begin = -80
 drag_area_offset = -18
+split_offset = 200
 
-[node name="Egg Shelf" parent="BoxContainer/HSplitContainer" instance=ExtResource("18_vusgt")]
+[node name="Egg Shelf" parent="BoxContainer/HSplitContainer" unique_id=1301336741 instance=ExtResource("18_vusgt")]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HSplitContainer"]
-custom_minimum_size = Vector2(952, 0)
+[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HSplitContainer" unique_id=718509494]
+custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
 
-[node name="TextureRect background" type="TextureRect" parent="."]
+[node name="TextureRect background" type="TextureRect" parent="." unique_id=1296228269]
 layout_mode = 0
 offset_left = 234.0
 offset_top = 95.0
@@ -88,7 +89,7 @@ offset_bottom = 612.0
 texture = ExtResource("1_xb13y")
 expand_mode = 1
 
-[node name="TextureRect foreground" type="TextureRect" parent="."]
+[node name="TextureRect foreground" type="TextureRect" parent="." unique_id=1273484905]
 layout_mode = 0
 offset_left = 234.0
 offset_top = 95.0
@@ -97,7 +98,7 @@ offset_bottom = 611.0
 texture = ExtResource("2_qlrmg")
 expand_mode = 1
 
-[node name="Snow" type="Button" parent="."]
+[node name="Snow" type="Button" parent="." unique_id=895167394]
 layout_mode = 0
 offset_left = 322.0
 offset_top = 99.0
@@ -108,7 +109,7 @@ theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
 script = ExtResource("1_h6qyf")
 metadata/_custom_type_script = "uid://bbn1jxutftk3u"
 
-[node name="Creature1" parent="Snow" instance=ExtResource("6_vusgt")]
+[node name="Creature1" parent="Snow" unique_id=683390447 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 175.0
 offset_top = 116.0
@@ -116,7 +117,7 @@ offset_right = 247.0
 offset_bottom = 188.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature2" parent="Snow" instance=ExtResource("6_vusgt")]
+[node name="Creature2" parent="Snow" unique_id=1734467465 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 78.0
 offset_top = 126.0
@@ -124,7 +125,7 @@ offset_right = 150.0
 offset_bottom = 198.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature3" parent="Snow" instance=ExtResource("6_vusgt")]
+[node name="Creature3" parent="Snow" unique_id=820784648 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 173.0
@@ -132,7 +133,7 @@ offset_right = 87.0
 offset_bottom = 245.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature4" parent="Snow" instance=ExtResource("6_vusgt")]
+[node name="Creature4" parent="Snow" unique_id=1259186239 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 148.0
 offset_top = 164.0
@@ -140,7 +141,7 @@ offset_right = 220.0
 offset_bottom = 236.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Grass" type="Button" parent="."]
+[node name="Grass" type="Button" parent="." unique_id=2040749147]
 layout_mode = 0
 offset_left = 576.0
 offset_top = 102.0
@@ -151,7 +152,7 @@ theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
 script = ExtResource("1_h6qyf")
 metadata/_custom_type_script = "uid://bbn1jxutftk3u"
 
-[node name="Creature1" parent="Grass" instance=ExtResource("6_vusgt")]
+[node name="Creature1" parent="Grass" unique_id=865970138 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 99.0
 offset_top = 111.0
@@ -159,7 +160,7 @@ offset_right = 171.0
 offset_bottom = 183.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature2" parent="Grass" instance=ExtResource("6_vusgt")]
+[node name="Creature2" parent="Grass" unique_id=2011446835 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 88.0
 offset_top = 165.0
@@ -167,7 +168,7 @@ offset_right = 160.0
 offset_bottom = 237.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature3" parent="Grass" instance=ExtResource("6_vusgt")]
+[node name="Creature3" parent="Grass" unique_id=834925857 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 173.0
@@ -175,7 +176,7 @@ offset_right = 87.0
 offset_bottom = 245.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature4" parent="Grass" instance=ExtResource("6_vusgt")]
+[node name="Creature4" parent="Grass" unique_id=1623771761 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 148.0
 offset_top = 164.0
@@ -183,7 +184,7 @@ offset_right = 220.0
 offset_bottom = 236.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Sand" type="Button" parent="."]
+[node name="Sand" type="Button" parent="." unique_id=1535855769]
 layout_mode = 0
 offset_left = 819.0
 offset_top = 102.0
@@ -194,7 +195,7 @@ theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
 script = ExtResource("1_h6qyf")
 metadata/_custom_type_script = "uid://bbn1jxutftk3u"
 
-[node name="Creature1" parent="Sand" instance=ExtResource("6_vusgt")]
+[node name="Creature1" parent="Sand" unique_id=209773839 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 141.0
 offset_top = 171.0
@@ -202,7 +203,7 @@ offset_right = 213.0
 offset_bottom = 243.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature2" parent="Sand" instance=ExtResource("6_vusgt")]
+[node name="Creature2" parent="Sand" unique_id=710989111 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 73.0
 offset_top = 116.0
@@ -210,7 +211,7 @@ offset_right = 145.0
 offset_bottom = 188.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature3" parent="Sand" instance=ExtResource("6_vusgt")]
+[node name="Creature3" parent="Sand" unique_id=1522760123 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 123.0
@@ -218,7 +219,7 @@ offset_right = 70.0
 offset_bottom = 195.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature4" parent="Sand" instance=ExtResource("6_vusgt")]
+[node name="Creature4" parent="Sand" unique_id=1525245172 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 141.0
 offset_top = 61.0
@@ -226,7 +227,7 @@ offset_right = 213.0
 offset_bottom = 133.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Aqua" type="Button" parent="."]
+[node name="Aqua" type="Button" parent="." unique_id=121066612]
 layout_mode = 0
 offset_left = 315.0
 offset_top = 355.0
@@ -237,7 +238,7 @@ theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
 script = ExtResource("1_h6qyf")
 metadata/_custom_type_script = "uid://bbn1jxutftk3u"
 
-[node name="Creature1" parent="Aqua" instance=ExtResource("6_vusgt")]
+[node name="Creature1" parent="Aqua" unique_id=324409919 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 146.0
 offset_top = 112.0
@@ -245,7 +246,7 @@ offset_right = 218.0
 offset_bottom = 184.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature2" parent="Aqua" instance=ExtResource("6_vusgt")]
+[node name="Creature2" parent="Aqua" unique_id=38747266 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 82.0
@@ -253,7 +254,7 @@ offset_right = 152.0
 offset_bottom = 154.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature3" parent="Aqua" instance=ExtResource("6_vusgt")]
+[node name="Creature3" parent="Aqua" unique_id=547211791 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 48.0
@@ -261,7 +262,7 @@ offset_right = 88.0
 offset_bottom = 120.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature4" parent="Aqua" instance=ExtResource("6_vusgt")]
+[node name="Creature4" parent="Aqua" unique_id=271568625 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 125.0
 offset_top = 32.0
@@ -269,7 +270,7 @@ offset_right = 197.0
 offset_bottom = 104.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Jungle" type="Button" parent="."]
+[node name="Jungle" type="Button" parent="." unique_id=167394062]
 layout_mode = 0
 offset_left = 570.0
 offset_top = 352.0
@@ -280,7 +281,7 @@ theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
 script = ExtResource("1_h6qyf")
 metadata/_custom_type_script = "uid://bbn1jxutftk3u"
 
-[node name="Creature1" parent="Jungle" instance=ExtResource("6_vusgt")]
+[node name="Creature1" parent="Jungle" unique_id=1627712128 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 167.0
 offset_top = 114.0
@@ -288,7 +289,7 @@ offset_right = 239.0
 offset_bottom = 186.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature2" parent="Jungle" instance=ExtResource("6_vusgt")]
+[node name="Creature2" parent="Jungle" unique_id=352806014 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 71.0
 offset_top = 81.0
@@ -296,7 +297,7 @@ offset_right = 143.0
 offset_bottom = 153.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature3" parent="Jungle" instance=ExtResource("6_vusgt")]
+[node name="Creature3" parent="Jungle" unique_id=818385348 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 164.0
@@ -304,7 +305,7 @@ offset_right = 75.0
 offset_bottom = 236.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature4" parent="Jungle" instance=ExtResource("6_vusgt")]
+[node name="Creature4" parent="Jungle" unique_id=2113877506 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 127.0
 offset_top = 162.0
@@ -312,7 +313,7 @@ offset_right = 199.0
 offset_bottom = 234.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Lava" type="Button" parent="."]
+[node name="Lava" type="Button" parent="." unique_id=2011747192]
 layout_mode = 0
 offset_left = 819.0
 offset_top = 351.0
@@ -323,7 +324,7 @@ theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
 script = ExtResource("1_h6qyf")
 metadata/_custom_type_script = "uid://bbn1jxutftk3u"
 
-[node name="Creature1" parent="Lava" instance=ExtResource("6_vusgt")]
+[node name="Creature1" parent="Lava" unique_id=448651869 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 173.0
 offset_top = 124.0
@@ -331,7 +332,7 @@ offset_right = 245.0
 offset_bottom = 196.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature2" parent="Lava" instance=ExtResource("6_vusgt")]
+[node name="Creature2" parent="Lava" unique_id=1844480368 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 104.0
 offset_top = 69.0
@@ -339,7 +340,7 @@ offset_right = 176.0
 offset_bottom = 141.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature3" parent="Lava" instance=ExtResource("6_vusgt")]
+[node name="Creature3" parent="Lava" unique_id=569843990 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 38.0
 offset_top = 135.0
@@ -347,7 +348,7 @@ offset_right = 110.0
 offset_bottom = 207.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature4" parent="Lava" instance=ExtResource("6_vusgt")]
+[node name="Creature4" parent="Lava" unique_id=1115131090 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 104.0
 offset_top = 157.0
@@ -355,12 +356,12 @@ offset_right = 176.0
 offset_bottom = 229.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Mini Menu" parent="." instance=ExtResource("4_nrwuv")]
+[node name="Mini Menu" parent="." unique_id=165855058 instance=ExtResource("4_nrwuv")]
 layout_mode = 0
 offset_left = 802.0
 offset_right = 1152.0
 
-[node name="Vertical Mini Menu" type="Panel" parent="."]
+[node name="Vertical Mini Menu" type="Panel" parent="." unique_id=808452654]
 visible = false
 custom_minimum_size = Vector2(80, 360)
 layout_mode = 1
@@ -377,7 +378,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_h6qyf")
 script = ExtResource("4_h6qyf")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Vertical Mini Menu"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Vertical Mini Menu" unique_id=873724259]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -387,44 +388,44 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 8
 
-[node name="Home" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer"]
+[node name="Home" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer" unique_id=434010680]
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("4_y2mes")
 texture_pressed = ExtResource("5_h6qyf")
 texture_hover = ExtResource("5_h6qyf")
 
-[node name="Incubator" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer"]
+[node name="Incubator" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer" unique_id=1862130386]
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("6_nrwuv")
 texture_pressed = ExtResource("7_1wf2t")
 texture_hover = ExtResource("7_1wf2t")
 
-[node name="Terrarium" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer"]
+[node name="Terrarium" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer" unique_id=1938551747]
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("8_a3s61")
 texture_pressed = ExtResource("9_kstpm")
 texture_hover = ExtResource("9_kstpm")
 
-[node name="Bestiary" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer"]
+[node name="Bestiary" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer" unique_id=1648257251]
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("10_vusgt")
 texture_pressed = ExtResource("11_pf7wg")
 texture_hover = ExtResource("11_pf7wg")
 
-[node name="Settings" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer"]
+[node name="Settings" type="TextureButton" parent="Vertical Mini Menu/VBoxContainer" unique_id=631290064]
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("12_mxrpn")
 texture_pressed = ExtResource("13_skqsh")
 texture_hover = ExtResource("13_skqsh")
 
-[node name="Egg-Gen" parent="." instance=ExtResource("22_skqsh")]
+[node name="Egg-Gen" parent="." unique_id=240887351 instance=ExtResource("22_skqsh")]
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1688681329]
 stream = ExtResource("22_w5ypi")
 autoplay = true
 
