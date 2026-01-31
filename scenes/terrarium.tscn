@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://77pmhayrj8nl"]
+[gd_scene load_steps=28 format=3 uid="uid://77pmhayrj8nl"]
 
 [ext_resource type="Script" uid="uid://bbn1jxutftk3u" path="res://scripts/terrarium.gd" id="1_h6qyf"]
 [ext_resource type="Script" uid="uid://b6yspum6krbt7" path="res://scripts/terrarium_room.gd" id="1_vusgt"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bunldmv1vprgp" path="res://art/icons/shelf_dragger.png" id="17_kstpm"]
 [ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelf.tscn" id="18_vusgt"]
 [ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="22_skqsh"]
+[ext_resource type="AudioStream" uid="uid://cx4rxdjh3xffy" path="res://sound/music/Terrarium.wav" id="22_w5ypi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pf7wg"]
 bg_color = Color(0.09048235, 0.09048236, 0.0904823, 1)
@@ -424,6 +425,7 @@ texture_hover = ExtResource("13_skqsh")
 [node name="Egg-Gen" parent="." instance=ExtResource("22_skqsh")]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_w5ypi")
 autoplay = true
 
 [connection signal="selection" from="BoxContainer/HSplitContainer/Egg Shelf" to="." method="_on_egg_shelf_selection"]

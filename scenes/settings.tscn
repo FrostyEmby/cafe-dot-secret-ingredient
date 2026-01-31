@@ -78,8 +78,13 @@ size_flags_stretch_ratio = 1.5
 max_value = 1.0
 value = 1.0
 
+[node name="Space1" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Space2" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
 [node name="Back" type="TextureButton" parent="PanelContainer/MarginContainer/GridContainer"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

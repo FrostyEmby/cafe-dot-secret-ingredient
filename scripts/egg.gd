@@ -139,6 +139,8 @@ func _dead():
 	
 	$Indicator.visible = false
 	icon = load("res://art/eggs/corpse.png")
+	
+	$Bad.play()
 
 
 func _process(_delta: float) -> void:

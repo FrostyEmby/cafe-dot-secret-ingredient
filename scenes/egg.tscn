@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctuxvuxm5oh0r"]
+[gd_scene load_steps=6 format=3 uid="uid://ctuxvuxm5oh0r"]
 
 [ext_resource type="Texture2D" uid="uid://yph5r4u8xt3w" path="res://art/icons/egg1.png" id="1_34461"]
 [ext_resource type="Script" uid="uid://br1lu1lnknnov" path="res://scripts/egg.gd" id="2_ifgqj"]
+[ext_resource type="AudioStream" uid="uid://c2h1mvtvb3td6" path="res://sound/sound effects/It went bad.wav" id="3_34461"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i1l7w"]
 
@@ -40,6 +41,9 @@ label_settings = SubResource("LabelSettings_qlus4")
 horizontal_alignment = 1
 clip_text = true
 visible_characters = 4
+
+[node name="Bad" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_34461")
 
 [connection signal="timeout" from="Hatch" to="." method="_on_hatch_timeout"]
 [connection signal="tree_entered" from="Hatch" to="." method="_on_hatch_tree_entered"]
