@@ -3,6 +3,7 @@ extends Control
 var save : Save = load("res://resources/save.tres")
 
 func _on_play_pressed() -> void:
+	save.main_exit = true
 	# goes to incubator scene
 	get_tree().change_scene_to_file("uid://g28updgkaqym")
 

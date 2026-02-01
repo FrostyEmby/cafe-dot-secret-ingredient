@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dy0st642kg23l" path="res://art/title/title book2.png" id="3_lgwnu"]
 [ext_resource type="Texture2D" uid="uid://b24uftqnjnnwv" path="res://art/icons/Play.png" id="3_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://cgn6g6ykgffnx" path="res://art/icons/gear.png" id="4_oa1go"]
-[ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="5_8ln24"]
 [ext_resource type="Texture2D" uid="uid://b6mh3wjq2rely" path="res://art/icons/who.png" id="5_oa1go"]
 [ext_resource type="AudioStream" uid="uid://ct3ff1chu1rmr" path="res://sound/music/Calm entry.wav" id="6_rtw2f"]
 
@@ -76,12 +75,6 @@ theme = ExtResource("2_8ln24")
 text = "Credits"
 icon = ExtResource("5_oa1go")
 alignment = 0
-
-[node name="Mini Menu" parent="." unique_id=1306011916 instance=ExtResource("5_8ln24")]
-visible = false
-layout_mode = 0
-offset_left = 802.0
-offset_right = 1152.0
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1966488827]
 stream = ExtResource("6_rtw2f")
