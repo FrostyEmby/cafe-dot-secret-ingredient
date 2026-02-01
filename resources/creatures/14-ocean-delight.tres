@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://csbq56k466ch8"]
+
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_fkhco"]
+[ext_resource type="Texture2D" uid="uid://d3hffbqheq6x" path="res://art/adult creatures/14 ocean delight.png" id="1_x64kr"]
+[ext_resource type="Texture2D" uid="uid://dvf0527c5tcmm" path="res://art/adult creatures/50 percent size/14 ocean delight.png" id="2_cj6a0"]
+[ext_resource type="Texture2D" uid="uid://dyo4h3yy52kw7" path="res://art/final babies/14 ocean delight baby.png" id="3_r3xnm"]
+
+[resource]
+script = ExtResource("1_fkhco")
+name = "Ocean Delight"
+type = 3
+diet = 2
+incubator = 7
+terrarium = 3
+baby_sprite = ExtResource("3_r3xnm")
+adult_sprite = ExtResource("2_cj6a0")
+adult_detailed = ExtResource("1_x64kr")
+hatch_time_secs = 10.0
+maturity_time_secs = 20.0
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

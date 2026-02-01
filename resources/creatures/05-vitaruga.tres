@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://ddvixqmre33gs"]
+
+[ext_resource type="Texture2D" uid="uid://uodkapaeodeu" path="res://art/adult creatures/05 vitaruga.png" id="1_7fqri"]
+[ext_resource type="Texture2D" uid="uid://pk4bm1cx5b5r" path="res://art/adult creatures/50 percent size/05 vitaruga.png" id="2_erptm"]
+[ext_resource type="Texture2D" uid="uid://bqssydiwkem52" path="res://art/final babies/05 vitaruga baby.png" id="3_ucf1p"]
+[ext_resource type="Texture2D" uid="uid://x0d37gn8p0qu" path="res://art/final eggs/05 vitaruga egg.png" id="4_e0ref"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="5_micq7"]
+
+[resource]
+script = ExtResource("5_micq7")
+name = "Vitaruga"
+type = 1
+diet = 4
+incubator = 3
+terrarium = 3
+egg = ExtResource("4_e0ref")
+baby_sprite = ExtResource("3_ucf1p")
+adult_sprite = ExtResource("2_erptm")
+adult_detailed = ExtResource("1_7fqri")
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

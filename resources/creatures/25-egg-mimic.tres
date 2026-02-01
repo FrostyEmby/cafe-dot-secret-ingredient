@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://tpahjjfell1w"]
+
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_arcf1"]
+
+[resource]
+script = ExtResource("1_arcf1")
+name = "Egg Mimic"
+type = 4
+diet = 1
+incubator = 2
+terrarium = 1
+hatch_time_secs = 1.0
+maturity_time_secs = 2.0
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

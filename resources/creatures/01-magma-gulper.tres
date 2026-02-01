@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://cp3qq1ccqtlf3"]
+
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_l6qvw"]
+[ext_resource type="Texture2D" uid="uid://dtefrlqmqoy6m" path="res://art/adult creatures/magma gulper.png" id="1_xegkf"]
+[ext_resource type="Texture2D" uid="uid://dqud6rcvx7swf" path="res://art/adult creatures/50 percent size/01 magma gulper.png" id="2_bi25f"]
+[ext_resource type="Texture2D" uid="uid://dvkorcyp14bne" path="res://art/final babies/01 magma gulper baby.png" id="3_hhgej"]
+
+[resource]
+script = ExtResource("1_l6qvw")
+name = "Magma Gulper"
+type = 2
+diet = 3
+incubator = 7
+terrarium = 2
+baby_sprite = ExtResource("3_hhgej")
+adult_sprite = ExtResource("2_bi25f")
+adult_detailed = ExtResource("1_xegkf")
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

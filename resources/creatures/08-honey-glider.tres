@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://gifsb8c5be5f"]
+
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_aluou"]
+[ext_resource type="Texture2D" uid="uid://y55s4pxwpr3a" path="res://art/adult creatures/08 honey glider.png" id="1_srpn1"]
+[ext_resource type="Texture2D" uid="uid://44k8ovlt8bud" path="res://art/adult creatures/50 percent size/08 honey glider.png" id="2_mybmb"]
+[ext_resource type="Texture2D" uid="uid://do43u3pm7o0cr" path="res://art/final babies/08 honey glider baby.png" id="3_8dd5i"]
+[ext_resource type="Texture2D" uid="uid://02o0p6uelxpj" path="res://art/final eggs/08 honey glider egg.png" id="4_o7p4m"]
+
+[resource]
+script = ExtResource("1_aluou")
+name = "Honey Glider"
+diet = 6
+incubator = 4
+terrarium = 5
+egg = ExtResource("4_o7p4m")
+baby_sprite = ExtResource("3_8dd5i")
+adult_sprite = ExtResource("2_mybmb")
+adult_detailed = ExtResource("1_srpn1")
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

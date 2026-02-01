@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://dqrniorklwy2j"]
+
+[ext_resource type="Texture2D" uid="uid://hvokm05hwnwl" path="res://art/adult creatures/obsidian.png" id="1_nmyuu"]
+[ext_resource type="Texture2D" uid="uid://c6in2pcempuhm" path="res://art/adult creatures/50 percent size/02 obsidian.png" id="2_yr5um"]
+[ext_resource type="Texture2D" uid="uid://qqqcqj3vvswj" path="res://art/final babies/02 obsidian baby.png" id="3_wvqxw"]
+[ext_resource type="Texture2D" uid="uid://buwai32i6pk4a" path="res://art/final eggs/02 obsidian egg.png" id="4_6psm4"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="5_62oax"]
+
+[resource]
+script = ExtResource("5_62oax")
+name = "Obsidian"
+type = 2
+diet = 7
+description = "The glowing lava seeping out of its body hardens into thick slacks, making it hard to move. In death it will completely petrify."
+incubator = 6
+terrarium = 2
+egg = ExtResource("4_6psm4")
+baby_sprite = ExtResource("3_wvqxw")
+adult_sprite = ExtResource("2_yr5um")
+adult_detailed = ExtResource("1_nmyuu")
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

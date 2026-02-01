@@ -2,10 +2,12 @@
 extends Resource
 class_name CreatureStats
 
+enum physical {FLESH, PLANT, ELEMENTAL, FISH, INSECT}
+enum food_pref {OMNIVORE, EGGS, INSECTS, MEAT, PLANTS, PURPLE_SNAIL, SWEETS, ELEMENTS, FISH}
+
 @export var name : String
-@export var diet : String
-@export var hint : String
-@export var confused_with : String
+@export var type : physical
+@export var diet : food_pref
 @export var description : String
 
 enum hatchery {NONE, ALL, COLD_DRY, COLD_WET, TEMPERATE_DRY, TEMPERATE_WET, HOT_DRY, HOT_WET}
@@ -16,7 +18,7 @@ enum habitat {NONE, ALL, VOLCANO, AQUATIC, DESERT, JUNGLE, SNOW, GRASSLAND}
 
 @export var egg : Texture2D
 @export var baby_sprite : Texture2D
-@export var baby_detailed : Texture2D
+#@export var baby_detailed : Texture2D
 @export var adult_sprite : Texture2D
 @export var adult_detailed : Texture2D
 

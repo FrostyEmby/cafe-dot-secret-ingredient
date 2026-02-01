@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="EggShelfData" load_steps=20 format=3 uid="uid://cmgoopq5yg1vo"]
+[gd_resource type="Resource" script_class="EggShelfData" format=3 uid="uid://cmgoopq5yg1vo"]
 
 [ext_resource type="Script" uid="uid://qvbb7aomctoi" path="res://scripts/templates/egg-shelf-data.gd" id="1_l4f7o"]
 [ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/templates/egg-data.gd" id="2_gfb1j"]
-[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/creatures/bird-one.tres" id="2_l4f7o"]
+[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/creatures/17-bird-one.tres" id="2_l4f7o"]
 
 [sub_resource type="Resource" id="Resource_voiek"]
 script = ExtResource("2_gfb1j")

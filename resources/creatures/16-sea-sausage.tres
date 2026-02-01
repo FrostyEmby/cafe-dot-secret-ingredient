@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://bcpddagykdk57"]
+
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_hgx5t"]
+[ext_resource type="Texture2D" uid="uid://d0qkodeo6sm6k" path="res://art/adult creatures/16 sea sausage.png" id="1_qonpb"]
+[ext_resource type="Texture2D" uid="uid://du4rf8qhtxc4l" path="res://art/final eggs/16 sea sausage egg.png" id="1_yxupf"]
+[ext_resource type="Texture2D" uid="uid://df5d7n2d6lr0g" path="res://art/adult creatures/50 percent size/16 sea sausage.png" id="2_ldsdx"]
+[ext_resource type="Texture2D" uid="uid://b18508neyu8nh" path="res://art/final babies/16 sea sausage baby.png" id="3_emifg"]
+
+[resource]
+script = ExtResource("1_hgx5t")
+name = "Sea Sausage"
+diet = 3
+incubator = 2
+terrarium = 3
+egg = ExtResource("1_yxupf")
+baby_sprite = ExtResource("3_emifg")
+adult_sprite = ExtResource("2_ldsdx")
+adult_detailed = ExtResource("1_qonpb")
+hatch_time_secs = 25.0
+maturity_time_secs = 30.0
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

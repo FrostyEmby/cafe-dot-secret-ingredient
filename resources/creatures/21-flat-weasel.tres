@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://defob51xngan0"]
+
+[ext_resource type="Texture2D" uid="uid://8q2rh4btbhq7" path="res://art/adult creatures/flat weasel.png" id="1_b1u0x"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_rkjwt"]
+[ext_resource type="Texture2D" uid="uid://lyaxxvhr61vd" path="res://art/adult creatures/50 percent size/21 flat weasel.png" id="2_25rbx"]
+[ext_resource type="Texture2D" uid="uid://t6o47qmsqkbl" path="res://art/final babies/21 flat weasel baby.png" id="3_n6mfw"]
+[ext_resource type="Texture2D" uid="uid://drd6q58imk38r" path="res://art/final eggs/21 flat weasel egg.png" id="4_84xwr"]
+
+[resource]
+script = ExtResource("1_rkjwt")
+name = "Flat Weasel"
+diet = 3
+incubator = 2
+terrarium = 6
+egg = ExtResource("4_84xwr")
+baby_sprite = ExtResource("3_n6mfw")
+adult_sprite = ExtResource("2_25rbx")
+adult_detailed = ExtResource("1_b1u0x")
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

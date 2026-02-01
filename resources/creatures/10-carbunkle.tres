@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://drd344unkl4hq"]
+
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_52hap"]
+[ext_resource type="Texture2D" uid="uid://cw11tb05aybg8" path="res://art/adult creatures/carbunkle.png" id="1_c7ory"]
+[ext_resource type="Texture2D" uid="uid://dbqrqnq0iu122" path="res://art/adult creatures/50 percent size/10 carbunkle.png" id="2_hp1kv"]
+[ext_resource type="Texture2D" uid="uid://b1hrb8ux0jiq" path="res://art/final babies/10 carbunkle baby.png" id="3_l1opo"]
+
+[resource]
+script = ExtResource("1_52hap")
+name = "Carbunkle"
+type = 2
+diet = 3
+incubator = 4
+terrarium = 7
+baby_sprite = ExtResource("3_l1opo")
+adult_sprite = ExtResource("2_hp1kv")
+adult_detailed = ExtResource("1_c7ory")
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

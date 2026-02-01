@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://b1r4e4p578ka3"]
+
+[ext_resource type="Texture2D" uid="uid://btdvhv7r6sxow" path="res://art/final babies/22 moose shrew baby.png" id="1_4tnvx"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_rotap"]
+[ext_resource type="Texture2D" uid="uid://ddoh7nkny1s53" path="res://art/adult creatures/moose shrew.png" id="1_ydwjp"]
+[ext_resource type="Texture2D" uid="uid://bs7mkb711rv4m" path="res://art/adult creatures/50 percent size/22 moose shrew.png" id="2_lubqt"]
+[ext_resource type="Texture2D" uid="uid://bvilgudbsfx1v" path="res://art/final eggs/22 moose shrew egg.png" id="2_sdmdg"]
+
+[resource]
+script = ExtResource("1_rotap")
+name = "Mouse Shrew"
+diet = 2
+incubator = 4
+terrarium = 6
+egg = ExtResource("2_sdmdg")
+baby_sprite = ExtResource("1_4tnvx")
+adult_sprite = ExtResource("2_lubqt")
+adult_detailed = ExtResource("1_ydwjp")
+hatch_time_secs = 5.0
+maturity_time_secs = 7.0
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

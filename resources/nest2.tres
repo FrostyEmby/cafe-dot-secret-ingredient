@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="NestData" load_steps=13 format=3 uid="uid://dhidbksh1hoq2"]
+[gd_resource type="Resource" script_class="NestData" format=3 uid="uid://dhidbksh1hoq2"]
 
 [ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/templates/egg-data.gd" id="1_hhdhr"]
-[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/creatures/bird-one.tres" id="2_67w5p"]
-[ext_resource type="Resource" uid="uid://ddvixqmre33gs" path="res://resources/creatures/plant-tortoise.tres" id="2_wbu0j"]
+[ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/creatures/17-bird-one.tres" id="2_67w5p"]
+[ext_resource type="Resource" uid="uid://ddvixqmre33gs" path="res://resources/creatures/05-vitaruga.tres" id="2_wbu0j"]
 [ext_resource type="Script" uid="uid://bgw7voc2pvri" path="res://scripts/templates/nest-data.gd" id="3_1hp4v"]
-[ext_resource type="Resource" uid="uid://dxqtqoy48cpre" path="res://resources/creatures/nest-parasite.tres" id="3_21bdv"]
-[ext_resource type="Resource" uid="uid://bgpacae1weki4" path="res://resources/creatures/electric-dragonfly.tres" id="4_u80px"]
+[ext_resource type="Resource" path="res://resources/creatures/nest-parasite.tres" id="3_21bdv"]
+[ext_resource type="Resource" uid="uid://bgpacae1weki4" path="res://resources/creatures/06-electric-dragonfly.tres" id="4_u80px"]
 
 [sub_resource type="Resource" id="Resource_1hp4v"]
 script = ExtResource("1_hhdhr")

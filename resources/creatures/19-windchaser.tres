@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://ddvvpkqrg1yt8"]
+
+[ext_resource type="Texture2D" uid="uid://d30qmjyjh3kgl" path="res://art/adult creatures/19 windchaser.png" id="1_g5ktq"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_owf7f"]
+[ext_resource type="Texture2D" uid="uid://d31pmvw4qhm31" path="res://art/adult creatures/50 percent size/19 windchaser.png" id="2_knii1"]
+[ext_resource type="Texture2D" uid="uid://gi333e6m1mr2" path="res://art/final babies/19 windchaser baby.png" id="3_2bilk"]
+[ext_resource type="Texture2D" uid="uid://cbk4rwppfra0" path="res://art/final eggs/19 windchaser egg.png" id="4_vucld"]
+
+[resource]
+script = ExtResource("1_owf7f")
+name = "Windchaser"
+diet = 3
+incubator = 4
+terrarium = 4
+egg = ExtResource("4_vucld")
+baby_sprite = ExtResource("3_2bilk")
+adult_sprite = ExtResource("2_knii1")
+adult_detailed = ExtResource("1_g5ktq")
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

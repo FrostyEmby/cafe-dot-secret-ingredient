@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://d02epy2ondgyt"]
+
+[ext_resource type="Texture2D" uid="uid://b4shgbaffiahs" path="res://art/adult creatures/tyrian snail.png" id="1_0yjs5"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_sqb0p"]
+[ext_resource type="Texture2D" uid="uid://bebtqxkwn2xw0" path="res://art/adult creatures/50 percent size/09 tyrian snail.png" id="2_re6jy"]
+[ext_resource type="Texture2D" uid="uid://bexr2dvwqiavn" path="res://art/final babies/09 tyrian snail baby.png" id="3_p776o"]
+
+[resource]
+script = ExtResource("1_sqb0p")
+name = "Tyrian Snail"
+type = 4
+diet = 6
+incubator = 5
+terrarium = 7
+baby_sprite = ExtResource("3_p776o")
+adult_sprite = ExtResource("2_re6jy")
+adult_detailed = ExtResource("1_0yjs5")
+hatch_time_secs = 20.0
+maturity_time_secs = 45.0
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

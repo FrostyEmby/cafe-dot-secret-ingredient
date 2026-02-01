@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://dub1mj75le4c3"]
+
+[ext_resource type="Texture2D" uid="uid://cpvujudfcoxj6" path="res://art/adult creatures/13 shelled slime.png" id="1_mi3rg"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_se1m6"]
+[ext_resource type="Texture2D" uid="uid://dc3n0e4ykt7n1" path="res://art/adult creatures/50 percent size/13 shelled slime.png" id="2_m7isd"]
+[ext_resource type="Texture2D" uid="uid://dupssk0r0x1nq" path="res://art/final babies/13 shelled slime baby.png" id="3_sb3q3"]
+
+[resource]
+script = ExtResource("1_se1m6")
+name = "Shelled Slime"
+type = 3
+diet = 7
+incubator = 5
+terrarium = 3
+baby_sprite = ExtResource("3_sb3q3")
+adult_sprite = ExtResource("2_m7isd")
+adult_detailed = ExtResource("1_mi3rg")
+hatch_time_secs = 10.0
+maturity_time_secs = 20.0
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

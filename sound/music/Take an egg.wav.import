@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://8xdg0l274c1w"
+path="res://.godot/imported/Take an egg.wav-1215a8527696a4c802ceae7c2b816a82.sample"
+
+[deps]
+
+source_file="res://sound/music/Take an egg.wav"
+dest_files=["res://.godot/imported/Take an egg.wav-1215a8527696a4c802ceae7c2b816a82.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

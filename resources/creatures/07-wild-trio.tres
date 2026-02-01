@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://2q4jivnlayxv"]
+
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_qja7n"]
+[ext_resource type="Texture2D" uid="uid://cattfmfp46pqv" path="res://art/adult creatures/07 wild trio.png" id="1_rpni4"]
+[ext_resource type="Texture2D" uid="uid://bd0ku0lh80tem" path="res://art/adult creatures/50 percent size/07 wild trio.png" id="2_r4x10"]
+[ext_resource type="Texture2D" uid="uid://dem4fflik0mgg" path="res://art/final babies/07 wild trio baby.png" id="3_4ncsk"]
+
+[resource]
+script = ExtResource("1_qja7n")
+name = "Wild Trio"
+type = 1
+diet = 4
+incubator = 7
+terrarium = 5
+baby_sprite = ExtResource("3_4ncsk")
+adult_sprite = ExtResource("2_r4x10")
+adult_detailed = ExtResource("1_rpni4")
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

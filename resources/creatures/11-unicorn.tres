@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://bd2c01l4dr8bq"]
+
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_ivksb"]
+[ext_resource type="Texture2D" uid="uid://cd7y8ypshj5kq" path="res://art/adult creatures/unicorn.png" id="1_kdbcw"]
+[ext_resource type="Texture2D" uid="uid://kb25x4hjif03" path="res://art/adult creatures/50 percent size/11 unicorn.png" id="2_ym47y"]
+[ext_resource type="Texture2D" uid="uid://cun3h250h0gvb" path="res://art/final babies/11 unicorn baby.png" id="3_bhq8y"]
+[ext_resource type="Texture2D" uid="uid://droe5nub50l38" path="res://art/final eggs/11 unicorn egg.png" id="4_vvr5a"]
+
+[resource]
+script = ExtResource("1_ivksb")
+name = "Unicorn"
+diet = 4
+incubator = 4
+terrarium = 7
+egg = ExtResource("4_vvr5a")
+baby_sprite = ExtResource("3_bhq8y")
+adult_sprite = ExtResource("2_ym47y")
+adult_detailed = ExtResource("1_kdbcw")
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

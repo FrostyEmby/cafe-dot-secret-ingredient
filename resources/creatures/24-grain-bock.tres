@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://6kmrgx31njis"]
+
+[ext_resource type="Texture2D" uid="uid://yorsotx4bswn" path="res://art/adult creatures/grain bock.png" id="1_c0kon"]
+[ext_resource type="Texture2D" uid="uid://du5end7p2xuqb" path="res://art/adult creatures/50 percent size/24 grain bock.png" id="2_11srr"]
+[ext_resource type="Texture2D" uid="uid://by4xk3se5yuh3" path="res://art/final babies/24 grain bock baby.png" id="3_6nx8a"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="4_ab4x7"]
+
+[resource]
+script = ExtResource("4_ab4x7")
+name = "Grain Bock"
+type = 1
+diet = 4
+incubator = 2
+terrarium = 6
+baby_sprite = ExtResource("3_6nx8a")
+adult_sprite = ExtResource("2_11srr")
+adult_detailed = ExtResource("1_c0kon")
+hatch_time_secs = 17.0
+maturity_time_secs = 31.0
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

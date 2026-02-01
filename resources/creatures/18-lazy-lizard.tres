@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://cf5jnn6tn3is"]
+
+[ext_resource type="Texture2D" uid="uid://cvcrlit0sspca" path="res://art/adult creatures/18 lazy lizard.png" id="1_4tb8a"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_ck8xq"]
+[ext_resource type="Texture2D" uid="uid://djhqae8ygoh1t" path="res://art/adult creatures/50 percent size/18 lazy lizard.png" id="2_h5t1k"]
+[ext_resource type="Texture2D" uid="uid://c3xyexcsuiu2y" path="res://art/final babies/18 lazy lizard baby.png" id="3_hl4d7"]
+[ext_resource type="Texture2D" uid="uid://ujdbtyjec0bh" path="res://art/final eggs/18 lazy lizard egg.png" id="4_ugle2"]
+
+[resource]
+script = ExtResource("1_ck8xq")
+name = "Lazy Lizard"
+diet = 2
+incubator = 6
+terrarium = 4
+egg = ExtResource("4_ugle2")
+baby_sprite = ExtResource("3_hl4d7")
+adult_sprite = ExtResource("2_h5t1k")
+adult_detailed = ExtResource("1_4tb8a")
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"

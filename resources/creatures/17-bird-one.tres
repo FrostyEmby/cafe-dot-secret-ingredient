@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://bo03k2xsccltr"]
+
+[ext_resource type="Texture2D" uid="uid://c3c322lptw8g" path="res://art/adult creatures/17 harptail.png" id="1_ufcuh"]
+[ext_resource type="Texture2D" uid="uid://cprfod61adyvt" path="res://art/adult creatures/50 percent size/17 harptail.png" id="2_b6qgv"]
+[ext_resource type="Texture2D" uid="uid://m4txsomxt0hq" path="res://art/final babies/17 harptail baby.png" id="3_j8m1y"]
+[ext_resource type="Texture2D" uid="uid://cv0i7r1q4hjsu" path="res://art/final eggs/17 harptail egg.png" id="4_xuhhj"]
+[ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="5_035vu"]
+
+[resource]
+script = ExtResource("5_035vu")
+name = "Harptail"
+diet = "Insects"
+hint = "Claws"
+confused_with = "other ugly bird chicks"
+incubator = 4
+terrarium = 4
+egg = ExtResource("4_xuhhj")
+baby_sprite = ExtResource("3_j8m1y")
+adult_sprite = ExtResource("2_b6qgv")
+adult_detailed = ExtResource("1_ufcuh")
+metadata/_custom_type_script = "uid://cqr8dj8toeqen"
