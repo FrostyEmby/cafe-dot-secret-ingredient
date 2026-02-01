@@ -3,6 +3,8 @@ class_name Egg
 
 signal selection(egg : Egg)
 signal death(egg : Egg)
+signal birth
+signal corpse
 
 @export var info : EggData = EggData.new()
 @onready var hatch_timer : Timer = $Hatch
@@ -136,6 +138,8 @@ func _survive_or_die():
 func _hatch():
 	print("hatched nice and healthy!")
 	
+	birth.emit()
+	
 	info.incubating = false
 	info.hatched = true
 	
@@ -160,6 +164,8 @@ func _mature():
 
 func _dead():
 	print("hatched... but unfortunately dead")
+	
+	corpse.emit()
 	
 	info.incubating = false
 	info.maturing = false

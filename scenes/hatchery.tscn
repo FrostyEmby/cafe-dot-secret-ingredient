@@ -25,10 +25,10 @@ icon = ExtResource("4_3awrc")
 
 [node name="Egg2" parent="." unique_id=329611772 instance=ExtResource("3_i34b7")]
 layout_mode = 0
-offset_left = 61.0
-offset_top = -39.0
-offset_right = 133.0
-offset_bottom = 33.0
+offset_left = 57.0
+offset_top = -19.0
+offset_right = 129.0
+offset_bottom = 53.0
 icon = ExtResource("4_3awrc")
 
 [node name="Egg3" parent="." unique_id=1290098347 instance=ExtResource("3_i34b7")]
@@ -47,9 +47,15 @@ texture = ExtResource("5_crxx7")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="birth" from="Egg1" to="." method="_on_egg_1_birth"]
+[connection signal="corpse" from="Egg1" to="." method="_on_egg_1_corpse"]
 [connection signal="death" from="Egg1" to="." method="_on_egg_1_death"]
 [connection signal="selection" from="Egg1" to="." method="_on_egg_1_selection"]
+[connection signal="birth" from="Egg2" to="." method="_on_egg_2_birth"]
+[connection signal="corpse" from="Egg2" to="." method="_on_egg_2_corpse"]
 [connection signal="death" from="Egg2" to="." method="_on_egg_2_death"]
 [connection signal="selection" from="Egg2" to="." method="_on_egg_2_selection"]
+[connection signal="birth" from="Egg3" to="." method="_on_egg_3_birth"]
+[connection signal="corpse" from="Egg3" to="." method="_on_egg_3_corpse"]
 [connection signal="death" from="Egg3" to="." method="_on_egg_3_death"]
 [connection signal="selection" from="Egg3" to="." method="_on_egg_3_selection"]
