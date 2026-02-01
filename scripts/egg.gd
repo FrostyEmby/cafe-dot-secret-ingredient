@@ -27,6 +27,7 @@ func change_visibility(visibility : bool):
 func reset():
 	print("back to defaults")
 	
+	info.enabled = false
 	info.species = load("res://resources/creatures/17-bird-one.tres")
 	info.hatch_time = info.species.hatch_time_secs
 	info.incubating = false
@@ -61,6 +62,7 @@ func setup(id : EggData):
 	
 	change_visibility(id.visibility)
 	
+	info.enabled = id.enabled
 	info.species = id.species
 	info.hatch_time = id.hatch_time
 	info.incubating = id.incubating
@@ -82,6 +84,9 @@ func _ready():
 
 func _pressed() -> void:
 	print("egg pressed")
+	
+	info.enabled = false
+	
 	if info.dead:
 		change_visibility(false)
 		reset()
@@ -97,6 +102,7 @@ func _pressed() -> void:
 func incubate():
 	print("----INCUBATION START!----")
 	hatch_timer.start(info.species.hatch_time_secs)
+	info.enabled = true
 	$Indicator.visible = true
 	info.incubating = true
 	change_visibility(false)

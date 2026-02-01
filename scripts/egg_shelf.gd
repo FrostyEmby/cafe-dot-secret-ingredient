@@ -3,22 +3,22 @@ extends MarginContainer
 var save : Save = load("res://resources/save.tres")
 signal selection(egg: Egg)
 
-@onready var egg1 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg1"
-@onready var egg2 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg2"
-@onready var egg3 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg3"
-@onready var egg4 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg4"
-@onready var egg5 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg5"
-@onready var egg6 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg6"
-@onready var egg7 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg7"
-@onready var egg8 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg8"
-@onready var egg9 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg9"
-@onready var egg10 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg10"
-@onready var egg11 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg11"
-@onready var egg12 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg12"
-@onready var egg13 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg13"
-@onready var egg14 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg14"
-@onready var egg15 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg15"
-@onready var egg16 = $"Organizer/ScrollContainer/MarginContainer/Egg Grid/Egg16"
+@onready var egg1 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg1"
+@onready var egg2 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg2"
+@onready var egg3 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg3"
+@onready var egg4 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg4"
+@onready var egg5 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg5"
+@onready var egg6 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg6"
+@onready var egg7 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg7"
+@onready var egg8 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg8"
+@onready var egg9 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg9"
+@onready var egg10 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg10"
+@onready var egg11 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg11"
+@onready var egg12 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg12"
+@onready var egg13 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg13"
+@onready var egg14 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg14"
+@onready var egg15 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg15"
+@onready var egg16 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg16"
 
 
 func _ready() -> void:
@@ -27,7 +27,7 @@ func _ready() -> void:
 
 func has_space():
 	for new_egg in find_children("Egg*"):
-		if not new_egg.visible:
+		if not new_egg.info.enabled:
 			return true
 	return false
 
@@ -35,10 +35,11 @@ func has_space():
 func add_egg(egg: Egg):
 	print("adding egg to shelf")
 	for new_egg in find_children("Egg*"):
-		if not new_egg.visible:
+		if not new_egg.info.enabled:
 			print("found empty slot")
 			new_egg.setup(egg.info)
 			new_egg.change_visibility(true)
+			new_egg.info.enabled = true
 			_save()
 			print("filled empty slot")
 			break
@@ -47,6 +48,7 @@ func add_egg(egg: Egg):
 
 func remove_egg(egg: Egg):
 	egg.change_visibility(false)
+	egg.info.enabled = false
 	_save()
 	#save.shelf[egg.name.to_lower()].visibility = false
 

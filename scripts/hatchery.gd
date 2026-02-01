@@ -29,16 +29,17 @@ func _place():
 
 func has_space():
 	for new_egg in find_children("Egg*"):
-		if not new_egg.visible:
+		if not new_egg.info.enabled:
 			return true
 	return false
 
 
 func add_egg(egg: Egg):
 	for new_egg in find_children("Egg*"):
-		if not new_egg.visible:
+		if not new_egg.info.enabled:
 			new_egg.setup(egg.info)
 			new_egg.info.placement = _place()
+			new_egg.info.enabled = true
 			new_egg.change_visibility(true)
 			new_egg.incubate()
 			_save()
@@ -48,7 +49,7 @@ func add_egg(egg: Egg):
 
 func _pressed() -> void:
 	# if at least the last spot is open, then let egg match happen
-	if not $Egg3.visible:
+	if not $Egg3.info.enabled:
 		selection.emit(self)
 
 func setup():

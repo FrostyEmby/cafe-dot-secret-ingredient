@@ -9,9 +9,6 @@
 [resource]
 script = ExtResource("5_035vu")
 name = "Harptail"
-diet = "Insects"
-hint = "Claws"
-confused_with = "other ugly bird chicks"
 incubator = 4
 terrarium = 4
 egg = ExtResource("4_xuhhj")

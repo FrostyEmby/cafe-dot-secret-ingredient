@@ -3,6 +3,13 @@ extends MarginContainer
 signal selection(hatchery : Hatchery)
 signal hatch_select(egg : Egg, hatchery : Hatchery)
 
+@onready var cold_dry = $MarginContainer/GridContainer/Cold_Dry
+@onready var cold_wet = $MarginContainer/GridContainer/Cold_Wet
+@onready var temp_dry = $MarginContainer/GridContainer/Temp_Dry
+@onready var temp_wet = $MarginContainer/GridContainer/Temp_Wet
+@onready var hot_dry = $MarginContainer/GridContainer/Hot_Dry
+@onready var hot_wet = $MarginContainer/GridContainer/Hot_Wet
+
 
 func _ready() -> void:
 	_load()
@@ -38,13 +45,6 @@ func _on_hot_wet_selection(hatchery: Hatchery) -> void:
 	selection.emit(hatchery)
 
 func _load():
-	var cold_dry = $MarginContainer/GridContainer/Cold_Dry
-	var cold_wet = $MarginContainer/GridContainer/Cold_Wet
-	var temp_dry = $MarginContainer/GridContainer/Temp_Dry
-	var temp_wet = $MarginContainer/GridContainer/Temp_Wet
-	var hot_dry = $MarginContainer/GridContainer/Hot_Dry
-	var hot_wet = $MarginContainer/GridContainer/Hot_Wet
-	
 	print("-----starting incubator room setup-----")
 	
 	cold_dry.setup()

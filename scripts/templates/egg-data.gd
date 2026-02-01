@@ -1,6 +1,7 @@
 extends Resource
 class_name EggData
 
+@export var enabled : bool = false
 @export var visibility : bool = false
 @export var species : CreatureStats = load("res://resources/creatures/17-bird-one.tres")
 @export var hatch_time : float = 15 #species.hatch_time_secs
