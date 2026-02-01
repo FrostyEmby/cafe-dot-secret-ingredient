@@ -1,9 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bijfo0tkv3b3j"]
+[gd_scene format=3 uid="uid://bijfo0tkv3b3j"]
 
 [ext_resource type="Script" uid="uid://c1fplubi2jjwu" path="res://scripts/egg_generation.gd" id="1_8dnlt"]
 
-[node name="Egg-Gen" type="Timer"]
+[node name="Egg-Gen" type="Timer" unique_id=1389361966]
 wait_time = 10.0
-one_shot = true
 autostart = true
 script = ExtResource("1_8dnlt")
+
+[connection signal="timeout" from="." to="." method="timeout"]

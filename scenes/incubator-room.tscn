@@ -60,6 +60,7 @@ offset_left = 802.0
 offset_right = 1152.0
 
 [node name="Egg-Gen" parent="." unique_id=1962189865 instance=ExtResource("6_qyx4e")]
+one_shot = true
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=827304512]
 stream = ExtResource("8_lerr0")

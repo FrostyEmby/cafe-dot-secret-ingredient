@@ -8,6 +8,7 @@ func _ready() -> void:
 	_load()
 	if save.egg_fill:
 		_egg_generation()
+		save.egg_fill = false
 
 
 func _egg_generation():
