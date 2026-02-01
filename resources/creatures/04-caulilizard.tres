@@ -4,12 +4,14 @@
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_r4wgg"]
 [ext_resource type="Texture2D" uid="uid://b2mvkm80ocvsv" path="res://art/adult creatures/50 percent size/04 caulilizard.png" id="2_xha0q"]
 [ext_resource type="Texture2D" uid="uid://seh0wb6n3aa6" path="res://art/final babies/04 caulilizard baby.png" id="3_n7ugn"]
+[ext_resource type="Texture2D" uid="uid://ckugw6wifr4ic" path="res://art/final eggs/04 caulilizard egg.png" id="4_1c1aj"]
 
 [resource]
 script = ExtResource("1_r4wgg")
 name = "Caulilizard"
 incubator = 5
 terrarium = 2
+egg = ExtResource("4_1c1aj")
 baby_sprite = ExtResource("3_n7ugn")
 adult_sprite = ExtResource("2_xha0q")
 adult_detailed = ExtResource("1_1c1aj")

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_sqb0p"]
 [ext_resource type="Texture2D" uid="uid://bebtqxkwn2xw0" path="res://art/adult creatures/50 percent size/09 tyrian snail.png" id="2_re6jy"]
 [ext_resource type="Texture2D" uid="uid://bexr2dvwqiavn" path="res://art/final babies/09 tyrian snail baby.png" id="3_p776o"]
+[ext_resource type="Texture2D" uid="uid://bja465s46vk8" path="res://art/final eggs/09 tyrian snail egg.png" id="4_0yjs5"]
 
 [resource]
 script = ExtResource("1_sqb0p")
@@ -12,6 +13,7 @@ type = 4
 diet = 6
 incubator = 5
 terrarium = 7
+egg = ExtResource("4_0yjs5")
 baby_sprite = ExtResource("3_p776o")
 adult_sprite = ExtResource("2_re6jy")
 adult_detailed = ExtResource("1_0yjs5")

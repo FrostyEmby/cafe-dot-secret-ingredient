@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dcswsevd0ehbf" path="res://scripts/egg_shelf.gd" id="1_qpkqp"]
 [ext_resource type="Texture2D" uid="uid://b212xrydl6hbu" path="res://art/final props/shelffinal.png" id="2_528ig"]
 [ext_resource type="PackedScene" uid="uid://ctuxvuxm5oh0r" path="res://scenes/egg.tscn" id="3_528ig"]
+[ext_resource type="AudioStream" uid="uid://dbn5ho0rcp2on" path="res://sound/sound effects/Take.wav" id="4_6hw1h"]
 
 [node name="Egg Shelf" type="MarginContainer" unique_id=928893465]
 custom_minimum_size = Vector2(200, 0)
@@ -96,6 +97,9 @@ layout_mode = 2
 
 [node name="Egg16" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=1606296672 instance=ExtResource("3_528ig")]
 layout_mode = 2
+
+[node name="Take" type="AudioStreamPlayer" parent="." unique_id=1011185048]
+stream = ExtResource("4_6hw1h")
 
 [connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg1" to="." method="_on_egg_1_selection"]
 [connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg2" to="." method="_on_egg_2_selection"]

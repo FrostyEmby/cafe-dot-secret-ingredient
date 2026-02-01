@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://yph5r4u8xt3w" path="res://art/icons/egg1.png" id="1_34461"]
 [ext_resource type="Script" uid="uid://br1lu1lnknnov" path="res://scripts/egg.gd" id="2_ifgqj"]
 [ext_resource type="AudioStream" uid="uid://c2h1mvtvb3td6" path="res://sound/sound effects/It went bad.wav" id="3_34461"]
+[ext_resource type="AudioStream" uid="uid://blvokbg44omm3" path="res://sound/sound effects/Accept.wav" id="3_ifgqj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i1l7w"]
 
@@ -41,6 +42,10 @@ label_settings = SubResource("LabelSettings_qlus4")
 horizontal_alignment = 1
 clip_text = true
 visible_characters = 4
+
+[node name="Good" type="AudioStreamPlayer" parent="." unique_id=1361816944]
+stream = ExtResource("3_ifgqj")
+bus = &"SFX"
 
 [node name="Bad" type="AudioStreamPlayer" parent="." unique_id=306752687]
 stream = ExtResource("3_34461")

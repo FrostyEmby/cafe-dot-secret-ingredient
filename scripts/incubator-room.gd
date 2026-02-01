@@ -19,6 +19,8 @@ func _match():
 		
 		# turn off again once match is found
 		egg_selected = false
+		
+		$Place.play()
 	else:
 		print("no space, match cancelled")
 

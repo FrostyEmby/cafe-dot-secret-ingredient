@@ -42,6 +42,7 @@ func add_egg(egg: Egg):
 			new_egg.info.enabled = true
 			_save()
 			print("filled empty slot")
+			$Take.play()
 			break
 	print("no valid spot found")
 

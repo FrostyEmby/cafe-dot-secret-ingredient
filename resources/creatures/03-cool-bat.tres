@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cy87qvc5vucad" path="res://art/adult creatures/cool bat.png" id="1_oqmc5"]
 [ext_resource type="Texture2D" uid="uid://cbxcs6d2q8jal" path="res://art/adult creatures/50 percent size/03 cool bat.png" id="2_2xvyk"]
 [ext_resource type="Texture2D" uid="uid://si6scpkjgsvb" path="res://art/final babies/03 cool bat baby.png" id="3_dnlum"]
+[ext_resource type="Texture2D" uid="uid://tsam6uvnfajp" path="res://art/final eggs/03 cool bat egg.png" id="4_oqmc5"]
 
 [resource]
 script = ExtResource("1_dh5jc")
@@ -12,6 +13,7 @@ diet = 2
 description = "It gained its name due to living in a volcanic environment and staying cool despite that. The eggs are a beautiful green color"
 incubator = 6
 terrarium = 2
+egg = ExtResource("4_oqmc5")
 baby_sprite = ExtResource("3_dnlum")
 adult_sprite = ExtResource("2_2xvyk")
 adult_detailed = ExtResource("1_oqmc5")

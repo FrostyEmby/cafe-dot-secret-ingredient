@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dtefrlqmqoy6m" path="res://art/adult creatures/magma gulper.png" id="1_xegkf"]
 [ext_resource type="Texture2D" uid="uid://dqud6rcvx7swf" path="res://art/adult creatures/50 percent size/01 magma gulper.png" id="2_bi25f"]
 [ext_resource type="Texture2D" uid="uid://dvkorcyp14bne" path="res://art/final babies/01 magma gulper baby.png" id="3_hhgej"]
+[ext_resource type="Texture2D" uid="uid://xw3sa8nxytmc" path="res://art/final eggs/01 magma gulper egg.png" id="4_p5wjf"]
 
 [resource]
 script = ExtResource("1_l6qvw")
@@ -12,6 +13,7 @@ type = 2
 diet = 3
 incubator = 7
 terrarium = 2
+egg = ExtResource("4_p5wjf")
 baby_sprite = ExtResource("3_hhgej")
 adult_sprite = ExtResource("2_bi25f")
 adult_detailed = ExtResource("1_xegkf")

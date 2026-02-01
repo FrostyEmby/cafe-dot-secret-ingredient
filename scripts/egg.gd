@@ -148,6 +148,8 @@ func _hatch():
 	
 	# this updates the bestiary with new data from the hatch
 	info.species.previously_hatched = true
+	
+	$Good.play()
 
 func _mature():
 	print("grown nice and healthy!")

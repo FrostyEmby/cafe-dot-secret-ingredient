@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cattfmfp46pqv" path="res://art/adult creatures/07 wild trio.png" id="1_rpni4"]
 [ext_resource type="Texture2D" uid="uid://bd0ku0lh80tem" path="res://art/adult creatures/50 percent size/07 wild trio.png" id="2_r4x10"]
 [ext_resource type="Texture2D" uid="uid://dem4fflik0mgg" path="res://art/final babies/07 wild trio baby.png" id="3_4ncsk"]
+[ext_resource type="Texture2D" uid="uid://b872sclgatr4h" path="res://art/final eggs/07 wild trio egg.png" id="4_rpni4"]
 
 [resource]
 script = ExtResource("1_qja7n")
@@ -12,6 +13,7 @@ type = 1
 diet = 4
 incubator = 7
 terrarium = 5
+egg = ExtResource("4_rpni4")
 baby_sprite = ExtResource("3_4ncsk")
 adult_sprite = ExtResource("2_r4x10")
 adult_detailed = ExtResource("1_rpni4")

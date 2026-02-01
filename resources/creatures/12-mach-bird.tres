@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_y56bw"]
 [ext_resource type="Texture2D" uid="uid://nay2k1051b2q" path="res://art/adult creatures/50 percent size/12 mach bird.png" id="2_hwhq7"]
 [ext_resource type="Texture2D" uid="uid://s5d72s4iy7s4" path="res://art/final babies/12 mach bird baby.png" id="3_c1eq1"]
+[ext_resource type="Texture2D" uid="uid://s47o24d782sy" path="res://art/final eggs/12 mach bird egg.png" id="4_3cdt8"]
 
 [resource]
 script = ExtResource("1_y56bw")
@@ -11,6 +12,7 @@ name = "Mach Bird"
 diet = 3
 incubator = 7
 terrarium = 7
+egg = ExtResource("4_3cdt8")
 baby_sprite = ExtResource("3_c1eq1")
 adult_sprite = ExtResource("2_hwhq7")
 adult_detailed = ExtResource("1_3cdt8")

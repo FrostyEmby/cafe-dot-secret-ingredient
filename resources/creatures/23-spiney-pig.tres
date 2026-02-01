@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_lciqk"]
 [ext_resource type="Texture2D" uid="uid://bk30yyfeuk782" path="res://art/adult creatures/50 percent size/23 spiney pig.png" id="2_geclk"]
 [ext_resource type="Texture2D" uid="uid://hp6hqt5eifov" path="res://art/final babies/23 spiney pig baby.png" id="3_ue4ai"]
+[ext_resource type="Texture2D" uid="uid://bx57tuftfsp74" path="res://art/final eggs/23 spiney pig egg.png" id="4_geclk"]
 
 [resource]
 script = ExtResource("1_lciqk")
@@ -11,6 +12,7 @@ name = "Spiney Pig"
 diet = 7
 incubator = 2
 terrarium = 6
+egg = ExtResource("4_geclk")
 baby_sprite = ExtResource("3_ue4ai")
 adult_sprite = ExtResource("2_geclk")
 adult_detailed = ExtResource("1_d0b6r")

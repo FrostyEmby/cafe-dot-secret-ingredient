@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d3hffbqheq6x" path="res://art/adult creatures/14 ocean delight.png" id="1_x64kr"]
 [ext_resource type="Texture2D" uid="uid://dvf0527c5tcmm" path="res://art/adult creatures/50 percent size/14 ocean delight.png" id="2_cj6a0"]
 [ext_resource type="Texture2D" uid="uid://dyo4h3yy52kw7" path="res://art/final babies/14 ocean delight baby.png" id="3_r3xnm"]
+[ext_resource type="Texture2D" uid="uid://dupap5k3bw11r" path="res://art/final eggs/14 ocean delight egg.png" id="4_cj6a0"]
 
 [resource]
 script = ExtResource("1_fkhco")
@@ -12,6 +13,7 @@ type = 3
 diet = 2
 incubator = 7
 terrarium = 3
+egg = ExtResource("4_cj6a0")
 baby_sprite = ExtResource("3_r3xnm")
 adult_sprite = ExtResource("2_cj6a0")
 adult_detailed = ExtResource("1_x64kr")
