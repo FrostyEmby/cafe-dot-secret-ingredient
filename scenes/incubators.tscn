@@ -3,12 +3,18 @@
 [ext_resource type="Script" uid="uid://d2cc114ybxrb1" path="res://scripts/incubators.gd" id="1_h5h8x"]
 [ext_resource type="Texture2D" uid="uid://c6s3pal1uk2xh" path="res://art/final props/incubators/dry cold incubator empty.png" id="2_1f0hf"]
 [ext_resource type="Script" uid="uid://twclfrnswwp7" path="res://scripts/hatchery.gd" id="2_h5h8x"]
+[ext_resource type="Texture2D" uid="uid://536lxkr4ql5" path="res://art/final props/incubators/dry left egg3.png" id="4_4f4c5"]
 [ext_resource type="PackedScene" uid="uid://ctuxvuxm5oh0r" path="res://scenes/egg.tscn" id="4_oys6p"]
 [ext_resource type="Texture2D" uid="uid://b0eucqyuyd6ie" path="res://art/final props/incubators/dry incubator empty.png" id="5_4f4c5"]
+[ext_resource type="Texture2D" uid="uid://dc8bemi4sn4jo" path="res://art/eggs/insect.png" id="5_uc2aw"]
 [ext_resource type="Texture2D" uid="uid://dvb27opx468ci" path="res://art/final props/incubators/dry hot incubator empty.png" id="6_jet3j"]
+[ext_resource type="Texture2D" uid="uid://tfso4r3jnfqk" path="res://art/final props/incubators/dry middle egg3.png" id="7_jet3j"]
 [ext_resource type="Texture2D" uid="uid://kfwktxy1jynb" path="res://art/final props/incubators/wet cold incubator empty.png" id="8_4f4c5"]
 [ext_resource type="Texture2D" uid="uid://dil2kt4lafc5e" path="res://art/final props/incubators/wet incubator empty.png" id="8_vqtuv"]
+[ext_resource type="Texture2D" uid="uid://l5b1h1chvad3" path="res://art/final props/incubators/wet left egg3.png" id="10_6784s"]
 [ext_resource type="Texture2D" uid="uid://54i2da4jgx4b" path="res://art/final props/incubators/wet hot incubator empty.png" id="10_jet3j"]
+[ext_resource type="Texture2D" uid="uid://bl7qwbc35a53v" path="res://art/final props/incubators/wet middle egg3.png" id="12_uc2aw"]
+[ext_resource type="Texture2D" uid="uid://dabhba0d8athn" path="res://art/final props/incubators/wet right egg3.png" id="14_8ek5a"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oh3qu"]
 
@@ -61,6 +67,7 @@ offset_left = 17.0
 offset_top = -39.0
 offset_right = 89.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
 
 [node name="Egg2" parent="MarginContainer/GridContainer/Cold_Dry" unique_id=1705001407 instance=ExtResource("4_oys6p")]
 layout_mode = 0
@@ -68,6 +75,7 @@ offset_left = 61.0
 offset_top = -39.0
 offset_right = 133.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
 
 [node name="Egg3" parent="MarginContainer/GridContainer/Cold_Dry" unique_id=1605758182 instance=ExtResource("4_oys6p")]
 layout_mode = 0
@@ -75,6 +83,13 @@ offset_left = 105.0
 offset_top = -39.0
 offset_right = 177.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
+
+[node name="Egg Display" type="TextureRect" parent="MarginContainer/GridContainer/Cold_Dry" unique_id=1759262719]
+layout_mode = 0
+offset_right = 184.0
+offset_bottom = 216.0
+texture = ExtResource("4_4f4c5")
 
 [node name="Temp_Dry" type="Button" parent="MarginContainer/GridContainer" unique_id=2060499838]
 texture_filter = 1
@@ -90,6 +105,7 @@ offset_left = 17.0
 offset_top = -39.0
 offset_right = 89.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
 
 [node name="Egg2" parent="MarginContainer/GridContainer/Temp_Dry" unique_id=2055031015 instance=ExtResource("4_oys6p")]
 layout_mode = 0
@@ -97,6 +113,7 @@ offset_left = 61.0
 offset_top = -39.0
 offset_right = 133.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
 
 [node name="Egg3" parent="MarginContainer/GridContainer/Temp_Dry" unique_id=85538024 instance=ExtResource("4_oys6p")]
 layout_mode = 0
@@ -104,6 +121,13 @@ offset_left = 105.0
 offset_top = -39.0
 offset_right = 177.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
+
+[node name="Egg Display" type="TextureRect" parent="MarginContainer/GridContainer/Temp_Dry" unique_id=30894033]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_jet3j")
 
 [node name="Hot_Dry" type="Button" parent="MarginContainer/GridContainer" unique_id=690180782]
 texture_filter = 1
@@ -119,6 +143,7 @@ offset_left = 17.0
 offset_top = -39.0
 offset_right = 89.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
 
 [node name="Egg2" parent="MarginContainer/GridContainer/Hot_Dry" unique_id=208599833 instance=ExtResource("4_oys6p")]
 layout_mode = 0
@@ -126,6 +151,7 @@ offset_left = 61.0
 offset_top = -39.0
 offset_right = 133.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
 
 [node name="Egg3" parent="MarginContainer/GridContainer/Hot_Dry" unique_id=1650592652 instance=ExtResource("4_oys6p")]
 layout_mode = 0
@@ -133,6 +159,13 @@ offset_left = 105.0
 offset_top = -39.0
 offset_right = 177.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
+
+[node name="Egg Display" type="TextureRect" parent="MarginContainer/GridContainer/Hot_Dry" unique_id=1388132790]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_4f4c5")
 
 [node name="Panel" type="Panel" parent="MarginContainer/GridContainer" unique_id=1633155559]
 custom_minimum_size = Vector2(128, 0)
@@ -158,6 +191,7 @@ offset_left = 17.0
 offset_top = -39.0
 offset_right = 89.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
 
 [node name="Egg2" parent="MarginContainer/GridContainer/Cold_Wet" unique_id=9006980 instance=ExtResource("4_oys6p")]
 layout_mode = 0
@@ -165,6 +199,7 @@ offset_left = 61.0
 offset_top = -39.0
 offset_right = 133.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
 
 [node name="Egg3" parent="MarginContainer/GridContainer/Cold_Wet" unique_id=450817402 instance=ExtResource("4_oys6p")]
 layout_mode = 0
@@ -172,6 +207,13 @@ offset_left = 105.0
 offset_top = -39.0
 offset_right = 177.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
+
+[node name="Egg Display" type="TextureRect" parent="MarginContainer/GridContainer/Cold_Wet" unique_id=1609299332]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("10_6784s")
 
 [node name="Temp_Wet" type="Button" parent="MarginContainer/GridContainer" unique_id=808824964]
 texture_filter = 1
@@ -187,6 +229,7 @@ offset_left = 17.0
 offset_top = -39.0
 offset_right = 89.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
 
 [node name="Egg2" parent="MarginContainer/GridContainer/Temp_Wet" unique_id=2042403439 instance=ExtResource("4_oys6p")]
 layout_mode = 0
@@ -194,6 +237,7 @@ offset_left = 61.0
 offset_top = -39.0
 offset_right = 133.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
 
 [node name="Egg3" parent="MarginContainer/GridContainer/Temp_Wet" unique_id=866412567 instance=ExtResource("4_oys6p")]
 layout_mode = 0
@@ -201,6 +245,13 @@ offset_left = 105.0
 offset_top = -39.0
 offset_right = 177.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
+
+[node name="Egg Display" type="TextureRect" parent="MarginContainer/GridContainer/Temp_Wet" unique_id=357740576]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("12_uc2aw")
 
 [node name="Hot_Wet" type="Button" parent="MarginContainer/GridContainer" unique_id=1961298312]
 texture_filter = 1
@@ -216,6 +267,7 @@ offset_left = 17.0
 offset_top = -39.0
 offset_right = 89.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
 
 [node name="Egg2" parent="MarginContainer/GridContainer/Hot_Wet" unique_id=695329176 instance=ExtResource("4_oys6p")]
 layout_mode = 0
@@ -223,6 +275,7 @@ offset_left = 61.0
 offset_top = -39.0
 offset_right = 133.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
 
 [node name="Egg3" parent="MarginContainer/GridContainer/Hot_Wet" unique_id=2133484077 instance=ExtResource("4_oys6p")]
 layout_mode = 0
@@ -230,6 +283,13 @@ offset_left = 105.0
 offset_top = -39.0
 offset_right = 177.0
 offset_bottom = 33.0
+icon = ExtResource("5_uc2aw")
+
+[node name="Egg Display" type="TextureRect" parent="MarginContainer/GridContainer/Hot_Wet" unique_id=1463565813]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("14_8ek5a")
 
 [connection signal="hatch_select" from="MarginContainer/GridContainer/Cold_Dry" to="." method="_on_hatch_select"]
 [connection signal="mouse_entered" from="MarginContainer/GridContainer/Cold_Dry" to="MarginContainer/GridContainer/Cold_Dry" method="_on_mouse_entered"]
