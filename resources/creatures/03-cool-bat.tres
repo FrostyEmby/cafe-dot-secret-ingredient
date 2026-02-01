@@ -10,7 +10,7 @@
 script = ExtResource("1_dh5jc")
 name = "Cool Bat"
 diet = 2
-description = "It gained its name due to living in a volcanic environment and staying cool despite that. The eggs are a beautiful green color"
+description = "It gained its name due to living in a volcanic environment and staying cool despite that. Their white color makes finding nests very easy, despite the spots."
 incubator = 6
 terrarium = 2
 egg = ExtResource("4_oqmc5")

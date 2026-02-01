@@ -9,11 +9,7 @@
 [resource]
 script = ExtResource("5_035vu")
 name = "Harptail"
-<<<<<<< HEAD
-diet = "Insects"
 description = "The plain Harptail chicks hatch from plain eggs and stay featherless for a long while, unlike the elemental birds, but in exchange they grow a very delightfully curved plumage."
-=======
->>>>>>> b22f7f3e8030511437c4d9976ff953288762c460
 incubator = 4
 terrarium = 4
 egg = ExtResource("4_xuhhj")

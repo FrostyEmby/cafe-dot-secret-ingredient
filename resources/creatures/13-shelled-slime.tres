@@ -11,6 +11,7 @@ script = ExtResource("1_se1m6")
 name = "Shelled Slime"
 type = 3
 diet = 7
+description = "Those who've seen the impressive hardened shell on this creature would be surprised that their young are the size of common garden snails and hatch from almost transparent eggs."
 incubator = 5
 terrarium = 3
 egg = ExtResource("4_m7isd")

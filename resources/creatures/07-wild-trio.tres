@@ -11,6 +11,7 @@ script = ExtResource("1_qja7n")
 name = "Wild Trio"
 type = 1
 diet = 4
+description = "Of the four elemental birds it is the trio that is the hardest to spot. Their orchid looking heads grow one at a time, but the middle one is always the oldest."
 incubator = 7
 terrarium = 5
 egg = ExtResource("4_rpni4")

@@ -11,6 +11,7 @@ script = ExtResource("1_l6qvw")
 name = "Magma Gulper"
 type = 2
 diet = 3
+description = "A giant dragonfish swimming in magma that attacks any big creature passing by. Even their eggs glow like molten rock."
 incubator = 7
 terrarium = 2
 egg = ExtResource("4_p5wjf")

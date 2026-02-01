@@ -11,6 +11,7 @@ script = ExtResource("1_52hap")
 name = "Carbunkle"
 type = 2
 diet = 3
+description = "The stone in their foreheads is the only thing that remains after they die.  From it a new carbuncle hatches."
 incubator = 4
 terrarium = 7
 egg = ExtResource("4_c7ory")

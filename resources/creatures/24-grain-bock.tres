@@ -11,6 +11,7 @@ script = ExtResource("4_ab4x7")
 name = "Grain Bock"
 type = 1
 diet = 4
+description = "The ribbons are part of its body that only later become red. The grain from their manes can be used to plant new Grain bocks."
 incubator = 2
 terrarium = 6
 egg = ExtResource("4_11srr")

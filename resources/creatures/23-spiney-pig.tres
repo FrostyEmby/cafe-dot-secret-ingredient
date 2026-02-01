@@ -10,6 +10,7 @@
 script = ExtResource("1_lciqk")
 name = "Spiney Pig"
 diet = 7
+description = "They have very painful quills covering their bodies and a bad temper to boot. Pointy eggs, pointy adults. At least the babes are cute."
 incubator = 2
 terrarium = 6
 egg = ExtResource("4_geclk")

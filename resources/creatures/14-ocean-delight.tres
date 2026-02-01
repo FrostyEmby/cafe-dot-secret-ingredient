@@ -11,6 +11,7 @@ script = ExtResource("1_fkhco")
 name = "Ocean Delight"
 type = 3
 diet = 2
+description = "Ever heard about water pearls? Those will likely have been the many eggs of this cynically named fish that appears to have human teeth and a cheery smile on its face."
 incubator = 7
 terrarium = 3
 egg = ExtResource("4_cj6a0")

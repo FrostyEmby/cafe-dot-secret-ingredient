@@ -9,6 +9,8 @@
 [resource]
 script = ExtResource("1_r4wgg")
 name = "Caulilizard"
+diet = 4
+description = "The many brightly colored skinflaps on its body make it look like a flower when it rolls up to sleep. They start out as small buds and gain color later and even their eggs look like balls of clay."
 incubator = 5
 terrarium = 2
 egg = ExtResource("4_1c1aj")

@@ -11,6 +11,7 @@ script = ExtResource("1_sqb0p")
 name = "Tyrian Snail"
 type = 4
 diet = 6
+description = "A beautiful, if slimy, purple creature that unfortunately has a 90% chance of attracting a striped parasite that takes over its brain."
 incubator = 5
 terrarium = 7
 egg = ExtResource("4_0yjs5")

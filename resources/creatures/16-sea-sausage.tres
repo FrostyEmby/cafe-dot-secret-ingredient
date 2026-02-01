@@ -10,7 +10,7 @@
 script = ExtResource("1_hgx5t")
 name = "Sea Sausage"
 diet = 3
-description = "no one knows why it has a second head or why its eggs seem perpetually wet. Some say it's to increase its short time living outside of the water."
+description = "No one knows why it has a second head or why its eggs seem perpetually wet. Some say it's to increase its short time living outside of the water."
 incubator = 2
 terrarium = 3
 egg = ExtResource("1_yxupf")

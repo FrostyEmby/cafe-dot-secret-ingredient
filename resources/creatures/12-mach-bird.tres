@@ -10,6 +10,7 @@
 script = ExtResource("1_y56bw")
 name = "Mach Bird"
 diet = 3
+description = "The stone in their foreheads is the only thing that remains after they die.  From it a new Carbunkle hatches."
 incubator = 7
 terrarium = 7
 egg = ExtResource("4_3cdt8")

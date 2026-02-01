@@ -11,6 +11,7 @@ script = ExtResource("1_2piju")
 name = "Striped Clown"
 type = 3
 diet = 2
+description = "This clown is playing a strange role, because what hatches from their eggs matches the baby, but the baby looks like an entirely different species from the adult fish."
 incubator = 5
 terrarium = 3
 egg = ExtResource("4_61b28")
