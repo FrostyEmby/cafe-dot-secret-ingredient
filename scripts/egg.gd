@@ -16,7 +16,7 @@ func _set_appearance():
 	elif info.adult:
 		_mature()
 	elif info.hatched:
-		_hatch()
+		_hatch(false)
 	else:
 		icon = info.species.egg
 
@@ -135,7 +135,7 @@ func _survive_or_die():
 		_mature()
 
 
-func _hatch():
+func _hatch(sound : bool = true):
 	print("hatched nice and healthy!")
 	
 	birth.emit()
@@ -149,7 +149,8 @@ func _hatch():
 	# this updates the bestiary with new data from the hatch
 	info.species.previously_hatched = true
 	
-	$Good.play()
+	if sound:
+		$Good.play()
 
 func _mature():
 	print("grown nice and healthy!")
