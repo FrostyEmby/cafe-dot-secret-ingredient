@@ -159,7 +159,7 @@ func _mature():
 	info.adult = true
 	
 	$Indicator.visible = false
-	icon = info.species.adult_sprite
+	icon = load("res://art/egg mimic/check.png")
 	
 	# this updates the bestiary with new data from the growth
 	info.species.previously_grown = true
