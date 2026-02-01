@@ -67,7 +67,7 @@ func _fill_right():
 	$"Right Page/Adult Creature Picture Area".texture = bestiary.creatures[page+1].adult_detailed
 	
 	#if bestiary.creatures[page+1].previously_hatched:
-	$"Right Page/Incubator/Label".text = bestiary.creatures[page+1].hatchery.keys()[bestiary.creatures[page].incubator].replace("_", " ")
+	$"Right Page/Incubator/Label".text = bestiary.creatures[page+1].hatchery.keys()[bestiary.creatures[page+1].incubator].replace("_", " ")
 	$"Right Page/Egg".texture = bestiary.creatures[page+1].egg
 	$"Right Page/Egg/Label".text = ""
 	$"Right Page/Baby Creature Picture Area".texture = bestiary.creatures[page+1].baby_sprite
