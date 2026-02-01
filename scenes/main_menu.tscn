@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://b6mh3wjq2rely" path="res://art/icons/who.png" id="5_oa1go"]
 [ext_resource type="AudioStream" uid="uid://ct3ff1chu1rmr" path="res://sound/music/Calm entry.wav" id="6_rtw2f"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbmy8"]
+
 [node name="Main Menu" type="Control" unique_id=490014450]
 layout_mode = 3
 anchors_preset = 0
@@ -24,52 +26,57 @@ stretch_mode = 4
 
 [node name="Title Book" type="TextureRect" parent="." unique_id=353676113]
 layout_mode = 0
-offset_left = 113.0
-offset_top = 52.0
-offset_right = 1082.0
-offset_bottom = 594.0
+offset_left = 3.0
+offset_top = -5.0
+offset_right = 1199.0
+offset_bottom = 664.0
 texture = ExtResource("3_lgwnu")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=250923396]
 layout_mode = 0
-offset_left = 409.0
-offset_top = 579.0
-offset_right = 775.0
-offset_bottom = 619.0
+offset_left = 460.0
+offset_top = 493.0
+offset_right = 734.0
+offset_bottom = 577.0
 theme = ExtResource("2_8ln24")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_tbmy8")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=1090407748]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=546929732]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1936147501]
 layout_mode = 2
 size_flags_horizontal = 4
-alignment = 1
-
-[node name="Play" type="Button" parent="PanelContainer/HBoxContainer" unique_id=1936147501]
-layout_mode = 2
 theme = ExtResource("2_8ln24")
 text = "Play"
 icon = ExtResource("3_rtw2f")
 alignment = 0
 
-[node name="Space" type="MarginContainer" parent="PanelContainer/HBoxContainer" unique_id=206864820]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=1090407748]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Space" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=206864820]
 layout_mode = 2
 theme = ExtResource("2_8ln24")
 theme_override_constants/margin_right = 3
 
-[node name="Settings" type="Button" parent="PanelContainer/HBoxContainer" unique_id=1805894709]
+[node name="Settings" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1805894709]
 layout_mode = 2
 theme = ExtResource("2_8ln24")
 text = "Settings"
 icon = ExtResource("4_oa1go")
 alignment = 0
 
-[node name="Space2" type="MarginContainer" parent="PanelContainer/HBoxContainer" unique_id=888379846]
+[node name="Space2" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=888379846]
 layout_mode = 2
 theme = ExtResource("2_8ln24")
 theme_override_constants/margin_right = 3
 
-[node name="Credits" type="Button" parent="PanelContainer/HBoxContainer" unique_id=859294853]
+[node name="Credits" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=859294853]
 layout_mode = 2
 theme = ExtResource("2_8ln24")
 text = "Credits"
@@ -81,7 +88,7 @@ stream = ExtResource("6_rtw2f")
 autoplay = true
 mix_target = 1
 
-[connection signal="pressed" from="PanelContainer/HBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="PanelContainer/HBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="PanelContainer/HBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
