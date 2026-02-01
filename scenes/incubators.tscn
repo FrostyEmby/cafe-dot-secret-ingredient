@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://ctuxvuxm5oh0r" path="res://scenes/egg.tscn" id="4_oys6p"]
 [ext_resource type="Texture2D" uid="uid://b0eucqyuyd6ie" path="res://art/final props/incubators/dry incubator empty.png" id="5_4f4c5"]
 [ext_resource type="Texture2D" uid="uid://dvb27opx468ci" path="res://art/final props/incubators/dry hot incubator empty.png" id="6_jet3j"]
+[ext_resource type="Texture2D" uid="uid://kfwktxy1jynb" path="res://art/final props/incubators/wet cold incubator empty.png" id="8_4f4c5"]
 [ext_resource type="Texture2D" uid="uid://dil2kt4lafc5e" path="res://art/final props/incubators/wet incubator empty.png" id="8_vqtuv"]
+[ext_resource type="Texture2D" uid="uid://54i2da4jgx4b" path="res://art/final props/incubators/wet hot incubator empty.png" id="10_jet3j"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oh3qu"]
 
@@ -175,7 +177,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_7tas0")
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_jthp8")
-icon = ExtResource("8_vqtuv")
+icon = ExtResource("8_4f4c5")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 
@@ -251,7 +253,7 @@ offset_bottom = 33.0
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_jthp8")
-icon = ExtResource("8_vqtuv")
+icon = ExtResource("10_jet3j")
 script = ExtResource("2_h5h8x")
 metadata/_custom_type_script = "uid://twclfrnswwp7"
 

@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bvmhui71lfmc4" path="res://scenes/incubators.tscn" id="4_83g0e"]
 [ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="6_qyx4e"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="8_ebtcn"]
+[ext_resource type="AudioStream" uid="uid://c7fl623semdyj" path="res://sound/music/Incubators.wav" id="8_lerr0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ic351"]
 
@@ -61,6 +62,7 @@ offset_right = 1152.0
 [node name="Egg-Gen" parent="." unique_id=1962189865 instance=ExtResource("6_qyx4e")]
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=827304512]
+stream = ExtResource("8_lerr0")
 autoplay = true
 
 [connection signal="hatch_select" from="Incubators" to="BoxContainer/HSplitContainer/Egg Shelf" method="_on_incubators_hatch_select"]

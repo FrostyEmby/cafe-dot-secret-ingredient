@@ -2,13 +2,32 @@
 
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_1jxg1"]
 [ext_resource type="Script" uid="uid://domapwhce8b8o" path="res://scripts/templates/bestiary-data.gd" id="1_8w2vk"]
-[ext_resource type="Resource" path="res://resources/creatures/fire-moth.tres" id="2_5aybs"]
+[ext_resource type="Resource" uid="uid://cp3qq1ccqtlf3" path="res://resources/creatures/01-magma-gulper.tres" id="2_w3hol"]
+[ext_resource type="Resource" uid="uid://dqrniorklwy2j" path="res://resources/creatures/02-obsidian.tres" id="3_jv7oo"]
 [ext_resource type="Resource" uid="uid://bgpacae1weki4" path="res://resources/creatures/06-electric-dragonfly.tres" id="3_wqog4"]
 [ext_resource type="Resource" uid="uid://bo03k2xsccltr" path="res://resources/creatures/17-bird-one.tres" id="4_gkyl6"]
-[ext_resource type="Resource" path="res://resources/creatures/nest-parasite.tres" id="5_5fwk7"]
+[ext_resource type="Resource" uid="uid://ddavsxcmlku88" path="res://resources/creatures/03-cool-bat.tres" id="4_jlwha"]
+[ext_resource type="Resource" uid="uid://cu62ssdrukce8" path="res://resources/creatures/04-caulilizard.tres" id="5_omqdf"]
 [ext_resource type="Resource" uid="uid://ddvixqmre33gs" path="res://resources/creatures/05-vitaruga.tres" id="6_bmmyl"]
+[ext_resource type="Resource" uid="uid://2q4jivnlayxv" path="res://resources/creatures/07-wild-trio.tres" id="8_pxkns"]
+[ext_resource type="Resource" uid="uid://gifsb8c5be5f" path="res://resources/creatures/08-honey-glider.tres" id="9_m7i71"]
+[ext_resource type="Resource" uid="uid://d02epy2ondgyt" path="res://resources/creatures/09-tyrian-snail.tres" id="10_2lwhj"]
+[ext_resource type="Resource" uid="uid://drd344unkl4hq" path="res://resources/creatures/10-carbunkle.tres" id="11_xvgpn"]
+[ext_resource type="Resource" uid="uid://bd2c01l4dr8bq" path="res://resources/creatures/11-unicorn.tres" id="12_6eyjw"]
+[ext_resource type="Resource" uid="uid://b0ob2wigdyo6" path="res://resources/creatures/12-mach-bird.tres" id="13_rwi6s"]
+[ext_resource type="Resource" uid="uid://dub1mj75le4c3" path="res://resources/creatures/13-shelled-slime.tres" id="14_uarl8"]
+[ext_resource type="Resource" uid="uid://csbq56k466ch8" path="res://resources/creatures/14-ocean-delight.tres" id="15_cimi5"]
+[ext_resource type="Resource" uid="uid://gkn4xcogk16b" path="res://resources/creatures/15-striped-clown.tres" id="16_ucoyq"]
+[ext_resource type="Resource" uid="uid://bcpddagykdk57" path="res://resources/creatures/16-sea-sausage.tres" id="17_vebbo"]
+[ext_resource type="Resource" uid="uid://cf5jnn6tn3is" path="res://resources/creatures/18-lazy-lizard.tres" id="19_w8v3f"]
+[ext_resource type="Resource" uid="uid://ddvvpkqrg1yt8" path="res://resources/creatures/19-windchaser.tres" id="20_onhdw"]
+[ext_resource type="Resource" uid="uid://btitcg53cxwl7" path="res://resources/creatures/20-mitten.tres" id="21_0xxix"]
+[ext_resource type="Resource" uid="uid://defob51xngan0" path="res://resources/creatures/21-flat-weasel.tres" id="22_jq02c"]
+[ext_resource type="Resource" uid="uid://b1r4e4p578ka3" path="res://resources/creatures/22-moose-shrew.tres" id="23_wjm4q"]
+[ext_resource type="Resource" uid="uid://cdptccsrx30e" path="res://resources/creatures/23-spiney-pig.tres" id="24_84m14"]
+[ext_resource type="Resource" uid="uid://6kmrgx31njis" path="res://resources/creatures/24-grain-bock.tres" id="25_vgt50"]
 
 [resource]
 script = ExtResource("1_8w2vk")
-creatures = Array[ExtResource("1_1jxg1")]([ExtResource("3_wqog4"), ExtResource("2_5aybs"), ExtResource("4_gkyl6"), ExtResource("5_5fwk7"), ExtResource("6_bmmyl")])
+creatures = Array[ExtResource("1_1jxg1")]([ExtResource("2_w3hol"), ExtResource("3_jv7oo"), ExtResource("4_jlwha"), ExtResource("5_omqdf"), ExtResource("6_bmmyl"), ExtResource("3_wqog4"), ExtResource("8_pxkns"), ExtResource("9_m7i71"), ExtResource("10_2lwhj"), ExtResource("11_xvgpn"), ExtResource("12_6eyjw"), ExtResource("13_rwi6s"), ExtResource("14_uarl8"), ExtResource("15_cimi5"), ExtResource("16_ucoyq"), ExtResource("17_vebbo"), ExtResource("4_gkyl6"), ExtResource("19_w8v3f"), ExtResource("20_onhdw"), ExtResource("21_0xxix"), ExtResource("22_jq02c"), ExtResource("23_wjm4q"), ExtResource("24_84m14"), ExtResource("25_vgt50")])
 metadata/_custom_type_script = "uid://domapwhce8b8o"

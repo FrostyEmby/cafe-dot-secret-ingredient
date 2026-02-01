@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7qejwtfkj86"
+path="res://.godot/imported/Scholar's knowledge.wav-032637b8ef1be2abafcd59c03b41babe.sample"
+
+[deps]
+
+source_file="res://sound/music/Scholar's knowledge.wav"
+dest_files=["res://.godot/imported/Scholar's knowledge.wav-032637b8ef1be2abafcd59c03b41babe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

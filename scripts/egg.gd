@@ -27,7 +27,7 @@ func change_visibility(visibility : bool):
 func reset():
 	print("back to defaults")
 	
-	info.species = load("res://resources/creatures/bird-one.tres")
+	info.species = load("res://resources/creatures/17-bird-one.tres")
 	info.hatch_time = info.species.hatch_time_secs
 	info.incubating = false
 	info.hatched = false
