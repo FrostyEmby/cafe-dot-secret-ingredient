@@ -3,8 +3,8 @@ class_name Hatchery
 
 signal selection(hatchery : Hatchery)
 signal hatch_select(egg : Egg, hatchery : Hatchery)
-var save : Save = load("res://resources/save.tres")
 
+var save : Save = load("res://resources/save.tres")
 
 # adds the placement which determines life or death
 func _place():
@@ -95,11 +95,3 @@ func _on_egg_2_death(egg: Egg) -> void:
 func _on_egg_3_death(egg: Egg) -> void:
 	egg.reset()
 	save.incubator[self.name.to_lower()][egg.name.to_lower()] = egg.info
-
-
-func _on_mouse_entered() -> void:
-	$Popup.visible = true
-
-
-func _on_mouse_exited() -> void:
-	$Popup.visible = false

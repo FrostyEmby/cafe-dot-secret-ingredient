@@ -99,6 +99,7 @@ func incubate():
 	hatch_timer.start(info.species.hatch_time_secs)
 	$Indicator.visible = true
 	info.incubating = true
+	change_visibility(false)
 
 
 func grow_up():
@@ -109,6 +110,8 @@ func grow_up():
 
 # Which will it be? Hope your placement was right!
 func _hatch_or_death():
+	change_visibility(true)
+	
 	if info.placement != info.species.incubator:
 		print("PLACEMENT IS ", info.placement, " AND SHOULD BE ", info.species.incubator)
 		_dead()
