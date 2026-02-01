@@ -1,16 +1,9 @@
 extends Control
 
-var save : Save = load("res://resources/save.tres")
-
 @onready var music = $"PanelContainer/MarginContainer/GridContainer/Music Volume"
 @onready var sound = $"PanelContainer/MarginContainer/GridContainer/Sound Volume"
 
 func _ready() -> void:
-	if save.main_exit:
-		$Back.visible = false
-	else:
-		$"Mini Menu".visible = false
-		
 	music.value = AudioServer.get_bus_volume_linear(0)
 	sound.value = AudioServer.get_bus_volume_linear(1)
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b085dkuk7uq8r"]
+[gd_scene format=3 uid="uid://b085dkuk7uq8r"]
 
 [ext_resource type="Script" uid="uid://fuwn4s1jhksn" path="res://scripts/mini_menu.gd" id="1_g1iql"]
 [ext_resource type="Texture2D" uid="uid://dhv7ticowig" path="res://art/icons/home.png" id="1_n2rt3"]
@@ -16,7 +16,7 @@
 bg_color = Color(0.7271216, 0.61423296, 0.29493418, 1)
 corner_radius_bottom_left = 20
 
-[node name="Mini Menu" type="Panel"]
+[node name="Mini Menu" type="Panel" unique_id=707227334]
 custom_minimum_size = Vector2(350, 80)
 offset_right = 350.0
 offset_bottom = 80.0
@@ -25,7 +25,7 @@ size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qigmh")
 script = ExtResource("1_g1iql")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1355601123]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,7 +34,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 8
 
-[node name="Home" type="TextureButton" parent="HBoxContainer"]
+[node name="Home" type="TextureButton" parent="HBoxContainer" unique_id=1807984548]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
@@ -42,7 +42,7 @@ texture_normal = ExtResource("1_n2rt3")
 texture_hover = ExtResource("2_g1iql")
 texture_focused = ExtResource("2_g1iql")
 
-[node name="Incubator" type="TextureButton" parent="HBoxContainer"]
+[node name="Incubator" type="TextureButton" parent="HBoxContainer" unique_id=1268654000]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
@@ -50,7 +50,7 @@ texture_normal = ExtResource("3_q7i8x")
 texture_hover = ExtResource("4_32nmq")
 texture_focused = ExtResource("4_32nmq")
 
-[node name="Terrarium" type="TextureButton" parent="HBoxContainer"]
+[node name="Terrarium" type="TextureButton" parent="HBoxContainer" unique_id=633042943]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
@@ -58,7 +58,7 @@ texture_normal = ExtResource("5_y6o3p")
 texture_hover = ExtResource("6_b2k16")
 texture_focused = ExtResource("6_b2k16")
 
-[node name="Bestiary" type="TextureButton" parent="HBoxContainer"]
+[node name="Bestiary" type="TextureButton" parent="HBoxContainer" unique_id=860495773]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
@@ -66,7 +66,7 @@ texture_normal = ExtResource("7_kd23u")
 texture_hover = ExtResource("8_gp66p")
 texture_focused = ExtResource("8_gp66p")
 
-[node name="Settings" type="TextureButton" parent="HBoxContainer"]
+[node name="Settings" type="TextureButton" parent="HBoxContainer" unique_id=384353092]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4

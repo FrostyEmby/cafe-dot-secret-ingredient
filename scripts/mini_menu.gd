@@ -23,4 +23,4 @@ func _on_bestiary_pressed() -> void:
 
 func _on_settings_pressed() -> void:
 	print("switch to settings")
-	get_tree().change_scene_to_file("uid://bgagifdev40yk")
+	get_tree().change_scene_to_file("uid://cpbueqxv0uum2")
