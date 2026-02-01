@@ -8,8 +8,9 @@
 
 [resource]
 script = ExtResource("1_rotap")
-name = "Mouse Shrew"
+name = "Moose Shrew"
 diet = 2
+description = "Their white eggs are perfectly hidden in the snow, but their big, wet eyes give the actual animal away."
 incubator = 4
 terrarium = 6
 egg = ExtResource("2_sdmdg")

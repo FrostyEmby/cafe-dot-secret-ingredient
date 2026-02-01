@@ -10,6 +10,7 @@
 script = ExtResource("1_rkjwt")
 name = "Flat Weasel"
 diet = 3
+description = "An extremely flat mammal whose babies are also flat and due to the lack of fur, can be confused with earth worms."
 incubator = 2
 terrarium = 6
 egg = ExtResource("4_84xwr")

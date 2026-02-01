@@ -10,6 +10,7 @@
 script = ExtResource("1_owf7f")
 name = "Windchaser"
 diet = 3
+description = "Travelers in old stories mention them seemingly materialize from rocks and the dark basalt mountains, and when they hold still they do look like onyx statues."
 incubator = 4
 terrarium = 4
 egg = ExtResource("4_vucld")

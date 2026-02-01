@@ -10,6 +10,7 @@
 script = ExtResource("1_ck8xq")
 name = "Lazy Lizard"
 diet = 2
+description = "With their perfect desert camouflage it is a surprise that they'd have that much green in their development."
 incubator = 6
 terrarium = 4
 egg = ExtResource("4_ugle2")

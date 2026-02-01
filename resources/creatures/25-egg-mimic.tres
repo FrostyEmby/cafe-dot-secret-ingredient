@@ -7,6 +7,7 @@ script = ExtResource("1_arcf1")
 name = "Egg Mimic"
 type = 4
 diet = 1
+description = "They pretend to be eggs, to eat eggs. Careful! Avoid putting them in temperate incubators with other eggs."
 incubator = 2
 terrarium = 1
 hatch_time_secs = 1.0

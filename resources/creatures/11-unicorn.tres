@@ -10,6 +10,7 @@
 script = ExtResource("1_ivksb")
 name = "Unicorn"
 diet = 4
+description = "Their snouts are so small that all they do is nibble on leaves, making especially the hornless babies look very docile. They only have pointy eggshells and need to find adult protection if they want to survive."
 incubator = 4
 terrarium = 7
 egg = ExtResource("4_vvr5a")

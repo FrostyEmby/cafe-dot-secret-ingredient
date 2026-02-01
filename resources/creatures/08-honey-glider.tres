@@ -10,6 +10,7 @@
 script = ExtResource("1_aluou")
 name = "Honey Glider"
 diet = 6
+description = "From small eggs hatches a small creature with a big appetite. Honey gliders spend most of their day sniffing out the sweetest fruits in miles."
 incubator = 4
 terrarium = 5
 egg = ExtResource("4_o7p4m")

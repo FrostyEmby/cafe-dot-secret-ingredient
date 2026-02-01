@@ -11,6 +11,7 @@ script = ExtResource("5_micq7")
 name = "Vitaruga"
 type = 1
 diet = 4
+description = "Many a conservationist was shocked to see their Obsidian baby grow greenery on its back. The two can be confused for much of their lives, but Vitarugas are cool to the touch."
 incubator = 3
 terrarium = 3
 egg = ExtResource("4_e0ref")

@@ -10,6 +10,7 @@
 script = ExtResource("1_isweg")
 name = "Mitten"
 diet = 4
+description = "Mittens often get confused with mice, due to their small size, but this is actually a cat. Their brown eggs are a hint, because they are quite big for its size; common for predators."
 incubator = 4
 terrarium = 4
 egg = ExtResource("4_7tvs2")
