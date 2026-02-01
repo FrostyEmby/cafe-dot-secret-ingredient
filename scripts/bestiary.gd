@@ -80,7 +80,7 @@ func _fill_right():
 	#	$"Right Page/Baby Creature Picture Area/Label".text = "Baby"
 	
 	#if bestiary.creatures[page+1].previously_grown:
-	$"Right Page/Terrarium/Label".text = bestiary.creatures[page+1].habitat.keys()[bestiary.creatures[page].terrarium]
+	$"Right Page/Terrarium/Label".text = bestiary.creatures[page+1].habitat.keys()[bestiary.creatures[page+1].terrarium]
 	#else:
 	#	$"Right Page/Terrarium/Label".text = "Terrarium"
 
