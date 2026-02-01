@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2ptf51hotg12"]
+[gd_scene format=3 uid="uid://d2ptf51hotg12"]
 
-[ext_resource type="Script" uid="uid://c00c6ar8636tw" path="res://scenes/credits.gd" id="1_0bpdh"]
+[ext_resource type="Script" uid="uid://c00c6ar8636tw" path="res://scripts/credits.gd" id="1_0bpdh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0bpdh"]
 font_size = 50

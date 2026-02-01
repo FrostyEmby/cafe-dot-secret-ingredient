@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://bbn1jxutftk3u" path="res://scripts/terrarium.gd" id="1_h6qyf"]
 [ext_resource type="Script" uid="uid://b6yspum6krbt7" path="res://scripts/terrarium_room.gd" id="1_vusgt"]
-[ext_resource type="Texture2D" uid="uid://dieym8rlk7n24" path="res://art/props/layout test game jam terrarium.png" id="1_xb13y"]
-[ext_resource type="Texture2D" uid="uid://l4k1qkmaaupx" path="res://art/props/layout test game jam terrarium foreground.png" id="2_qlrmg"]
 [ext_resource type="Texture2D" uid="uid://db1p5mc1oy03c" path="res://art/eggs/birdbaby.png" id="4_1wf2t"]
 [ext_resource type="Script" uid="uid://fuwn4s1jhksn" path="res://scripts/mini_menu.gd" id="4_h6qyf"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="4_nrwuv"]
+[ext_resource type="Texture2D" uid="uid://df4ts5quiwft2" path="res://art/final props/terrarium back.png" id="4_skqsh"]
 [ext_resource type="Texture2D" uid="uid://dhv7ticowig" path="res://art/icons/home.png" id="4_y2mes"]
 [ext_resource type="Texture2D" uid="uid://c5dtqxisv1of5" path="res://art/icons/home_hover.png" id="5_h6qyf"]
+[ext_resource type="Texture2D" uid="uid://cidbpveuy05nh" path="res://art/final props/terrarium frame.png" id="5_w5ypi"]
 [ext_resource type="Texture2D" uid="uid://bt11rdadjevpq" path="res://art/icons/incubator.png" id="6_nrwuv"]
 [ext_resource type="PackedScene" uid="uid://ctuxvuxm5oh0r" path="res://scenes/egg.tscn" id="6_vusgt"]
 [ext_resource type="Texture2D" uid="uid://dvf5vhulucklh" path="res://art/icons/incubator_hover.png" id="7_1wf2t"]
@@ -80,22 +80,22 @@ layout_mode = 2
 custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
 
-[node name="TextureRect background" type="TextureRect" parent="." unique_id=1296228269]
+[node name="terrarium background" type="TextureRect" parent="." unique_id=1296228269]
 layout_mode = 0
 offset_left = 234.0
 offset_top = 95.0
 offset_right = 1153.0
 offset_bottom = 612.0
-texture = ExtResource("1_xb13y")
+texture = ExtResource("4_skqsh")
 expand_mode = 1
 
-[node name="TextureRect foreground" type="TextureRect" parent="." unique_id=1273484905]
+[node name="terrarium foreground" type="TextureRect" parent="." unique_id=1273484905]
 layout_mode = 0
 offset_left = 234.0
 offset_top = 95.0
 offset_right = 1153.0
 offset_bottom = 611.0
-texture = ExtResource("2_qlrmg")
+texture = ExtResource("5_w5ypi")
 expand_mode = 1
 
 [node name="Snow" type="Button" parent="." unique_id=895167394]

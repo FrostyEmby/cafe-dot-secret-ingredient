@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://djtd6vihyb4ph"]
+[gd_scene format=3 uid="uid://djtd6vihyb4ph"]
 
 [ext_resource type="Texture2D" uid="uid://dlsooa8vkecjj" path="res://art/props/nest1.png" id="1_tm8is"]
 [ext_resource type="Script" uid="uid://coxr4fw58q14s" path="res://scripts/nest.gd" id="2_a0nmq"]
 [ext_resource type="PackedScene" uid="uid://ctuxvuxm5oh0r" path="res://scenes/egg.tscn" id="3_5fcmp"]
 
-[node name="Nest" type="TextureRect"]
+[node name="Nest" type="TextureRect" unique_id=2112437589]
 offset_left = 440.0
 offset_top = 195.0
 offset_right = 696.0
@@ -13,14 +13,14 @@ texture = ExtResource("1_tm8is")
 stretch_mode = 2
 script = ExtResource("2_a0nmq")
 
-[node name="Egg1" parent="." instance=ExtResource("3_5fcmp")]
+[node name="Egg1" parent="." unique_id=255719937 instance=ExtResource("3_5fcmp")]
 layout_mode = 0
 offset_left = 117.0
 offset_top = 33.0
 offset_right = 189.0
 offset_bottom = 105.0
 
-[node name="Egg2" parent="." instance=ExtResource("3_5fcmp")]
+[node name="Egg2" parent="." unique_id=1975285814 instance=ExtResource("3_5fcmp")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.25300002
@@ -32,28 +32,28 @@ offset_top = -7.9920044
 offset_right = 72.231995
 offset_bottom = 64.007996
 
-[node name="Egg3" parent="." instance=ExtResource("3_5fcmp")]
+[node name="Egg3" parent="." unique_id=678417285 instance=ExtResource("3_5fcmp")]
 layout_mode = 0
 offset_left = 121.0
 offset_top = 100.0
 offset_right = 193.0
 offset_bottom = 172.0
 
-[node name="Egg4" parent="." instance=ExtResource("3_5fcmp")]
+[node name="Egg4" parent="." unique_id=1356708137 instance=ExtResource("3_5fcmp")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 58.0
 offset_right = 232.0
 offset_bottom = 130.0
 
-[node name="Egg5" parent="." instance=ExtResource("3_5fcmp")]
+[node name="Egg5" parent="." unique_id=293921960 instance=ExtResource("3_5fcmp")]
 layout_mode = 0
 offset_left = 166.0
 offset_top = 108.0
 offset_right = 238.0
 offset_bottom = 180.0
 
-[node name="Egg6" parent="." instance=ExtResource("3_5fcmp")]
+[node name="Egg6" parent="." unique_id=345717626 instance=ExtResource("3_5fcmp")]
 layout_mode = 0
 offset_left = 70.0
 offset_top = 100.0

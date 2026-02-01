@@ -28,3 +28,4 @@ enum habitat {NONE, ALL, VOLCANO, AQUATIC, DESERT, JUNGLE, SNOW, GRASSLAND}
 # dynamic data
 @export var previously_hatched : bool = false
 @export var previously_grown : bool = false
+@export var in_play : bool = false

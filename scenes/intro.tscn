@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://cgs2egubd3560"]
+
+[ext_resource type="Script" uid="uid://c8hih01lyh12b" path="res://scripts/intro.gd" id="1_es01l"]
+[ext_resource type="Texture2D" uid="uid://cauu4e4arog3s" path="res://art/title/turtle_empty.png" id="1_ioskq"]
+[ext_resource type="Texture2D" uid="uid://dadd0whb2ulsl" path="res://art/final props/Gradient Background.png" id="2_0naf5"]
+[ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://resources/theme.tres" id="3_bu1yb"]
+[ext_resource type="Texture2D" uid="uid://chvqbwaulnv8y" path="res://art/icons/forward-small.png" id="5_t1qkj"]
+[ext_resource type="Texture2D" uid="uid://jsqxydg5pski" path="res://art/icons/forward-smal-hover.png" id="6_272cy"]
+[ext_resource type="AudioStream" uid="uid://b7qejwtfkj86" path="res://sound/music/Scholar's knowledge.wav" id="7_0naf5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sjfbp"]
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+
+[node name="Intro" type="Control" unique_id=292394426]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_es01l")
+
+[node name="Background" type="TextureRect" parent="." unique_id=565873784]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_0naf5")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=530069556]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 648.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1599677647]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.875
+offset_top = -244.0
+offset_right = 235.875
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_bu1yb")
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1091221672]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.75
+offset_top = 204.5
+offset_right = -18.75
+offset_bottom = -8.25
+grow_horizontal = 2
+grow_vertical = 2
+text = "It is remarkable what creatures this land used to have. I would call many of them fairytales if I had not seen some of their surviving kin with my own eyes. Unfortunately, most of them have been pushed into extinction, leaving this place desolate and empty. 
+
+Luckily for us, a recently discovered secret magic passed down through the generations can replicate the eggs from eons past. If you can figure out how to nurture each of them correctly, we may be able to restore the ecosystem to it's former glory. As one of our foremost biological alchemists, I will leave this important task to you.
+
+Best of luck!
+Elle"
+label_settings = SubResource("LabelSettings_sjfbp")
+autowrap_mode = 3
+
+[node name="Creature" type="TextureRect" parent="." unique_id=147103740]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 36.0
+offset_right = 821.0
+offset_bottom = 333.0
+texture = ExtResource("1_ioskq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Next" type="TextureButton" parent="." unique_id=1914325156]
+layout_mode = 0
+offset_left = 769.0
+offset_top = 516.0
+offset_right = 801.0
+offset_bottom = 548.0
+texture_normal = ExtResource("5_t1qkj")
+texture_hover = ExtResource("6_272cy")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1273803197]
+stream = ExtResource("7_0naf5")
+autoplay = true
+
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]
