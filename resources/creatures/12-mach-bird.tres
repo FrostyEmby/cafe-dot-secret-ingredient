@@ -10,7 +10,7 @@
 script = ExtResource("1_y56bw")
 name = "Mach Bird"
 diet = 3
-description = "The stone in their foreheads is the only thing that remains after they die.  From it a new Carbunkle hatches."
+description = "This warden of the wind is an elusive bird, because it spends most of its life in flight. Few have seen them walk and some wonder if they have feet at all."
 incubator = 7
 terrarium = 7
 egg = ExtResource("4_3cdt8")
