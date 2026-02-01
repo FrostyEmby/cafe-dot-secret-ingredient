@@ -56,3 +56,7 @@ func _load():
 	$Nest1.setup(save.nest1)
 	$Nest2.setup(save.nest2)
 	$Nest3.setup(save.nest3)
+
+
+func _on_music_finished() -> void:
+	$Music.play()

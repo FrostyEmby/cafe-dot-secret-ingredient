@@ -59,11 +59,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 alignment = 1
 
-[node name="Space" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=206864820]
-layout_mode = 2
-theme = ExtResource("2_8ln24")
-theme_override_constants/margin_right = 3
-
 [node name="Settings" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1805894709]
 layout_mode = 2
 theme = ExtResource("2_8ln24")
@@ -71,7 +66,8 @@ text = "Settings"
 icon = ExtResource("4_oa1go")
 alignment = 0
 
-[node name="Space2" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=888379846]
+[node name="Space" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=888379846]
+visible = false
 layout_mode = 2
 theme = ExtResource("2_8ln24")
 theme_override_constants/margin_right = 3

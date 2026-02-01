@@ -17,7 +17,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Secret Ingredient"
 run/main_scene="uid://dhs6v4k8dmjo4"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="uid://dfoebasvbudfx"
+config/icon="uid://btr6kx0tgml37"
 
 [audio]
 
