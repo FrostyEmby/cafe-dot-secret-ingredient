@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="TerrariumData" load_steps=7 format=3 uid="uid://d0ei1ycwf41lq"]
+[gd_resource type="Resource" script_class="TerrariumData" format=3 uid="uid://d0ei1ycwf41lq"]
 
 [ext_resource type="Script" uid="uid://br5o6wci85nr8" path="res://scripts/templates/egg-data.gd" id="1_7k58r"]
 [ext_resource type="Script" uid="uid://du0bchkwa6mok" path="res://scripts/templates/terrarium-data.gd" id="1_qx0xb"]

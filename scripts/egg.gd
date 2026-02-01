@@ -129,7 +129,7 @@ func _hatch_or_death():
 
 func _survive_or_die():
 	if info.space != info.species.terrarium:
-		print("TERRARIUM IS ", info.placement, " AND SHOULD BE ", info.species.incubator)
+		print("TERRARIUM IS ", info.space, " AND SHOULD BE ", info.species.terrarium)
 		_dead()
 	else:
 		_mature()

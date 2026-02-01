@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://ddvixqmre33gs" path="res://resources/creatures/05-vitaruga.tres" id="2_wbu0j"]
 [ext_resource type="Script" uid="uid://bgw7voc2pvri" path="res://scripts/templates/nest-data.gd" id="3_1hp4v"]
 [ext_resource type="Resource" uid="uid://bd2c01l4dr8bq" path="res://resources/creatures/11-unicorn.tres" id="3_wbu0j"]
-[ext_resource type="Resource" uid="uid://bgpacae1weki4" path="res://resources/creatures/06-electric-dragonfly.tres" id="4_u80px"]
+[ext_resource type="Resource" uid="uid://bcpddagykdk57" path="res://resources/creatures/16-sea-sausage.tres" id="4_wbu0j"]
 
 [sub_resource type="Resource" id="Resource_1hp4v"]
 script = ExtResource("1_hhdhr")
@@ -22,7 +22,7 @@ metadata/_custom_type_script = "uid://br5o6wci85nr8"
 [sub_resource type="Resource" id="Resource_21bdv"]
 script = ExtResource("1_hhdhr")
 visibility = true
-species = ExtResource("4_u80px")
+species = ExtResource("4_wbu0j")
 metadata/_custom_type_script = "uid://br5o6wci85nr8"
 
 [sub_resource type="Resource" id="Resource_u80px"]

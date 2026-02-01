@@ -20,7 +20,7 @@ func _space():
 		"lava":
 			print("ADDED TO VOLCANO")
 			return CreatureStats.habitat.VOLCANO
-		"aquatic":
+		"aqua":
 			print("ADDED TO AQUATIC")
 			return CreatureStats.habitat.AQUATIC
 		"sand":

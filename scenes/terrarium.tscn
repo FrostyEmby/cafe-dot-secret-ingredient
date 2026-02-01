@@ -141,7 +141,7 @@ offset_right = 220.0
 offset_bottom = 236.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Grassland" type="Button" parent="." unique_id=2040749147]
+[node name="Grass" type="Button" parent="." unique_id=2040749147]
 layout_mode = 0
 offset_left = 576.0
 offset_top = 102.0
@@ -152,7 +152,7 @@ theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
 script = ExtResource("1_h6qyf")
 metadata/_custom_type_script = "uid://bbn1jxutftk3u"
 
-[node name="Creature1" parent="Grassland" unique_id=865970138 instance=ExtResource("6_vusgt")]
+[node name="Creature1" parent="Grass" unique_id=865970138 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 99.0
 offset_top = 111.0
@@ -160,7 +160,7 @@ offset_right = 171.0
 offset_bottom = 183.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature2" parent="Grassland" unique_id=2011446835 instance=ExtResource("6_vusgt")]
+[node name="Creature2" parent="Grass" unique_id=2011446835 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 88.0
 offset_top = 165.0
@@ -168,7 +168,7 @@ offset_right = 160.0
 offset_bottom = 237.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature3" parent="Grassland" unique_id=834925857 instance=ExtResource("6_vusgt")]
+[node name="Creature3" parent="Grass" unique_id=834925857 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 173.0
@@ -176,7 +176,7 @@ offset_right = 87.0
 offset_bottom = 245.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature4" parent="Grassland" unique_id=1623771761 instance=ExtResource("6_vusgt")]
+[node name="Creature4" parent="Grass" unique_id=1623771761 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 148.0
 offset_top = 164.0
@@ -184,7 +184,7 @@ offset_right = 220.0
 offset_bottom = 236.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Desert" type="Button" parent="." unique_id=1535855769]
+[node name="Sand" type="Button" parent="." unique_id=1535855769]
 layout_mode = 0
 offset_left = 819.0
 offset_top = 102.0
@@ -195,7 +195,7 @@ theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
 script = ExtResource("1_h6qyf")
 metadata/_custom_type_script = "uid://bbn1jxutftk3u"
 
-[node name="Creature1" parent="Desert" unique_id=209773839 instance=ExtResource("6_vusgt")]
+[node name="Creature1" parent="Sand" unique_id=209773839 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 141.0
 offset_top = 171.0
@@ -203,7 +203,7 @@ offset_right = 213.0
 offset_bottom = 243.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature2" parent="Desert" unique_id=710989111 instance=ExtResource("6_vusgt")]
+[node name="Creature2" parent="Sand" unique_id=710989111 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 73.0
 offset_top = 116.0
@@ -211,7 +211,7 @@ offset_right = 145.0
 offset_bottom = 188.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature3" parent="Desert" unique_id=1522760123 instance=ExtResource("6_vusgt")]
+[node name="Creature3" parent="Sand" unique_id=1522760123 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 123.0
@@ -219,7 +219,7 @@ offset_right = 70.0
 offset_bottom = 195.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature4" parent="Desert" unique_id=1525245172 instance=ExtResource("6_vusgt")]
+[node name="Creature4" parent="Sand" unique_id=1525245172 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 141.0
 offset_top = 61.0
@@ -227,7 +227,7 @@ offset_right = 213.0
 offset_bottom = 133.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Aquatic" type="Button" parent="." unique_id=121066612]
+[node name="Aqua" type="Button" parent="." unique_id=121066612]
 layout_mode = 0
 offset_left = 315.0
 offset_top = 355.0
@@ -238,7 +238,7 @@ theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
 script = ExtResource("1_h6qyf")
 metadata/_custom_type_script = "uid://bbn1jxutftk3u"
 
-[node name="Creature1" parent="Aquatic" unique_id=324409919 instance=ExtResource("6_vusgt")]
+[node name="Creature1" parent="Aqua" unique_id=324409919 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 146.0
 offset_top = 112.0
@@ -246,7 +246,7 @@ offset_right = 218.0
 offset_bottom = 184.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature2" parent="Aquatic" unique_id=38747266 instance=ExtResource("6_vusgt")]
+[node name="Creature2" parent="Aqua" unique_id=38747266 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 82.0
@@ -254,7 +254,7 @@ offset_right = 152.0
 offset_bottom = 154.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature3" parent="Aquatic" unique_id=547211791 instance=ExtResource("6_vusgt")]
+[node name="Creature3" parent="Aqua" unique_id=547211791 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 48.0
@@ -262,7 +262,7 @@ offset_right = 88.0
 offset_bottom = 120.0
 icon = ExtResource("4_1wf2t")
 
-[node name="Creature4" parent="Aquatic" unique_id=271568625 instance=ExtResource("6_vusgt")]
+[node name="Creature4" parent="Aqua" unique_id=271568625 instance=ExtResource("6_vusgt")]
 layout_mode = 0
 offset_left = 125.0
 offset_top = 32.0
@@ -431,9 +431,9 @@ autoplay = true
 
 [connection signal="selection" from="BoxContainer/HSplitContainer/Egg Shelf" to="." method="_on_egg_shelf_selection"]
 [connection signal="selection" from="Snow" to="." method="_on_snow_selection"]
-[connection signal="selection" from="Grassland" to="." method="_on_grass_selection"]
-[connection signal="selection" from="Desert" to="." method="_on_sand_selection"]
-[connection signal="selection" from="Aquatic" to="." method="_on_aqua_selection"]
+[connection signal="selection" from="Grass" to="." method="_on_grass_selection"]
+[connection signal="selection" from="Sand" to="." method="_on_sand_selection"]
+[connection signal="selection" from="Aqua" to="." method="_on_aqua_selection"]
 [connection signal="selection" from="Jungle" to="." method="_on_jungle_selection"]
 [connection signal="selection" from="Lava" to="." method="_on_lava_selection"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Home" to="Vertical Mini Menu" method="_on_home_pressed"]

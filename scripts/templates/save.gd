@@ -16,9 +16,9 @@ class_name Save
 @export var nest3 : NestData = load("res://resources/nest3.tres")
 
 # TERRARIUMS
-@export var snow : TerrariumData
-@export var grass : TerrariumData
-@export var sand : TerrariumData
-@export var aqua : TerrariumData
-@export var jungle : TerrariumData
-@export var lava : TerrariumData
+@export var snow : TerrariumData = load("res://resources/snow.tres")
+@export var grass : TerrariumData = load("res://resources/grass.tres")
+@export var sand : TerrariumData = load("res://resources/sand.tres")
+@export var aqua : TerrariumData = load("res://resources/aqua.tres")
+@export var jungle : TerrariumData = load("res://resources/jungle.tres")
+@export var lava : TerrariumData = load("res://resources/lava.tres")

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Save" load_steps=13 format=3 uid="uid://1ll1rg6ogcrc"]
+[gd_resource type="Resource" script_class="Save" format=3 uid="uid://1ll1rg6ogcrc"]
 
 [ext_resource type="Script" uid="uid://dt67tgv2fjsug" path="res://scripts/templates/save.gd" id="1_8knjt"]
 [ext_resource type="Resource" uid="uid://d2b1e62855o4h" path="res://resources/aqua.tres" id="1_sccy7"]
