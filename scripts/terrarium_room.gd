@@ -3,8 +3,6 @@ extends Control
 var creature_selected : bool = false
 var creature_match : Egg
 
-@onready var shelf = $"BoxContainer/HSplitContainer/Egg Shelf"
-
 
 func _on_egg_shelf_selection(creature: Egg) -> void:
 	if creature.info.hatched:
@@ -15,7 +13,7 @@ func _on_egg_shelf_selection(creature: Egg) -> void:
 func _match(terrarium : Terrarium):
 	if creature_selected and terrarium.has_space():
 		terrarium.add(creature_match)
-		shelf.remove_egg(creature_match)
+		$Shelf.remove_egg(creature_match)
 		creature_selected = false
 
 

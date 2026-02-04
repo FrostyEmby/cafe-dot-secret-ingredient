@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cy87qvc5vucad" path="res://art/adult creatures/cool bat.png" id="6_eapyg"]
 [ext_resource type="Texture2D" uid="uid://bvxd7p23rhjsv" path="res://art/adult creatures/page background2.png" id="7_bfiq4"]
 [ext_resource type="Texture2D" uid="uid://cmjnxjp0dfr3a" path="res://art/icons/back-small-hover.png" id="9_eapyg"]
+[ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelf.tscn" id="10_g005f"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="11_aig2i"]
 [ext_resource type="Texture2D" uid="uid://jsqxydg5pski" path="res://art/icons/forward-smal-hover.png" id="11_bfiq4"]
 [ext_resource type="Texture2D" uid="uid://blyiy4kc543nl" path="res://art/final props/FlipRightspritesheet.png" id="11_eapyg"]
@@ -632,6 +633,11 @@ offset_right = 519.0
 offset_bottom = 40.0
 texture_normal = ExtResource("4_j3mqr")
 texture_hover = ExtResource("11_bfiq4")
+
+[node name="Shelf" parent="." unique_id=928893465 instance=ExtResource("10_g005f")]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 202.0
 
 [node name="FlipLeft" type="AnimatedSprite2D" parent="." unique_id=2141954442]
 visible = false

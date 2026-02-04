@@ -5,14 +5,12 @@ var egg_match : Egg
 var hatchery_match : Hatchery
 var save : Save = load("res://resources/save.tres")
 
-@onready var shelf = $"BoxContainer/HSplitContainer/Egg Shelf"
-
 # matches egg and hatchery
 func _match():
 	# if hatchery has space, then proceed with matching
 	if hatchery_match.has_space():
 		# turn off the button and visibility to make egg disappear
-		shelf.remove_egg(egg_match)
+		$Shelf.remove_egg(egg_match)
 		
 		# use egg button data to add that variety to the hatchery
 		hatchery_match.add_egg(egg_match)

@@ -3,22 +3,22 @@ extends MarginContainer
 var save : Save = load("res://resources/save.tres")
 signal selection(egg: Egg)
 
-@onready var egg1 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg1"
-@onready var egg2 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg2"
-@onready var egg3 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg3"
-@onready var egg4 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg4"
-@onready var egg5 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg5"
-@onready var egg6 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg6"
-@onready var egg7 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg7"
-@onready var egg8 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg8"
-@onready var egg9 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg9"
-@onready var egg10 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg10"
-@onready var egg11 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg11"
-@onready var egg12 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg12"
-@onready var egg13 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg13"
-@onready var egg14 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg14"
-@onready var egg15 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg15"
-@onready var egg16 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg16"
+@onready var egg1 = $Hold/Grid/Egg1
+@onready var egg2 = $Hold/Grid/Egg2
+@onready var egg3 = $Hold/Grid/Egg3
+@onready var egg4 = $Hold/Grid/Egg4
+@onready var egg5 = $Hold/Grid/Egg5
+@onready var egg6 = $Hold/Grid/Egg6
+@onready var egg7 = $Hold/Grid/Egg7
+@onready var egg8 = $"Hold/Grid/Egg8"
+@onready var egg9 = $"Hold/Grid/Egg9"
+@onready var egg10 = $"Hold/Grid/Egg10"
+@onready var egg11 = $"Hold/Grid/Egg11"
+@onready var egg12 = $"Hold/Grid/Egg12"
+@onready var egg13 = $"Hold/Grid/Egg13"
+@onready var egg14 = $"Hold/Grid/Egg14"
+@onready var egg15 = $"Hold/Grid/Egg15"
+@onready var egg16 = $"Hold/Grid/Egg16"
 
 
 func _ready() -> void:
@@ -136,6 +136,11 @@ func _on_egg_16_selection(egg: Egg) -> void:
 func _load():
 	print("-----starting shelf setup-----")
 	
+	if save.shelf.open:
+		position = Vector2(0,0)
+	else:
+		position = Vector2(-176,0)
+	
 	egg1.setup(save.shelf.egg1)
 	egg2.setup(save.shelf.egg2)
 	egg3.setup(save.shelf.egg3)
@@ -179,3 +184,13 @@ func _on_incubators_hatch_select(egg: Egg, hatchery : Hatchery) -> void:
 	egg.reset()
 	save.incubator[hatchery.name.to_lower()][egg.name.to_lower()] = egg.info
 	
+
+
+func _on_move_pressed() -> void:
+	var movement = create_tween()
+	if save.shelf.open:
+		save.shelf.open = false
+		movement.tween_property(self, "global_position", Vector2(-176,0), 0.1)
+	else:
+		save.shelf.open = true
+		movement.tween_property(self, "global_position", Vector2(0,0), 0.1)

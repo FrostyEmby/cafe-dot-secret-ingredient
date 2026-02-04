@@ -5,12 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://b5bkddainp227" path="res://art/props/Nest Background.png" id="2_m11xh"]
 [ext_resource type="PackedScene" uid="uid://djtd6vihyb4ph" path="res://scenes/nest.tscn" id="3_r7ts3"]
 [ext_resource type="Texture2D" uid="uid://dskie2krx7h0o" path="res://art/props/nest2.png" id="7_fcwn1"]
-[ext_resource type="Texture2D" uid="uid://bunldmv1vprgp" path="res://art/icons/shelf_dragger.png" id="7_vclnr"]
 [ext_resource type="Texture2D" uid="uid://doyl7ideois6k" path="res://art/props/nestback.png" id="8_6o0hv"]
 [ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelf.tscn" id="8_cwp2l"]
 [ext_resource type="AudioStream" uid="uid://8xdg0l274c1w" path="res://sound/music/Take an egg.wav" id="9_1mlyo"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_18w84"]
 
 [node name="Egg Collection" type="Control" unique_id=1279119683]
 layout_mode = 3
@@ -23,31 +20,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_m11xh")
 
-[node name="BoxContainer" type="BoxContainer" parent="." unique_id=1170728713]
+[node name="Shelf" parent="." unique_id=729667400 instance=ExtResource("8_cwp2l")]
 layout_mode = 0
-offset_left = -176.0
-offset_right = 1152.0
-offset_bottom = 648.0
-
-[node name="HSplitContainer" type="HSplitContainer" parent="BoxContainer" unique_id=1909969415]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_icons/touch_dragger = ExtResource("7_vclnr")
-theme_override_styles/split_bar_background = SubResource("StyleBoxEmpty_18w84")
-split_offsets = PackedInt32Array(200)
-dragger_visibility = 1
-touch_dragger_enabled = true
-drag_area_margin_begin = -80
-drag_area_offset = -18
-split_offset = 200
-
-[node name="Egg Shelf" parent="BoxContainer/HSplitContainer" unique_id=729667400 instance=ExtResource("8_cwp2l")]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HSplitContainer" unique_id=1960357504]
-custom_minimum_size = Vector2(952, 0)
-layout_mode = 2
+offset_left = 0.0
+offset_right = 202.0
 
 [node name="Nest1" parent="." unique_id=1642692670 instance=ExtResource("3_r7ts3")]
 layout_mode = 0
