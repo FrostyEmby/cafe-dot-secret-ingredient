@@ -636,8 +636,6 @@ texture_hover = ExtResource("11_bfiq4")
 
 [node name="Shelf" parent="." unique_id=928893465 instance=ExtResource("10_g005f")]
 layout_mode = 0
-offset_left = 0.0
-offset_right = 202.0
 
 [node name="FlipLeft" type="AnimatedSprite2D" parent="." unique_id=2141954442]
 visible = false
