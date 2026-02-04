@@ -67,7 +67,6 @@ icon = ExtResource("4_oa1go")
 alignment = 0
 
 [node name="Space" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=888379846]
-visible = false
 layout_mode = 2
 theme = ExtResource("2_8ln24")
 theme_override_constants/margin_right = 3

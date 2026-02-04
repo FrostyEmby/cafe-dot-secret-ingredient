@@ -91,6 +91,23 @@ layout_mode = 2
 [node name="Space2" type="Label" parent="PanelContainer/MarginContainer/GridContainer" unique_id=1382285762]
 layout_mode = 2
 
+[node name="Display" type="Label" parent="PanelContainer/MarginContainer/GridContainer" unique_id=1739254557]
+layout_mode = 2
+text = "Display"
+label_settings = SubResource("LabelSettings_r6d6q")
+horizontal_alignment = 1
+
+[node name="Display Options" type="OptionButton" parent="PanelContainer/MarginContainer/GridContainer" unique_id=1924965179]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+selected = 0
+item_count = 2
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Full Screen"
+popup/item_1/id = 1
+
 [node name="Back" type="TextureButton" parent="." unique_id=51032091]
 layout_mode = 0
 offset_left = 16.0
@@ -112,5 +129,6 @@ autoplay = true
 
 [connection signal="value_changed" from="PanelContainer/MarginContainer/GridContainer/Music Volume" to="." method="_on_master_volume_value_changed"]
 [connection signal="value_changed" from="PanelContainer/MarginContainer/GridContainer/Sound Volume" to="." method="_on_sound_volume_value_changed"]
+[connection signal="item_selected" from="PanelContainer/MarginContainer/GridContainer/Display Options" to="." method="_on_display_options_item_selected"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
