@@ -133,72 +133,96 @@ func _on_egg_3_death(egg: Egg) -> void:
 func _cold_dry_egg_display():
 	match save.incubator.cold_dry.egg_count:
 		0:
+			icon = load("res://art/final props/incubators/dry cold incubator empty DONE.png")
 			$Display.texture = null
 		1:
+			icon = load("res://art/final props/incubators/dry cold incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/dry left egg1.png")
 		2:
+			icon = load("res://art/final props/incubators/dry cold incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/dry left egg2.png")
 		3:
+			icon = load("res://art/final props/incubators/dry cold incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/dry left egg3.png")
 
 
 func _temp_dry_egg_display():
 	match save.incubator.temp_dry.egg_count:
 		0:
+			icon = load("res://art/final props/incubators/dry incubator empty DONE.png")
 			$Display.texture = null
 		1:
+			icon = load("res://art/final props/incubators/dry incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/dry middle egg1.png")
 		2:
+			icon = load("res://art/final props/incubators/dry incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/dry middle egg2.png")
 		3:
+			icon = load("res://art/final props/incubators/dry incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/dry middle egg3.png")
 
 
 func _hot_dry_egg_display():
 	match save.incubator.hot_dry.egg_count:
 		0:
+			icon = load("res://art/final props/incubators/dry hot incubator emptyDONE.png")
 			$Display.texture = null
 		1:
+			icon = load("res://art/final props/incubators/dry hot incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/dry right egg1.png")
 		2:
+			icon = load("res://art/final props/incubators/dry hot incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/dry right egg2.png")
 		3:
+			icon = load("res://art/final props/incubators/dry hot incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/dry right egg3.png")
 
 
 func _cold_wet_egg_display():
 	match save.incubator.cold_wet.egg_count:
 		0:
+			icon = load("res://art/final props/incubators/wet cold incubator emptyDONE.png")
 			$Display.texture = null
 		1:
+			icon = load("res://art/final props/incubators/wet cold incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/wet left egg1.png")
 		2:
+			icon = load("res://art/final props/incubators/wet cold incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/wet left egg2.png")
 		3:
+			icon = load("res://art/final props/incubators/wet cold incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/wet left egg3.png")
 
 
 func _temp_wet_egg_display():
 	match save.incubator.temp_wet.egg_count:
 		0:
+			icon = load("res://art/final props/incubators/wet incubator empty DONE.png")
 			$Display.texture = null
 		1:
+			icon = load("res://art/final props/incubators/wet incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/wet middle egg1.png")
 		2:
+			icon = load("res://art/final props/incubators/wet incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/wet middle egg2.png")
 		3:
+			icon = load("res://art/final props/incubators/wet incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/wet middle egg3.png")
 
 
 func _hot_wet_egg_display():
 	match save.incubator.hot_wet.egg_count:
 		0:
+			icon = load("res://art/final props/incubators/wet hot incubator emptyDONE.png")
 			$Display.texture = null
 		1:
+			icon = load("res://art/final props/incubators/wet hot incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/wet right egg1.png")
 		2:
+			icon = load("res://art/final props/incubators/wet hot incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/wet right egg2.png")
 		3:
+			icon = load("res://art/final props/incubators/wet hot incubator empty.png")
 			$Display.texture = load("res://art/final props/incubators/wet right egg3.png")
 
 
