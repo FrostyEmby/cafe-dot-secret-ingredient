@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="8_ebtcn"]
 [ext_resource type="AudioStream" uid="uid://c7fl623semdyj" path="res://sound/music/Incubators.wav" id="8_lerr0"]
 [ext_resource type="AudioStream" uid="uid://b1f28fc7xbff5" path="res://sound/sound effects/Place.wav" id="9_glcki"]
+[ext_resource type="Texture2D" uid="uid://do4wg3dg05fm3" path="res://art/eggs/egglist85.png" id="9_t4njw"]
+[ext_resource type="Script" uid="uid://pklua34rgsp2" path="res://scripts/fool_egg.gd" id="10_b2v4q"]
 
 [node name="Incubator Room" type="Control" unique_id=1116973836]
 layout_mode = 3
@@ -46,6 +48,11 @@ autoplay = true
 [node name="Place" type="AudioStreamPlayer" parent="." unique_id=209222006]
 stream = ExtResource("9_glcki")
 bus = &"SFX"
+
+[node name="Fool Egg" type="Sprite2D" parent="." unique_id=657856268]
+visible = false
+texture = ExtResource("9_t4njw")
+script = ExtResource("10_b2v4q")
 
 [connection signal="hatch_select" from="Incubators" to="Shelf" method="_on_incubators_hatch_select"]
 [connection signal="selection" from="Incubators" to="." method="_on_incubator_selection"]

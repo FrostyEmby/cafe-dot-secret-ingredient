@@ -18,6 +18,9 @@ func _match():
 		# turn off again once match is found
 		egg_selected = false
 		
+		# remove dragged egg
+		$"Fool Egg".visible = false
+		
 		$Place.play()
 	else:
 		print("no space, match cancelled")
@@ -25,6 +28,9 @@ func _match():
 func _on_egg_selection(egg: Egg) -> void:
 	egg_match = egg
 	egg_selected = true
+	egg.visible = false
+	$"Fool Egg".texture = egg.icon
+	$"Fool Egg".visible = true
 
 
 # selection only goes one way, because egg -> hatchery 

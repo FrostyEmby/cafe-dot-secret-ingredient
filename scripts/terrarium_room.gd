@@ -8,6 +8,9 @@ func _on_egg_shelf_selection(creature: Egg) -> void:
 	if creature.info.hatched:
 		creature_selected = true
 		creature_match = creature
+		creature.visible = false
+		$"Fool Creature".texture = creature.icon
+		$"Fool Creature".visible = true
 
 
 func _match(terrarium : Terrarium):
@@ -15,6 +18,7 @@ func _match(terrarium : Terrarium):
 		terrarium.add(creature_match)
 		$Shelf.remove_egg(creature_match)
 		creature_selected = false
+		$"Fool Creature".visible = false
 
 
 func _on_snow_selection(terrarium : Terrarium) -> void:
