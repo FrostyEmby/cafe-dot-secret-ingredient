@@ -5,9 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://dadd0whb2ulsl" path="res://art/final props/Gradient Background.png" id="2_0naf5"]
 [ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://resources/theme.tres" id="3_bu1yb"]
 [ext_resource type="FontFile" uid="uid://bd5hly5xmortx" path="res://art/fonts/Handyman.ttf" id="5_bu1yb"]
-[ext_resource type="Texture2D" uid="uid://chvqbwaulnv8y" path="res://art/icons/forward-small.png" id="5_t1qkj"]
-[ext_resource type="Texture2D" uid="uid://jsqxydg5pski" path="res://art/icons/forward-smal-hover.png" id="6_272cy"]
+[ext_resource type="Texture2D" uid="uid://bbemsiywr7gre" path="res://art/icons/Forward.png" id="6_n6p8m"]
 [ext_resource type="AudioStream" uid="uid://b7qejwtfkj86" path="res://sound/music/Scholar's knowledge.wav" id="7_0naf5"]
+[ext_resource type="Texture2D" uid="uid://bkkmmsmllp78i" path="res://art/icons/Forward-hover.png" id="7_m3r7s"]
+[ext_resource type="Texture2D" uid="uid://xw3sa8nxytmc" path="res://art/final eggs/01 magma gulper egg.png" id="10_n6p8m"]
+[ext_resource type="Texture2D" uid="uid://b5g2a561gd3me" path="res://art/final eggs/10 carbunkle egg.png" id="10_xwriy"]
+[ext_resource type="Texture2D" uid="uid://s47o24d782sy" path="res://art/final eggs/12 mach bird egg.png" id="11_m3r7s"]
+[ext_resource type="Texture2D" uid="uid://bja465s46vk8" path="res://art/final eggs/09 tyrian snail egg.png" id="11_u5myo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sjfbp"]
 font = ExtResource("5_bu1yb")
@@ -29,7 +33,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_0naf5")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1599677647]
+[node name="Page" type="ColorRect" parent="." unique_id=1599677647]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -44,7 +48,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_bu1yb")
 
-[node name="Creature" type="TextureRect" parent="ColorRect" unique_id=147103740]
+[node name="Creature" type="TextureRect" parent="Page" unique_id=147103740]
 layout_mode = 0
 offset_left = -14.125
 offset_top = -45.0
@@ -54,7 +58,7 @@ texture = ExtResource("1_ioskq")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Letter" type="Label" parent="ColorRect" unique_id=1091221672]
+[node name="Letter" type="Label" parent="Page" unique_id=1091221672]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -74,18 +78,42 @@ Elle"
 label_settings = SubResource("LabelSettings_sjfbp")
 autowrap_mode = 3
 
-[node name="Next" type="TextureButton" parent="ColorRect" unique_id=1914325156]
+[node name="Next" type="TextureButton" parent="Page" unique_id=1914325156]
 layout_mode = 0
-offset_left = 432.875
-offset_top = 556.0
-offset_right = 464.875
-offset_bottom = 588.0
-texture_normal = ExtResource("5_t1qkj")
-texture_hover = ExtResource("6_272cy")
+offset_left = 394.875
+offset_top = 520.5
+offset_right = 458.875
+offset_bottom = 584.5
+texture_normal = ExtResource("6_n6p8m")
+texture_hover = ExtResource("7_m3r7s")
+
+[node name="Egg row" type="HBoxContainer" parent="Page" unique_id=1440407181]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 297.0
+offset_right = 461.0
+offset_bottom = 361.0
+theme_override_constants/separation = 0
+
+[node name="Egg1" type="TextureRect" parent="Page/Egg row" unique_id=166279418]
+layout_mode = 2
+texture = ExtResource("11_u5myo")
+
+[node name="Egg2" type="TextureRect" parent="Page/Egg row" unique_id=1508603411]
+layout_mode = 2
+texture = ExtResource("10_xwriy")
+
+[node name="Egg3" type="TextureRect" parent="Page/Egg row" unique_id=191387652]
+layout_mode = 2
+texture = ExtResource("10_n6p8m")
+
+[node name="Egg4" type="TextureRect" parent="Page/Egg row" unique_id=130879242]
+layout_mode = 2
+texture = ExtResource("11_m3r7s")
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1273803197]
 stream = ExtResource("7_0naf5")
 autoplay = true
 
-[connection signal="pressed" from="ColorRect/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Page/Next" to="." method="_on_next_pressed"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]

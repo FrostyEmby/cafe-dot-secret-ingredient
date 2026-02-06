@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://bval0fmdjaet" path="res://scripts/settings.gd" id="1_r6d6q"]
 [ext_resource type="FontFile" uid="uid://bd5hly5xmortx" path="res://art/fonts/Handyman.ttf" id="2_83j8s"]
 [ext_resource type="Texture2D" uid="uid://dubt5x0ntj1od" path="res://art/icons/back.png" id="3_6wm04"]
-[ext_resource type="Texture2D" uid="uid://c5son408o0nng" path="res://art/icons/back-small.png" id="4_es4n0"]
 [ext_resource type="AudioStream" uid="uid://cpke8gi8uop4d" path="res://sound/music/Hang on.wav" id="6_gis3k"]
+[ext_resource type="Texture2D" uid="uid://cxmrv37y2a45a" path="res://art/icons/back-hover.png" id="6_gjs24"]
 [ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="7_83j8s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_36l1p"]
@@ -125,7 +125,7 @@ size_flags_vertical = 4
 theme = ExtResource("1_5p8wc")
 action_mode = 0
 texture_normal = ExtResource("3_6wm04")
-texture_pressed = ExtResource("4_es4n0")
+texture_hover = ExtResource("6_gjs24")
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1825309183]
 stream = ExtResource("6_gis3k")

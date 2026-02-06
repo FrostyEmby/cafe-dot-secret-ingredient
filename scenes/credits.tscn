@@ -1,13 +1,18 @@
 [gd_scene format=3 uid="uid://d2ptf51hotg12"]
 
 [ext_resource type="Script" uid="uid://c00c6ar8636tw" path="res://scripts/credits.gd" id="1_0bpdh"]
+[ext_resource type="FontFile" uid="uid://bd5hly5xmortx" path="res://art/fonts/Handyman.ttf" id="2_0ctdu"]
 [ext_resource type="AudioStream" uid="uid://cpke8gi8uop4d" path="res://sound/music/Hang on.wav" id="2_2ckv8"]
+[ext_resource type="Texture2D" uid="uid://dubt5x0ntj1od" path="res://art/icons/back.png" id="3_8gwij"]
+[ext_resource type="Texture2D" uid="uid://cxmrv37y2a45a" path="res://art/icons/back-hover.png" id="4_mah5v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0bpdh"]
-font_size = 50
+font = ExtResource("2_0ctdu")
+font_size = 80
 
 [sub_resource type="LabelSettings" id="LabelSettings_yeqti"]
-font_size = 30
+font = ExtResource("2_0ctdu")
+font_size = 50
 
 [node name="Credits" type="Control" unique_id=1399699389]
 layout_mode = 3
@@ -61,10 +66,10 @@ layout_mode = 2
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer" unique_id=1188044944]
 layout_mode = 2
 
-[node name="Back Button" type="Button" parent="VBoxContainer/CenterContainer" unique_id=1512379837]
+[node name="Back Button" type="TextureButton" parent="VBoxContainer/CenterContainer" unique_id=2035637284]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Back"
+texture_normal = ExtResource("3_8gwij")
+texture_hover = ExtResource("4_mah5v")
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=978675387]
 stream = ExtResource("2_2ckv8")
