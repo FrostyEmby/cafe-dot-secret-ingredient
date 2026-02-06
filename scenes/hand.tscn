@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cifj5iv2if7d4"]
+
+[ext_resource type="Texture2D" uid="uid://do4wg3dg05fm3" path="res://art/eggs/egglist85.png" id="1_cmdsa"]
+[ext_resource type="Script" uid="uid://pklua34rgsp2" path="res://scripts/hand.gd" id="2_k7pjy"]
+[ext_resource type="AudioStream" uid="uid://b1f28fc7xbff5" path="res://sound/sound effects/Place.wav" id="3_k7pjy"]
+[ext_resource type="AudioStream" uid="uid://dbn5ho0rcp2on" path="res://sound/sound effects/Take.wav" id="4_m1v21"]
+
+[node name="Hand" type="Sprite2D" unique_id=612491534]
+visible = false
+texture = ExtResource("1_cmdsa")
+script = ExtResource("2_k7pjy")
+
+[node name="Place" type="AudioStreamPlayer" parent="." unique_id=1726260940]
+stream = ExtResource("3_k7pjy")
+bus = &"SFX"
+
+[node name="Take" type="AudioStreamPlayer" parent="." unique_id=415113799]
+stream = ExtResource("4_m1v21")

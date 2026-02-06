@@ -19,8 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dvejl3bs6w23" path="res://art/icons/gear-big.png" id="12_mxrpn"]
 [ext_resource type="Texture2D" uid="uid://dbydrte2rg8sm" path="res://art/icons/gear-big-hover.png" id="13_skqsh"]
 [ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelf.tscn" id="18_vusgt"]
-[ext_resource type="Texture2D" uid="uid://do4wg3dg05fm3" path="res://art/eggs/egglist85.png" id="20_w5ypi"]
-[ext_resource type="Script" uid="uid://pklua34rgsp2" path="res://scripts/fool_egg.gd" id="21_6104g"]
+[ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="20_skqsh"]
 [ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="22_skqsh"]
 [ext_resource type="AudioStream" uid="uid://cx4rxdjh3xffy" path="res://sound/music/Terrarium.wav" id="22_w5ypi"]
 
@@ -401,10 +400,7 @@ texture_normal = ExtResource("12_mxrpn")
 texture_pressed = ExtResource("13_skqsh")
 texture_hover = ExtResource("13_skqsh")
 
-[node name="Fool Creature" type="Sprite2D" parent="." unique_id=264291138]
-visible = false
-texture = ExtResource("20_w5ypi")
-script = ExtResource("21_6104g")
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("20_skqsh")]
 
 [node name="Egg-Gen" parent="." unique_id=240887351 instance=ExtResource("22_skqsh")]
 
