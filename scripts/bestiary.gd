@@ -119,6 +119,7 @@ func _on_music_finished() -> void:
 
 
 func _on_flip_left_animation_finished() -> void:
+	_fill_left()
 	_fill_right()
 	$FlipLeft.visible = false
 
@@ -131,6 +132,7 @@ func _on_flip_left_frame_changed() -> void:
 
 func _on_flip_right_animation_finished() -> void:
 	_fill_left()
+	_fill_right()
 	$FlipRight.visible = false
 
 

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://hvokm05hwnwl" path="res://art/adult creatures/obsidian.png" id="2_oyl77"]
 [ext_resource type="Texture2D" uid="uid://clq10s4vdhy0c" path="res://art/adult creatures/page background4.png" id="3_aig2i"]
 [ext_resource type="Texture2D" uid="uid://chvqbwaulnv8y" path="res://art/icons/forward-small.png" id="4_j3mqr"]
+[ext_resource type="FontFile" uid="uid://bd5hly5xmortx" path="res://art/fonts/Handyman.ttf" id="5_3jqp3"]
 [ext_resource type="Texture2D" uid="uid://bwl5mas3bou8k" path="res://art/final props/FlipLeftspritesheet.png" id="6_aig2i"]
 [ext_resource type="Texture2D" uid="uid://cy87qvc5vucad" path="res://art/adult creatures/cool bat.png" id="6_eapyg"]
 [ext_resource type="Texture2D" uid="uid://bvxd7p23rhjsv" path="res://art/adult creatures/page background2.png" id="7_bfiq4"]
@@ -21,19 +22,24 @@
 [ext_resource type="AudioStream" uid="uid://cj17fetxh7y5g" path="res://sound/sound effects/Flip 5.wav" id="17_g005f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eq67u"]
-font_size = 30
+font = ExtResource("5_3jqp3")
+font_size = 40
 font_color = Color(0, 0, 0, 1)
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_8u4y0"]
-font_size = 14
+font = ExtResource("5_3jqp3")
+font_size = 20
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_36r6s"]
-font_size = 14
+font = ExtResource("5_3jqp3")
+font_size = 20
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_lqwxb"]
+font = ExtResource("5_3jqp3")
+font_size = 24
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_oyl77"]

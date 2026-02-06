@@ -2,19 +2,23 @@
 
 [ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://resources/theme.tres" id="1_5p8wc"]
 [ext_resource type="Script" uid="uid://bval0fmdjaet" path="res://scripts/settings.gd" id="1_r6d6q"]
+[ext_resource type="FontFile" uid="uid://bd5hly5xmortx" path="res://art/fonts/Handyman.ttf" id="2_83j8s"]
 [ext_resource type="Texture2D" uid="uid://dubt5x0ntj1od" path="res://art/icons/back.png" id="3_6wm04"]
 [ext_resource type="Texture2D" uid="uid://c5son408o0nng" path="res://art/icons/back-small.png" id="4_es4n0"]
 [ext_resource type="AudioStream" uid="uid://cpke8gi8uop4d" path="res://sound/music/Hang on.wav" id="6_gis3k"]
 [ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="7_83j8s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_36l1p"]
-font_size = 50
+font = ExtResource("2_83j8s")
+font_size = 80
 
 [sub_resource type="LabelSettings" id="LabelSettings_5p8wc"]
-font_size = 22
+font = ExtResource("2_83j8s")
+font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_r6d6q"]
-font_size = 22
+font = ExtResource("2_83j8s")
+font_size = 30
 
 [node name="Settings" type="Control" unique_id=1683627982]
 layout_mode = 3
@@ -100,6 +104,8 @@ horizontal_alignment = 1
 [node name="Display Options" type="OptionButton" parent="PanelContainer/MarginContainer/GridContainer" unique_id=1924965179]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_83j8s")
+theme_override_font_sizes/font_size = 30
 alignment = 1
 selected = 0
 item_count = 2

@@ -2,21 +2,26 @@
 
 [ext_resource type="Script" uid="uid://bval0fmdjaet" path="res://scripts/settings.gd" id="1_1pcco"]
 [ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://resources/theme.tres" id="2_c67ho"]
+[ext_resource type="FontFile" uid="uid://bd5hly5xmortx" path="res://art/fonts/Handyman.ttf" id="2_tiumm"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="3_tiumm"]
 [ext_resource type="AudioStream" uid="uid://cpke8gi8uop4d" path="res://sound/music/Hang on.wav" id="4_4hre1"]
 [ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="5_enrh5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_36l1p"]
-font_size = 50
+font = ExtResource("2_tiumm")
+font_size = 80
 
 [sub_resource type="LabelSettings" id="LabelSettings_5p8wc"]
-font_size = 22
+font = ExtResource("2_tiumm")
+font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_r6d6q"]
-font_size = 22
+font = ExtResource("2_tiumm")
+font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_ot4o6"]
-font_size = 22
+font = ExtResource("2_tiumm")
+font_size = 30
 
 [node name="Settings" type="Control" unique_id=1683627982]
 layout_mode = 3
@@ -102,6 +107,8 @@ horizontal_alignment = 1
 [node name="Display Options" type="OptionButton" parent="PanelContainer/MarginContainer/GridContainer" unique_id=476677365]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_tiumm")
+theme_override_font_sizes/font_size = 30
 alignment = 1
 selected = 0
 item_count = 2
