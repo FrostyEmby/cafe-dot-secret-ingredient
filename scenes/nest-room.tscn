@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://g28updgkaqym"]
+
+[ext_resource type="Script" uid="uid://6seakwoxk527" path="res://scripts/egg-collection.gd" id="1_27ugg"]
+[ext_resource type="Texture2D" uid="uid://b5bkddainp227" path="res://art/props/Nest Background.png" id="2_q3q7q"]
+[ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelf.tscn" id="3_fkcig"]
+[ext_resource type="PackedScene" uid="uid://djtd6vihyb4ph" path="res://scenes/nest.tscn" id="4_f4x54"]
+[ext_resource type="Texture2D" uid="uid://dskie2krx7h0o" path="res://art/props/nest2.png" id="5_icsml"]
+[ext_resource type="Texture2D" uid="uid://doyl7ideois6k" path="res://art/props/nestback.png" id="6_0iy0e"]
+[ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="7_jva8j"]
+[ext_resource type="AudioStream" uid="uid://8xdg0l274c1w" path="res://sound/music/Take an egg.wav" id="8_t5fqd"]
+
+[node name="Nest Room" type="Control" unique_id=1279119683]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_27ugg")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=269439839]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_q3q7q")
+
+[node name="Shelf" parent="." unique_id=729667400 instance=ExtResource("3_fkcig")]
+layout_mode = 0
+
+[node name="Nest1" parent="." unique_id=1642692670 instance=ExtResource("4_f4x54")]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 262.0
+offset_right = 560.0
+offset_bottom = 518.0
+
+[node name="Nest2" parent="." unique_id=615388703 instance=ExtResource("4_f4x54")]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 359.0
+offset_right = 849.0
+offset_bottom = 615.0
+texture = ExtResource("5_icsml")
+
+[node name="Nest3" parent="." unique_id=1337618919 instance=ExtResource("4_f4x54")]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 107.0
+offset_right = 806.0
+offset_bottom = 363.0
+texture = ExtResource("6_0iy0e")
+
+[node name="Mini Menu" parent="." unique_id=2131272578 instance=ExtResource("7_jva8j")]
+layout_mode = 0
+offset_left = 802.0
+offset_right = 1152.0
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=359384145]
+stream = ExtResource("8_t5fqd")
+autoplay = true
+
+[connection signal="selection" from="Nest1" to="." method="_on_nest_selection"]
+[connection signal="selection" from="Nest2" to="." method="_on_nest_2_selection"]
+[connection signal="selection" from="Nest3" to="." method="_on_nest_3_selection"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]

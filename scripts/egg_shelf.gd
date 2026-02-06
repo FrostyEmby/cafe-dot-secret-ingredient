@@ -1,24 +1,10 @@
 extends MarginContainer
 
-var save : Save = load("res://resources/save.tres")
-signal selection(egg: Egg)
 
-@onready var egg1 = $Hold/Grid/Egg1
-@onready var egg2 = $Hold/Grid/Egg2
-@onready var egg3 = $Hold/Grid/Egg3
-@onready var egg4 = $Hold/Grid/Egg4
-@onready var egg5 = $Hold/Grid/Egg5
-@onready var egg6 = $Hold/Grid/Egg6
-@onready var egg7 = $Hold/Grid/Egg7
-@onready var egg8 = $"Hold/Grid/Egg8"
-@onready var egg9 = $"Hold/Grid/Egg9"
-@onready var egg10 = $"Hold/Grid/Egg10"
-@onready var egg11 = $"Hold/Grid/Egg11"
-@onready var egg12 = $"Hold/Grid/Egg12"
-@onready var egg13 = $"Hold/Grid/Egg13"
-@onready var egg14 = $"Hold/Grid/Egg14"
-@onready var egg15 = $"Hold/Grid/Egg15"
-@onready var egg16 = $"Hold/Grid/Egg16"
+signal selection(egg: Egg)
+signal recieve
+
+var save : Save = load("res://resources/save.tres")
 
 
 func _ready() -> void:
@@ -141,42 +127,14 @@ func _load():
 	else:
 		position = Vector2(-176,0)
 	
-	egg1.setup(save.shelf.egg1)
-	egg2.setup(save.shelf.egg2)
-	egg3.setup(save.shelf.egg3)
-	egg4.setup(save.shelf.egg4)
-	egg5.setup(save.shelf.egg5)
-	egg6.setup(save.shelf.egg6)
-	egg7.setup(save.shelf.egg7)
-	egg8.setup(save.shelf.egg8)
-	egg9.setup(save.shelf.egg9)
-	egg10.setup(save.shelf.egg10)
-	egg11.setup(save.shelf.egg11)
-	egg12.setup(save.shelf.egg12)
-	egg13.setup(save.shelf.egg13)
-	egg14.setup(save.shelf.egg14)
-	egg15.setup(save.shelf.egg15)
-	egg16.setup(save.shelf.egg16)
+	for egg in find_children("Egg*"):
+		egg.setup(save.shelf[egg.name.to_lower()])
 	
 	print("-----egg shelf setup complete-----")
 
 func _save():
-	save.shelf.egg1 = egg1.info
-	save.shelf.egg2 = egg2.info
-	save.shelf.egg3 = egg3.info
-	save.shelf.egg4 = egg4.info
-	save.shelf.egg5 = egg5.info
-	save.shelf.egg6 = egg6.info
-	save.shelf.egg7 = egg7.info
-	save.shelf.egg8 = egg8.info
-	save.shelf.egg9 = egg9.info
-	save.shelf.egg10 = egg10.info
-	save.shelf.egg11 = egg11.info
-	save.shelf.egg12 = egg12.info
-	save.shelf.egg13 = egg13.info
-	save.shelf.egg14 = egg14.info
-	save.shelf.egg15 = egg15.info
-	save.shelf.egg16 = egg16.info
+	for egg in find_children("Egg*"):
+		save.shelf[egg.name.to_lower()] = egg.info
 
 
 func _on_incubators_hatch_select(egg: Egg, hatchery : Hatchery) -> void:

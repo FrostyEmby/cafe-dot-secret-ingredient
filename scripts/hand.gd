@@ -6,6 +6,7 @@ signal releasing(released_creature : EggData)
 var active : bool = false
 var creature : EggData = EggData.new()
 
+#TODO: make this the hub for matching between the shelf and everything else
 
 func _init():
 	visible = false
@@ -36,7 +37,8 @@ func release():
 	active = false
 	$Place.play()
 
-
+# TODO: if pressed outside of area like hachery or terrarium, return to initial spot
 func _process(_delta: float) -> void:
 	global_position = get_global_mouse_position()
+	
 	
