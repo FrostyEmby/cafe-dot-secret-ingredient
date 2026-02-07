@@ -4,12 +4,27 @@ class_name Hatchery
 signal selection(hatchery : Hatchery)
 signal hatch_select(egg : Egg, hatchery : Hatchery)
 
+var active_prev : bool = true
+@export var active : bool = true
+
 var save : Save = load("res://resources/save.tres")
 
 
 func _ready() -> void:
 	setup()
 
+
+func _process(_delta: float) -> void:
+	if not active and active != active_prev:
+		active_prev = active
+		$Egg1.pause()
+		$Egg2.pause()
+		$Egg3.pause()
+	elif active and active != active_prev:
+		active_prev = active
+		$Egg1.play()
+		$Egg2.play()
+		$Egg3.play()
 
 # adds the placement which determines life or death
 func _place():

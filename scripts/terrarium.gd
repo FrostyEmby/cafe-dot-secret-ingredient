@@ -1,6 +1,8 @@
 extends Button
 class_name Terrarium
 
+var active_prev : bool = true
+var active : bool = true
 var save = load("res://resources/save.tres")
 
 signal selection(terrarium : Terrarium)
@@ -8,6 +10,21 @@ signal selection(terrarium : Terrarium)
 
 func _ready():
 	_load()
+
+
+func _process(_delta: float) -> void:
+	if not active and active != active_prev:
+		active_prev = active
+		$Creature1.pause()
+		$Creature2.pause()
+		$Creature3.pause()
+		$Creature4.pause()
+	if active and active != active_prev:
+		active_prev = active
+		$Creature1.play()
+		$Creature2.play()
+		$Creature3.play()
+		$Creature4.play()
 
 
 func _pressed() -> void:

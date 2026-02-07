@@ -1,6 +1,6 @@
 extends Control
 
-var active = true
+var active : bool = true
 var creature_selected : bool = false
 var creature_match : Egg
 
@@ -54,9 +54,21 @@ func _on_pause() -> void:
 	active = false
 	$Music.stop()
 	$"Mini Menu".visible = false
+	$Snow.active = false
+	$Grass.active = false
+	$Sand.active = false
+	$Aqua.active = false
+	$Jungle.active = false
+	$Lava.active = false
 
 
 func _on_play() -> void:
 	active = true
 	$Music.play()
 	$"Mini Menu".visible = true
+	$Snow.active = true
+	$Grass.active = true
+	$Sand.active = true
+	$Aqua.active = true
+	$Jungle.active = true
+	$Lava.active = true

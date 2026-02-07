@@ -51,11 +51,13 @@ func _on_music_finished() -> void:
 
 func _on_pause() -> void:
 	active = false
+	$Incubators.active = false
 	$Music.stop()
 	$"Mini Menu".visible = false
 
 
 func _on_play() -> void:
 	active = true
+	$Incubators.active = true
 	$Music.play()
 	$"Mini Menu".visible = true

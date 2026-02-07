@@ -6,6 +6,9 @@ signal death(egg : Egg)
 signal birth
 signal corpse
 
+var hatch_pause : bool = false
+var age_pause : bool = false
+
 @export var info : EggData = EggData.new()
 @onready var hatch_timer : Timer = $Hatch
 @onready var age_timer : Timer = $Age
@@ -182,14 +185,14 @@ func _dead():
 
 
 func _process(_delta: float) -> void:
-	if info.incubating and hatch_timer.paused:
+	if info.incubating and hatch_timer.paused and not hatch_pause:
 		incubate() 
 	
-	if info.hatch_time <= 0 and not info.hatched:
-		_hatch_or_death()
+	if info.hatch_time <= 0 and not info.hatched and not hatch_pause:
+		incubate()
 		
-	if info.aging_time <= 0 and not info.adult:
-		_survive_or_die()
+	if info.aging_time <= 0 and not info.adult and not age_pause:
+		grow_up()
 	
 	# update indicator timer when incubating
 	if info.incubating:
@@ -219,3 +222,21 @@ func _on_age_timeout() -> void:
 func _on_age_tree_entered() -> void:
 	if info.hatched and not info.maturing and info.space != info.species.habitat.NONE:
 		grow_up()
+
+
+func pause():
+	if not $Hatch.paused:
+		hatch_pause = true
+		$Hatch.paused = true
+	elif not $Age.paused:
+		age_pause = true
+		$Age.paused = true
+
+
+func play():
+	if hatch_pause:
+		hatch_pause = false
+		$Hatch.paused = false
+	elif age_pause:
+		age_pause = false
+		$Age.paused = false

@@ -3,6 +3,10 @@ extends MarginContainer
 signal selection(hatchery : Hatchery)
 signal hatch_select(egg : Egg, hatchery : Hatchery)
 
+var active_prev : bool = true # this is to check for changes in active state
+@export var active : bool = true
+
+
 @onready var cold_dry = $MarginContainer/GridContainer/Cold_Dry
 @onready var cold_wet = $MarginContainer/GridContainer/Cold_Wet
 @onready var temp_dry = $MarginContainer/GridContainer/Temp_Dry
@@ -14,6 +18,16 @@ signal hatch_select(egg : Egg, hatchery : Hatchery)
 func _ready() -> void:
 	_load()
 
+func _process(_delta: float) -> void:
+	# if active changes
+	if active != active_prev:
+		cold_dry.active = active
+		temp_dry.active = active
+		hot_dry.active = active
+		cold_wet.active = active
+		temp_wet.active = active
+		hot_wet.active = active
+		active_prev = active
 
 func _on_cold_dry_selection(hatchery: Hatchery) -> void:
 	print("selected cold dry hatchery")
