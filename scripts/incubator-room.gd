@@ -23,11 +23,12 @@ func _match():
 	else:
 		print("no space, match cancelled")
 
+
 func _on_egg_selection(egg: Egg) -> void:
 	egg_match = egg
 	egg_selected = true
 	egg.visible = false
-	$Hand.hold(egg.info)
+	$Hand.hold(egg)
 
 
 # selection only goes one way, because egg -> hatchery 

@@ -18,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://bsrsk2yub3n28" path="res://sound/sound effects/Flip 1.wav" id="13_bfiq4"]
 [ext_resource type="AudioStream" uid="uid://cvdiap1n6su4t" path="res://sound/sound effects/Flip 2.wav" id="14_viudg"]
 [ext_resource type="AudioStream" uid="uid://dohxroyto5wee" path="res://sound/sound effects/Flip 3.wav" id="15_q1xbv"]
+[ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="15_vxfeb"]
 [ext_resource type="AudioStream" uid="uid://nuv064xgu4fm" path="res://sound/sound effects/Flip 4.wav" id="16_7tv8b"]
 [ext_resource type="AudioStream" uid="uid://cj17fetxh7y5g" path="res://sound/sound effects/Flip 5.wav" id="17_g005f"]
 
@@ -642,6 +643,8 @@ texture_hover = ExtResource("11_bfiq4")
 
 [node name="Shelf" parent="." unique_id=928893465 instance=ExtResource("10_g005f")]
 layout_mode = 0
+offset_left = 0.0
+offset_right = 202.0
 
 [node name="FlipLeft" type="AnimatedSprite2D" parent="." unique_id=2141954442]
 visible = false
@@ -658,6 +661,8 @@ frame_progress = 0.5150689
 layout_mode = 0
 offset_left = 802.0
 offset_right = 1152.0
+
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("15_vxfeb")]
 
 [node name="Egg-Gen" type="Timer" parent="." unique_id=1303647709]
 wait_time = 10.0

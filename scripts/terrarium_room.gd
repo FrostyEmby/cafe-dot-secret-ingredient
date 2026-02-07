@@ -9,7 +9,7 @@ func _on_egg_shelf_selection(creature: Egg) -> void:
 		creature_selected = true
 		creature_match = creature
 		creature.visible = false
-		$Hand.hold(creature.info)
+		$Hand.hold(creature)
 
 
 func _match(terrarium : Terrarium):

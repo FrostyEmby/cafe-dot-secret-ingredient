@@ -7,6 +7,8 @@ var page : int = 0 # starts at 0 because of arrays
 func _ready() -> void:
 	_fill_left()
 	_fill_right()
+	if save.shelf.open:
+		$Shelf.move()
 	
 # returns whether right page can be displayed
 func _right_fill_ok():

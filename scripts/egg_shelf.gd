@@ -2,7 +2,6 @@ extends MarginContainer
 
 
 signal selection(egg: Egg)
-signal recieve
 
 var save : Save = load("res://resources/save.tres")
 
@@ -141,10 +140,9 @@ func _on_incubators_hatch_select(egg: Egg, hatchery : Hatchery) -> void:
 	add_egg(egg)
 	egg.reset()
 	save.incubator[hatchery.name.to_lower()][egg.name.to_lower()] = egg.info
-	
 
 
-func _on_move_pressed() -> void:
+func move():
 	var movement = create_tween()
 	if save.shelf.open:
 		save.shelf.open = false
@@ -152,3 +150,4 @@ func _on_move_pressed() -> void:
 	else:
 		save.shelf.open = true
 		movement.tween_property(self, "global_position", Vector2(0,0), 0.1)
+	

@@ -16,3 +16,7 @@ bus = &"SFX"
 
 [node name="Take" type="AudioStreamPlayer" parent="." unique_id=415113799]
 stream = ExtResource("4_m1v21")
+
+[node name="Removal" type="Timer" parent="." unique_id=1280027305]
+wait_time = 0.1
+one_shot = true

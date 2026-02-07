@@ -24,7 +24,7 @@ custom_minimum_size = Vector2(0, 560)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
-theme_override_constants/h_separation = 8
+theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
 columns = 2
 
@@ -102,4 +102,4 @@ stream = ExtResource("4_6hw1h")
 [connection signal="selection" from="Grid/Egg14" to="." method="_on_egg_14_selection"]
 [connection signal="selection" from="Grid/Egg15" to="." method="_on_egg_15_selection"]
 [connection signal="selection" from="Grid/Egg16" to="." method="_on_egg_16_selection"]
-[connection signal="pressed" from="Move" to="." method="_on_move_pressed"]
+[connection signal="pressed" from="Move" to="." method="move"]

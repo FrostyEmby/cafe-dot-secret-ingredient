@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://doyl7ideois6k" path="res://art/props/nestback.png" id="6_0iy0e"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="7_jva8j"]
 [ext_resource type="AudioStream" uid="uid://8xdg0l274c1w" path="res://sound/music/Take an egg.wav" id="8_t5fqd"]
+[ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="9_q3q7q"]
 
 [node name="Nest Room" type="Control" unique_id=1279119683]
 layout_mode = 3
@@ -22,6 +23,8 @@ texture = ExtResource("2_q3q7q")
 
 [node name="Shelf" parent="." unique_id=729667400 instance=ExtResource("3_fkcig")]
 layout_mode = 0
+offset_left = 0.0
+offset_right = 202.0
 
 [node name="Nest1" parent="." unique_id=1642692670 instance=ExtResource("4_f4x54")]
 layout_mode = 0
@@ -50,6 +53,8 @@ texture = ExtResource("6_0iy0e")
 layout_mode = 0
 offset_left = 802.0
 offset_right = 1152.0
+
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("9_q3q7q")]
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=359384145]
 stream = ExtResource("8_t5fqd")

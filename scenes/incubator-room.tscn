@@ -46,6 +46,7 @@ autoplay = true
 [node name="Hand" parent="." unique_id=612491534 instance=ExtResource("8_glcki")]
 
 [connection signal="hatch_select" from="Incubators" to="Shelf" method="_on_incubators_hatch_select"]
+[connection signal="outside" from="Incubators" to="Hand" method="_on_outside_pressed"]
 [connection signal="selection" from="Incubators" to="." method="_on_incubator_selection"]
 [connection signal="selection" from="Shelf" to="." method="_on_egg_selection"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
