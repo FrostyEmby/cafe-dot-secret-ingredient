@@ -1,5 +1,7 @@
 extends Control
 
+signal off
+
 @onready var music = $"PanelContainer/MarginContainer/GridContainer/Music Volume"
 @onready var sound = $"PanelContainer/MarginContainer/GridContainer/Sound Volume"
 @onready var display = $"PanelContainer/MarginContainer/GridContainer/Display Options"
@@ -36,3 +38,7 @@ func _on_display_options_item_selected(index: int) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+
+func _on_back_menu_pressed() -> void:
+	off.emit()

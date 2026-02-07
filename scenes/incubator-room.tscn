@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="8_glcki"]
 [ext_resource type="AudioStream" uid="uid://c7fl623semdyj" path="res://sound/music/Incubators.wav" id="8_lerr0"]
 [ext_resource type="PackedScene" uid="uid://blp1nxq4lwa6q" path="res://scenes/clipboard.tscn" id="9_glcki"]
+[ext_resource type="PackedScene" uid="uid://1i1cxrtaukuq" path="res://scenes/pause.tscn" id="10_t4njw"]
 
 [node name="Incubator Room" type="Control" unique_id=1116973836]
 layout_mode = 3
@@ -34,7 +35,7 @@ offset_right = 202.0
 
 [node name="Mini Menu" parent="." unique_id=1724834949 instance=ExtResource("8_ebtcn")]
 layout_mode = 0
-offset_left = 802.0
+offset_left = 852.0
 offset_right = 1152.0
 
 [node name="Egg-Gen" parent="." unique_id=1962189865 instance=ExtResource("6_qyx4e")]
@@ -53,7 +54,13 @@ offset_top = 134.0
 offset_right = 1425.0
 offset_bottom = 496.0
 
+[node name="Pause" parent="." unique_id=186506773 instance=ExtResource("10_t4njw")]
+visible = false
+layout_mode = 0
+
 [connection signal="hatch_select" from="Incubators" to="Shelf" method="_on_incubators_hatch_select"]
 [connection signal="selection" from="Incubators" to="." method="_on_incubator_selection"]
 [connection signal="selection" from="Shelf" to="." method="_on_egg_selection"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="pause" from="Pause" to="." method="_on_pause"]
+[connection signal="play" from="Pause" to="." method="_on_play"]

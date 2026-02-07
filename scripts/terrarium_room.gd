@@ -1,5 +1,6 @@
 extends Control
 
+var active = true
 var creature_selected : bool = false
 var creature_match : Egg
 
@@ -45,4 +46,17 @@ func _on_lava_selection(terrarium : Terrarium) -> void:
 
 
 func _on_music_finished() -> void:
+	if active:
+		$Music.play()
+
+
+func _on_pause() -> void:
+	active = false
+	$Music.stop()
+	$"Mini Menu".visible = false
+
+
+func _on_play() -> void:
+	active = true
 	$Music.play()
+	$"Mini Menu".visible = true

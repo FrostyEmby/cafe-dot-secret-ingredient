@@ -1,5 +1,6 @@
 extends Control
 
+var active = true
 var egg_selected : bool = false
 var egg_match : Egg
 var hatchery_match : Hatchery
@@ -44,4 +45,17 @@ func _on_egg_gen_timeout() -> void:
 
 
 func _on_music_finished() -> void:
+	if active:
+		$Music.play()
+
+
+func _on_pause() -> void:
+	active = false
+	$Music.stop()
+	$"Mini Menu".visible = false
+
+
+func _on_play() -> void:
+	active = true
 	$Music.play()
+	$"Mini Menu".visible = true

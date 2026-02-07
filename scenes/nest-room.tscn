@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://8xdg0l274c1w" path="res://sound/music/Take an egg.wav" id="8_t5fqd"]
 [ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="9_q3q7q"]
 [ext_resource type="PackedScene" uid="uid://blp1nxq4lwa6q" path="res://scenes/clipboard.tscn" id="10_fkcig"]
+[ext_resource type="PackedScene" uid="uid://1i1cxrtaukuq" path="res://scenes/pause.tscn" id="11_f4x54"]
 
 [node name="Nest Room" type="Control" unique_id=1279119683]
 layout_mode = 3
@@ -52,7 +53,7 @@ texture = ExtResource("6_0iy0e")
 
 [node name="Mini Menu" parent="." unique_id=2131272578 instance=ExtResource("7_jva8j")]
 layout_mode = 0
-offset_left = 802.0
+offset_left = 852.0
 offset_right = 1152.0
 
 [node name="Hand" parent="." unique_id=612491534 instance=ExtResource("9_q3q7q")]
@@ -63,8 +64,18 @@ autoplay = true
 
 [node name="Clipboard" parent="." unique_id=2119543535 instance=ExtResource("10_fkcig")]
 layout_mode = 0
+offset_left = 1133.0
+offset_top = 136.0
+offset_right = 1403.0
+offset_bottom = 498.0
+
+[node name="Pause" parent="." unique_id=186506773 instance=ExtResource("11_f4x54")]
+visible = false
+layout_mode = 0
 
 [connection signal="selection" from="Nest1" to="." method="_on_nest_selection"]
 [connection signal="selection" from="Nest2" to="." method="_on_nest_2_selection"]
 [connection signal="selection" from="Nest3" to="." method="_on_nest_3_selection"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="pause" from="Pause" to="." method="_on_pause"]
+[connection signal="play" from="Pause" to="." method="_on_play"]

@@ -1,5 +1,6 @@
 extends Control
 
+var active
 var save : Save = load("res://resources/save.tres")
 
 func _ready() -> void:
@@ -57,4 +58,17 @@ func _load():
 
 
 func _on_music_finished() -> void:
+	if active:
+		$Music.play()
+
+
+func _on_pause() -> void:
+	active = false
+	$Music.stop()
+	$"Mini Menu".visible = false
+
+
+func _on_play() -> void:
+	active = true
 	$Music.play()
+	$"Mini Menu".visible = true

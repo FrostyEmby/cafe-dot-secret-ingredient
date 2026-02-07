@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://blp1nxq4lwa6q" path="res://scenes/clipboard.tscn" id="20_w5ypi"]
 [ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="22_skqsh"]
 [ext_resource type="AudioStream" uid="uid://cx4rxdjh3xffy" path="res://sound/music/Terrarium.wav" id="22_w5ypi"]
+[ext_resource type="PackedScene" uid="uid://1i1cxrtaukuq" path="res://scenes/pause.tscn" id="24_6104g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pf7wg"]
 bg_color = Color(0.09048235, 0.09048236, 0.0904823, 1)
@@ -336,7 +337,7 @@ icon = ExtResource("4_1wf2t")
 
 [node name="Mini Menu" parent="." unique_id=165855058 instance=ExtResource("4_nrwuv")]
 layout_mode = 0
-offset_left = 802.0
+offset_left = 852.0
 offset_right = 1152.0
 
 [node name="Vertical Mini Menu" type="Panel" parent="." unique_id=808452654]
@@ -403,6 +404,10 @@ texture_hover = ExtResource("13_skqsh")
 
 [node name="Clipboard" parent="." unique_id=2119543535 instance=ExtResource("20_w5ypi")]
 layout_mode = 0
+offset_left = 1137.0
+offset_top = 144.0
+offset_right = 1407.0
+offset_bottom = 506.0
 
 [node name="Hand" parent="." unique_id=612491534 instance=ExtResource("20_skqsh")]
 
@@ -411,6 +416,10 @@ layout_mode = 0
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1688681329]
 stream = ExtResource("22_w5ypi")
 autoplay = true
+
+[node name="Pause" parent="." unique_id=186506773 instance=ExtResource("24_6104g")]
+visible = false
+layout_mode = 0
 
 [connection signal="selection" from="Shelf" to="." method="_on_egg_shelf_selection"]
 [connection signal="selection" from="Snow" to="." method="_on_snow_selection"]
@@ -425,3 +434,5 @@ autoplay = true
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Bestiary" to="Vertical Mini Menu" method="_on_bestiary_pressed"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Settings" to="Vertical Mini Menu" method="_on_settings_pressed"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="pause" from="Pause" to="." method="_on_pause"]
+[connection signal="play" from="Pause" to="." method="_on_play"]

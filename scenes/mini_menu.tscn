@@ -17,19 +17,36 @@ bg_color = Color(0.7271216, 0.61423296, 0.29493418, 1)
 corner_radius_bottom_left = 20
 
 [node name="Mini Menu" type="Panel" unique_id=707227334]
-custom_minimum_size = Vector2(350, 80)
-offset_right = 350.0
+custom_minimum_size = Vector2(300, 80)
+offset_right = 300.0
 offset_bottom = 80.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qigmh")
 script = ExtResource("1_g1iql")
 
+[node name="Settings" type="TextureButton" parent="." unique_id=384353092]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 288.0
+offset_right = 352.0
+offset_bottom = 80.0
+size_flags_horizontal = 4
+texture_normal = ExtResource("9_r40w5")
+texture_hover = ExtResource("11_q7i8x")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1355601123]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -32.0
+offset_right = 140.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 8
@@ -66,15 +83,8 @@ texture_normal = ExtResource("7_kd23u")
 texture_hover = ExtResource("8_gp66p")
 texture_focused = ExtResource("8_gp66p")
 
-[node name="Settings" type="TextureButton" parent="HBoxContainer" unique_id=384353092]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 4
-texture_normal = ExtResource("9_r40w5")
-texture_hover = ExtResource("11_q7i8x")
-
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="HBoxContainer/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="HBoxContainer/Incubator" to="." method="_on_incubator_pressed"]
 [connection signal="pressed" from="HBoxContainer/Terrarium" to="." method="_on_terrarium_pressed"]
 [connection signal="pressed" from="HBoxContainer/Bestiary" to="." method="_on_bestiary_pressed"]
-[connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]

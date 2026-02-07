@@ -1,5 +1,6 @@
 extends Control
 
+var active = true
 var save = load("res://resources/save.tres")
 
 func _ready() -> void:
@@ -124,7 +125,8 @@ func _on_egg_gen_timeout() -> void:
 
 
 func _on_music_finished() -> void:
-	$Music.play()
+	if active:
+		$Music.play()
 
 
 func _on_flip_left_animation_finished() -> void:
@@ -149,3 +151,15 @@ func _on_flip_right_frame_changed() -> void:
 	# so that it appears at page turn
 	if $FlipRight.frame == 2:
 		_fill_right()
+
+
+func _on_pause() -> void:
+	active = false
+	$Music.stop()
+	$"Mini Menu".visible = false
+
+
+func _on_play() -> void:
+	active = true
+	$Music.play()
+	$"Mini Menu".visible = true

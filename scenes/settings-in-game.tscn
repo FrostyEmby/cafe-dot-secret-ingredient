@@ -4,8 +4,9 @@
 [ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://resources/theme.tres" id="2_c67ho"]
 [ext_resource type="FontFile" uid="uid://bd5hly5xmortx" path="res://art/fonts/Handyman.ttf" id="2_tiumm"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="3_tiumm"]
-[ext_resource type="AudioStream" uid="uid://cpke8gi8uop4d" path="res://sound/music/Hang on.wav" id="4_4hre1"]
+[ext_resource type="Texture2D" uid="uid://dubt5x0ntj1od" path="res://art/icons/back.png" id="5_4hre1"]
 [ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="5_enrh5"]
+[ext_resource type="Texture2D" uid="uid://cxmrv37y2a45a" path="res://art/icons/back-hover.png" id="6_enrh5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_36l1p"]
 font = ExtResource("2_tiumm")
@@ -118,17 +119,27 @@ popup/item_1/text = "Full Screen"
 popup/item_1/id = 1
 
 [node name="Mini Menu" parent="." unique_id=692852118 instance=ExtResource("3_tiumm")]
+visible = false
 layout_mode = 0
-offset_left = 802.0
+offset_left = 852.0
 offset_right = 1152.0
 
-[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1825309183]
-stream = ExtResource("4_4hre1")
-autoplay = true
+[node name="Back Menu" type="TextureButton" parent="." unique_id=1926846984]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 572.0
+offset_right = 80.0
+offset_bottom = 636.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_c67ho")
+action_mode = 0
+texture_normal = ExtResource("5_4hre1")
+texture_hover = ExtResource("6_enrh5")
 
 [node name="Egg-Gen" parent="." unique_id=565685724 instance=ExtResource("5_enrh5")]
 
 [connection signal="value_changed" from="PanelContainer/MarginContainer/GridContainer/Music Volume" to="." method="_on_master_volume_value_changed"]
 [connection signal="value_changed" from="PanelContainer/MarginContainer/GridContainer/Sound Volume" to="." method="_on_sound_volume_value_changed"]
 [connection signal="item_selected" from="PanelContainer/MarginContainer/GridContainer/Display Options" to="." method="_on_display_options_item_selected"]
-[connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="pressed" from="Back Menu" to="." method="_on_back_menu_pressed"]

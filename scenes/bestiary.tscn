@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="15_vxfeb"]
 [ext_resource type="AudioStream" uid="uid://nuv064xgu4fm" path="res://sound/sound effects/Flip 4.wav" id="16_7tv8b"]
 [ext_resource type="AudioStream" uid="uid://cj17fetxh7y5g" path="res://sound/sound effects/Flip 5.wav" id="17_g005f"]
+[ext_resource type="PackedScene" uid="uid://1i1cxrtaukuq" path="res://scenes/pause.tscn" id="23_6v5mc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eq67u"]
 font = ExtResource("5_3jqp3")
@@ -660,11 +661,15 @@ frame_progress = 0.5150689
 
 [node name="Mini Menu" parent="." unique_id=1700139890 instance=ExtResource("11_aig2i")]
 layout_mode = 0
-offset_left = 802.0
+offset_left = 852.0
 offset_right = 1152.0
 
 [node name="Clipboard" parent="." unique_id=2119543535 instance=ExtResource("15_3jqp3")]
 layout_mode = 0
+offset_left = 1133.0
+offset_top = 146.0
+offset_right = 1403.0
+offset_bottom = 508.0
 
 [node name="Hand" parent="." unique_id=612491534 instance=ExtResource("15_vxfeb")]
 
@@ -698,6 +703,10 @@ bus = &"SFX"
 stream = ExtResource("17_g005f")
 bus = &"SFX"
 
+[node name="Pause" parent="." unique_id=186506773 instance=ExtResource("23_6v5mc")]
+visible = false
+layout_mode = 0
+
 [connection signal="pressed" from="Left Page/Prev Page" to="." method="_on_prev_page_pressed"]
 [connection signal="pressed" from="Right Page/Next Page" to="." method="_on_next_page_pressed"]
 [connection signal="animation_finished" from="FlipLeft" to="." method="_on_flip_left_animation_finished"]
@@ -706,3 +715,5 @@ bus = &"SFX"
 [connection signal="frame_changed" from="FlipRight" to="." method="_on_flip_right_frame_changed"]
 [connection signal="timeout" from="Egg-Gen" to="." method="_on_egg_gen_timeout"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="pause" from="Pause" to="." method="_on_pause"]
+[connection signal="play" from="Pause" to="." method="_on_play"]
