@@ -32,23 +32,26 @@ func _fill_left():
 	# Fill in left page
 	$"Left Page/Creature Name".text = save.bestiary.creatures[save.bestiary.page].name
 	$"Left Page/Adult Creature Picture".texture = save.bestiary.creatures[save.bestiary.page].adult_detailed
-	$"Left Page/Egg".texture = save.bestiary.creatures[save.bestiary.page].egg
-	$"Left Page/Egg/Label".text = ""
-	$"Left Page/Incubator/Label".text = save.bestiary.creatures[save.bestiary.page].hatchery.keys()[save.bestiary.creatures[save.bestiary.page].incubator].replace("_", " ")
+	$"Left Page/Dynamic Text/Description".text = save.bestiary.creatures[save.bestiary.page].description
+	
 	
 	if save.bestiary.creatures[save.bestiary.page].previously_hatched:
 		$"Left Page/Baby Creature Picture".texture = save.bestiary.creatures[save.bestiary.page].baby_sprite
 		$"Left Page/Baby Creature Picture/Label".text = ""
-		$"Left Page/Terrarium/Label".text = save.bestiary.creatures[save.bestiary.page].habitat.keys()[save.bestiary.creatures[save.bestiary.page].terrarium]
+		$"Left Page/Egg".texture = save.bestiary.creatures[save.bestiary.page].egg
+		$"Left Page/Egg/Label".text = ""
+		$"Left Page/Incubator/Label".text = save.bestiary.creatures[save.bestiary.page].hatchery.keys()[save.bestiary.creatures[save.bestiary.page].incubator].replace("_", " ")
 	else:
 		$"Left Page/Baby Creature Picture".texture = null
-		$"Left Page/Baby Creature Picture/Label".text = "?"
-		$"Left Page/Terrarium/Label".text = "?"
+		$"Left Page/Baby Creature Picture/Label".text = "Baby"
+		$"Left Page/Egg".texture = null
+		$"Left Page/Egg/Label".text = "Egg"
+		$"Left Page/Incubator/Label".text = "Incubator"
 	
 	if save.bestiary.creatures[save.bestiary.page].previously_grown:
-		$"Left Page/Dynamic Text/Description".text = save.bestiary.creatures[save.bestiary.page].description
+		$"Left Page/Terrarium/Label".text = save.bestiary.creatures[save.bestiary.page].habitat.keys()[save.bestiary.creatures[save.bestiary.page].terrarium]
 	else:
-		$"Left Page/Dynamic Text/Description".text = ""
+		$"Left Page/Terrarium/Label".text = "Terrarium"
 
 # Fill in right page
 func _fill_right():
@@ -61,23 +64,29 @@ func _fill_right():
 	
 	$"Right Page/Creature Name".text = save.bestiary.creatures[save.bestiary.page+1].name
 	$"Right Page/Adult Creature Picture Area".texture = save.bestiary.creatures[save.bestiary.page+1].adult_detailed
-	$"Right Page/Egg".texture = save.bestiary.creatures[save.bestiary.page+1].egg
-	$"Right Page/Egg/Label".text = ""
-	$"Right Page/Incubator/Label".text = save.bestiary.creatures[save.bestiary.page+1].hatchery.keys()[save.bestiary.creatures[save.bestiary.page+1].incubator].replace("_", " ")
+	$"Right Page/Dynamic Text/Description".text = save.bestiary.creatures[save.bestiary.page+1].description
 	
 	if save.bestiary.creatures[save.bestiary.page+1].previously_hatched:
 		$"Right Page/Baby Creature Picture Area".texture = save.bestiary.creatures[save.bestiary.page+1].baby_sprite
 		$"Right Page/Baby Creature Picture Area/Label".text = ""
+		
+		$"Right Page/Egg".texture = save.bestiary.creatures[save.bestiary.page+1].egg
+		$"Right Page/Egg/Label".text = ""
+		$"Right Page/Incubator/Label".text = save.bestiary.creatures[save.bestiary.page+1].hatchery.keys()[save.bestiary.creatures[save.bestiary.page+1].incubator].replace("_", " ")
+		
 		$"Right Page/Terrarium/Label".text = save.bestiary.creatures[save.bestiary.page+1].habitat.keys()[save.bestiary.creatures[save.bestiary.page+1].terrarium]
 	else:
 		$"Right Page/Baby Creature Picture Area".texture = null
-		$"Right Page/Baby Creature Picture Area/Label".text = "?"
-		$"Right Page/Terrarium/Label".text = "?"
+		$"Right Page/Baby Creature Picture Area/Label".text = "Baby"
+		
+		$"Right Page/Egg".texture = null
+		$"Right Page/Egg/Label".text = "Egg"
+		$"Right Page/Incubator/Label".text = "Incubator"
 	
 	if save.bestiary.creatures[save.bestiary.page+1].previously_grown:
-		$"Right Page/Dynamic Text/Description".text = save.bestiary.creatures[save.bestiary.page+1].description
+		$"Right Page/Terrarium/Label".text = save.bestiary.creatures[save.bestiary.page+1].habitat.keys()[save.bestiary.creatures[save.bestiary.page+1].terrarium]
 	else:
-		$"Right Page/Dynamic Text/Description".text = ""
+		$"Right Page/Terrarium/Label".text = "Terrarium"
 
 
 func _flip_sound():
