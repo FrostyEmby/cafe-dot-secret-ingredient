@@ -1,7 +1,6 @@
 extends Resource
 class_name Save
 
-@export var main_exit : bool = false
 @export var egg_fill : bool = false # if flipped on, eggs randomly generate in egg collection
 
 # EGG SHELF 
@@ -22,3 +21,6 @@ class_name Save
 @export var aqua : TerrariumData = load("res://resources/aqua.tres")
 @export var jungle : TerrariumData = load("res://resources/jungle.tres")
 @export var lava : TerrariumData = load("res://resources/lava.tres")
+
+# Bestiary
+@export var bestiary : BestiaryData = load("res://resources/bestiary-data.tres")

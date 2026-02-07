@@ -1,8 +1,6 @@
 extends Control
 
 var save = load("res://resources/save.tres")
-var bestiary : BestiaryData = load("res://resources/bestiary-data.tres")
-var page : int = 0 # starts at 0 because of arrays
 
 func _ready() -> void:
 	_fill_left()
@@ -12,7 +10,7 @@ func _ready() -> void:
 	
 # returns whether right page can be displayed
 func _right_fill_ok():
-	if bestiary.creatures.size() % 2 != 0 && page == bestiary.creatures.size() - 1:
+	if save.bestiary.creatures.size() % 2 != 0 && save.bestiary.page == save.bestiary.creatures.size() - 1:
 		return false
 	else:
 		return true
@@ -21,34 +19,34 @@ func _fill_left():
 	$"Left Page".visible = true
 	
 	# hide arrows at either extreme of the bestiary
-	if page <= 0:
+	if save.bestiary.page <= 0:
 		$"Left Page/Prev Page".visible = false
 	else:
 		$"Left Page/Prev Page".visible = true
 	
-	if page + 2 >= bestiary.creatures.size():
+	if save.bestiary.page + 2 >= save.bestiary.creatures.size():
 		$"Right Page/Next Page".visible = false
 	else:
 		$"Right Page/Next Page".visible = true
 		
 	# Fill in left page
-	$"Left Page/Creature Name".text = bestiary.creatures[page].name
-	$"Left Page/Adult Creature Picture".texture = bestiary.creatures[page].adult_detailed
-	$"Left Page/Egg".texture = bestiary.creatures[page].egg
+	$"Left Page/Creature Name".text = save.bestiary.creatures[save.bestiary.page].name
+	$"Left Page/Adult Creature Picture".texture = save.bestiary.creatures[save.bestiary.page].adult_detailed
+	$"Left Page/Egg".texture = save.bestiary.creatures[save.bestiary.page].egg
 	$"Left Page/Egg/Label".text = ""
-	$"Left Page/Incubator/Label".text = bestiary.creatures[page].hatchery.keys()[bestiary.creatures[page].incubator].replace("_", " ")
+	$"Left Page/Incubator/Label".text = save.bestiary.creatures[save.bestiary.page].hatchery.keys()[save.bestiary.creatures[save.bestiary.page].incubator].replace("_", " ")
 	
-	if bestiary.creatures[page].previously_hatched:
-		$"Left Page/Baby Creature Picture".texture = bestiary.creatures[page].baby_sprite
+	if save.bestiary.creatures[save.bestiary.page].previously_hatched:
+		$"Left Page/Baby Creature Picture".texture = save.bestiary.creatures[save.bestiary.page].baby_sprite
 		$"Left Page/Baby Creature Picture/Label".text = ""
-		$"Left Page/Terrarium/Label".text = bestiary.creatures[page].habitat.keys()[bestiary.creatures[page].terrarium]
+		$"Left Page/Terrarium/Label".text = save.bestiary.creatures[save.bestiary.page].habitat.keys()[save.bestiary.creatures[save.bestiary.page].terrarium]
 	else:
 		$"Left Page/Baby Creature Picture".texture = null
 		$"Left Page/Baby Creature Picture/Label".text = "?"
 		$"Left Page/Terrarium/Label".text = "?"
 	
-	if bestiary.creatures[page].previously_grown:
-		$"Left Page/Dynamic Text/Description".text = bestiary.creatures[page].description
+	if save.bestiary.creatures[save.bestiary.page].previously_grown:
+		$"Left Page/Dynamic Text/Description".text = save.bestiary.creatures[save.bestiary.page].description
 	else:
 		$"Left Page/Dynamic Text/Description".text = ""
 
@@ -61,23 +59,23 @@ func _fill_right():
 	
 	$"Right Page".visible = true
 	
-	$"Right Page/Creature Name".text = bestiary.creatures[page+1].name
-	$"Right Page/Adult Creature Picture Area".texture = bestiary.creatures[page+1].adult_detailed
-	$"Right Page/Egg".texture = bestiary.creatures[page+1].egg
+	$"Right Page/Creature Name".text = save.bestiary.creatures[save.bestiary.page+1].name
+	$"Right Page/Adult Creature Picture Area".texture = save.bestiary.creatures[save.bestiary.page+1].adult_detailed
+	$"Right Page/Egg".texture = save.bestiary.creatures[save.bestiary.page+1].egg
 	$"Right Page/Egg/Label".text = ""
-	$"Right Page/Incubator/Label".text = bestiary.creatures[page+1].hatchery.keys()[bestiary.creatures[page+1].incubator].replace("_", " ")
+	$"Right Page/Incubator/Label".text = save.bestiary.creatures[save.bestiary.page+1].hatchery.keys()[save.bestiary.creatures[save.bestiary.page+1].incubator].replace("_", " ")
 	
-	if bestiary.creatures[page+1].previously_hatched:
-		$"Right Page/Baby Creature Picture Area".texture = bestiary.creatures[page+1].baby_sprite
+	if save.bestiary.creatures[save.bestiary.page+1].previously_hatched:
+		$"Right Page/Baby Creature Picture Area".texture = save.bestiary.creatures[save.bestiary.page+1].baby_sprite
 		$"Right Page/Baby Creature Picture Area/Label".text = ""
-		$"Right Page/Terrarium/Label".text = bestiary.creatures[page+1].habitat.keys()[bestiary.creatures[page+1].terrarium]
+		$"Right Page/Terrarium/Label".text = save.bestiary.creatures[save.bestiary.page+1].habitat.keys()[save.bestiary.creatures[save.bestiary.page+1].terrarium]
 	else:
 		$"Right Page/Baby Creature Picture Area".texture = null
 		$"Right Page/Baby Creature Picture Area/Label".text = "?"
 		$"Right Page/Terrarium/Label".text = "?"
 	
-	if bestiary.creatures[page+1].previously_grown:
-		$"Right Page/Dynamic Text/Description".text = bestiary.creatures[page+1].description
+	if save.bestiary.creatures[save.bestiary.page+1].previously_grown:
+		$"Right Page/Dynamic Text/Description".text = save.bestiary.creatures[save.bestiary.page+1].description
 	else:
 		$"Right Page/Dynamic Text/Description".text = ""
 
@@ -97,7 +95,7 @@ func _flip_sound():
 
 
 func _on_next_page_pressed() -> void:
-	page += 2
+	save.bestiary.page += 2
 	$"Right Page".visible = false
 	$FlipRight.visible = true
 	$FlipRight.play()
@@ -105,7 +103,7 @@ func _on_next_page_pressed() -> void:
 
 
 func _on_prev_page_pressed() -> void:
-	page -= 2
+	save.bestiary.page -= 2
 	$"Left Page".visible = false
 	$FlipLeft.visible = true
 	$FlipLeft.play()
