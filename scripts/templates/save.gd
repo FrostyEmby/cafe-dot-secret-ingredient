@@ -22,5 +22,9 @@ class_name Save
 @export var jungle : TerrariumData = load("res://resources/jungle.tres")
 @export var lava : TerrariumData = load("res://resources/lava.tres")
 
-# Bestiary
+# BESTIARY
 @export var bestiary : BestiaryData = load("res://resources/bestiary-data.tres")
+
+
+# CLIPBOARD
+@export var clipboard : ClipboardData = load("res://resources/clipboard.tres")

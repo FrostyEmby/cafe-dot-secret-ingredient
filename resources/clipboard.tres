@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ClipboardData" format=3 uid="uid://dry044cas2sb8"]
+
+[ext_resource type="Script" uid="uid://ixnfs2tdgmh8" path="res://scripts/templates/clipboard-data.gd" id="1_32yd4"]
+
+[resource]
+script = ExtResource("1_32yd4")
+metadata/_custom_type_script = "uid://ixnfs2tdgmh8"

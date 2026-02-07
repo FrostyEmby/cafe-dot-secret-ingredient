@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://b7qejwtfkj86" path="res://sound/music/Scholar's knowledge.wav" id="13_7tv8b"]
 [ext_resource type="AudioStream" uid="uid://bsrsk2yub3n28" path="res://sound/sound effects/Flip 1.wav" id="13_bfiq4"]
 [ext_resource type="AudioStream" uid="uid://cvdiap1n6su4t" path="res://sound/sound effects/Flip 2.wav" id="14_viudg"]
+[ext_resource type="PackedScene" uid="uid://blp1nxq4lwa6q" path="res://scenes/clipboard.tscn" id="15_3jqp3"]
 [ext_resource type="AudioStream" uid="uid://dohxroyto5wee" path="res://sound/sound effects/Flip 3.wav" id="15_q1xbv"]
 [ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="15_vxfeb"]
 [ext_resource type="AudioStream" uid="uid://nuv064xgu4fm" path="res://sound/sound effects/Flip 4.wav" id="16_7tv8b"]
@@ -661,6 +662,9 @@ frame_progress = 0.5150689
 layout_mode = 0
 offset_left = 802.0
 offset_right = 1152.0
+
+[node name="Clipboard" parent="." unique_id=2119543535 instance=ExtResource("15_3jqp3")]
+layout_mode = 0
 
 [node name="Hand" parent="." unique_id=612491534 instance=ExtResource("15_vxfeb")]
 

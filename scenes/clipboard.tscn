@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://blp1nxq4lwa6q"]
+
+[ext_resource type="Script" uid="uid://bxin4gkn61nr0" path="res://scenes/clipboard.gd" id="1_js5ej"]
+[ext_resource type="FontFile" uid="uid://bd5hly5xmortx" path="res://art/fonts/Handyman.ttf" id="1_u1xd4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t4njw"]
+font = ExtResource("1_u1xd4")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_glcki"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4njw"]
+bg_color = Color(0.91881675, 0.91881675, 0.9188166, 1)
+
+[node name="Clipboard" type="ColorRect" unique_id=2119543535]
+offset_left = 882.0
+offset_top = 159.0
+offset_right = 1152.0
+offset_bottom = 521.0
+color = Color(0.5774683, 0.22482356, 0, 1)
+script = ExtResource("1_js5ej")
+
+[node name="Notes" type="ColorRect" parent="." unique_id=1934859595]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 257.0
+offset_bottom = 344.0
+
+[node name="Title" type="Label" parent="Notes" unique_id=1436655041]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 8.0
+offset_bottom = 61.0
+grow_horizontal = 2
+text = "Notes"
+label_settings = SubResource("LabelSettings_t4njw")
+horizontal_alignment = 1
+
+[node name="Player Writing" type="TextEdit" parent="Notes" unique_id=862064141]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 65.0
+offset_right = 235.0
+offset_bottom = 321.0
+theme_override_colors/caret_color = Color(0.00119745, 0.0011974432, 0.0011974449, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.066755, 0.066755, 0.066755, 1)
+theme_override_colors/font_outline_color = Color(0.49354547, 0.49354553, 0.49354553, 1)
+theme_override_fonts/font = ExtResource("1_u1xd4")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_glcki")
+theme_override_styles/focus = SubResource("StyleBoxFlat_t4njw")
+placeholder_text = "Write stuff here!"
+wrap_mode = 1
+
+[node name="Clip" type="ColorRect" parent="." unique_id=402086130]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.5
+offset_right = 26.5
+offset_bottom = 15.0
+grow_horizontal = 2
+color = Color(0.6542321, 0.6542321, 0.654232, 1)
+
+[node name="Move" type="Button" parent="." unique_id=1062141975]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 8.0
+grow_vertical = 2
+
+[connection signal="text_changed" from="Notes/Player Writing" to="." method="_on_player_writing_text_changed"]
+[connection signal="pressed" from="Move" to="." method="_on_move_pressed"]
