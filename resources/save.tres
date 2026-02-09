@@ -3,21 +3,32 @@
 [ext_resource type="Script" uid="uid://dt67tgv2fjsug" path="res://scripts/templates/save.gd" id="1_8knjt"]
 [ext_resource type="Resource" uid="uid://d2b1e62855o4h" path="res://resources/aqua.tres" id="1_sccy7"]
 [ext_resource type="Resource" uid="uid://ddh0aydn350qi" path="res://resources/grass.tres" id="2_7m6vq"]
-[ext_resource type="Resource" uid="uid://c15yc4b70njfd" path="res://resources/incubator.tres" id="2_d66w8"]
 [ext_resource type="Resource" uid="uid://bhhxfwpdi3gfj" path="res://resources/bestiary-data.tres" id="2_y1ajm"]
 [ext_resource type="Resource" uid="uid://dhidbksh1hoq2" path="res://resources/nest2.tres" id="3_gnrsa"]
+[ext_resource type="Resource" uid="uid://dry044cas2sb8" path="res://resources/clipboard.tres" id="3_vdkq8"]
 [ext_resource type="Resource" uid="uid://b6xug7sh5qc1b" path="res://resources/nest1.tres" id="3_w8e4p"]
 [ext_resource type="Resource" uid="uid://darl7ej1xp2dx" path="res://resources/nest3.tres" id="4_d66w8"]
+[ext_resource type="Resource" uid="uid://cw61ybkggdoah" path="res://resources/cold-dry.tres" id="4_tlxn5"]
 [ext_resource type="Resource" uid="uid://d0ei1ycwf41lq" path="res://resources/jungle.tres" id="4_y1ajm"]
 [ext_resource type="Resource" uid="uid://dwl8hsb0pk76r" path="res://resources/lava.tres" id="5_h4hu7"]
+[ext_resource type="Resource" uid="uid://bpexrkd1iutvp" path="res://resources/cold-wet.tres" id="5_jj6fl"]
 [ext_resource type="Resource" uid="uid://cmgoopq5yg1vo" path="res://resources/egg-shelf.tres" id="6_w8e4p"]
+[ext_resource type="Resource" uid="uid://bn433xq1f7duy" path="res://resources/hot-dry.tres" id="7_vnv5y"]
+[ext_resource type="Resource" uid="uid://cj5ywoxlkgk7b" path="res://resources/hot-wet.tres" id="8_286v6"]
 [ext_resource type="Resource" uid="uid://dgausgceh5dsa" path="res://resources/sand.tres" id="9_op7no"]
 [ext_resource type="Resource" uid="uid://12gsb43tntc3" path="res://resources/snow.tres" id="12_ti3mx"]
+[ext_resource type="Resource" uid="uid://djfjwb4r3d1vr" path="res://resources/temp-dry.tres" id="18_1qy8g"]
+[ext_resource type="Resource" uid="uid://1pjmqtj2uif2" path="res://resources/temp-wet.tres" id="19_5n3el"]
 
 [resource]
 script = ExtResource("1_8knjt")
 shelf = ExtResource("6_w8e4p")
-incubator = ExtResource("2_d66w8")
+cold_dry = ExtResource("4_tlxn5")
+cold_wet = ExtResource("5_jj6fl")
+temp_dry = ExtResource("18_1qy8g")
+temp_wet = ExtResource("19_5n3el")
+hot_dry = ExtResource("7_vnv5y")
+hot_wet = ExtResource("8_286v6")
 nest1 = ExtResource("3_w8e4p")
 nest2 = ExtResource("3_gnrsa")
 nest3 = ExtResource("4_d66w8")
@@ -28,4 +39,5 @@ aqua = ExtResource("1_sccy7")
 jungle = ExtResource("4_y1ajm")
 lava = ExtResource("5_h4hu7")
 bestiary = ExtResource("2_y1ajm")
+clipboard = ExtResource("3_vdkq8")
 metadata/_custom_type_script = "uid://dt67tgv2fjsug"
