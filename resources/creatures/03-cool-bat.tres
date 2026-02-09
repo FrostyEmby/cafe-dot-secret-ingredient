@@ -17,4 +17,5 @@ egg = ExtResource("4_oqmc5")
 baby_sprite = ExtResource("3_dnlum")
 adult_sprite = ExtResource("2_2xvyk")
 adult_detailed = ExtResource("1_oqmc5")
+egg_tip = "brrrr"
 metadata/_custom_type_script = "uid://cqr8dj8toeqen"

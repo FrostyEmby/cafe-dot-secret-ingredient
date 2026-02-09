@@ -61,7 +61,7 @@ func _outside_press():
 		texture = null
 		active = false
 		$Tip.text = ""
-		creature.visible = true # since creature is copied, makes it visible where it came from
+		creature.change_visibility(true) # since creature is copied, makes it visible where it came from
 
 
 # extra visual for clicks

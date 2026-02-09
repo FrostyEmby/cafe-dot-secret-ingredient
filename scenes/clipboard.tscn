@@ -13,6 +13,8 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4njw"]
 bg_color = Color(0.91881675, 0.91881675, 0.9188166, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_js5ej"]
+
 [node name="Clipboard" type="ColorRect" unique_id=2119543535]
 offset_left = 882.0
 offset_top = 159.0
@@ -74,6 +76,7 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 8.0
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_js5ej")
 
 [connection signal="text_changed" from="Notes/Player Writing" to="." method="_on_player_writing_text_changed"]
 [connection signal="pressed" from="Move" to="." method="_on_move_pressed"]
