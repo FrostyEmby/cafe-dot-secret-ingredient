@@ -9,8 +9,13 @@ var save = load("res://resources/save.tres")
 
 func _ready() -> void:
 	$"Notes/Player Writing".text = save.clipboard.text
-	position.x = close_x
-	position.y = 134
+	
+	if save.clipboard.open:
+		position.x = open_x
+		position.y = 134
+	else:
+		position.x = close_x
+		position.y = 134
 
 
 func move():

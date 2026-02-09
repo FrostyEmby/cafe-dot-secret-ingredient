@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://blp1nxq4lwa6q"]
 
-[ext_resource type="Script" uid="uid://bxin4gkn61nr0" path="res://scenes/clipboard.gd" id="1_js5ej"]
+[ext_resource type="Script" uid="uid://bxin4gkn61nr0" path="res://scripts/clipboard.gd" id="1_js5ej"]
 [ext_resource type="FontFile" uid="uid://bd5hly5xmortx" path="res://art/fonts/Handyman.ttf" id="1_u1xd4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t4njw"]
