@@ -25,6 +25,10 @@ enum habitat {NONE, ALL, VOLCANO, AQUATIC, DESERT, JUNGLE, SNOW, GRASSLAND}
 @export var hatch_time_secs : float = 15.0
 @export var maturity_time_secs : float = 15.0
 
+# While held, creatures may have additional info
+@export var egg_tip : String = ""
+@export var baby_tip : String = ""
+
 # dynamic data
 @export var previously_hatched : bool = false
 @export var previously_grown : bool = false

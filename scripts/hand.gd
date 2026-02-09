@@ -13,6 +13,14 @@ func _ready():
 	$Grip.frame = 0
 	texture = null
 	active = false
+	$Tip.text = ""
+
+
+func _get_tip() -> String:
+	if creature.info.hatched:
+		return creature.info.species.baby_tip
+	else:
+		return creature.info.species.egg_tip
 
 
 # determines appearance based on held egg/creature
@@ -31,14 +39,15 @@ func hold(held_creature : Egg):
 	creature = held_creature
 	texture = _get_appearance()
 	active = true
+	$Tip.text = _get_tip()
 	#$Take.play() need to remove from shelf first
-
 
 func release():
 	releasing.emit(creature)
 	$Grip.frame = 0
 	texture = null
 	active = false
+	$Tip.text = ""
 	$Place.play()
 
 
@@ -51,6 +60,7 @@ func _outside_press():
 		$Grip.frame = 0
 		texture = null
 		active = false
+		$Tip.text = ""
 		creature.visible = true # since creature is copied, makes it visible where it came from
 
 
