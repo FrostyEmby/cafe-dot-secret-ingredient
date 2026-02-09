@@ -139,7 +139,7 @@ func _save():
 func _on_incubators_hatch_select(egg: Egg, hatchery : Hatchery) -> void:
 	add_egg(egg)
 	egg.reset()
-	save.incubator[hatchery.name.to_lower()][egg.name.to_lower()] = egg.info
+	save[hatchery.name.to_lower()][egg.name.to_lower()] = egg.info
 
 
 func move():

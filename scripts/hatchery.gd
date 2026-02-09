@@ -49,8 +49,8 @@ func _place():
 
 # change num eggs displayed
 func _change_egg_num(diff : int):
-	save.incubator[self.name.to_lower()].egg_count += diff
-	print("count is now ", save.incubator[self.name.to_lower()].egg_count)
+	save[self.name.to_lower()].egg_count += diff
+	print("count is now ", save[self.name.to_lower()].egg_count)
 	_egg_display()
 
 
@@ -101,9 +101,9 @@ func _pressed() -> void:
 func setup():
 	print("starting hatchery " + self.name + " setup")
 	
-	$Egg1.setup(save.incubator[self.name.to_lower()].egg1)
-	$Egg2.setup(save.incubator[self.name.to_lower()].egg2)
-	$Egg3.setup(save.incubator[self.name.to_lower()].egg3)
+	$Egg1.setup(save[self.name.to_lower()].egg1)
+	$Egg2.setup(save[self.name.to_lower()].egg2)
+	$Egg3.setup(save[self.name.to_lower()].egg3)
 	
 	_egg_display()
 	
@@ -111,9 +111,9 @@ func setup():
 
 
 func _save():
-	save.incubator[self.name.to_lower()].egg1 = $Egg1.info
-	save.incubator[self.name.to_lower()].egg2 = $Egg2.info
-	save.incubator[self.name.to_lower()].egg3 = $Egg3.info
+	save[self.name.to_lower()].egg1 = $Egg1.info
+	save[self.name.to_lower()].egg2 = $Egg2.info
+	save[self.name.to_lower()].egg3 = $Egg3.info
 
 
 func _on_egg_1_selection(egg: Egg) -> void:
@@ -133,20 +133,20 @@ func _on_egg_3_selection(egg: Egg) -> void:
 
 func _on_egg_1_death(egg: Egg) -> void:
 	egg.reset()
-	save.incubator[self.name.to_lower()][egg.name.to_lower()] = egg.info
+	save[self.name.to_lower()][egg.name.to_lower()] = egg.info
 
 
 func _on_egg_2_death(egg: Egg) -> void:
 	egg.reset()
-	save.incubator[self.name.to_lower()][egg.name.to_lower()] = egg.info
+	save[self.name.to_lower()][egg.name.to_lower()] = egg.info
 
 
 func _on_egg_3_death(egg: Egg) -> void:
 	egg.reset()
-	save.incubator[self.name.to_lower()][egg.name.to_lower()] = egg.info
+	save[self.name.to_lower()][egg.name.to_lower()] = egg.info
 	
 func _cold_dry_egg_display():
-	match save.incubator.cold_dry.egg_count:
+	match save.cold_dry.egg_count:
 		0:
 			icon = load("res://art/final props/incubators/dry cold incubator empty DONE.png")
 			$Display.texture = null
@@ -162,11 +162,11 @@ func _cold_dry_egg_display():
 		_:
 			icon = load("res://art/final props/incubators/dry cold incubator empty DONE.png")
 			$Display.texture = null
-			save.incubator.cold_dry.egg_count = 0
+			save.cold_dry.egg_count = 0
 
 
 func _temp_dry_egg_display():
-	match save.incubator.temp_dry.egg_count:
+	match save.temp_dry.egg_count:
 		0:
 			icon = load("res://art/final props/incubators/dry incubator empty DONE.png")
 			$Display.texture = null
@@ -182,11 +182,11 @@ func _temp_dry_egg_display():
 		_:
 			icon = load("res://art/final props/incubators/dry incubator empty DONE.png")
 			$Display.texture = null
-			save.incubator.temp_dry.egg_count = 0
+			save.temp_dry.egg_count = 0
 
 
 func _hot_dry_egg_display():
-	match save.incubator.hot_dry.egg_count:
+	match save.hot_dry.egg_count:
 		0:
 			icon = load("res://art/final props/incubators/dry hot incubator emptyDONE.png")
 			$Display.texture = null
@@ -202,11 +202,11 @@ func _hot_dry_egg_display():
 		_:
 			icon = load("res://art/final props/incubators/dry hot incubator emptyDONE.png")
 			$Display.texture = null
-			save.incubator.hot_dry.egg_count = 0
+			save.hot_dry.egg_count = 0
 
 
 func _cold_wet_egg_display():
-	match save.incubator.cold_wet.egg_count:
+	match save.cold_wet.egg_count:
 		0:
 			icon = load("res://art/final props/incubators/wet cold incubator emptyDONE.png")
 			$Display.texture = null
@@ -222,11 +222,11 @@ func _cold_wet_egg_display():
 		_:
 			icon = load("res://art/final props/incubators/wet cold incubator emptyDONE.png")
 			$Display.texture = null
-			save.incubator.cold_wet.egg_count = 0
+			save.cold_wet.egg_count = 0
 
 
 func _temp_wet_egg_display():
-	match save.incubator.temp_wet.egg_count:
+	match save.temp_wet.egg_count:
 		0:
 			icon = load("res://art/final props/incubators/wet incubator empty DONE.png")
 			$Display.texture = null
@@ -242,11 +242,11 @@ func _temp_wet_egg_display():
 		_:
 			icon = load("res://art/final props/incubators/wet incubator empty DONE.png")
 			$Display.texture = null
-			save.incubator.temp_wet.egg_count = 0
+			save.temp_wet.egg_count = 0
 
 
 func _hot_wet_egg_display():
-	match save.incubator.hot_wet.egg_count:
+	match save.hot_wet.egg_count:
 		0:
 			icon = load("res://art/final props/incubators/wet hot incubator emptyDONE.png")
 			$Display.texture = null
@@ -262,28 +262,34 @@ func _hot_wet_egg_display():
 		_:
 			icon = load("res://art/final props/incubators/wet hot incubator emptyDONE.png")
 			$Display.texture = null
-			save.incubator.hot_wet.egg_count = 0
+			save.hot_wet.egg_count = 0
 
 
 func _on_egg_1_birth() -> void:
 	_change_egg_num(-1)
+	_save()
 
 
 func _on_egg_2_birth() -> void:
 	_change_egg_num(-1)
+	_save()
 
 
 func _on_egg_3_birth() -> void:
 	_change_egg_num(-1)
+	_save()
 
 
 func _on_egg_1_corpse() -> void:
 	_change_egg_num(-1)
+	_save()
 
 
 func _on_egg_2_corpse() -> void:
 	_change_egg_num(-1)
+	_save()
 
 
 func _on_egg_3_corpse() -> void:
 	_change_egg_num(-1)
+	_save()

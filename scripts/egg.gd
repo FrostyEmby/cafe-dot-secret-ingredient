@@ -1,6 +1,9 @@
 extends Button
 class_name Egg
 
+# TODO: Fix save bug upon hatching creatures and resetting scene
+# Second hatched egg always disappears after second reset
+
 signal selection(egg : Egg)
 signal death(egg : Egg)
 signal birth
@@ -9,13 +12,15 @@ signal corpse
 var hatch_pause : bool = false
 var age_pause : bool = false
 
+var save = load("res://resources/save.tres")
+
 @export var info : EggData = EggData.new()
 @onready var hatch_timer : Timer = $Hatch
 @onready var age_timer : Timer = $Age
 
 func _set_appearance():
 	if info.dead:
-		_dead()
+		_dead(false)
 	elif info.adult:
 		_mature()
 	elif info.hatched:
@@ -125,7 +130,7 @@ func _hatch_or_death():
 	
 	if info.placement != info.species.incubator:
 		print("PLACEMENT IS ", info.placement, " AND SHOULD BE ", info.species.incubator)
-		_dead()
+		_dead(true)
 	else:
 		_hatch()
 
@@ -133,7 +138,7 @@ func _hatch_or_death():
 func _survive_or_die():
 	if info.space != info.species.terrarium:
 		print("TERRARIUM IS ", info.space, " AND SHOULD BE ", info.species.terrarium)
-		_dead()
+		_dead(true)
 	else:
 		_mature()
 
@@ -168,7 +173,7 @@ func _mature():
 	info.species.previously_grown = true
 
 
-func _dead():
+func _dead(sound : bool):
 	print("hatched... but unfortunately dead")
 	
 	corpse.emit()
@@ -181,7 +186,8 @@ func _dead():
 	$Indicator.visible = false
 	icon = load("res://art/eggs/corpse.png")
 	
-	$Bad.play()
+	if sound:
+		$Bad.play()
 
 
 func _process(_delta: float) -> void:
@@ -189,10 +195,12 @@ func _process(_delta: float) -> void:
 		incubate() 
 	
 	if info.hatch_time <= 0 and not info.hatched and not hatch_pause:
-		incubate()
+		#incubate()
+		_hatch_or_death()
 		
 	if info.aging_time <= 0 and not info.adult and not age_pause:
-		grow_up()
+		#grow_up()
+		_survive_or_die()
 	
 	# update indicator timer when incubating
 	if info.incubating:
@@ -240,3 +248,6 @@ func play():
 	elif age_pause:
 		age_pause = false
 		$Age.paused = false
+
+#func _save():
+#	save[get_parent().name.to_lower()][self.name.to_lower()] = self.info
