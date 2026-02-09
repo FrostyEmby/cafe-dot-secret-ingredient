@@ -671,8 +671,6 @@ offset_top = 146.0
 offset_right = 1403.0
 offset_bottom = 508.0
 
-[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("15_vxfeb")]
-
 [node name="Egg-Gen" type="Timer" parent="." unique_id=1303647709]
 wait_time = 10.0
 one_shot = true
@@ -706,6 +704,8 @@ bus = &"SFX"
 [node name="Pause" parent="." unique_id=186506773 instance=ExtResource("23_6v5mc")]
 visible = false
 layout_mode = 0
+
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("15_vxfeb")]
 
 [connection signal="pressed" from="Left Page/Prev Page" to="." method="_on_prev_page_pressed"]
 [connection signal="pressed" from="Right Page/Next Page" to="." method="_on_next_page_pressed"]

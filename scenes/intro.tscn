@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b5g2a561gd3me" path="res://art/final eggs/10 carbunkle egg.png" id="10_xwriy"]
 [ext_resource type="Texture2D" uid="uid://s47o24d782sy" path="res://art/final eggs/12 mach bird egg.png" id="11_m3r7s"]
 [ext_resource type="Texture2D" uid="uid://bja465s46vk8" path="res://art/final eggs/09 tyrian snail egg.png" id="11_u5myo"]
+[ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="13_m3r7s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sjfbp"]
 font = ExtResource("5_bu1yb")
@@ -114,6 +115,8 @@ texture = ExtResource("11_m3r7s")
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1273803197]
 stream = ExtResource("7_0naf5")
 autoplay = true
+
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("13_m3r7s")]
 
 [connection signal="pressed" from="Page/Next" to="." method="_on_next_pressed"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]

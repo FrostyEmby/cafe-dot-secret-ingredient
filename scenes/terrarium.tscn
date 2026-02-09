@@ -409,8 +409,6 @@ offset_top = 144.0
 offset_right = 1407.0
 offset_bottom = 506.0
 
-[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("20_skqsh")]
-
 [node name="Egg-Gen" parent="." unique_id=240887351 instance=ExtResource("22_skqsh")]
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1688681329]
@@ -420,6 +418,8 @@ autoplay = true
 [node name="Pause" parent="." unique_id=186506773 instance=ExtResource("24_6104g")]
 visible = false
 layout_mode = 0
+
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("20_skqsh")]
 
 [connection signal="selection" from="Shelf" to="." method="_on_egg_shelf_selection"]
 [connection signal="selection" from="Snow" to="." method="_on_snow_selection"]

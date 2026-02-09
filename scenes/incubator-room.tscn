@@ -45,8 +45,6 @@ one_shot = true
 stream = ExtResource("8_lerr0")
 autoplay = true
 
-[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("8_glcki")]
-
 [node name="Clipboard" parent="." unique_id=2119543535 instance=ExtResource("9_glcki")]
 layout_mode = 0
 offset_left = 1155.0
@@ -57,6 +55,8 @@ offset_bottom = 496.0
 [node name="Pause" parent="." unique_id=186506773 instance=ExtResource("10_t4njw")]
 visible = false
 layout_mode = 0
+
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("8_glcki")]
 
 [connection signal="hatch_select" from="Incubators" to="Shelf" method="_on_incubators_hatch_select"]
 [connection signal="selection" from="Incubators" to="." method="_on_incubator_selection"]

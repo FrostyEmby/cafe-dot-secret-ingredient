@@ -26,11 +26,12 @@ func _match():
 
 
 func _on_egg_selection(egg: Egg) -> void:
-	egg_match = egg
-	egg_selected = true
-	egg.change_visibility(false)
-	#egg.visible = false
-	$Hand.hold(egg)
+	if not egg.info.hatched: # make sure baby creatures are not selected
+		egg_match = egg
+		egg_selected = true
+		egg.change_visibility(false)
+		#egg.visible = false
+		$Hand.hold(egg)
 
 
 # selection only goes one way, because egg -> hatchery 

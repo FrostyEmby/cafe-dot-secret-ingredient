@@ -8,8 +8,10 @@ var creature : Egg = Egg.new()
 
 #TODO: make this the hub for matching between the shelf and everything else
 
-func _init():
-	visible = false
+func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN # hides mouse. This is your mouse now
+	$Grip.frame = 0
+	texture = null
 	active = false
 
 
@@ -25,16 +27,17 @@ func _get_appearance():
 
 func hold(held_creature : Egg):
 	holding.emit(held_creature)
+	$Grip.frame = 1
 	creature = held_creature
 	texture = _get_appearance()
-	visible = true
 	active = true
 	#$Take.play() need to remove from shelf first
 
 
 func release():
 	releasing.emit(creature)
-	visible = false
+	$Grip.frame = 0
+	texture = null
 	active = false
 	$Place.play()
 
@@ -45,9 +48,19 @@ func _outside_press():
 	$Removal.start(.1)
 	await $Removal.timeout
 	if active: # removes egg if release() does not get pressed
-		visible = false
+		$Grip.frame = 0
+		texture = null
 		active = false
 		creature.visible = true # since creature is copied, makes it visible where it came from
+
+
+# extra visual for clicks
+func _grip_ungrip():
+	$Grip.frame = 1
+	$Ungrip.start()
+	await $Ungrip.timeout
+	if not active:
+		$Grip.frame = 0
 
 
 # TODO: if pressed outside of area like hachery or terrarium, return to initial spot
@@ -55,5 +68,7 @@ func _process(_delta: float) -> void:
 	global_position = get_global_mouse_position()
 	
 	# removes and returns item if release() doesn't happen first
-	if active and Input.is_action_pressed("stop holding"):
+	if active and Input.is_action_pressed("click"):
 		_outside_press()
+	elif not active and Input.is_action_pressed("click"):
+		_grip_ungrip()

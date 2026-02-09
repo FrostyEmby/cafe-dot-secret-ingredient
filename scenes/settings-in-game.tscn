@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dubt5x0ntj1od" path="res://art/icons/back.png" id="5_4hre1"]
 [ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="5_enrh5"]
 [ext_resource type="Texture2D" uid="uid://cxmrv37y2a45a" path="res://art/icons/back-hover.png" id="6_enrh5"]
+[ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="8_4hre1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_36l1p"]
 font = ExtResource("2_tiumm")
@@ -138,6 +139,8 @@ texture_normal = ExtResource("5_4hre1")
 texture_hover = ExtResource("6_enrh5")
 
 [node name="Egg-Gen" parent="." unique_id=565685724 instance=ExtResource("5_enrh5")]
+
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("8_4hre1")]
 
 [connection signal="value_changed" from="PanelContainer/MarginContainer/GridContainer/Music Volume" to="." method="_on_master_volume_value_changed"]
 [connection signal="value_changed" from="PanelContainer/MarginContainer/GridContainer/Sound Volume" to="." method="_on_sound_volume_value_changed"]

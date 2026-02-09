@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://cpke8gi8uop4d" path="res://sound/music/Hang on.wav" id="2_2ckv8"]
 [ext_resource type="Texture2D" uid="uid://dubt5x0ntj1od" path="res://art/icons/back.png" id="3_8gwij"]
 [ext_resource type="Texture2D" uid="uid://cxmrv37y2a45a" path="res://art/icons/back-hover.png" id="4_mah5v"]
+[ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="6_mah5v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0bpdh"]
 font = ExtResource("2_0ctdu")
@@ -74,6 +75,8 @@ texture_hover = ExtResource("4_mah5v")
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=978675387]
 stream = ExtResource("2_2ckv8")
 autoplay = true
+
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("6_mah5v")]
 
 [connection signal="pressed" from="VBoxContainer/CenterContainer/Back Button" to="." method="_on_back_button_pressed"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
