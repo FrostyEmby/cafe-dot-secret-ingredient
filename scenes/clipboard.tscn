@@ -55,7 +55,11 @@ theme_override_fonts/font = ExtResource("1_u1xd4")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxEmpty_glcki")
 theme_override_styles/focus = SubResource("StyleBoxFlat_t4njw")
-placeholder_text = "Write stuff here!"
+placeholder_text = "
+
+
+
+		Write stuff here!"
 wrap_mode = 1
 
 [node name="Clip" type="ColorRect" parent="." unique_id=402086130]

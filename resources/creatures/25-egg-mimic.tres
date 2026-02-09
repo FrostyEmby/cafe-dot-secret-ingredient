@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="CreatureStats" format=3 uid="uid://tpahjjfell1w"]
 
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_arcf1"]
+[ext_resource type="Texture2D" uid="uid://b6qvi3ys1hnwp" path="res://art/egg mimic/egg mimic.png" id="1_f43m3"]
 
 [resource]
 script = ExtResource("1_arcf1")
@@ -10,6 +11,7 @@ diet = 1
 description = "They pretend to be eggs, to eat eggs. Careful! Avoid putting them in temperate incubators with other eggs."
 incubator = 2
 terrarium = 1
+adult_detailed = ExtResource("1_f43m3")
 hatch_time_secs = 1.0
 maturity_time_secs = 2.0
 metadata/_custom_type_script = "uid://cqr8dj8toeqen"
