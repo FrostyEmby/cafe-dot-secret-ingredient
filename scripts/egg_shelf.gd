@@ -1,24 +1,9 @@
 extends MarginContainer
 
-var save : Save = load("res://resources/save.tres")
+
 signal selection(egg: Egg)
 
-@onready var egg1 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg1"
-@onready var egg2 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg2"
-@onready var egg3 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg3"
-@onready var egg4 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg4"
-@onready var egg5 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg5"
-@onready var egg6 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg6"
-@onready var egg7 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg7"
-@onready var egg8 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg8"
-@onready var egg9 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg9"
-@onready var egg10 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg10"
-@onready var egg11 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg11"
-@onready var egg12 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg12"
-@onready var egg13 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg13"
-@onready var egg14 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg14"
-@onready var egg15 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg15"
-@onready var egg16 = $"Organizer/ScrollContainer/MarginContainer/Grid/Egg16"
+var save : Save = load("res://resources/save.tres")
 
 
 func _ready() -> void:
@@ -39,8 +24,8 @@ func add_egg(egg: Egg):
 			print("found empty slot")
 			new_egg.setup(egg.info)
 			new_egg.change_visibility(true)
-			new_egg.info.enabled = true
-			_save()
+			new_egg.enable(true)
+			#_save()
 			print("filled empty slot")
 			$Take.play()
 			break
@@ -49,8 +34,8 @@ func add_egg(egg: Egg):
 
 func remove_egg(egg: Egg):
 	egg.change_visibility(false)
-	egg.info.enabled = false
-	_save()
+	egg.enable(false)
+	#_save()
 	#save.shelf[egg.name.to_lower()].visibility = false
 
 
@@ -136,46 +121,33 @@ func _on_egg_16_selection(egg: Egg) -> void:
 func _load():
 	print("-----starting shelf setup-----")
 	
-	egg1.setup(save.shelf.egg1)
-	egg2.setup(save.shelf.egg2)
-	egg3.setup(save.shelf.egg3)
-	egg4.setup(save.shelf.egg4)
-	egg5.setup(save.shelf.egg5)
-	egg6.setup(save.shelf.egg6)
-	egg7.setup(save.shelf.egg7)
-	egg8.setup(save.shelf.egg8)
-	egg9.setup(save.shelf.egg9)
-	egg10.setup(save.shelf.egg10)
-	egg11.setup(save.shelf.egg11)
-	egg12.setup(save.shelf.egg12)
-	egg13.setup(save.shelf.egg13)
-	egg14.setup(save.shelf.egg14)
-	egg15.setup(save.shelf.egg15)
-	egg16.setup(save.shelf.egg16)
+	if save.shelf.open:
+		position = Vector2(0,0)
+	else:
+		position = Vector2(-176,0)
+	
+	#for egg in find_children("Egg*"):
+	#	egg.setup(save.shelf[egg.name.to_lower()])
 	
 	print("-----egg shelf setup complete-----")
 
 func _save():
-	save.shelf.egg1 = egg1.info
-	save.shelf.egg2 = egg2.info
-	save.shelf.egg3 = egg3.info
-	save.shelf.egg4 = egg4.info
-	save.shelf.egg5 = egg5.info
-	save.shelf.egg6 = egg6.info
-	save.shelf.egg7 = egg7.info
-	save.shelf.egg8 = egg8.info
-	save.shelf.egg9 = egg9.info
-	save.shelf.egg10 = egg10.info
-	save.shelf.egg11 = egg11.info
-	save.shelf.egg12 = egg12.info
-	save.shelf.egg13 = egg13.info
-	save.shelf.egg14 = egg14.info
-	save.shelf.egg15 = egg15.info
-	save.shelf.egg16 = egg16.info
+	for egg in find_children("Egg*"):
+		save.shelf[egg.name.to_lower()] = egg.info
 
 
 func _on_incubators_hatch_select(egg: Egg, hatchery : Hatchery) -> void:
 	add_egg(egg)
 	egg.reset()
-	save.incubator[hatchery.name.to_lower()][egg.name.to_lower()] = egg.info
+	#save[hatchery.name.to_lower()][egg.name.to_lower()] = egg.info
+
+
+func move():
+	var movement = create_tween()
+	if save.shelf.open:
+		save.shelf.open = false
+		movement.tween_property(self, "global_position", Vector2(-176,0), 0.1)
+	else:
+		save.shelf.open = true
+		movement.tween_property(self, "global_position", Vector2(0,0), 0.1)
 	

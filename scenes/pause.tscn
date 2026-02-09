@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://1i1cxrtaukuq"]
+
+[ext_resource type="Script" uid="uid://diquwrlnu1ibt" path="res://scripts/pause.gd" id="1_m0klm"]
+[ext_resource type="PackedScene" uid="uid://cpbueqxv0uum2" path="res://scenes/settings-in-game.tscn" id="1_r8yp4"]
+[ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://resources/theme.tres" id="2_m0klm"]
+[ext_resource type="AudioStream" uid="uid://cpke8gi8uop4d" path="res://sound/music/Hang on.wav" id="4_aicil"]
+
+[node name="Pause" type="PanelContainer" unique_id=186506773]
+offset_right = 1156.0
+offset_bottom = 649.0
+script = ExtResource("1_m0klm")
+
+[node name="Settings" parent="." unique_id=1683627982 instance=ExtResource("1_r8yp4")]
+visible = false
+layout_mode = 2
+
+[node name="Options" type="CenterContainer" parent="." unique_id=10728394]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options" unique_id=63623188]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="Options/VBoxContainer" unique_id=1962488706]
+layout_mode = 2
+theme = ExtResource("2_m0klm")
+text = "Back"
+
+[node name="Settings" type="Button" parent="Options/VBoxContainer" unique_id=1475748565]
+layout_mode = 2
+theme = ExtResource("2_m0klm")
+text = "Settings"
+
+[node name="Main Menu" type="Button" parent="Options/VBoxContainer" unique_id=151815538]
+layout_mode = 2
+theme = ExtResource("2_m0klm")
+text = "Main Menu"
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1060171131]
+stream = ExtResource("4_aicil")
+
+[connection signal="off" from="Settings" to="." method="_on_settings_off"]
+[connection signal="pressed" from="Options/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Options/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Options/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]

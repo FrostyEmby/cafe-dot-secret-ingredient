@@ -1,8 +1,7 @@
 extends Control
 
+var active
 var save : Save = load("res://resources/save.tres")
-
-@onready var shelf = $"BoxContainer/HSplitContainer/Egg Shelf"
 
 func _ready() -> void:
 	_load()
@@ -30,9 +29,9 @@ func _egg_generation():
 
 func _move_egg(egg: Egg):
 	# make sure it has space before adding
-	if shelf.has_space():
+	if $Shelf.has_space():
 		# movement and visibility updates
-		shelf.add_egg(egg)
+		$Shelf.add_egg(egg)
 		egg.change_visibility(false) # change original egg to invisible to show movement
 		# update save
 		$Nest1.save(save.nest1)
@@ -59,4 +58,17 @@ func _load():
 
 
 func _on_music_finished() -> void:
+	if active:
+		$Music.play()
+
+
+func _on_pause() -> void:
+	active = false
+	$Music.stop()
+	$"Mini Menu".visible = false
+
+
+func _on_play() -> void:
+	active = true
 	$Music.play()
+	$"Mini Menu".visible = true

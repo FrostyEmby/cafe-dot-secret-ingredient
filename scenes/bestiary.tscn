@@ -5,34 +5,44 @@
 [ext_resource type="Texture2D" uid="uid://hvokm05hwnwl" path="res://art/adult creatures/obsidian.png" id="2_oyl77"]
 [ext_resource type="Texture2D" uid="uid://clq10s4vdhy0c" path="res://art/adult creatures/page background4.png" id="3_aig2i"]
 [ext_resource type="Texture2D" uid="uid://chvqbwaulnv8y" path="res://art/icons/forward-small.png" id="4_j3mqr"]
+[ext_resource type="FontFile" uid="uid://bd5hly5xmortx" path="res://art/fonts/Handyman.ttf" id="5_3jqp3"]
 [ext_resource type="Texture2D" uid="uid://bwl5mas3bou8k" path="res://art/final props/FlipLeftspritesheet.png" id="6_aig2i"]
 [ext_resource type="Texture2D" uid="uid://cy87qvc5vucad" path="res://art/adult creatures/cool bat.png" id="6_eapyg"]
 [ext_resource type="Texture2D" uid="uid://bvxd7p23rhjsv" path="res://art/adult creatures/page background2.png" id="7_bfiq4"]
 [ext_resource type="Texture2D" uid="uid://cmjnxjp0dfr3a" path="res://art/icons/back-small-hover.png" id="9_eapyg"]
+[ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelf.tscn" id="10_g005f"]
 [ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="11_aig2i"]
 [ext_resource type="Texture2D" uid="uid://jsqxydg5pski" path="res://art/icons/forward-smal-hover.png" id="11_bfiq4"]
 [ext_resource type="Texture2D" uid="uid://blyiy4kc543nl" path="res://art/final props/FlipRightspritesheet.png" id="11_eapyg"]
 [ext_resource type="AudioStream" uid="uid://b7qejwtfkj86" path="res://sound/music/Scholar's knowledge.wav" id="13_7tv8b"]
 [ext_resource type="AudioStream" uid="uid://bsrsk2yub3n28" path="res://sound/sound effects/Flip 1.wav" id="13_bfiq4"]
 [ext_resource type="AudioStream" uid="uid://cvdiap1n6su4t" path="res://sound/sound effects/Flip 2.wav" id="14_viudg"]
+[ext_resource type="PackedScene" uid="uid://blp1nxq4lwa6q" path="res://scenes/clipboard.tscn" id="15_3jqp3"]
 [ext_resource type="AudioStream" uid="uid://dohxroyto5wee" path="res://sound/sound effects/Flip 3.wav" id="15_q1xbv"]
+[ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="15_vxfeb"]
 [ext_resource type="AudioStream" uid="uid://nuv064xgu4fm" path="res://sound/sound effects/Flip 4.wav" id="16_7tv8b"]
 [ext_resource type="AudioStream" uid="uid://cj17fetxh7y5g" path="res://sound/sound effects/Flip 5.wav" id="17_g005f"]
+[ext_resource type="PackedScene" uid="uid://1i1cxrtaukuq" path="res://scenes/pause.tscn" id="23_6v5mc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eq67u"]
-font_size = 30
+font = ExtResource("5_3jqp3")
+font_size = 40
 font_color = Color(0, 0, 0, 1)
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_8u4y0"]
-font_size = 22
+font = ExtResource("5_3jqp3")
+font_size = 20
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_36r6s"]
-font_size = 14
+font = ExtResource("5_3jqp3")
+font_size = 20
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_lqwxb"]
+font = ExtResource("5_3jqp3")
+font_size = 24
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_oyl77"]
@@ -144,7 +154,7 @@ color = Color(0.95686275, 0.95686275, 0.9490196, 1)
 
 [node name="ColorRect" type="ColorRect" parent="Left Page" unique_id=302703978]
 layout_mode = 0
-offset_left = 21.0
+offset_left = 9.0
 offset_top = 67.0
 offset_right = 511.0
 offset_bottom = 302.0
@@ -205,20 +215,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 32.0
-offset_top = 74.0
-offset_right = -394.0
-offset_bottom = -420.0
+offset_left = 15.0
+offset_top = 78.0
+offset_right = -391.0
+offset_bottom = -416.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Egg" type="TextureRect" parent="Left Page" unique_id=1164269968]
 layout_mode = 0
-offset_left = 47.0
-offset_top = 73.0
-offset_right = 111.0
-offset_bottom = 137.0
+offset_left = 40.0
+offset_top = 77.0
+offset_right = 104.0
+offset_bottom = 141.0
 
 [node name="ColorRect" type="ColorRect" parent="Left Page/Egg" unique_id=2139530339]
 visible = false
@@ -239,8 +249,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_right = -1.0
+offset_left = -24.0
+offset_right = 29.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Egg"
@@ -250,9 +260,9 @@ vertical_alignment = 1
 
 [node name="Incubator" type="TextureRect" parent="Left Page" unique_id=202192331]
 layout_mode = 0
-offset_left = 32.0
+offset_left = 31.0
 offset_top = 153.0
-offset_right = 96.0
+offset_right = 95.0
 offset_bottom = 217.0
 
 [node name="ColorRect" type="ColorRect" parent="Left Page/Incubator" unique_id=1224953660]
@@ -260,14 +270,16 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 32.0
+offset_left = -16.0
+offset_right = 37.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Label" type="Label" parent="Left Page/Incubator" unique_id=548442243]
 layout_mode = 0
-offset_right = 95.0
+offset_left = -16.0
+offset_right = 101.0
 offset_bottom = 64.0
 text = "Incubator"
 label_settings = SubResource("LabelSettings_36r6s")
@@ -277,26 +289,27 @@ autowrap_mode = 3
 
 [node name="Terrarium" type="TextureRect" parent="Left Page" unique_id=280430534]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 234.0
-offset_right = 96.0
-offset_bottom = 298.0
+offset_left = 31.0
+offset_top = 230.0
+offset_right = 95.0
+offset_bottom = 294.0
 
 [node name="ColorRect" type="ColorRect" parent="Left Page/Terrarium" unique_id=828518865]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 32.0
+offset_left = -16.0
+offset_right = 37.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Label" type="Label" parent="Left Page/Terrarium" unique_id=803460088]
 layout_mode = 0
-offset_left = 11.0
-offset_right = 81.0
-offset_bottom = 64.0
+offset_left = -16.0
+offset_right = 101.0
+offset_bottom = 65.0
 text = "Terrarium"
 label_settings = SubResource("LabelSettings_36r6s")
 horizontal_alignment = 1
@@ -305,10 +318,10 @@ autowrap_mode = 3
 
 [node name="ColorRect2" type="ColorRect" parent="Left Page" unique_id=2022201396]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 312.0
-offset_right = 139.0
-offset_bottom = 414.0
+offset_left = 9.0
+offset_top = 310.0
+offset_right = 127.0
+offset_bottom = 412.0
 color = Color(0.42352942, 0.42352942, 0.42352942, 1)
 
 [node name="Baby Background" type="ColorRect" parent="Left Page" unique_id=85251069]
@@ -316,20 +329,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 31.0
-offset_top = 316.5
-offset_right = -395.0
-offset_bottom = -148.5
+offset_left = 19.0
+offset_top = 314.5
+offset_right = -407.0
+offset_bottom = -150.5
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Baby Creature Picture" type="TextureRect" parent="Left Page" unique_id=1503847173]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 315.0
-offset_right = 129.0
-offset_bottom = 411.0
+offset_left = 20.0
+offset_top = 313.0
+offset_right = 117.0
+offset_bottom = 409.0
 
 [node name="ColorRect" type="ColorRect" parent="Left Page/Baby Creature Picture" unique_id=1303225923]
 visible = false
@@ -352,7 +365,7 @@ vertical_alignment = 1
 
 [node name="Dynamic Text" type="VBoxContainer" parent="Left Page" unique_id=1499167586]
 layout_mode = 0
-offset_left = 145.0
+offset_left = 147.0
 offset_top = 312.0
 offset_right = 511.0
 offset_bottom = 548.0
@@ -400,7 +413,7 @@ color = Color(0.95704955, 0.9566192, 0.9483895, 1)
 layout_mode = 0
 offset_left = 13.0
 offset_top = 67.0
-offset_right = 502.0
+offset_right = 516.0
 offset_bottom = 302.0
 color = Color(0.42365032, 0.42365074, 0.42365053, 1)
 
@@ -459,20 +472,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 395.0
-offset_top = 74.0
-offset_right = -31.0
-offset_bottom = -420.0
+offset_left = 392.0
+offset_top = 78.0
+offset_right = -14.0
+offset_bottom = -416.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Egg" type="TextureRect" parent="Right Page" unique_id=1888417929]
 layout_mode = 0
-offset_left = 411.0
-offset_top = 73.0
-offset_right = 475.0
-offset_bottom = 137.0
+offset_left = 415.0
+offset_top = 77.0
+offset_right = 479.0
+offset_bottom = 141.0
 
 [node name="ColorRect" type="ColorRect" parent="Right Page/Egg" unique_id=439788743]
 visible = false
@@ -481,7 +494,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -14.0
-offset_right = 18.0
+offset_right = -35.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
@@ -491,8 +504,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_right = 1.0
+offset_left = -23.0
+offset_right = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Egg"
@@ -502,9 +515,9 @@ vertical_alignment = 1
 
 [node name="Incubator" type="TextureRect" parent="Right Page" unique_id=1382865091]
 layout_mode = 0
-offset_left = 409.0
+offset_left = 406.0
 offset_top = 153.0
-offset_right = 473.0
+offset_right = 470.0
 offset_bottom = 217.0
 
 [node name="ColorRect" type="ColorRect" parent="Right Page/Incubator" unique_id=443575051]
@@ -513,7 +526,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -14.0
-offset_right = 18.0
+offset_right = 39.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
@@ -521,7 +534,7 @@ color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 [node name="Label" type="Label" parent="Right Page/Incubator" unique_id=1042702993]
 layout_mode = 0
 offset_left = -14.0
-offset_right = 83.0
+offset_right = 103.0
 offset_bottom = 64.0
 text = "Incubator"
 label_settings = SubResource("LabelSettings_36r6s")
@@ -531,10 +544,10 @@ autowrap_mode = 3
 
 [node name="Terrarium" type="TextureRect" parent="Right Page" unique_id=1288341371]
 layout_mode = 0
-offset_left = 409.0
-offset_top = 234.0
-offset_right = 473.0
-offset_bottom = 298.0
+offset_left = 406.0
+offset_top = 230.0
+offset_right = 470.0
+offset_bottom = 294.0
 
 [node name="ColorRect" type="ColorRect" parent="Right Page/Terrarium" unique_id=2020447516]
 layout_mode = 1
@@ -542,16 +555,16 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -14.0
-offset_right = 18.0
+offset_right = 39.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Label" type="Label" parent="Right Page/Terrarium" unique_id=1615999343]
 layout_mode = 0
-offset_left = -3.0
-offset_right = 67.0
-offset_bottom = 64.0
+offset_left = -15.0
+offset_right = 102.0
+offset_bottom = 65.0
 text = "Terrarium"
 label_settings = SubResource("LabelSettings_36r6s")
 horizontal_alignment = 1
@@ -560,10 +573,10 @@ autowrap_mode = 3
 
 [node name="ColorRect2" type="ColorRect" parent="Right Page" unique_id=660039503]
 layout_mode = 0
-offset_left = 385.0
-offset_top = 311.0
-offset_right = 502.0
-offset_bottom = 413.0
+offset_left = 399.0
+offset_top = 312.0
+offset_right = 516.0
+offset_bottom = 414.0
 color = Color(0.42352942, 0.42352942, 0.42352942, 1)
 
 [node name="Baby Background" type="ColorRect" parent="Right Page" unique_id=1985048150]
@@ -571,20 +584,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 394.0
-offset_top = 315.0
-offset_right = -32.0
-offset_bottom = -150.0
+offset_left = 408.0
+offset_top = 316.0
+offset_right = -18.0
+offset_bottom = -149.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.9019608, 0.88235295, 0.8392157, 1)
 
 [node name="Baby Creature Picture Area" type="TextureRect" parent="Right Page" unique_id=413379870]
 layout_mode = 0
-offset_left = 397.0
-offset_top = 314.0
-offset_right = 493.0
-offset_bottom = 410.0
+offset_left = 411.0
+offset_top = 315.0
+offset_right = 507.0
+offset_bottom = 411.0
 
 [node name="ColorRect" type="ColorRect" parent="Right Page/Baby Creature Picture Area" unique_id=797737943]
 visible = false
@@ -599,6 +612,7 @@ color = Color(0.90018153, 0.8804225, 0.8409129, 1)
 
 [node name="Label" type="Label" parent="Right Page/Baby Creature Picture Area" unique_id=170807443]
 layout_mode = 0
+offset_left = -5.0
 offset_right = 96.0
 offset_bottom = 96.0
 text = "Baby"
@@ -610,7 +624,7 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 17.0
 offset_top = 311.0
-offset_right = 380.0
+offset_right = 383.0
 offset_bottom = 548.0
 
 [node name="Description" type="Label" parent="Right Page/Dynamic Text" unique_id=898753575]
@@ -629,6 +643,11 @@ offset_bottom = 40.0
 texture_normal = ExtResource("4_j3mqr")
 texture_hover = ExtResource("11_bfiq4")
 
+[node name="Shelf" parent="." unique_id=928893465 instance=ExtResource("10_g005f")]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 202.0
+
 [node name="FlipLeft" type="AnimatedSprite2D" parent="." unique_id=2141954442]
 visible = false
 position = Vector2(575, 319)
@@ -642,8 +661,15 @@ frame_progress = 0.5150689
 
 [node name="Mini Menu" parent="." unique_id=1700139890 instance=ExtResource("11_aig2i")]
 layout_mode = 0
-offset_left = 802.0
+offset_left = 852.0
 offset_right = 1152.0
+
+[node name="Clipboard" parent="." unique_id=2119543535 instance=ExtResource("15_3jqp3")]
+layout_mode = 0
+offset_left = 1133.0
+offset_top = 146.0
+offset_right = 1403.0
+offset_bottom = 508.0
 
 [node name="Egg-Gen" type="Timer" parent="." unique_id=1303647709]
 wait_time = 10.0
@@ -675,6 +701,12 @@ bus = &"SFX"
 stream = ExtResource("17_g005f")
 bus = &"SFX"
 
+[node name="Pause" parent="." unique_id=186506773 instance=ExtResource("23_6v5mc")]
+visible = false
+layout_mode = 0
+
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("15_vxfeb")]
+
 [connection signal="pressed" from="Left Page/Prev Page" to="." method="_on_prev_page_pressed"]
 [connection signal="pressed" from="Right Page/Next Page" to="." method="_on_next_page_pressed"]
 [connection signal="animation_finished" from="FlipLeft" to="." method="_on_flip_left_animation_finished"]
@@ -683,3 +715,5 @@ bus = &"SFX"
 [connection signal="frame_changed" from="FlipRight" to="." method="_on_flip_right_frame_changed"]
 [connection signal="timeout" from="Egg-Gen" to="." method="_on_egg_gen_timeout"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="pause" from="Pause" to="." method="_on_pause"]
+[connection signal="play" from="Pause" to="." method="_on_play"]

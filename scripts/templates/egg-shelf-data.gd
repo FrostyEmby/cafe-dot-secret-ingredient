@@ -1,6 +1,8 @@
 extends Resource
 class_name EggShelfData
 
+@export var open : bool = true
+
 @export var egg1 : EggData = EggData.new()
 @export var egg2 : EggData = EggData.new()
 @export var egg3 : EggData = EggData.new()

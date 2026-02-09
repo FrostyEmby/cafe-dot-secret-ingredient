@@ -1,19 +1,29 @@
 [gd_scene format=3 uid="uid://cpbueqxv0uum2"]
 
-[ext_resource type="Script" uid="uid://bval0fmdjaet" path="res://scripts/settings.gd" id="1_guxo1"]
-[ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://resources/theme.tres" id="2_8jirf"]
-[ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="5_elto6"]
-[ext_resource type="AudioStream" uid="uid://cpke8gi8uop4d" path="res://sound/music/Hang on.wav" id="6_oyjg8"]
-[ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="7_5hdta"]
+[ext_resource type="Script" uid="uid://bval0fmdjaet" path="res://scripts/settings.gd" id="1_1pcco"]
+[ext_resource type="Theme" uid="uid://4vrmlk1raavy" path="res://resources/theme.tres" id="2_c67ho"]
+[ext_resource type="FontFile" uid="uid://bd5hly5xmortx" path="res://art/fonts/Handyman.ttf" id="2_tiumm"]
+[ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="3_tiumm"]
+[ext_resource type="Texture2D" uid="uid://dubt5x0ntj1od" path="res://art/icons/back.png" id="5_4hre1"]
+[ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="5_enrh5"]
+[ext_resource type="Texture2D" uid="uid://cxmrv37y2a45a" path="res://art/icons/back-hover.png" id="6_enrh5"]
+[ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="8_4hre1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_36l1p"]
-font_size = 50
+font = ExtResource("2_tiumm")
+font_size = 80
 
 [sub_resource type="LabelSettings" id="LabelSettings_5p8wc"]
-font_size = 22
+font = ExtResource("2_tiumm")
+font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_r6d6q"]
-font_size = 22
+font = ExtResource("2_tiumm")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_ot4o6"]
+font = ExtResource("2_tiumm")
+font_size = 30
 
 [node name="Settings" type="Control" unique_id=1683627982]
 layout_mode = 3
@@ -22,7 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_guxo1")
+script = ExtResource("1_1pcco")
 
 [node name="Panel" type="Panel" parent="." unique_id=1845335310]
 layout_mode = 0
@@ -55,7 +65,7 @@ theme_override_constants/margin_bottom = 100
 
 [node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer" unique_id=21319293]
 layout_mode = 2
-theme = ExtResource("2_8jirf")
+theme = ExtResource("2_c67ho")
 columns = 2
 
 [node name="Music" type="Label" parent="PanelContainer/MarginContainer/GridContainer" unique_id=977994120]
@@ -90,17 +100,49 @@ layout_mode = 2
 [node name="Space2" type="Label" parent="PanelContainer/MarginContainer/GridContainer" unique_id=1382285762]
 layout_mode = 2
 
-[node name="Mini Menu" parent="." unique_id=692852118 instance=ExtResource("5_elto6")]
+[node name="Display" type="Label" parent="PanelContainer/MarginContainer/GridContainer" unique_id=1032717235]
+layout_mode = 2
+text = "Display"
+label_settings = SubResource("LabelSettings_ot4o6")
+horizontal_alignment = 1
+
+[node name="Display Options" type="OptionButton" parent="PanelContainer/MarginContainer/GridContainer" unique_id=476677365]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_tiumm")
+theme_override_font_sizes/font_size = 30
+alignment = 1
+selected = 0
+item_count = 2
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Full Screen"
+popup/item_1/id = 1
+
+[node name="Mini Menu" parent="." unique_id=692852118 instance=ExtResource("3_tiumm")]
+visible = false
 layout_mode = 0
-offset_left = 802.0
+offset_left = 852.0
 offset_right = 1152.0
 
-[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1825309183]
-stream = ExtResource("6_oyjg8")
-autoplay = true
+[node name="Back Menu" type="TextureButton" parent="." unique_id=1926846984]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 572.0
+offset_right = 80.0
+offset_bottom = 636.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_c67ho")
+action_mode = 0
+texture_normal = ExtResource("5_4hre1")
+texture_hover = ExtResource("6_enrh5")
 
-[node name="Egg-Gen" parent="." unique_id=565685724 instance=ExtResource("7_5hdta")]
+[node name="Egg-Gen" parent="." unique_id=565685724 instance=ExtResource("5_enrh5")]
+
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("8_4hre1")]
 
 [connection signal="value_changed" from="PanelContainer/MarginContainer/GridContainer/Music Volume" to="." method="_on_master_volume_value_changed"]
 [connection signal="value_changed" from="PanelContainer/MarginContainer/GridContainer/Sound Volume" to="." method="_on_sound_volume_value_changed"]
-[connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="item_selected" from="PanelContainer/MarginContainer/GridContainer/Display Options" to="." method="_on_display_options_item_selected"]
+[connection signal="pressed" from="Back Menu" to="." method="_on_back_menu_pressed"]

@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cifj5iv2if7d4"]
+
+[ext_resource type="Script" uid="uid://pklua34rgsp2" path="res://scripts/hand.gd" id="2_k7pjy"]
+[ext_resource type="Texture2D" uid="uid://b5wrlpkov5500" path="res://art/icons/handopenLINE.png" id="2_kdemd"]
+[ext_resource type="AudioStream" uid="uid://b1f28fc7xbff5" path="res://sound/sound effects/Place.wav" id="3_k7pjy"]
+[ext_resource type="Texture2D" uid="uid://d1yayfl2ftljv" path="res://art/icons/handclosedLINE.png" id="3_n04oe"]
+[ext_resource type="AudioStream" uid="uid://dbn5ho0rcp2on" path="res://sound/sound effects/Take.wav" id="4_m1v21"]
+[ext_resource type="FontFile" uid="uid://bd5hly5xmortx" path="res://art/fonts/Handyman.ttf" id="6_n04oe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yinqy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kdemd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n04oe")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yinqy"]
+font = ExtResource("6_n04oe")
+font_size = 24
+
+[node name="Hand" type="Sprite2D" unique_id=612491534]
+script = ExtResource("2_k7pjy")
+
+[node name="Grip" type="AnimatedSprite2D" parent="." unique_id=1504781912]
+sprite_frames = SubResource("SpriteFrames_yinqy")
+
+[node name="Place" type="AudioStreamPlayer" parent="." unique_id=1726260940]
+stream = ExtResource("3_k7pjy")
+bus = &"SFX"
+
+[node name="Take" type="AudioStreamPlayer" parent="." unique_id=415113799]
+stream = ExtResource("4_m1v21")
+
+[node name="Removal" type="Timer" parent="." unique_id=1280027305]
+wait_time = 0.1
+one_shot = true
+
+[node name="Ungrip" type="Timer" parent="." unique_id=54913448]
+wait_time = 0.1
+
+[node name="Tip" type="Label" parent="." unique_id=1031337569]
+offset_left = -68.0
+offset_top = -46.0
+offset_right = 67.0
+offset_bottom = -23.0
+label_settings = SubResource("LabelSettings_yinqy")
+horizontal_alignment = 1
+autowrap_mode = 3

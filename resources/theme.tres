@@ -1,10 +1,13 @@
 [gd_resource type="Theme" format=3 uid="uid://4vrmlk1raavy"]
 
+[ext_resource type="FontFile" uid="uid://bd5hly5xmortx" path="res://art/fonts/Handyman.ttf" id="1_d4nwg"]
+
 [resource]
 Button/colors/font_hover_color = Color(0.8754563, 0.8754566, 0.87545687, 1)
 Button/colors/font_pressed_color = Color(0.4448433, 0.44484326, 0.4448435, 1)
 Button/colors/icon_pressed_color = Color(0.21050721, 0.21050721, 0.21050721, 1)
-Button/font_sizes/font_size = 16
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_d4nwg")
 GridContainer/constants/h_separation = 30
 GridContainer/constants/v_separation = 20
 TabContainer/font_sizes/font_size = 30

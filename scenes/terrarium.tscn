@@ -18,15 +18,15 @@
 [ext_resource type="Texture2D" uid="uid://dqr2h3xlcovdu" path="res://art/icons/bestiary_hover.png" id="11_pf7wg"]
 [ext_resource type="Texture2D" uid="uid://dvejl3bs6w23" path="res://art/icons/gear-big.png" id="12_mxrpn"]
 [ext_resource type="Texture2D" uid="uid://dbydrte2rg8sm" path="res://art/icons/gear-big-hover.png" id="13_skqsh"]
-[ext_resource type="Texture2D" uid="uid://bunldmv1vprgp" path="res://art/icons/shelf_dragger.png" id="17_kstpm"]
 [ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelf.tscn" id="18_vusgt"]
+[ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="20_skqsh"]
+[ext_resource type="PackedScene" uid="uid://blp1nxq4lwa6q" path="res://scenes/clipboard.tscn" id="20_w5ypi"]
 [ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="22_skqsh"]
 [ext_resource type="AudioStream" uid="uid://cx4rxdjh3xffy" path="res://sound/music/Terrarium.wav" id="22_w5ypi"]
+[ext_resource type="PackedScene" uid="uid://1i1cxrtaukuq" path="res://scenes/pause.tscn" id="24_6104g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pf7wg"]
 bg_color = Color(0.09048235, 0.09048236, 0.0904823, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pf7wg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xb13y"]
 
@@ -54,55 +54,34 @@ offset_right = 1155.0
 offset_bottom = 650.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_pf7wg")
 
-[node name="BoxContainer" type="BoxContainer" parent="." unique_id=1610696942]
-layout_mode = 0
-offset_left = -176.0
-offset_right = 195.0
-offset_bottom = 648.0
-
-[node name="HSplitContainer" type="HSplitContainer" parent="BoxContainer" unique_id=1199140940]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_icons/touch_dragger = ExtResource("17_kstpm")
-theme_override_styles/split_bar_background = SubResource("StyleBoxEmpty_pf7wg")
-split_offsets = PackedInt32Array(200)
-dragger_visibility = 1
-touch_dragger_enabled = true
-drag_area_margin_begin = -80
-drag_area_offset = -18
-split_offset = 200
-
-[node name="Egg Shelf" parent="BoxContainer/HSplitContainer" unique_id=1301336741 instance=ExtResource("18_vusgt")]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HSplitContainer" unique_id=718509494]
-custom_minimum_size = Vector2(1, 0)
-layout_mode = 2
-
 [node name="terrarium background" type="TextureRect" parent="." unique_id=1296228269]
 layout_mode = 0
-offset_left = 234.0
+offset_left = 136.0
 offset_top = 95.0
-offset_right = 1153.0
+offset_right = 1055.0
 offset_bottom = 612.0
 texture = ExtResource("4_skqsh")
 expand_mode = 1
 
 [node name="terrarium foreground" type="TextureRect" parent="." unique_id=1273484905]
 layout_mode = 0
-offset_left = 234.0
+offset_left = 136.0
 offset_top = 95.0
-offset_right = 1153.0
+offset_right = 1055.0
 offset_bottom = 611.0
 texture = ExtResource("5_w5ypi")
 expand_mode = 1
 
+[node name="Shelf" parent="." unique_id=1301336741 instance=ExtResource("18_vusgt")]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 202.0
+
 [node name="Snow" type="Button" parent="." unique_id=895167394]
 layout_mode = 0
-offset_left = 322.0
+offset_left = 224.0
 offset_top = 99.0
-offset_right = 564.0
+offset_right = 466.0
 offset_bottom = 345.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
@@ -143,9 +122,9 @@ icon = ExtResource("4_1wf2t")
 
 [node name="Grass" type="Button" parent="." unique_id=2040749147]
 layout_mode = 0
-offset_left = 576.0
+offset_left = 478.0
 offset_top = 102.0
-offset_right = 815.0
+offset_right = 717.0
 offset_bottom = 346.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
@@ -186,9 +165,9 @@ icon = ExtResource("4_1wf2t")
 
 [node name="Sand" type="Button" parent="." unique_id=1535855769]
 layout_mode = 0
-offset_left = 819.0
+offset_left = 721.0
 offset_top = 102.0
-offset_right = 1073.0
+offset_right = 975.0
 offset_bottom = 352.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
@@ -229,9 +208,9 @@ icon = ExtResource("4_1wf2t")
 
 [node name="Aqua" type="Button" parent="." unique_id=121066612]
 layout_mode = 0
-offset_left = 315.0
+offset_left = 217.0
 offset_top = 355.0
-offset_right = 570.0
+offset_right = 472.0
 offset_bottom = 601.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
@@ -272,9 +251,9 @@ icon = ExtResource("4_1wf2t")
 
 [node name="Jungle" type="Button" parent="." unique_id=167394062]
 layout_mode = 0
-offset_left = 570.0
+offset_left = 472.0
 offset_top = 352.0
-offset_right = 819.0
+offset_right = 721.0
 offset_bottom = 601.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
@@ -315,9 +294,9 @@ icon = ExtResource("4_1wf2t")
 
 [node name="Lava" type="Button" parent="." unique_id=2011747192]
 layout_mode = 0
-offset_left = 819.0
+offset_left = 721.0
 offset_top = 351.0
-offset_right = 1074.0
+offset_right = 976.0
 offset_bottom = 603.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xb13y")
 theme_override_styles/focus = SubResource("StyleBoxLine_xb13y")
@@ -358,7 +337,7 @@ icon = ExtResource("4_1wf2t")
 
 [node name="Mini Menu" parent="." unique_id=165855058 instance=ExtResource("4_nrwuv")]
 layout_mode = 0
-offset_left = 802.0
+offset_left = 852.0
 offset_right = 1152.0
 
 [node name="Vertical Mini Menu" type="Panel" parent="." unique_id=808452654]
@@ -423,13 +402,26 @@ texture_normal = ExtResource("12_mxrpn")
 texture_pressed = ExtResource("13_skqsh")
 texture_hover = ExtResource("13_skqsh")
 
+[node name="Clipboard" parent="." unique_id=2119543535 instance=ExtResource("20_w5ypi")]
+layout_mode = 0
+offset_left = 1137.0
+offset_top = 144.0
+offset_right = 1407.0
+offset_bottom = 506.0
+
 [node name="Egg-Gen" parent="." unique_id=240887351 instance=ExtResource("22_skqsh")]
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1688681329]
 stream = ExtResource("22_w5ypi")
 autoplay = true
 
-[connection signal="selection" from="BoxContainer/HSplitContainer/Egg Shelf" to="." method="_on_egg_shelf_selection"]
+[node name="Pause" parent="." unique_id=186506773 instance=ExtResource("24_6104g")]
+visible = false
+layout_mode = 0
+
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("20_skqsh")]
+
+[connection signal="selection" from="Shelf" to="." method="_on_egg_shelf_selection"]
 [connection signal="selection" from="Snow" to="." method="_on_snow_selection"]
 [connection signal="selection" from="Grass" to="." method="_on_grass_selection"]
 [connection signal="selection" from="Sand" to="." method="_on_sand_selection"]
@@ -442,3 +434,5 @@ autoplay = true
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Bestiary" to="Vertical Mini Menu" method="_on_bestiary_pressed"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Settings" to="Vertical Mini Menu" method="_on_settings_pressed"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="pause" from="Pause" to="." method="_on_pause"]
+[connection signal="play" from="Pause" to="." method="_on_play"]

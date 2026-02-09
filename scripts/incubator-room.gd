@@ -1,18 +1,17 @@
 extends Control
 
+var active = true
 var egg_selected : bool = false
 var egg_match : Egg
 var hatchery_match : Hatchery
 var save : Save = load("res://resources/save.tres")
-
-@onready var shelf = $"BoxContainer/HSplitContainer/Egg Shelf"
 
 # matches egg and hatchery
 func _match():
 	# if hatchery has space, then proceed with matching
 	if hatchery_match.has_space():
 		# turn off the button and visibility to make egg disappear
-		shelf.remove_egg(egg_match)
+		$Shelf.remove_egg(egg_match)
 		
 		# use egg button data to add that variety to the hatchery
 		hatchery_match.add_egg(egg_match)
@@ -20,13 +19,19 @@ func _match():
 		# turn off again once match is found
 		egg_selected = false
 		
-		$Place.play()
+		# remove dragged egg
+		$Hand.release()
 	else:
 		print("no space, match cancelled")
 
+
 func _on_egg_selection(egg: Egg) -> void:
-	egg_match = egg
-	egg_selected = true
+	if not egg.info.hatched: # make sure baby creatures are not selected
+		egg_match = egg
+		egg_selected = true
+		egg.change_visibility(false)
+		#egg.visible = false
+		$Hand.hold(egg)
 
 
 # selection only goes one way, because egg -> hatchery 
@@ -42,4 +47,19 @@ func _on_egg_gen_timeout() -> void:
 
 
 func _on_music_finished() -> void:
+	if active:
+		$Music.play()
+
+
+func _on_pause() -> void:
+	active = false
+	$Incubators.active = false
+	$Music.stop()
+	$"Mini Menu".visible = false
+
+
+func _on_play() -> void:
+	active = true
+	$Incubators.active = true
 	$Music.play()
+	$"Mini Menu".visible = true

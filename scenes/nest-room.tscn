@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://g28updgkaqym"]
+
+[ext_resource type="Script" uid="uid://6seakwoxk527" path="res://scripts/egg-collection.gd" id="1_27ugg"]
+[ext_resource type="Texture2D" uid="uid://b5bkddainp227" path="res://art/props/Nest Background.png" id="2_q3q7q"]
+[ext_resource type="PackedScene" uid="uid://bi7vr8n2y7b5" path="res://scenes/egg_shelf.tscn" id="3_fkcig"]
+[ext_resource type="PackedScene" uid="uid://djtd6vihyb4ph" path="res://scenes/nest.tscn" id="4_f4x54"]
+[ext_resource type="Texture2D" uid="uid://dskie2krx7h0o" path="res://art/props/nest2.png" id="5_icsml"]
+[ext_resource type="Texture2D" uid="uid://doyl7ideois6k" path="res://art/props/nestback.png" id="6_0iy0e"]
+[ext_resource type="PackedScene" uid="uid://b085dkuk7uq8r" path="res://scenes/mini_menu.tscn" id="7_jva8j"]
+[ext_resource type="AudioStream" uid="uid://8xdg0l274c1w" path="res://sound/music/Take an egg.wav" id="8_t5fqd"]
+[ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="9_q3q7q"]
+[ext_resource type="PackedScene" uid="uid://blp1nxq4lwa6q" path="res://scenes/clipboard.tscn" id="10_fkcig"]
+[ext_resource type="PackedScene" uid="uid://1i1cxrtaukuq" path="res://scenes/pause.tscn" id="11_f4x54"]
+
+[node name="Nest Room" type="Control" unique_id=1279119683]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_27ugg")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=269439839]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_q3q7q")
+
+[node name="Shelf" parent="." unique_id=729667400 instance=ExtResource("3_fkcig")]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 202.0
+
+[node name="Nest1" parent="." unique_id=1642692670 instance=ExtResource("4_f4x54")]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 262.0
+offset_right = 560.0
+offset_bottom = 518.0
+
+[node name="Nest2" parent="." unique_id=615388703 instance=ExtResource("4_f4x54")]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 359.0
+offset_right = 849.0
+offset_bottom = 615.0
+texture = ExtResource("5_icsml")
+
+[node name="Nest3" parent="." unique_id=1337618919 instance=ExtResource("4_f4x54")]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 107.0
+offset_right = 806.0
+offset_bottom = 363.0
+texture = ExtResource("6_0iy0e")
+
+[node name="Mini Menu" parent="." unique_id=2131272578 instance=ExtResource("7_jva8j")]
+layout_mode = 0
+offset_left = 852.0
+offset_right = 1152.0
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=359384145]
+stream = ExtResource("8_t5fqd")
+autoplay = true
+
+[node name="Clipboard" parent="." unique_id=2119543535 instance=ExtResource("10_fkcig")]
+layout_mode = 0
+offset_left = 1133.0
+offset_top = 136.0
+offset_right = 1403.0
+offset_bottom = 498.0
+
+[node name="Pause" parent="." unique_id=186506773 instance=ExtResource("11_f4x54")]
+visible = false
+layout_mode = 0
+
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("9_q3q7q")]
+
+[connection signal="selection" from="Nest1" to="." method="_on_nest_selection"]
+[connection signal="selection" from="Nest2" to="." method="_on_nest_2_selection"]
+[connection signal="selection" from="Nest3" to="." method="_on_nest_3_selection"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="pause" from="Pause" to="." method="_on_pause"]
+[connection signal="play" from="Pause" to="." method="_on_play"]

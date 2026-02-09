@@ -6,13 +6,18 @@ signal death(egg : Egg)
 signal birth
 signal corpse
 
+var hatch_pause : bool = false
+var age_pause : bool = false
+
+var save = load("res://resources/save.tres")
+
 @export var info : EggData = EggData.new()
 @onready var hatch_timer : Timer = $Hatch
 @onready var age_timer : Timer = $Age
 
 func _set_appearance():
 	if info.dead:
-		_dead()
+		_dead(false)
 	elif info.adult:
 		_mature()
 	elif info.hatched:
@@ -24,7 +29,12 @@ func _set_appearance():
 func change_visibility(visibility : bool):
 	visible = visibility
 	info.visibility = visibility
+	_save()
 
+
+func enable(enabling : bool):
+	info.enabled = enabling
+	_save()
 
 func reset():
 	print("back to defaults")
@@ -41,8 +51,9 @@ func reset():
 	
 	_set_appearance()
 	change_visibility(false)
+	_save()
 
-
+# for creating new eggs at nest area
 func new(creature : CreatureStats):
 	print("new egg!")
 	
@@ -57,6 +68,7 @@ func new(creature : CreatureStats):
 	
 	_set_appearance()
 	change_visibility(true)
+	_save()
 
 
 func setup(id : EggData):
@@ -81,7 +93,7 @@ func setup(id : EggData):
 
 
 func _ready():
-	setup(info)
+	_load()
 
 
 func _pressed() -> void:
@@ -116,13 +128,14 @@ func grow_up():
 	$Indicator.visible = true
 	info.maturing = true
 
+
 # Which will it be? Hope your placement was right!
 func _hatch_or_death():
 	change_visibility(true)
 	
 	if info.placement != info.species.incubator:
 		print("PLACEMENT IS ", info.placement, " AND SHOULD BE ", info.species.incubator)
-		_dead()
+		_dead(true)
 	else:
 		_hatch()
 
@@ -130,7 +143,7 @@ func _hatch_or_death():
 func _survive_or_die():
 	if info.space != info.species.terrarium:
 		print("TERRARIUM IS ", info.space, " AND SHOULD BE ", info.species.terrarium)
-		_dead()
+		_dead(true)
 	else:
 		_mature()
 
@@ -149,6 +162,8 @@ func _hatch(sound : bool = true):
 	# this updates the bestiary with new data from the hatch
 	info.species.previously_hatched = true
 	
+	_save()
+	
 	if sound:
 		$Good.play()
 
@@ -161,11 +176,13 @@ func _mature():
 	$Indicator.visible = false
 	icon = load("res://art/egg mimic/check.png")
 	
+	_save()
+	
 	# this updates the bestiary with new data from the growth
 	info.species.previously_grown = true
 
 
-func _dead():
+func _dead(sound : bool):
 	print("hatched... but unfortunately dead")
 	
 	corpse.emit()
@@ -178,17 +195,22 @@ func _dead():
 	$Indicator.visible = false
 	icon = load("res://art/eggs/corpse.png")
 	
-	$Bad.play()
+	_save()
+	
+	if sound:
+		$Bad.play()
 
 
 func _process(_delta: float) -> void:
-	if info.incubating and hatch_timer.paused:
+	if info.incubating and hatch_timer.paused and not hatch_pause:
 		incubate() 
 	
-	if info.hatch_time <= 0 and not info.hatched:
+	if info.hatch_time <= 0 and not info.hatched and not hatch_pause:
+		#incubate()
 		_hatch_or_death()
 		
-	if info.aging_time <= 0 and not info.adult:
+	if info.aging_time <= 0 and not info.adult and not age_pause:
+		#grow_up()
 		_survive_or_die()
 	
 	# update indicator timer when incubating
@@ -219,3 +241,44 @@ func _on_age_timeout() -> void:
 func _on_age_tree_entered() -> void:
 	if info.hatched and not info.maturing and info.space != info.species.habitat.NONE:
 		grow_up()
+
+
+# when starting pause screen
+func pause():
+	if not $Hatch.paused:
+		hatch_pause = true
+		$Hatch.paused = true
+	elif not $Age.paused:
+		age_pause = true
+		$Age.paused = true
+
+
+# when continuing from pause screen
+func play():
+	if hatch_pause:
+		hatch_pause = false
+		$Hatch.paused = false
+	elif age_pause:
+		age_pause = false
+		$Age.paused = false
+
+
+# find the save parent of creature
+func _find_parent():
+	var parent = get_parent()
+	
+	# find parent
+	while not parent.name.to_lower() in save:
+		parent = parent.get_parent()
+	
+	return parent
+
+
+func _save():
+	save[_find_parent().name.to_lower()][self.name.to_lower()] = self.info
+
+
+func _load():
+	self.info = save[_find_parent().name.to_lower()][self.name.to_lower()]
+	change_visibility(info.visibility)
+	_set_appearance()

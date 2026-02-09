@@ -1,5 +1,6 @@
 extends Panel
 
+# TODO: Move settings somewhere else
 
 func _on_home_pressed() -> void:
 	print("switch to gathering")

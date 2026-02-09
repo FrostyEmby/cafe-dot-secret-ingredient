@@ -5,115 +5,101 @@
 [ext_resource type="PackedScene" uid="uid://ctuxvuxm5oh0r" path="res://scenes/egg.tscn" id="3_528ig"]
 [ext_resource type="AudioStream" uid="uid://dbn5ho0rcp2on" path="res://sound/sound effects/Take.wav" id="4_6hw1h"]
 
-[node name="Egg Shelf" type="MarginContainer" unique_id=928893465]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6hw1h"]
+
+[node name="Shelf" type="MarginContainer" unique_id=928893465]
 custom_minimum_size = Vector2(200, 0)
+offset_left = -176.0
+offset_right = 26.0
+offset_bottom = 650.0
 script = ExtResource("1_qpkqp")
 
-[node name="Organizer" type="Control" parent="." unique_id=115055116]
-custom_minimum_size = Vector2(200, 648)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 3
-
-[node name="TextureRect" type="TextureRect" parent="Organizer" unique_id=1376816092]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1376816092]
 texture_filter = 1
-layout_mode = 0
-offset_top = 44.0
-offset_right = 200.0
-offset_bottom = 604.0
+layout_mode = 2
 texture = ExtResource("2_528ig")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Organizer" unique_id=468708798]
-custom_minimum_size = Vector2(0, 540)
-layout_direction = 3
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Organizer/ScrollContainer" unique_id=1722568487]
-layout_direction = 1
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="Grid" type="GridContainer" parent="Organizer/ScrollContainer/MarginContainer" unique_id=1773525785]
+[node name="Grid" type="GridContainer" parent="." unique_id=1773525785]
 custom_minimum_size = Vector2(0, 560)
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
 columns = 2
 
-[node name="Egg1" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=1069734456 instance=ExtResource("3_528ig")]
+[node name="Egg1" parent="Grid" unique_id=1069734456 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg2" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=1083302937 instance=ExtResource("3_528ig")]
+[node name="Egg2" parent="Grid" unique_id=1083302937 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg3" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=195140966 instance=ExtResource("3_528ig")]
+[node name="Egg3" parent="Grid" unique_id=195140966 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg4" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=1215186777 instance=ExtResource("3_528ig")]
+[node name="Egg4" parent="Grid" unique_id=1215186777 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg5" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=693408020 instance=ExtResource("3_528ig")]
+[node name="Egg5" parent="Grid" unique_id=693408020 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg6" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=1119236019 instance=ExtResource("3_528ig")]
+[node name="Egg6" parent="Grid" unique_id=1119236019 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg7" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=412392876 instance=ExtResource("3_528ig")]
+[node name="Egg7" parent="Grid" unique_id=412392876 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg8" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=1487164305 instance=ExtResource("3_528ig")]
+[node name="Egg8" parent="Grid" unique_id=1487164305 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg9" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=673680585 instance=ExtResource("3_528ig")]
+[node name="Egg9" parent="Grid" unique_id=673680585 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg10" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=504134479 instance=ExtResource("3_528ig")]
+[node name="Egg10" parent="Grid" unique_id=504134479 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg11" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=525278317 instance=ExtResource("3_528ig")]
+[node name="Egg11" parent="Grid" unique_id=525278317 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg12" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=240115002 instance=ExtResource("3_528ig")]
+[node name="Egg12" parent="Grid" unique_id=240115002 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg13" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=1856930331 instance=ExtResource("3_528ig")]
+[node name="Egg13" parent="Grid" unique_id=1856930331 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg14" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=1878071540 instance=ExtResource("3_528ig")]
+[node name="Egg14" parent="Grid" unique_id=1878071540 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg15" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=2089711217 instance=ExtResource("3_528ig")]
+[node name="Egg15" parent="Grid" unique_id=2089711217 instance=ExtResource("3_528ig")]
 layout_mode = 2
 
-[node name="Egg16" parent="Organizer/ScrollContainer/MarginContainer/Grid" unique_id=1606296672 instance=ExtResource("3_528ig")]
+[node name="Egg16" parent="Grid" unique_id=1606296672 instance=ExtResource("3_528ig")]
 layout_mode = 2
+
+[node name="Move" type="Button" parent="." unique_id=1968111550]
+custom_minimum_size = Vector2(25, 240)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6hw1h")
 
 [node name="Take" type="AudioStreamPlayer" parent="." unique_id=1011185048]
 stream = ExtResource("4_6hw1h")
 
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg1" to="." method="_on_egg_1_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg2" to="." method="_on_egg_2_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg3" to="." method="_on_egg_3_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg4" to="." method="_on_egg_4_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg5" to="." method="_on_egg_5_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg6" to="." method="_on_egg_6_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg7" to="." method="_on_egg_7_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg8" to="." method="_on_egg_8_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg9" to="." method="_on_egg_9_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg10" to="." method="_on_egg_10_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg11" to="." method="_on_egg_11_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg12" to="." method="_on_egg_12_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg13" to="." method="_on_egg_13_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg14" to="." method="_on_egg_14_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg15" to="." method="_on_egg_15_selection"]
-[connection signal="selection" from="Organizer/ScrollContainer/MarginContainer/Grid/Egg16" to="." method="_on_egg_16_selection"]
+[connection signal="selection" from="Grid/Egg1" to="." method="_on_egg_1_selection"]
+[connection signal="selection" from="Grid/Egg2" to="." method="_on_egg_2_selection"]
+[connection signal="selection" from="Grid/Egg3" to="." method="_on_egg_3_selection"]
+[connection signal="selection" from="Grid/Egg4" to="." method="_on_egg_4_selection"]
+[connection signal="selection" from="Grid/Egg5" to="." method="_on_egg_5_selection"]
+[connection signal="selection" from="Grid/Egg6" to="." method="_on_egg_6_selection"]
+[connection signal="selection" from="Grid/Egg7" to="." method="_on_egg_7_selection"]
+[connection signal="selection" from="Grid/Egg8" to="." method="_on_egg_8_selection"]
+[connection signal="selection" from="Grid/Egg9" to="." method="_on_egg_9_selection"]
+[connection signal="selection" from="Grid/Egg10" to="." method="_on_egg_10_selection"]
+[connection signal="selection" from="Grid/Egg11" to="." method="_on_egg_11_selection"]
+[connection signal="selection" from="Grid/Egg12" to="." method="_on_egg_12_selection"]
+[connection signal="selection" from="Grid/Egg13" to="." method="_on_egg_13_selection"]
+[connection signal="selection" from="Grid/Egg14" to="." method="_on_egg_14_selection"]
+[connection signal="selection" from="Grid/Egg15" to="." method="_on_egg_15_selection"]
+[connection signal="selection" from="Grid/Egg16" to="." method="_on_egg_16_selection"]
+[connection signal="pressed" from="Move" to="." method="move"]

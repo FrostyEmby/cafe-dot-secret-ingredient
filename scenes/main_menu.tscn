@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cgn6g6ykgffnx" path="res://art/icons/gear.png" id="4_oa1go"]
 [ext_resource type="Texture2D" uid="uid://b6mh3wjq2rely" path="res://art/icons/who.png" id="5_oa1go"]
 [ext_resource type="AudioStream" uid="uid://ct3ff1chu1rmr" path="res://sound/music/Calm entry.wav" id="6_rtw2f"]
+[ext_resource type="PackedScene" uid="uid://cifj5iv2if7d4" path="res://scenes/hand.tscn" id="9_jk1qb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbmy8"]
 
@@ -67,7 +68,6 @@ icon = ExtResource("4_oa1go")
 alignment = 0
 
 [node name="Space" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=888379846]
-visible = false
 layout_mode = 2
 theme = ExtResource("2_8ln24")
 theme_override_constants/margin_right = 3
@@ -83,6 +83,8 @@ alignment = 0
 stream = ExtResource("6_rtw2f")
 autoplay = true
 mix_target = 1
+
+[node name="Hand" parent="." unique_id=612491534 instance=ExtResource("9_jk1qb")]
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Settings" to="." method="_on_settings_pressed"]
