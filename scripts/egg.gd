@@ -49,8 +49,9 @@ func reset():
 	
 	_set_appearance()
 	change_visibility(false)
+	_save()
 
-
+# for creating new eggs at nest area
 func new(creature : CreatureStats):
 	print("new egg!")
 	
@@ -65,6 +66,7 @@ func new(creature : CreatureStats):
 	
 	_set_appearance()
 	change_visibility(true)
+	_save()
 
 
 func setup(id : EggData):
@@ -89,7 +91,7 @@ func setup(id : EggData):
 
 
 func _ready():
-	setup(info)
+	_load()
 
 
 func _pressed() -> void:
@@ -124,6 +126,7 @@ func grow_up():
 	$Indicator.visible = true
 	info.maturing = true
 
+
 # Which will it be? Hope your placement was right!
 func _hatch_or_death():
 	change_visibility(true)
@@ -157,6 +160,8 @@ func _hatch(sound : bool = true):
 	# this updates the bestiary with new data from the hatch
 	info.species.previously_hatched = true
 	
+	_save()
+	
 	if sound:
 		$Good.play()
 
@@ -168,6 +173,8 @@ func _mature():
 	
 	$Indicator.visible = false
 	icon = load("res://art/egg mimic/check.png")
+	
+	_save()
 	
 	# this updates the bestiary with new data from the growth
 	info.species.previously_grown = true
@@ -185,6 +192,8 @@ func _dead(sound : bool):
 	
 	$Indicator.visible = false
 	icon = load("res://art/eggs/corpse.png")
+	
+	_save()
 	
 	if sound:
 		$Bad.play()
@@ -232,6 +241,7 @@ func _on_age_tree_entered() -> void:
 		grow_up()
 
 
+# when starting pause screen
 func pause():
 	if not $Hatch.paused:
 		hatch_pause = true
@@ -241,6 +251,7 @@ func pause():
 		$Age.paused = true
 
 
+# when continuing from pause screen
 func play():
 	if hatch_pause:
 		hatch_pause = false
@@ -249,5 +260,23 @@ func play():
 		age_pause = false
 		$Age.paused = false
 
-#func _save():
-#	save[get_parent().name.to_lower()][self.name.to_lower()] = self.info
+
+# find the save parent of creature
+func _find_parent():
+	var parent = get_parent()
+	
+	# find parent
+	while not parent.name.to_lower() in save:
+		parent = parent.get_parent()
+	
+	return parent
+
+
+func _save():
+	save[_find_parent().name.to_lower()][self.name.to_lower()] = self.info
+
+
+func _load():
+	self.info = save[_find_parent().name.to_lower()][self.name.to_lower()]
+	change_visibility(info.visibility)
+	_set_appearance()
