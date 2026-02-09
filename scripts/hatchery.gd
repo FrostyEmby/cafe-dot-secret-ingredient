@@ -11,7 +11,7 @@ var save : Save = load("res://resources/save.tres")
 
 
 func _ready() -> void:
-	setup()
+	_egg_display()
 
 
 func _process(_delta: float) -> void:
@@ -83,11 +83,11 @@ func add_egg(egg: Egg):
 		if not new_egg.info.enabled:
 			new_egg.setup(egg.info)
 			new_egg.info.placement = _place()
-			new_egg.info.enabled = true
+			new_egg.enable(true)
 			new_egg.change_visibility(true)
 			new_egg.incubate()
 			_change_egg_num(1)
-			_save()
+			#_save()
 			print(self.name + " " + new_egg.name + " saved!")
 			break
 
@@ -96,24 +96,6 @@ func _pressed() -> void:
 	# if at least the last spot is open, then let egg match happen
 	if not $Egg3.info.enabled:
 		selection.emit(self)
-
-
-func setup():
-	print("starting hatchery " + self.name + " setup")
-	
-	$Egg1.setup(save[self.name.to_lower()].egg1)
-	$Egg2.setup(save[self.name.to_lower()].egg2)
-	$Egg3.setup(save[self.name.to_lower()].egg3)
-	
-	_egg_display()
-	
-	print("hatchery " + self.name + " setup complete")
-
-
-func _save():
-	save[self.name.to_lower()].egg1 = $Egg1.info
-	save[self.name.to_lower()].egg2 = $Egg2.info
-	save[self.name.to_lower()].egg3 = $Egg3.info
 
 
 func _on_egg_1_selection(egg: Egg) -> void:
@@ -133,17 +115,17 @@ func _on_egg_3_selection(egg: Egg) -> void:
 
 func _on_egg_1_death(egg: Egg) -> void:
 	egg.reset()
-	save[self.name.to_lower()][egg.name.to_lower()] = egg.info
+	#save[self.name.to_lower()][egg.name.to_lower()] = egg.info
 
 
 func _on_egg_2_death(egg: Egg) -> void:
 	egg.reset()
-	save[self.name.to_lower()][egg.name.to_lower()] = egg.info
+	#save[self.name.to_lower()][egg.name.to_lower()] = egg.info
 
 
 func _on_egg_3_death(egg: Egg) -> void:
 	egg.reset()
-	save[self.name.to_lower()][egg.name.to_lower()] = egg.info
+	#save[self.name.to_lower()][egg.name.to_lower()] = egg.info
 	
 func _cold_dry_egg_display():
 	match save.cold_dry.egg_count:
@@ -267,29 +249,23 @@ func _hot_wet_egg_display():
 
 func _on_egg_1_birth() -> void:
 	_change_egg_num(-1)
-	_save()
 
 
 func _on_egg_2_birth() -> void:
 	_change_egg_num(-1)
-	_save()
 
 
 func _on_egg_3_birth() -> void:
 	_change_egg_num(-1)
-	_save()
 
 
 func _on_egg_1_corpse() -> void:
 	_change_egg_num(-1)
-	_save()
 
 
 func _on_egg_2_corpse() -> void:
 	_change_egg_num(-1)
-	_save()
 
 
 func _on_egg_3_corpse() -> void:
 	_change_egg_num(-1)
-	_save()

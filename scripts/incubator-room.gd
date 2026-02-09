@@ -28,7 +28,8 @@ func _match():
 func _on_egg_selection(egg: Egg) -> void:
 	egg_match = egg
 	egg_selected = true
-	egg.visible = false
+	egg.change_visibility(false)
+	#egg.visible = false
 	$Hand.hold(egg)
 
 

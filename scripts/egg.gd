@@ -1,9 +1,6 @@
 extends Button
 class_name Egg
 
-# TODO: Fix save bug upon hatching creatures and resetting scene
-# Second hatched egg always disappears after second reset
-
 signal selection(egg : Egg)
 signal death(egg : Egg)
 signal birth
@@ -32,7 +29,12 @@ func _set_appearance():
 func change_visibility(visibility : bool):
 	visible = visibility
 	info.visibility = visibility
+	_save()
 
+
+func enable(enabling : bool):
+	info.enabled = enabling
+	_save()
 
 func reset():
 	print("back to defaults")

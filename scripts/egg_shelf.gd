@@ -24,8 +24,8 @@ func add_egg(egg: Egg):
 			print("found empty slot")
 			new_egg.setup(egg.info)
 			new_egg.change_visibility(true)
-			new_egg.info.enabled = true
-			_save()
+			new_egg.enable(true)
+			#_save()
 			print("filled empty slot")
 			$Take.play()
 			break
@@ -34,8 +34,8 @@ func add_egg(egg: Egg):
 
 func remove_egg(egg: Egg):
 	egg.change_visibility(false)
-	egg.info.enabled = false
-	_save()
+	egg.enable(false)
+	#_save()
 	#save.shelf[egg.name.to_lower()].visibility = false
 
 
@@ -126,8 +126,8 @@ func _load():
 	else:
 		position = Vector2(-176,0)
 	
-	for egg in find_children("Egg*"):
-		egg.setup(save.shelf[egg.name.to_lower()])
+	#for egg in find_children("Egg*"):
+	#	egg.setup(save.shelf[egg.name.to_lower()])
 	
 	print("-----egg shelf setup complete-----")
 
@@ -139,7 +139,7 @@ func _save():
 func _on_incubators_hatch_select(egg: Egg, hatchery : Hatchery) -> void:
 	add_egg(egg)
 	egg.reset()
-	save[hatchery.name.to_lower()][egg.name.to_lower()] = egg.info
+	#save[hatchery.name.to_lower()][egg.name.to_lower()] = egg.info
 
 
 func move():

@@ -6,7 +6,6 @@ signal hatch_select(egg : Egg, hatchery : Hatchery)
 var active_prev : bool = true # this is to check for changes in active state
 @export var active : bool = true
 
-
 @onready var cold_dry = $MarginContainer/GridContainer/Cold_Dry
 @onready var cold_wet = $MarginContainer/GridContainer/Cold_Wet
 @onready var temp_dry = $MarginContainer/GridContainer/Temp_Dry
@@ -14,10 +13,7 @@ var active_prev : bool = true # this is to check for changes in active state
 @onready var hot_dry = $MarginContainer/GridContainer/Hot_Dry
 @onready var hot_wet = $MarginContainer/GridContainer/Hot_Wet
 
-
-func _ready() -> void:
-	_load()
-
+# to pause/unpause
 func _process(_delta: float) -> void:
 	# if active changes
 	if active != active_prev:
@@ -57,18 +53,6 @@ func _on_temp_wet_selection(hatchery: Hatchery) -> void:
 func _on_hot_wet_selection(hatchery: Hatchery) -> void:
 	print("selected hot wet hatchery")
 	selection.emit(hatchery)
-
-func _load():
-	print("-----starting incubator room setup-----")
-	
-	cold_dry.setup()
-	cold_wet.setup()
-	temp_dry.setup()
-	temp_wet.setup()
-	hot_dry.setup()
-	hot_wet.setup()
-	
-	print("-----incubator room setup complete-----")
 
 
 func _on_hatch_select(egg: Egg, hatchery : Hatchery) -> void:
