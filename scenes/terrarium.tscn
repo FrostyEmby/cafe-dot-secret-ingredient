@@ -24,6 +24,11 @@
 [ext_resource type="PackedScene" uid="uid://bijfo0tkv3b3j" path="res://scenes/egg_gen.tscn" id="22_skqsh"]
 [ext_resource type="AudioStream" uid="uid://cx4rxdjh3xffy" path="res://sound/music/Terrarium.wav" id="22_w5ypi"]
 [ext_resource type="PackedScene" uid="uid://1i1cxrtaukuq" path="res://scenes/pause.tscn" id="24_6104g"]
+[ext_resource type="Texture2D" uid="uid://cinfspmbwyame" path="res://art/eggs/meat.png" id="25_ac3wr"]
+[ext_resource type="Texture2D" uid="uid://ycp6l1v2kl0h" path="res://art/eggs/plant.png" id="26_luhao"]
+[ext_resource type="Texture2D" uid="uid://brb0cqlttxbfl" path="res://art/eggs/candy.png" id="27_lwp0y"]
+[ext_resource type="Texture2D" uid="uid://dc8bemi4sn4jo" path="res://art/eggs/insect.png" id="28_4l8xg"]
+[ext_resource type="Texture2D" uid="uid://de2c4rqrwpxdx" path="res://art/eggs/fish.png" id="29_gdb28"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pf7wg"]
 bg_color = Color(0.09048235, 0.09048236, 0.0904823, 1)
@@ -35,6 +40,17 @@ color = Color(0.9529412, 0.87058824, 0.49019608, 1)
 grow_begin = -45.0
 grow_end = -45.0
 thickness = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fs4in"]
+bg_color = Color(0.28791186, 0.23532528, 0.17119259, 1)
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ac3wr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6qyf"]
 bg_color = Color(0.7254902, 0.6156863, 0.29411766, 1)
@@ -335,6 +351,54 @@ offset_right = 176.0
 offset_bottom = 229.0
 icon = ExtResource("4_1wf2t")
 
+[node name="Food Tray" type="Panel" parent="." unique_id=697429776]
+layout_mode = 1
+offset_left = 982.0
+offset_top = 160.0
+offset_right = 1057.0
+offset_bottom = 543.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fs4in")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Food Tray" unique_id=1937394179]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -170.0
+offset_right = 32.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Meat" type="Button" parent="Food Tray/VBoxContainer" unique_id=1641970580]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ac3wr")
+icon = ExtResource("25_ac3wr")
+
+[node name="Plant" type="Button" parent="Food Tray/VBoxContainer" unique_id=1836209468]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ac3wr")
+icon = ExtResource("26_luhao")
+
+[node name="Candy" type="Button" parent="Food Tray/VBoxContainer" unique_id=604989354]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ac3wr")
+icon = ExtResource("27_lwp0y")
+
+[node name="Insect" type="Button" parent="Food Tray/VBoxContainer" unique_id=674796641]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ac3wr")
+icon = ExtResource("28_4l8xg")
+
+[node name="Element" type="Button" parent="Food Tray/VBoxContainer" unique_id=887085132]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ac3wr")
+icon = ExtResource("29_gdb28")
+
 [node name="Mini Menu" parent="." unique_id=165855058 instance=ExtResource("4_nrwuv")]
 layout_mode = 0
 offset_left = 852.0
@@ -428,6 +492,11 @@ layout_mode = 0
 [connection signal="selection" from="Aqua" to="." method="_on_aqua_selection"]
 [connection signal="selection" from="Jungle" to="." method="_on_jungle_selection"]
 [connection signal="selection" from="Lava" to="." method="_on_lava_selection"]
+[connection signal="pressed" from="Food Tray/VBoxContainer/Meat" to="Hand" method="_on_meat_pressed"]
+[connection signal="pressed" from="Food Tray/VBoxContainer/Plant" to="Hand" method="_on_plant_pressed"]
+[connection signal="pressed" from="Food Tray/VBoxContainer/Candy" to="Hand" method="_on_candy_pressed"]
+[connection signal="pressed" from="Food Tray/VBoxContainer/Insect" to="Hand" method="_on_insect_pressed"]
+[connection signal="pressed" from="Food Tray/VBoxContainer/Element" to="Hand" method="_on_element_pressed"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Home" to="Vertical Mini Menu" method="_on_home_pressed"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Incubator" to="Vertical Mini Menu" method="_on_incubator_pressed"]
 [connection signal="pressed" from="Vertical Mini Menu/VBoxContainer/Terrarium" to="Vertical Mini Menu" method="_on_terrarium_pressed"]
