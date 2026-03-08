@@ -197,6 +197,7 @@ func _dead(sound : bool):
 	info.dead = true
 	
 	$Indicator.visible = false
+	$Animation.visible = false
 	icon = load("res://art/eggs/corpse.png")
 	
 	_save()
