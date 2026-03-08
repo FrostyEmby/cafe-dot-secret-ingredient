@@ -29,6 +29,7 @@ font_size = 24
 script = ExtResource("2_k7pjy")
 
 [node name="Grip" type="AnimatedSprite2D" parent="." unique_id=1504781912]
+position = Vector2(-2, -9)
 sprite_frames = SubResource("SpriteFrames_yinqy")
 
 [node name="Place" type="AudioStreamPlayer" parent="." unique_id=1726260940]
