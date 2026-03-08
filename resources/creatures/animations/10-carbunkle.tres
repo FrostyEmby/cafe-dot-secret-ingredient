@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://ht48m13yae6i"]
+
+[ext_resource type="Texture2D" uid="uid://de3yq52ff4dtc" path="res://art/final babies/animated/10 carbunkle baby animated.png" id="1_fvhv2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e1ln"]
+atlas = ExtResource("1_fvhv2")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eopmh"]
+atlas = ExtResource("1_fvhv2")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7w4wu"]
+atlas = ExtResource("1_fvhv2")
+region = Rect2(128, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e1ln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eopmh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7w4wu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

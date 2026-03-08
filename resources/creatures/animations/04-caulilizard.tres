@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b202qk2s3030w"]
+
+[ext_resource type="Texture2D" uid="uid://ct1ytb0r0qm8r" path="res://art/final babies/animated/04 caulilizard baby animated.png" id="1_e821o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhhan"]
+atlas = ExtResource("1_e821o")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpftu"]
+atlas = ExtResource("1_e821o")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2s01"]
+atlas = ExtResource("1_e821o")
+region = Rect2(128, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhhan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpftu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2s01")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

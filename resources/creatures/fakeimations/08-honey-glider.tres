@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://hrdg8btq5war"]
+
+[ext_resource type="Texture2D" uid="uid://do43u3pm7o0cr" path="res://art/final babies/08 honey glider baby.png" id="1_r6vg3"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_r6vg3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

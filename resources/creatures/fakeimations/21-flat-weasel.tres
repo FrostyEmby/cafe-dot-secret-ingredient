@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cgkd057ss4t7o"]
+
+[ext_resource type="Texture2D" uid="uid://t6o47qmsqkbl" path="res://art/final babies/21 flat weasel baby.png" id="1_qm718"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qm718")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

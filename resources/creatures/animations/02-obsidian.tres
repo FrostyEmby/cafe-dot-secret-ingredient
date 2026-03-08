@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cw7yxqrn8pngb"]
+
+[ext_resource type="Texture2D" uid="uid://cs01uadnlh3ns" path="res://art/final babies/animated/02 obsidian baby animated.png" id="1_pg4cl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r25ir"]
+atlas = ExtResource("1_pg4cl")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5umr"]
+atlas = ExtResource("1_pg4cl")
+region = Rect2(64, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r25ir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5umr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

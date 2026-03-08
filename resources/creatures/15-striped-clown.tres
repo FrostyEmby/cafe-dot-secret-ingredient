@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_2piju"]
 [ext_resource type="Texture2D" uid="uid://dpcmgyjymxdfe" path="res://art/adult creatures/15 striped clown.png" id="1_78g7i"]
 [ext_resource type="Texture2D" uid="uid://k6mcsmc8nbby" path="res://art/adult creatures/50 percent size/15 striped clown.png" id="2_61b28"]
-[ext_resource type="Texture2D" uid="uid://c3m4tnmr4mimq" path="res://art/final babies/15 striped clown baby.png" id="3_j2y7i"]
+[ext_resource type="SpriteFrames" uid="uid://mdsp15vbie0q" path="res://resources/creatures/animations/15-striped-clown.tres" id="3_61b28"]
 [ext_resource type="Texture2D" uid="uid://extpj71y8tnv" path="res://art/final eggs/15 striped clown egg.png" id="4_61b28"]
 
 [resource]
@@ -15,7 +15,7 @@ description = "This clown is playing a strange role, because what hatches from t
 incubator = 5
 terrarium = 3
 egg = ExtResource("4_61b28")
-baby_sprite = ExtResource("3_j2y7i")
+baby_sprite = ExtResource("3_61b28")
 adult_sprite = ExtResource("2_61b28")
 adult_detailed = ExtResource("1_78g7i")
 metadata/_custom_type_script = "uid://cqr8dj8toeqen"

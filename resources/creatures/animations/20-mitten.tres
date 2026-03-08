@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b6grx0cmxkx3h"]
+
+[ext_resource type="Texture2D" uid="uid://d3qqypixpg1h5" path="res://art/final babies/animated/20 mitten baby animated.png" id="1_83r05"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nko7o"]
+atlas = ExtResource("1_83r05")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0eqeb"]
+atlas = ExtResource("1_83r05")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w08y0"]
+atlas = ExtResource("1_83r05")
+region = Rect2(128, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nko7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0eqeb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w08y0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

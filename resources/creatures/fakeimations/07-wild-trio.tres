@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cdvgmweygx80t"]
+
+[ext_resource type="Texture2D" uid="uid://dem4fflik0mgg" path="res://art/final babies/07 wild trio baby.png" id="1_ncefb"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ncefb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

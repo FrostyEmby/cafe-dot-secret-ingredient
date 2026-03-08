@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b0ks2rc7bap4u"]
+
+[ext_resource type="Texture2D" uid="uid://dupssk0r0x1nq" path="res://art/final babies/13 shelled slime baby.png" id="1_uv4n5"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uv4n5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

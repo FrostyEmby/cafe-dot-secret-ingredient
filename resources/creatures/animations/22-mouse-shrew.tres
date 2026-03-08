@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://6cgd2bebpf4k"]
+
+[ext_resource type="Texture2D" uid="uid://sld686btcp3u" path="res://art/final babies/animated/22 moose shrew baby animated.png" id="1_wqyle"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n54b5"]
+atlas = ExtResource("1_wqyle")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsdxm"]
+atlas = ExtResource("1_wqyle")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7illg"]
+atlas = ExtResource("1_wqyle")
+region = Rect2(128, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n54b5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsdxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7illg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

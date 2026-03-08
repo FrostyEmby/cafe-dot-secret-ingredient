@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://x2c578bqm7cl"]
+
+[ext_resource type="Texture2D" uid="uid://byjumqykase8w" path="res://art/final babies/animated/01 magma gulper baby animated.png" id="1_1sc83"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljr3l"]
+atlas = ExtResource("1_1sc83")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_li1tq"]
+atlas = ExtResource("1_1sc83")
+region = Rect2(64, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljr3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_li1tq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

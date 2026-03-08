@@ -17,7 +17,7 @@ enum habitat {NONE, ALL, VOLCANO, AQUATIC, DESERT, JUNGLE, SNOW, GRASSLAND}
 @export var terrarium : habitat
 
 @export var egg : Texture2D
-@export var baby_sprite : Texture2D
+@export var baby_sprite : SpriteFrames
 #@export var baby_detailed : Texture2D
 @export var adult_sprite : Texture2D
 @export var adult_detailed : Texture2D

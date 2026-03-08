@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://ds5l2wf565bwu"]
+
+[ext_resource type="Texture2D" uid="uid://bb8pli1dwrsp4" path="res://art/final babies/animated/18 lazy lizard baby animated.png" id="1_gtbr4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hnf0"]
+atlas = ExtResource("1_gtbr4")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkia2"]
+atlas = ExtResource("1_gtbr4")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86y18"]
+atlas = ExtResource("1_gtbr4")
+region = Rect2(128, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hnf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkia2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86y18")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

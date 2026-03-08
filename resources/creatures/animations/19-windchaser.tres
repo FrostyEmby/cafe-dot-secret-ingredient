@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://coso5ig1e2bu5"]
+
+[ext_resource type="Texture2D" uid="uid://b3efffveilkys" path="res://art/final babies/animated/19 windchaser baby animated.png" id="1_tmv81"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ufc2"]
+atlas = ExtResource("1_tmv81")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tftd"]
+atlas = ExtResource("1_tmv81")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8525"]
+atlas = ExtResource("1_tmv81")
+region = Rect2(128, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ufc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tftd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8525")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bdcf5runuxen0"]
+
+[ext_resource type="Texture2D" uid="uid://by4xk3se5yuh3" path="res://art/final babies/24 grain bock baby.png" id="1_rqfot"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rqfot")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

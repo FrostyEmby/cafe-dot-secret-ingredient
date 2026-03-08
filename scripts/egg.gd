@@ -157,7 +157,10 @@ func _hatch(sound : bool = true):
 	info.hatched = true
 	
 	$Indicator.visible = false
-	icon = info.species.baby_sprite
+	icon = load("res://art/icons/empty.png")
+	$Animation.sprite_frames = info.species.baby_sprite
+	$Animation.visible = true
+	$Animation.play()
 	
 	# this updates the bestiary with new data from the hatch
 	info.species.previously_hatched = true
@@ -174,6 +177,7 @@ func _mature():
 	info.adult = true
 	
 	$Indicator.visible = false
+	$Animation.visible = false
 	icon = load("res://art/egg mimic/check.png")
 	
 	_save()

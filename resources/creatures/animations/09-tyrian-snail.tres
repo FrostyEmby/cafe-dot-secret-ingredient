@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dm6o1p78agtvi"]
+
+[ext_resource type="Texture2D" uid="uid://cf5cddduhe5nj" path="res://art/final babies/animated/09 tyrian snail baby animated.png" id="1_cck8l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_486gu"]
+atlas = ExtResource("1_cck8l")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjgyb"]
+atlas = ExtResource("1_cck8l")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qo43h"]
+atlas = ExtResource("1_cck8l")
+region = Rect2(128, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_486gu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjgyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qo43h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

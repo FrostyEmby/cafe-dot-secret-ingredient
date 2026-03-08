@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://lioc5hd6uotv"]
+
+[ext_resource type="Texture2D" uid="uid://b00q6ohjnjm2h" path="res://art/final babies/animated/17 harptail baby animated.png" id="1_o5rmg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6qu2"]
+atlas = ExtResource("1_o5rmg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q82c6"]
+atlas = ExtResource("1_o5rmg")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sf1jk"]
+atlas = ExtResource("1_o5rmg")
+region = Rect2(128, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6qu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q82c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sf1jk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

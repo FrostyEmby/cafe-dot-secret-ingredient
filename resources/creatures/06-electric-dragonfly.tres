@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bl0kls56cpmwv" path="res://art/adult creatures/06 electric dragonfly.png" id="1_lm0f6"]
 [ext_resource type="Texture2D" uid="uid://q4u4v5q74hkm" path="res://art/adult creatures/50 percent size/06 electric dragonfly.png" id="2_isbut"]
-[ext_resource type="Texture2D" uid="uid://dr45haypfn8vd" path="res://art/final babies/06 electric dragonfly baby.png" id="3_ko4pe"]
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="3_lm0f6"]
+[ext_resource type="SpriteFrames" uid="uid://c3a1vkobeah48" path="res://resources/creatures/animations/06-electric-dragonfly.tres" id="3_u4pr2"]
 [ext_resource type="Texture2D" uid="uid://bs05x751ro33j" path="res://art/final eggs/06 electric dragonfly egg.png" id="4_u4pr2"]
 
 [resource]
@@ -15,7 +15,7 @@ description = "Seeks dark areas in which you can sometimes see flashes of electr
 incubator = 5
 terrarium = 5
 egg = ExtResource("4_u4pr2")
-baby_sprite = ExtResource("3_ko4pe")
+baby_sprite = ExtResource("3_u4pr2")
 adult_sprite = ExtResource("2_isbut")
 adult_detailed = ExtResource("1_lm0f6")
 hatch_time_secs = 3.0

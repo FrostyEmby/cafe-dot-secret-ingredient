@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://mdsp15vbie0q"]
+
+[ext_resource type="Texture2D" uid="uid://8joau0c1rb7p" path="res://art/final babies/animated/15 striped clown baby animated.png" id="1_x6el5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n10mu"]
+atlas = ExtResource("1_x6el5")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70ei0"]
+atlas = ExtResource("1_x6el5")
+region = Rect2(64, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n10mu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70ei0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

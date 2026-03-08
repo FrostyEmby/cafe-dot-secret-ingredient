@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cyqju6gfob7vm"]
+
+[ext_resource type="Texture2D" uid="uid://si6scpkjgsvb" path="res://art/final babies/03 cool bat baby.png" id="1_nb855"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nb855")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://blbaxsui4ptn7"]
+
+[ext_resource type="Texture2D" uid="uid://s5d72s4iy7s4" path="res://art/final babies/12 mach bird baby.png" id="1_4uqtd"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4uqtd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

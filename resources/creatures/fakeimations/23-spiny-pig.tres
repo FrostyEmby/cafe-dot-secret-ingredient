@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cubtfuypuqfig"]
+
+[ext_resource type="Texture2D" uid="uid://hp6hqt5eifov" path="res://art/final babies/23 spiney pig baby.png" id="1_co1bt"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_co1bt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

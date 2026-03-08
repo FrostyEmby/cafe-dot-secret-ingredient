@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cvcrlit0sspca" path="res://art/adult creatures/18 lazy lizard.png" id="1_4tb8a"]
 [ext_resource type="Script" uid="uid://cqr8dj8toeqen" path="res://scripts/templates/creature-stats.gd" id="1_ck8xq"]
 [ext_resource type="Texture2D" uid="uid://djhqae8ygoh1t" path="res://art/adult creatures/50 percent size/18 lazy lizard.png" id="2_h5t1k"]
-[ext_resource type="Texture2D" uid="uid://c3xyexcsuiu2y" path="res://art/final babies/18 lazy lizard baby.png" id="3_hl4d7"]
+[ext_resource type="SpriteFrames" uid="uid://ds5l2wf565bwu" path="res://resources/creatures/animations/18-lazy-lizard.tres" id="3_4tb8a"]
 [ext_resource type="Texture2D" uid="uid://ujdbtyjec0bh" path="res://art/final eggs/18 lazy lizard egg.png" id="4_ugle2"]
 
 [resource]
@@ -14,7 +14,7 @@ description = "With their perfect desert camouflage it is a surprise that they'd
 incubator = 6
 terrarium = 4
 egg = ExtResource("4_ugle2")
-baby_sprite = ExtResource("3_hl4d7")
+baby_sprite = ExtResource("3_4tb8a")
 adult_sprite = ExtResource("2_h5t1k")
 adult_detailed = ExtResource("1_4tb8a")
 metadata/_custom_type_script = "uid://cqr8dj8toeqen"

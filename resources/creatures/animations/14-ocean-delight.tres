@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c3sgyrd887not"]
+
+[ext_resource type="Texture2D" uid="uid://dhn2f3lccvm8p" path="res://art/final babies/animated/14 ocean delight baby animated.png" id="1_a2k7n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8csdx"]
+atlas = ExtResource("1_a2k7n")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xc3cv"]
+atlas = ExtResource("1_a2k7n")
+region = Rect2(64, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8csdx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xc3cv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

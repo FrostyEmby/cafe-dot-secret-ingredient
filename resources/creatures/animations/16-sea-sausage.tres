@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bqia31236a8hc"]
+
+[ext_resource type="Texture2D" uid="uid://cl8umfaxik8t" path="res://art/final babies/animated/16 sea sausage baby animated.png" id="1_35jag"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w61lu"]
+atlas = ExtResource("1_35jag")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8iiu"]
+atlas = ExtResource("1_35jag")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjnbn"]
+atlas = ExtResource("1_35jag")
+region = Rect2(128, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w61lu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8iiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjnbn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

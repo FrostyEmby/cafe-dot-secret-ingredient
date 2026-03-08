@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://xq3nct8fphq3"]
+
+[ext_resource type="Texture2D" uid="uid://cun3h250h0gvb" path="res://art/final babies/11 unicorn baby.png" id="1_hisn4"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hisn4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
